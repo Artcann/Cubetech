@@ -1,6 +1,12 @@
 <?php
+
+
+if(!empty($_SESSION["isLogged"])) {
+    print_r($_SESSION);
+}
+
 $title = "Inscription";
-$style = "static/index.css";
+$style = "public/css/index.css";
 
 ob_start();
 ?>
@@ -9,7 +15,7 @@ ob_start();
 
     <h3>Veuillez remplir le formulaire</h3>
 
-    <form action="login_verification.php" method="post">
+    <form class="login" action="index.php?action=login-verification" method="post">
         <div>
             <label for="pseudo">Pseudo : </label><input type="text" name="pseudo" id="pseudo" required>
         </div>
@@ -21,8 +27,8 @@ ob_start();
         </div>
     </form>
 
-    <a href="register.php">Créer un compte.</a>
+    <a href="../../register.php">Créer un compte.</a>
 
 <?php $content = ob_get_clean();
-require("header.php");
+require("view/frontoffice/header.php");
 ?>

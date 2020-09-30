@@ -1,21 +1,23 @@
 <?php
-    session_start();
+require('controller/frontoffice.php');
 
-    if(empty($_SESSION["isLogged"])) {
-        header('Location: login.php');
+try {
+    if (isset($_GET['action'])) {
+        if($_GET['action'] == 'login-verification') {
+            $pseudo = $_POST['pseudo'];
+            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+            loginVerification($pseudo, $password);
+        } elseif($_GET['action'] == 'home') {
+            home();
+        } elseif($_GET['action'] == 'disconnect') {
+            disconnect();
+        } elseif($_GET['action'] == 'login') {
+            login();
+        }
+    } else {
+        login();
     }
-
-    try {
-        $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'test', 'caf4LWc9atNhbn58');
-    } catch(Exception $e) {
-        die('Erreur : '.$e->getMessage());
-    }
-
-
-    $response = $bdd->query('SELECT pseudo FROM users');
-
-    while ($data = $response->fetch())
-    {
-        echo '<p><strong>'.htmlspecialchars($data['pseudo']).'</strong></p>';
-    }
-
+} catch(Exception $e) {
+    echo 'Erreur : '.$e->getMessage();
+}
