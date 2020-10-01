@@ -10,17 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc80bb17-8541-40c4-a0c3-e88a735feb4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/frontoffice.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/frontoffice.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/frontoffice/home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontoffice/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontoffice/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login_verification.php" beforeDir="false" afterPath="$PROJECT_DIR$/login_verification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/index.css" afterDir="false" />
-    </list>
+    <list default="true" id="cc80bb17-8541-40c4-a0c3-e88a735feb4d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +65,7 @@
       <workItem from="1601400704247" duration="342000" />
       <workItem from="1601401336428" duration="2676000" />
       <workItem from="1601462647992" duration="5906000" />
-      <workItem from="1601484464486" duration="9331000" />
+      <workItem from="1601484464486" duration="9418000" />
     </task>
     <servers />
   </component>
