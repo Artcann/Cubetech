@@ -6,6 +6,7 @@ $style = "public/css/index.css";
 if(empty($_SESSION["isLogged"])) {
     header('Location: index.php?action=login');
 }
+
 ob_start();
 ?>
 

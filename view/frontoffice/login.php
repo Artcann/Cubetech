@@ -2,7 +2,7 @@
 
 
 if(!empty($_SESSION["isLogged"])) {
-    print_r($_SESSION);
+    echo ("You're connected");
 }
 
 $title = "Inscription";
@@ -27,7 +27,7 @@ ob_start();
         </div>
     </form>
 
-    <a href="../../register.php">Créer un compte.</a>
+    <a href="index.php?action=register">Créer un compte.</a>
 
 <?php $content = ob_get_clean();
 require("view/frontoffice/header.php");
