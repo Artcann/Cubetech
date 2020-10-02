@@ -11,12 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc80bb17-8541-40c4-a0c3-e88a735feb4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/model/Manager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/UserManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/frontoffice.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/frontoffice.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/frontoffice.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/frontoffice.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontoffice/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/frontoffice/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontoffice/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/frontoffice.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/view/frontoffice/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontoffice/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +75,8 @@
       <workItem from="1601401336428" duration="2676000" />
       <workItem from="1601462647992" duration="5906000" />
       <workItem from="1601484464486" duration="9418000" />
-      <workItem from="1601549059292" duration="2591000" />
+      <workItem from="1601549059292" duration="8477000" />
+      <workItem from="1601675830619" duration="945000" />
     </task>
     <servers />
   </component>
@@ -106,14 +108,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601197366645" />
-    <state x="760" y="243" key="NewPhpClassDialog" timestamp="1600186556548">
+    <state x="760" y="243" key="NewPhpClassDialog" timestamp="1601675936575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="760" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600186556548" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1601492550814">
+    <state x="760" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601675936575" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1601675945568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601492550814" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601675945568" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1601491855360">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

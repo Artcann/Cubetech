@@ -11,7 +11,7 @@ $style = "public/css/index.css";
 ob_start();
 ?>
 
-    <h1>Inscription</h1>
+    <h1>Connection</h1>
 
     <h3>Veuillez remplir le formulaire</h3>
 
