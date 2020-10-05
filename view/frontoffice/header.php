@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>HyperCube</title>
+    <title><?= $title ?></title>
     <link href=<?= $style ?> rel="stylesheet" />
 </head>
 
