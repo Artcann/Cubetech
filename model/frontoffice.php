@@ -9,7 +9,18 @@ function getUserByPseudo($pseudo): array
         return $response->fetch();
     }
 
-    function dbConnect()
+function insertUser($pseudo, $password)
+{
+    $db = dbConnect();
+
+    $req = $db->prepare('INSERT INTO users (pseudo, password, plain_password) VALUES (?, ?, ?)');
+    $req->execute(array($_POST['pseudo'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['password']));
+
+    return null;
+}
+
+function dbConnect()
     {
         return new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'test', 'caf4LWc9atNhbn58');
     }
+
