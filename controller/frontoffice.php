@@ -1,6 +1,7 @@
 <?php
 session_start();
-require("model/frontoffice.php");
+require_once("model/Manager.php");
+require_once("model/UserManager.php");
 
 function login()
 {
@@ -10,7 +11,8 @@ function login()
 
 function loginVerification($pseudo, $password)
 {
-    $data = getUserByPseudo($pseudo);
+    $user = new UserManager();
+    $data = $user->getUserByPseudo($pseudo);
 
     if(empty($data)) {
         echo "Vous n'êtes pas inscrit";
@@ -26,9 +28,10 @@ function registerUser() {
     require('view/frontoffice/register.php');
 }
 
-function registerVerification($pseudo, $password, $password2) {
+function registerVerification($pseudo, $password) {
+    $user = new UserManager();
     if($_POST['password'] == $_POST['password2']) {
-        insertUser($pseudo, $password);
+        $user->insertUser($pseudo, $password);
         echo "<h1>Registration Complete</h1>";
         require('view/frontoffice/login.php');
     } else {

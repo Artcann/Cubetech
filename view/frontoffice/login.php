@@ -10,15 +10,10 @@ $style = "public/css/index.css";
 
 ob_start();
 ?>
-<<<<<<< HEAD
     <tr>
         <td><img src="public/images/logo.png" alt="Logo CubeTech" id="LogoPNG"></td>
         <td><h1>Connexion</h1></td>
     </tr>
-=======
-
-    <h1>Inscription</h1>
->>>>>>> f4852f9e864b0a07fa0eab3941ba9d801e23a042
 
     <h3>Veuillez remplir le formulaire</h3>
 
