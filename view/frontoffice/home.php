@@ -17,4 +17,5 @@ ob_start();
     <a href="index?action=disconnect">Disconnect</a>
 
 <?php $content = ob_get_clean();
+$header = "";
 require("view/frontoffice/header.php");

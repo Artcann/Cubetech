@@ -2,20 +2,21 @@ a
 {
     text-align: center;
     display: block;
+    color: white;
 }
 
-img
+#LogoPNG
 {
     display: block;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
     width: 150px;
 }
 
 h1, h3
 {
     text-align: center;
-    color: black;
+    color: white;
 }
 
 form {
@@ -24,8 +25,9 @@ form {
     width: 500px;
     /* Encadré pour voir les limites du formulaire */
     padding: 1em;
-    border: 1px solid #CCC;
+    border: 1px solid #ff9000;
     border-radius: 1em;
+
 }
 
 label {
@@ -33,12 +35,14 @@ label {
     display: inline-block;
     width: 175px;
     text-align: left;
+    color: white;
 }
 
 input {
     /* Pour s'assurer que tous les champs texte ont la même police.
        Par défaut, les textarea ont une police monospace */
     font: 1em sans-serif;
+
 
     /* Pour que tous les champs texte aient la même dimension */
     width: 300px;
