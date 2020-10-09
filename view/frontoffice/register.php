@@ -1,6 +1,6 @@
 <?php
 $title = "Inscription";
-$style = "static/index.css";
+$style = "public/css/index.css";
 
 ob_start();
 ?>
@@ -9,7 +9,7 @@ ob_start();
 
 <h3>Veuillez remplir le formulaire</h3>
 
-<form action="register_post.php" method="post">
+<form action="index.php?action=register-verification" method="post">
     <div>
         <label for="pseudo">Pseudo : </label><input type="text" name="pseudo" id="pseudo" required>
     </div>
@@ -25,5 +25,6 @@ ob_start();
 </form>
 
 <?php $content = ob_get_clean();
-require("header.php");
+$header = "";
+require("view/frontoffice/header.php");
 ?>

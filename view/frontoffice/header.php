@@ -6,7 +6,8 @@
     <link href=<?= $style ?> rel="stylesheet" />
 </head>
 
-<body>
+<body style="background-color: #212121">
+<?= $header ?>
 <?= $content ?>
 </body>
 </html>

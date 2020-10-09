@@ -6,6 +6,7 @@ $style = "public/css/index.css";
 if(empty($_SESSION["isLogged"])) {
     header('Location: index.php?action=login');
 }
+
 ob_start();
 ?>
 
@@ -16,4 +17,5 @@ ob_start();
     <a href="index?action=disconnect">Disconnect</a>
 
 <?php $content = ob_get_clean();
+$header = "";
 require("view/frontoffice/header.php");
