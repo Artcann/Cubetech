@@ -18,7 +18,7 @@ try {
             $pseudo = $_POST['pseudo'];
             $password = $_POST['password'];
             $password2 = $_POST['password2'];
-            registerVerification($pseudo, $password, $password2);
+            registerVerification($pseudo, $password);
         } elseif ($_GET['action'] == 'register') {
             registerUser();
         }
