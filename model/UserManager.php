@@ -1,11 +1,11 @@
 <?php
 require_once("model/Manager.php");
 
-class UserManager
+class UserManager extends Manager
 {
     public function getUserByPseudo($pseudo): array
     {
-        $db = dbConnect();
+        $db = $this->dbConnect();
 
         $response = $db->query("SELECT pseudo, password FROM users WHERE pseudo='".$pseudo."'");
 
@@ -14,7 +14,7 @@ class UserManager
 
     public function insertUser($pseudo, $password)
     {
-        $db = dbConnect();
+        $db = $this->dbConnect();
 
         $req = $db->prepare('INSERT INTO users (pseudo, password, plain_password) VALUES (?, ?, ?)');
         $req->execute(array($_POST['pseudo'], password_hash($_POST['password'], PASSWORD_DEFAULT), $_POST['password']));

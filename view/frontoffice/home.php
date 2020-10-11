@@ -4,7 +4,7 @@ $title = "Index";
 $style = "public/css/index.css";
 
 if(empty($_SESSION["isLogged"])) {
-    header('Location: index.php?action=login');
+    header('Location: index.php');
 }
 
 ob_start();
@@ -12,7 +12,7 @@ ob_start();
 
     <h1>Bienvenue sur le site CubeTech</h1>
 
-    <img id="logo" src="public/images/logo.jpg" alt="Logo du site">
+    <img id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
 
     <a href="index?action=disconnect">Disconnect</a>
 

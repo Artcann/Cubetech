@@ -1,0 +1,4 @@
+AuthName "Page d'administration protégée"
+AuthType Basic
+AuthUserFile "C:/Users/artca/PhpstormProjects/APP_2020/backoffice/.htpasswd"
+Require valid-user
