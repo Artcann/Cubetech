@@ -24,10 +24,17 @@ class ControllerLogin
         if(empty($data)) {
             echo "Vous n'êtes pas inscrit";
         } elseif(password_verify($password, $data['password'])){
+            $_SESSION['pseudo'] = $pseudo;
             $_SESSION['isLogged'] = true;
             header("Location: index.php?action=home");
         } else {
             echo "<h1>Mauvais mot de passe</h1>";
+        }
+    }
+
+    public function isLogged() {
+        if(!$_SESSION["isLogged"]) {
+            header("Location: index.php");
         }
     }
 }

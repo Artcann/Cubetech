@@ -1,10 +1,5 @@
 <?php
 
-
-if(!empty($_SESSION["isLogged"])) {
-    echo ("You're connected");
-}
-
 $title = "Connection";
 $style = "public/css/index.css";
 ?>
@@ -15,7 +10,7 @@ $style = "public/css/index.css";
 
     <h3>Veuillez remplir le formulaire</h3>
 
-    <form class="login" action="testRouteur.php?action=login-verification" method="post">
+    <form class="login" action="index.php?action=login-verification" method="post">
         <div>
             <label for="pseudo">Identifiant : </label><input type="text" name="pseudo" id="pseudo" required>
         </div>
@@ -27,4 +22,4 @@ $style = "public/css/index.css";
         </div>
     </form>
 
-    <!--- <a href="index.php?action=register">Créer un compte.</a> -->
+    <a href="testRouteur.php?action=register">Créer un compte.</a>

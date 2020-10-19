@@ -1,8 +1,6 @@
 <?php
 $title = "Inscription";
 $style = "public/css/index.css";
-
-ob_start();
 ?>
 
 <h1>Inscription</h1>
@@ -23,8 +21,3 @@ ob_start();
         <label for="submit">Envoyer</label><input type="submit">
     </div>
 </form>
-
-<?php $content = ob_get_clean();
-$header = "";
-require("view/frontoffice/header.php");
-?>
