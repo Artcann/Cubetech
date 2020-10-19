@@ -1,5 +1,6 @@
 <?php
 require('controller/frontoffice.php');
+require('controller/ControllerLogin.php');
 
 try {
     if (isset($_GET['action'])) {
@@ -21,7 +22,8 @@ try {
             registerUser();
         }
     } else {
-        login();
+        $login = new ControllerLogin();
+        $login->login();
     }
 } catch(Exception $e) {
     echo 'Erreur : '.$e->getMessage();

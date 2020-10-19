@@ -5,10 +5,8 @@ if(!empty($_SESSION["isLogged"])) {
     echo ("You're connected");
 }
 
-$title = "Inscription";
+$title = "Connection";
 $style = "public/css/index.css";
-
-ob_start();
 ?>
     <tr>
         <td><img src="public/images/logo.png" alt="Logo CubeTech" id="LogoPNG"></td>
@@ -17,7 +15,7 @@ ob_start();
 
     <h3>Veuillez remplir le formulaire</h3>
 
-    <form class="login" action="index.php?action=login-verification" method="post">
+    <form class="login" action="testRouteur.php?action=login-verification" method="post">
         <div>
             <label for="pseudo">Identifiant : </label><input type="text" name="pseudo" id="pseudo" required>
         </div>
@@ -30,8 +28,3 @@ ob_start();
     </form>
 
     <!--- <a href="index.php?action=register">Créer un compte.</a> -->
-
-<?php $content = ob_get_clean();
-$header = "";
-require("view/frontoffice/header.php");
-?>
