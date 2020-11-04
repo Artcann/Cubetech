@@ -1,7 +1,7 @@
 <?php
-require_once("model/Manager.php");
+require_once("Framework/Model.php");
 
-class User extends Manager
+class User extends Model
 {
 
     public function getUserByPseudo($pseudo): array

@@ -1,9 +1,9 @@
 <?php
 
 require_once 'model/User.php';
-require_once 'view/View.php';
+require_once 'Framework/Controller.php';
 
-class ControllerLogin
+class ControllerLogin extends Controller
 {
     private $user;
 
@@ -12,12 +12,15 @@ class ControllerLogin
         $this->user = new User();
     }
 
-    public function login() {
+    public function index() {
         $view = new View("Login");
         $view->generate();
     }
 
-    public function loginVerification($pseudo, $password) {
+    public function login() {
+        $pseudo = $this->request->getParameter('pseudo');
+        $password = $this->request->getParameter('password');
+
         $user = new User();
         $data = $user->getUserByPseudo($pseudo);
 
@@ -26,7 +29,7 @@ class ControllerLogin
         } elseif(password_verify($password, $data['password'])){
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['isLogged'] = true;
-            header("Location: index.php?action=home");
+            header("Location: /APP_2020/home");
         } else {
             echo "<h1>Mauvais mot de passe</h1>";
         }

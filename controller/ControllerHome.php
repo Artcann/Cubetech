@@ -1,9 +1,9 @@
 <?php
 
 require_once 'model/User.php';
-require_once 'view/View.php';
+require_once 'Framework/Controller.php';
 
-class ControllerHome
+class ControllerHome extends Controller
 {
     private $user;
 
@@ -11,9 +11,13 @@ class ControllerHome
         $this->user = new User();
     }
 
-    public function home() {
-        $view = new View("Home");
-        $view->generate(array("pseudo" => "Artcann"));
+    public function index() {
+        if(!isset($_SESSION['isLogged']) && !($_SESSION['isLogged'])) {
+            header('Location: http://localhost/APP_2020/login');
+        }  else {
+            $view = new View("Home");
+            $view->generate(array("pseudo" => "Artcann"));
+        }
     }
 
     public function disconnect()

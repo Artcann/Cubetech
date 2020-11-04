@@ -10,7 +10,7 @@ $style = "public/css/index.css";
 
     <h3>Veuillez remplir le formulaire</h3>
 
-    <form class="login" action="index.php?action=login-verification" method="post">
+    <form class="login" action="index.php?controller=login&action=login" method="post">
         <div>
             <label for="pseudo">Identifiant : </label><input type="text" name="pseudo" id="pseudo" required>
         </div>
@@ -21,5 +21,3 @@ $style = "public/css/index.css";
             <label for="submit">Envoyer</label><input type="submit">
         </div>
     </form>
-
-    <a href="testRouteur.php?action=register">Créer un compte.</a>

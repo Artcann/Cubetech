@@ -7,15 +7,22 @@ class View
 
     private $title;
 
-    public function __construct($action)
+    public function __construct($action, $controller = "")
     {
-        $this->file = "View/frontoffice/view".$action.".php";
+        $fichier = "view/";
+        if($controller != "") {
+            $fichier = $fichier . $controller ."/";
+        }
+        $this->file = $fichier . $action . ".php";
     }
 
     public function generate($data = null) {
         $content = $this->generateFile($this->file, $data);
 
-        $view = $this->generateFile("View/frontoffice/template.php", array('title' => $this->title, 'content' => $content));
+        $root = Configuration::get("racineWeb", "/");
+
+        $view = $this->generateFile("view/template.php", array('title' => $this->title, 'content' => $content,
+            'racineWeb' => $root));
 
         echo $view;
     }

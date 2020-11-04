@@ -1,9 +1,9 @@
 <?php
 
 require_once 'model/User.php';
-require_once 'view/View.php';
+require_once 'Framework/Controller.php';
 
-class ControllerRegister
+class ControllerRegister extends Controller
 {
     private $user;
 

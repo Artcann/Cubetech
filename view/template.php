@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <base href="<?= $racineWeb ?>" >
     <title><?= $title ?></title>
     <link href="public/css/index.css" rel="stylesheet" />
 </head>
