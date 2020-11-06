@@ -12,19 +12,16 @@ class ControllerHome extends Controller
     }
 
     public function index() {
-        if(!isset($_SESSION['isLogged']) && !($_SESSION['isLogged'])) {
-            header('Location: http://localhost/APP_2020/login');
+        if($this->request->getSession()->isAttributeSet('isLogged')) {
+            $this->generateView(array("pseudo" => "Artcann"));
         }  else {
-            $view = new View("Home");
-            $view->generate(array("pseudo" => "Artcann"));
+            $this->redirect("login");
         }
     }
 
     public function disconnect()
     {
-        session_unset();
-
-        session_destroy();
+        $this->request->getSession()->destroy();
 
         header('Location: /');
     }

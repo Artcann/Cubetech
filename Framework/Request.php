@@ -1,12 +1,15 @@
 <?php
-
+require_once 'Session.php';
 
 class Request
 {
     private $parameters;
 
+    private $session;
+
     public function __construct($parameters) {
         $this->parameters = $parameters;
+        $this->session = new Session();
     }
 
     public function isParameterSet($name) {
@@ -19,5 +22,9 @@ class Request
         } else {
             throw new Exception("Paramètre '$name' absent de la requête");
         }
+    }
+
+    public function getSession() {
+        return $this->session;
     }
 }

@@ -24,8 +24,7 @@ abstract class Controller
         }
     }
 
-    // default action of child class
-    // public abstract function index();
+    public abstract function index();
 
     protected function generateView($dataView = array()) {
         $classController = get_class($this);
@@ -33,6 +32,13 @@ abstract class Controller
 
         $view = new View($this->action, $controller);
         $view->generate($dataView);
+    }
+
+    protected function redirect($controller, $action = null)
+    {
+        $racineWeb = Configuration::get("racineWeb", "/");
+        // Redirection vers l'URL /racine_site/controleur/action
+        header("Location:" . $racineWeb . $controller . "/" . $action);
     }
 }
 
