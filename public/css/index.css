@@ -5,6 +5,13 @@ a
     color: white;
 }
 
+p
+{
+    text-align: center;
+    display: block;
+    color: white;
+}
+
 #LogoPNG
 {
     display: block;

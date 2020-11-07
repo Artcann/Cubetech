@@ -19,7 +19,7 @@ class Session
     }
 
     public function getAttribute($name) {
-        if ($this->getAttribute($name)) {
+        if ($this->isAttributeSet($name)) {
             return $_SESSION[$name];
         } else {
             throw new Exception("Attribut '$name' absent de la session");

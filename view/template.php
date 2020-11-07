@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <base href="<?= $racineWeb ?>" >
     <title><?= $title ?></title>
-    <link href="public/css/index.css" rel="stylesheet" />
+    <script type="text/javascript" src="<?= $script ?>"></script>
+    <link href=<?= $style ?> rel="stylesheet" />
 </head>
 
 <body style="background-color: #212121">

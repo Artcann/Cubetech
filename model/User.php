@@ -4,18 +4,22 @@ require_once("Framework/Model.php");
 class User extends Model
 {
 
-    public function getUserByPseudo($pseudo): array
+    public function getUserByLogin($login)
     {
-        $sql = "SELECT pseudo, password FROM users WHERE pseudo='".$pseudo."'";
+        $sql = "SELECT login, password, statut, prenom FROM user WHERE login='".$login."'";
 
-        return $this->executeSelect($sql, array($pseudo));
+        return $this->executeSelect($sql, array($login));
     }
 
-    public function insertUser($pseudo, $password)
+    public function insertUser($values)
     {
-        $sql = 'INSERT INTO users (pseudo, password, plain_password) VALUES (?, ?, ?)';
 
-        $this->executeInsert($sql, array($pseudo, password_hash($password, PASSWORD_DEFAULT), $password));
+
+        $sql = 'INSERT INTO `user` (`nom`, `prenom`, `naissance`, `grade`, 
+                `nationalite`, `caserne`, `corps`, `statut`, `matricule`, `mail`, `password`, `login`) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+
+        $this->executeInsert($sql, $values);
 
 
 

@@ -1,11 +1,16 @@
 <?php
 
+require_once 'Configuration.php';
 
 class View
 {
     private $file;
 
     private $title;
+
+    private $style;
+
+    private $script;
 
     public function __construct($action, $controller = "")
     {
@@ -22,7 +27,7 @@ class View
         $root = Configuration::get("racineWeb", "/");
 
         $view = $this->generateFile("view/template.php", array('title' => $this->title, 'content' => $content,
-            'racineWeb' => $root));
+            'racineWeb' => $root, 'style' => $this->style, 'script' => $this->script));
 
         echo $view;
     }

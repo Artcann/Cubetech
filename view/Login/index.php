@@ -1,7 +1,7 @@
 <?php
 
-$title = "Connection";
-$style = "public/css/index.css";
+$this->title = "Connexion";
+$this->style = "public/css/index.css";
 ?>
     <tr>
         <td><img src="public/images/logo.png" alt="Logo CubeTech" id="LogoPNG"></td>
@@ -10,9 +10,9 @@ $style = "public/css/index.css";
 
     <h3>Veuillez remplir le formulaire</h3>
 
-    <form class="login" action="index.php?controller=login&action=login" method="post">
+    <form class="loginForm" action="index.php?controller=login&action=login" method="post">
         <div>
-            <label for="pseudo">Identifiant : </label><input type="text" name="pseudo" id="pseudo" required>
+            <label for="login">Identifiant : </label><input type="text" name="login" id="login" required>
         </div>
         <div>
             <label for="password">Mot de passe : </label><input type="password" name="password" id="password" required>
