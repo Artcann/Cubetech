@@ -1,5 +1,4 @@
 <?php
-
 $this->title = "Connexion";
 $this->style = "public/css/index.css";
 ?>
