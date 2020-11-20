@@ -40,6 +40,13 @@ abstract class Controller
         // Redirection vers l'URL /racine_site/controleur/action
         header("Location:" . $racineWeb . $controller . "/" . $action);
     }
+
+    public function disconnect()
+    {
+        $this->request->getSession()->destroy();
+
+        header('Location: /');
+    }
 }
 
 

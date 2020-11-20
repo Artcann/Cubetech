@@ -21,8 +21,6 @@ class ControllerHome extends Controller
 
     public function disconnect()
     {
-        $this->request->getSession()->destroy();
-
-        header('Location: /');
+        parent::disconnect();
     }
 }

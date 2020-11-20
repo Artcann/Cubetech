@@ -30,6 +30,7 @@ class ControllerLogin extends Controller
             $this->request->getSession()->setAttribute("login", $login);
             $this->request->getSession()->setAttribute("isLogged", true);
             $this->request->getSession()->setAttribute("prenom", $data['prenom']);
+            setcookie("statut", $data['statut']);
 
             if($data['statut'] == 1) $this->redirect("admin");
             else $this->redirect("home");
