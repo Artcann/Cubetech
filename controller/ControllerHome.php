@@ -2,8 +2,9 @@
 
 require_once 'model/User.php';
 require_once 'Framework/Controller.php';
+require_once 'controller/ControllerSecure.php';
 
-class ControllerHome extends Controller
+class ControllerHome extends ControllerSecure
 {
     private $user;
 
@@ -12,11 +13,7 @@ class ControllerHome extends Controller
     }
 
     public function index() {
-        if($this->request->getSession()->isAttributeSet('isLogged')) {
-            $this->generateView(array("pseudo" => "Artcann"));
-        }  else {
-            $this->redirect("login");
-        }
+        $this->generateView(array("pseudo" => $this->request->getSession()->getAttribute("nom")));
     }
 
     public function disconnect()

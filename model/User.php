@@ -6,9 +6,23 @@ class User extends Model
 
     public function getUserByLogin($login)
     {
-        $sql = "SELECT login, password, statut, prenom FROM user WHERE login='".$login."'";
+        $sql = "SELECT login, password, statut, prenom, nom FROM user WHERE login='".$login."'";
 
         return $this->executeSelect($sql, array($login));
+    }
+
+    public function getAllUsers() {
+        $sql = "SELECT id, login, statut, prenom, nom FROM user";
+
+        $response = $this->executeSelect($sql);
+
+        $dataArr = array();
+
+        while($data = $response->fetch()) {
+            $dataArr[$data['id']] = $data;
+        }
+
+        return $dataArr;
     }
 
     public function insertUser($values)

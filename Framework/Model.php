@@ -13,7 +13,7 @@ abstract class Model   {
             $results = self::getDb()->prepare($sql);
             $results->execute($arg);
         }
-        return $results->fetch();
+        return $results;
     }
 
     protected function executeInsert($sql, $arg = null) {
