@@ -19,11 +19,12 @@ catch(Exception $e)
 
 
 
-$text = $bdd->query('SELECT contenu FROM cgu');
+$text = $bdd->query('SELECT contenu, titre FROM cgu');
 
 
 while ($donnees = $text->fetch())
 {
+    echo '<h1>'.$donnees['titre'].'</h1><br/>';
     echo $donnees['contenu'] . '<br />';
 }
 
