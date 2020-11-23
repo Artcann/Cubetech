@@ -1,7 +1,7 @@
 <?php
 
 #$this->title = "CGU";
-#$this->style = "public/css/index.css";
+$this->style = "public/css/index.css";
 
 $db = parse_ini_file("C:\wamp64\www\Cubetech\Configuration\dev.ini");
 
@@ -24,7 +24,7 @@ $text = $bdd->query('SELECT contenu, titre FROM cgu');
 
 while ($donnees = $text->fetch())
 {
-    echo '<h1>'.$donnees['titre'].'</h1><br/>';
+    echo '<h2>'.$donnees['titre'].'</h2>';
     echo $donnees['contenu'] . '<br />';
 }
 
