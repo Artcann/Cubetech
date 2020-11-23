@@ -30,12 +30,14 @@ class ControllerLogin extends Controller
             $this->request->getSession()->setAttribute("login", $login);
             $this->request->getSession()->setAttribute("isLogged", true);
             $this->request->getSession()->setAttribute("prenom", $data['prenom']);
+            $this->request->getSession()->setAttribute("nom", $data['nom']);
+            $this->request->getSession()->setAttribute("statut", $data['statut']);
             setcookie("statut", $data['statut']);
 
-            if($data['statut'] == 1) $this->redirect("admin");
+            if($data['statut'] == 1) $this->redirect("adminhome");
             else $this->redirect("home");
         } else {
-            $this->generateView(array('errorMessage' => 'Login ou mot de passe incorrect'));
+            throw new Exception("Vous avez rentré les mauvais identifiants");
 
         }
     }

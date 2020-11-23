@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Acceuil Admin";
+$this->title = "Acceuil Adminhome";
 $this->style = "public/css/index.css";
 
 ?>
@@ -11,8 +11,8 @@ $this->style = "public/css/index.css";
 
 <img id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
 
-<a href="Admin/register">Enregistrer un nouvel utilisateur</a>
+<a href="Adminhome/register">Enregistrer un nouvel utilisateur</a>
 
-<a href="Admin/disconnect">Disconnect</a>
+<a href="Adminhome/disconnect">Disconnect</a>
 
 <?php include_once "view/footer.html"; ?>

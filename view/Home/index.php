@@ -6,7 +6,7 @@ $this->script = "public/js/home.js";
 ?>
     <?php include_once "view/header.html"; ?>
 
-    <a onload="adminAccess()" href="Admin" id="adminAccess" style="display: none">Accès BackOffice</a>
+    <a onload="adminAccess()" href="Adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
 
     <?php echo "<h1>Bienvenue ".$pseudo." sur le site CubeTech</h1>" ?>
 
