@@ -5,6 +5,13 @@ a
     color: white;
 }
 
+table, th, td {
+    border: 1px solid black;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 p
 {
     text-align: center;

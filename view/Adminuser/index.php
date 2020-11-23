@@ -16,7 +16,14 @@ $this->style = "public/css/index.css";
     </tr>
     </thead>
     <tbody>
-        <?php foreach($data as $k => $v)
-        ?>
+    <?php foreach($data as $k => $v): ?>
+        <tr>
+            <td><?php echo $v['id']; ?></td>
+            <td><?php echo $v['login']; ?></td>
+            <td><?php echo $v['statut']; ?></td>
+            <td><?php echo $v['prenom']; ?></td>
+            <td><?php echo $v['nom']; ?></td>
+        </tr>
+    <?php endforeach ?>
     </tbody>
 </table>

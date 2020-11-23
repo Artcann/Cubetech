@@ -8,7 +8,7 @@ class User extends Model
     {
         $sql = "SELECT login, password, statut, prenom, nom FROM user WHERE login='".$login."'";
 
-        return $this->executeSelect($sql, array($login));
+        return $this->executeSelect($sql, array($login))->fetch();
     }
 
     public function getAllUsers() {
