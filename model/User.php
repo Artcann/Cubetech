@@ -6,9 +6,23 @@ class User extends Model
 
     public function getUserByLogin($login)
     {
-        $sql = "SELECT login, password, statut, prenom FROM user WHERE login='".$login."'";
+        $sql = "SELECT login, password, statut, prenom, nom FROM user WHERE login='".$login."'";
 
-        return $this->executeSelect($sql, array($login));
+        return $this->executeRequest($sql, array($login))->fetch();
+    }
+
+    public function getAllUsers() {
+        $sql = "SELECT id, login, statut, prenom, nom FROM user";
+
+        $response = $this->executeRequest($sql);
+
+        $dataArr = array();
+
+        while($data = $response->fetch()) {
+            $dataArr[$data['id']] = $data;
+        }
+
+        return $dataArr;
     }
 
     public function insertUser($values)
@@ -19,7 +33,7 @@ class User extends Model
                 `nationalite`, `caserne`, `corps`, `statut`, `matricule`, `mail`, `password`, `login`) 
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
-        $this->executeInsert($sql, $values);
+        $this->executeRequest($sql, $values);
 
 
 

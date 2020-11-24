@@ -4,6 +4,8 @@ $this->title = "Enregistrement";
 $this->style = "public/css/index.css";
 ?>
 
+<?php include_once "view/header.html"; ?>
+
 <h1>Enregistrement fini.</h1>
 
 <p>
@@ -16,4 +18,6 @@ $this->style = "public/css/index.css";
 <img id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
 
 <a href="Login">Retour à la page de connexion</a>
+
+<?php include_once "view/footer.html"; ?>
 

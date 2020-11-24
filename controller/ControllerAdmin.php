@@ -1,14 +1,18 @@
 <?php
 
-require_once 'ControllerSecure.php';
+require_once "Framework/Controller.php";
 
-class ControllerAdmin extends Controller
+abstract class ControllerAdmin extends Controller
 {
-    public function index() {
-        $this->generateView(array("pseudo" => $this->request->getSession()->getAttribute("prenom")));
+
+    public function executeAction($action)
+    {
+        if($this->request->getSession()->getAttribute("statut") == 1) {
+            parent::executeAction($action);
+        } else {
+            parent::redirect('Home');
+        }
+
     }
 
-    public function register() {
-        $this->redirect("register");
-    }
 }

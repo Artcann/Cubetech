@@ -4,6 +4,8 @@ $this->style = "public/css/index.css";
 $this->script = "public/js/register.js";
 ?>
 
+<?php include_once "view/header.html"; ?>
+
 <h1>Inscription</h1>
 
 <h3>Veuillez remplir le formulaire</h3>
@@ -37,4 +39,6 @@ $this->script = "public/js/register.js";
         <label for="submit">Envoyer</label><input type="submit">
     </div>
 </form>
+
+<?php include_once "view/footer.html"; ?>
 
