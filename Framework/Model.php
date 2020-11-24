@@ -6,6 +6,7 @@ abstract class Model   {
 
     private static $db;
 
+
     protected function executeRequest($sql, $arg = null) {
         if($arg == null) {
             $results = self::getDb()->query($sql);
@@ -15,7 +16,6 @@ abstract class Model   {
         }
         return $results;
     }
-
 
     private static function getDb()
     {
