@@ -15,7 +15,7 @@ class ControllerCgu extends Controller
 
     public function index() {
         $data=$this->cgu->getCgu();
-        $this->generateView(array("data"=>$data));
+        $this->generateView($data);
     }
 
 }
