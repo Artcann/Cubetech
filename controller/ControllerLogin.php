@@ -27,9 +27,9 @@ class ControllerLogin extends Controller
         if (empty($data)) {
             echo "Vous n'êtes pas inscrit";
         } elseif (password_verify($password, $data['password'])) {
-            $this->request->getSession()->setAttribute("login", $login);
-            $this->request->getSession()->setAttribute("isLogged", true);
-            $this->request->getSession()->setAttribute("prenom", $data['prenom']);
+            $this->request->getSession()->setAttribute("user", $data);
+            
+            setcookie("statut", $data['statut']);
 
             if($data['statut'] == 1) $this->redirect("admin");
             else $this->redirect("home");

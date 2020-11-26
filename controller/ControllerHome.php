@@ -12,8 +12,18 @@ class ControllerHome extends Controller
     }
 
     public function index() {
-        if($this->request->getSession()->isAttributeSet('isLogged')) {
-            $this->generateView(array("pseudo" => "Artcann"));
+        if($this->request->getSession()->isAttributeSet('user')) {
+            $this->generateView(array("prenom" => $this->request->getSession()->getAttribute('user')['prenom'],
+                                      "nom" => $this->request->getSession()->getAttribute('user')['nom'],
+                                      "login" => $this->request->getSession()->getAttribute('user')['login'],
+                                      "naissance" => $this->request->getSession()->getAttribute('user')['naissance'],
+                                      "nationalite" => $this->request->getSession()->getAttribute('user')['nationalite'],
+                                      "matricule" => $this->request->getSession()->getAttribute('user')['matricule'],
+                                      "grade" => $this->request->getSession()->getAttribute('user')['grade'],
+                                      "caserne" => $this->request->getSession()->getAttribute('user')['caserne'],
+                                      "corps" => $this->request->getSession()->getAttribute('user')['corps'],
+                                      ));
+
         }  else {
             $this->redirect("login");
         }
@@ -21,8 +31,6 @@ class ControllerHome extends Controller
 
     public function disconnect()
     {
-        $this->request->getSession()->destroy();
-
-        header('Location: /');
+        parent::disconnect();
     }
 }

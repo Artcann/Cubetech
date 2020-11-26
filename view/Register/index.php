@@ -4,6 +4,8 @@ $this->style = "public/css/index.css";
 $this->script = "public/js/register.js";
 ?>
 
+<?php include_once "view/header.html"; ?>
+
 <h1>Inscription</h1>
 
 <h3>Veuillez remplir le formulaire</h3>
@@ -27,14 +29,33 @@ $this->script = "public/js/register.js";
             <option value="3">Utilisateur</option>
         </select>
     </div>
+   <div>
+        <label for="grade">Grade :</label><input type="text" name="grade" id="grade">
+    </div>
+    <div>
+        <label for="nationalite">Nationalité :</label><input type="text" name="nationalite" id="nationalite">
+    </div>
+    <div>
+        <label for="caserne">Caserne :</label><input type="text" name="caserne" id="caserne">
+    </div>
+     <div>
+        <label for="corps">Corps :</label><input type="text" name="corps" id="corps">
+    </div>
+     <div>
+        <label for="matricule">Matricule :</label><input type="text" name="matricule" id="matricule">
+    </div>
+    <div>
+        <label for="mail">Mail :</label><input type="text" name="mail" id="mail">
+    </div>
     <div>
         <label for="password">Mot de passe : </label><input type="password" name="password" id="password" required>
     </div>
     <div>
-        <label for="password2">Comfirmer mot de passe : </label><input type="password" name="password2" id="password2" required>
+        <label for="password2">Confirmer mot de passe : </label><input type="password" name="password2" id="password2" required>
     </div>
     <div onclick="return validateRegister();">
         <label for="submit">Envoyer</label><input type="submit">
     </div>
 </form>
+
 

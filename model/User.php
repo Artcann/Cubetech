@@ -6,7 +6,7 @@ class User extends Model
 
     public function getUserByLogin($login)
     {
-        $sql = "SELECT login, password, statut, prenom FROM user WHERE login='".$login."'";
+        $sql = "SELECT login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail FROM user WHERE login='".$login."'";
 
         return $this->executeSelect($sql, array($login));
     }
@@ -20,9 +20,11 @@ class User extends Model
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
 
         $this->executeInsert($sql, $values);
-
-
-
         return null;
+    }
+
+    public function UserBytest()
+    {
+        $sql = 
     }
 }
