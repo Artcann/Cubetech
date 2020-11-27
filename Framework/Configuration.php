@@ -1,10 +1,19 @@
 <?php
 
 
+/**
+ * Class Configuration
+ */
 class Configuration
 {
     private static $parameters;
 
+    /**
+     * @param $name
+     * @param null $defaultValue
+     * @return mixed|null
+     * @throws Exception
+     */
     public static function get($name, $defaultValue=null) {
         if(isset(self::getParameters()[$name])) {
             $value = self::getParameters()[$name];
@@ -14,6 +23,10 @@ class Configuration
         return $value;
     }
 
+    /**
+     * @return array|false
+     * @throws Exception
+     */
     private static function getParameters() {
         if(self::$parameters == null) {
             $filePath = "Configuration/dev.ini";

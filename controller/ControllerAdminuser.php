@@ -3,6 +3,9 @@
 require_once "controller/ControllerAdmin.php";
 require_once 'model/user.php';
 
+/**
+ * Class ControllerAdminuser
+ */
 class ControllerAdminuser extends ControllerAdmin {
 
     private $user;

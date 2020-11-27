@@ -3,6 +3,9 @@
 require_once 'controller/ControllerAdmin.php';
 require_once 'Model/Caserne.php';
 
+/**
+ * Class ControllerAdmincaserne
+ */
 class ControllerAdmincaserne extends ControllerAdmin {
 
     private $caserne;

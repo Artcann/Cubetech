@@ -14,7 +14,8 @@ $this->script = "public/js/home.js";
     Vous trouverez ci-dessous votre login, il vous servira à vous connecter à la plateforme par la suite, retenez le bien.
 </p>
 
-<?php echo "<h3>".$login."</h3>" ?>
+<?php /** @noinspection PhpUndefinedVariableInspection */
+echo "<h3>".$login."</h3>" ?>
 
 <img id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
 

@@ -16,7 +16,8 @@ $this->style = "public/css/index.css";
     </tr>
     </thead>
     <tbody>
-    <?php foreach($data as $k => $v): ?>
+    <?php /** @noinspection PhpUndefinedVariableInspection */
+    foreach($data as $k => $v): ?>
         <tr>
             <td><?php echo $v['id']; ?></td>
             <td><?php echo $v['login']; ?></td>

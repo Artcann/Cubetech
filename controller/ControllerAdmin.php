@@ -2,9 +2,16 @@
 
 require_once "Framework/Controller.php";
 
+/**
+ * Class ControllerAdmin
+ */
 abstract class ControllerAdmin extends Controller
 {
 
+    /**
+     * @param $action
+     * @throws Exception
+     */
     public function executeAction($action)
     {
         if($this->request->getSession()->getAttribute("statut") == 1) {

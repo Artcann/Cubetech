@@ -3,6 +3,9 @@
 require_once 'controller/ControllerAdmin.php';
 require_once 'model/Card.php';
 
+/**
+ * Class ControllerAdmincard
+ */
 class ControllerAdmincard extends ControllerAdmin {
 
     private $card;

@@ -2,6 +2,9 @@
 require_once "Request.php";
 require_once "View.php";
 
+/**
+ * Class Routeur
+ */
 class Routeur
 {
 
@@ -18,6 +21,11 @@ class Routeur
         }
     }
 
+    /**
+     * @param Request $request
+     * @return mixed
+     * @throws Exception
+     */
     private function createController(Request $request)
     {
         $controller = "Home";
@@ -39,6 +47,11 @@ class Routeur
         }
     }
 
+    /**
+     * @param Request $request
+     * @return mixed|string
+     * @throws Exception
+     */
     private function createAction(Request $request) {
         $action = "index";
         if($request->isParameterSet('action')) {
@@ -47,6 +60,9 @@ class Routeur
         return $action;
     }
 
+    /**
+     * @param Exception $exception
+     */
     private function handleError(Exception $exception) {
         echo $exception->getMessage();
     }

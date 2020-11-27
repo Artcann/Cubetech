@@ -1,7 +1,13 @@
 <?php
 
+/**
+ * Class Card
+ */
 class Card extends model {
 
+    /**
+     * @return array
+     */
     public function getAllCards() {
 
         $sql = 'SELECT id, statut, date, caserne FROM carte';
@@ -14,6 +20,7 @@ class Card extends model {
             $dataArr[$data['id']] = $data;
         }
 
+        return $dataArr;
     }
 
 }

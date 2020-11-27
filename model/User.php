@@ -1,9 +1,16 @@
 <?php
 require_once("Framework/Model.php");
 
+/**
+ * Class User
+ */
 class User extends Model
 {
 
+    /**
+     * @param $login
+     * @return mixed
+     */
     public function getUserByLogin($login)
     {
 
@@ -12,6 +19,9 @@ class User extends Model
         return $this->executeRequest($sql, array($login))->fetch();
     }
 
+    /**
+     * @return array
+     */
     public function getAllUsers() {
         $sql = "SELECT id, login, statut, prenom, nom FROM user";
 
@@ -26,6 +36,10 @@ class User extends Model
         return $dataArr;
     }
 
+    /**
+     * @param $values
+     * @return null |null
+     */
     public function insertUser($values)
     {
 
@@ -40,6 +54,9 @@ class User extends Model
         return null;
     }
 
+    /**
+     * @param $id
+     */
     public function deleteUserById($id) {
         $sql = "DELETE FROM user WHERE id='".$id."'";
 

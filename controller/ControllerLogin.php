@@ -4,6 +4,9 @@ require_once 'model/User.php';
 require_once 'Framework/Controller.php';
 require_once 'ControllerSecure.php';
 
+/**
+ * Class ControllerLogin
+ */
 class ControllerLogin extends Controller
 {
     private $user;

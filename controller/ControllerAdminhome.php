@@ -2,6 +2,9 @@
 
 require_once 'ControllerAdmin.php';
 
+/**
+ * Class ControllerAdminhome
+ */
 class ControllerAdminhome extends ControllerAdmin
 {
     public function index() {

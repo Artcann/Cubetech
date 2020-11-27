@@ -2,6 +2,9 @@
 
 require_once 'Configuration.php';
 
+/**
+ * Class View
+ */
 class View
 {
     private $file;
@@ -12,6 +15,11 @@ class View
 
     private $script;
 
+    /**
+     * View constructor.
+     * @param $action
+     * @param string $controller
+     */
     public function __construct($action, $controller = "")
     {
         $fichier = "view/";
@@ -21,6 +29,10 @@ class View
         $this->file = $fichier . $action . ".php";
     }
 
+    /**
+     * @param null $data
+     * @throws Exception
+     */
     public function generate($data = null) {
         $content = $this->generateFile($this->file, $data);
 
@@ -32,6 +44,12 @@ class View
         echo $view;
     }
 
+    /**
+     * @param $file
+     * @param $data
+     * @return false|string
+     * @throws Exception
+     */
     private function generateFile($file, $data) {
         if (file_exists($file)) {
             if($data != null) {

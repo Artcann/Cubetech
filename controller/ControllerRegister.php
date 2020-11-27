@@ -3,6 +3,9 @@
 require_once 'model/User.php';
 require_once 'Framework/Controller.php';
 
+/**
+ * Class ControllerRegister
+ */
 class ControllerRegister extends Controller
 {
     private $user;
