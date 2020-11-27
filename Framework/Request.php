@@ -1,5 +1,6 @@
 <?php
 require_once 'Session.php';
+require_once 'Cookie.php';
 
 class Request
 {
@@ -7,9 +8,12 @@ class Request
 
     private $session;
 
+    private $cookie;
+
     public function __construct($parameters) {
         $this->parameters = $parameters;
         $this->session = new Session();
+        $this->cookie = new Cookie();
     }
 
     public function isParameterSet($name) {
@@ -26,5 +30,9 @@ class Request
 
     public function getSession() {
         return $this->session;
+    }
+
+    public function getCookies() {
+        return $this->cookie;
     }
 }

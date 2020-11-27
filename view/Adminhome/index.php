@@ -13,6 +13,11 @@ $this->style = "public/css/index.css";
 
 <a href="Adminhome/register">Enregistrer un nouvel utilisateur</a>
 
+<a href="Adminuser">Afficher les utilisateurs</a>
+
+<a href="Admincard">Afficher les cartes</a>
+<a href="Admincard/create">Créer une nouvelle carte</a>
+
 <a href="Adminhome/disconnect">Disconnect</a>
 
 <?php include_once "view/footer.html"; ?>

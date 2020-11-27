@@ -1,11 +1,11 @@
 <?php
 
-require_once 'ControllerSecure.php';
+require_once 'ControllerAdmin.php';
 
-class ControllerAdminhome extends Controller
+class ControllerAdminhome extends ControllerAdmin
 {
     public function index() {
-        $this->generateView(array("pseudo" => $this->request->getSession()->getAttribute("prenom")));
+        $this->generateView(array("pseudo" => $this->request->getSession()->getAttribute("user")['statut']));
     }
 
     public function register() {

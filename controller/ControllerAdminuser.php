@@ -18,4 +18,15 @@ class ControllerAdminuser extends ControllerAdmin {
         $this->generateView($data);
     }
 
+    public function register() {
+        $this->redirect('register');
+    }
+
+    public function delete() {
+        $this->user->deleteUserById($this->request->getParameter('id'));
+
+        $this->redirect('Adminuser');
+    }
+
+
 }

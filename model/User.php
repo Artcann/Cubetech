@@ -39,4 +39,10 @@ class User extends Model
 
         return null;
     }
+
+    public function deleteUserById($id) {
+        $sql = "DELETE FROM user WHERE id='".$id."'";
+
+        $this->executeRequest($sql);
+    }
 }

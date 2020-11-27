@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Gestion Utilisateurs";
+$this->title = "Gestion Casernes";
 $this->style = "public/css/index.css";
 
 ?>
@@ -9,23 +9,19 @@ $this->style = "public/css/index.css";
     <thead>
     <tr>
         <td>ID</td>
-        <td>Login</td>
         <td>Statut</td>
-        <td>Prenom</td>
-        <td>Nom</td>
+        <td>Date mise en service</td>
     </tr>
     </thead>
     <tbody>
     <?php foreach($data as $k => $v): ?>
         <tr>
             <td><?php echo $v['id']; ?></td>
-            <td><?php echo $v['login']; ?></td>
             <td><?php echo $v['statut']; ?></td>
-            <td><?php echo $v['prenom']; ?></td>
-            <td><?php echo $v['nom']; ?></td>
-            <td><a href="Adminuser/modification">Modifier</a></td>
+            <td><?php echo $v['date']; ?></td>
+            <td><a href="Admincard/modification">Modifier</a></td>
             <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
-                   href="Adminuser/delete/' . $v['id'] . '">Supprimer</a>' ?></td>
+                   href="Admincard/delete/' . $v['id'] . '">Supprimer</a>' ?></td>
         </tr>
     <?php endforeach ?>
     </tbody>

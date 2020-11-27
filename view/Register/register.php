@@ -2,6 +2,7 @@
 
 $this->title = "Enregistrement";
 $this->style = "public/css/index.css";
+$this->script = "public/js/home.js";
 ?>
 
 <?php include_once "view/header.html"; ?>
@@ -18,6 +19,8 @@ $this->style = "public/css/index.css";
 <img id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
 
 <a href="Login">Retour à la page de connexion</a>
+
+<a onload="adminAccess()" href="Adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
 
 <?php include_once "view/footer.html"; ?>
 

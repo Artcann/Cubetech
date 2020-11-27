@@ -27,18 +27,15 @@ class ControllerLogin extends Controller
         if (empty($data)) {
             echo "Vous n'êtes pas inscrit";
         } elseif (password_verify($password, $data['password'])) {
-            $this->request->getSession()->setAttribute("login", $login);
-            $this->request->getSession()->setAttribute("isLogged", true);
-            $this->request->getSession()->setAttribute("prenom", $data['prenom']);
-            $this->request->getSession()->setAttribute("nom", $data['nom']);
-            $this->request->getSession()->setAttribute("statut", $data['statut']);
-            setcookie("statut", $data['statut']);
+            $this->request->getSession()->setAttribute("user", $data);
+            $this->request->getCookies()->setValue('statut', $data['statut']);
 
-            if($data['statut'] == 1) $this->redirect("adminhome");
-            else $this->redirect("home");
+            print_r($data);
+
+//            if($data['statut'] == 1) $this->redirect("adminhome");
+//            else $this->redirect("home");
         } else {
             throw new Exception("Vous avez rentré les mauvais identifiants");
-
         }
     }
 }
