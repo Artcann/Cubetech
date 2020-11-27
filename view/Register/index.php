@@ -4,8 +4,6 @@ $this->style = "public/css/index.css";
 $this->script = "public/js/register.js";
 ?>
 
-<?php include_once "view/header.html"; ?>
-
 <h1>Inscription</h1>
 
 <h3>Veuillez remplir le formulaire</h3>

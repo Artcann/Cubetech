@@ -19,7 +19,7 @@ class ControllerAdmincaserne extends ControllerAdmin {
     {
         $data = $this->caserne->getAllCaserne();
 
-        $this->generateView($data);
+        $this->generateView(array("data" => $data));
     }
 
     public function create() {

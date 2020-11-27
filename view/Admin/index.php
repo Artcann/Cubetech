@@ -5,8 +5,6 @@ $this->style = "public/css/index.css";
 
 ?>
 
-<?php include_once "view/header.html"; ?>
-
 <?php /** @noinspection PhpUndefinedVariableInspection */
 echo "<h1>Bienvenue ".$pseudo." sur le backoffice de  CubeTech</h1>" ?>
 

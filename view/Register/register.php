@@ -5,8 +5,6 @@ $this->style = "public/css/index.css";
 $this->script = "public/js/home.js";
 ?>
 
-<?php include_once "view/header.html"; ?>
-
 <h1>Enregistrement fini.</h1>
 
 <p>

@@ -66,4 +66,8 @@ class View
             throw new Exception("Fichier ".$file." introuvable");
         }
     }
+
+    private function sanitize($value) {
+        return htmlspecialchars($value, ENT_QUOTES, 'UTF-8', false);
+    }
 }

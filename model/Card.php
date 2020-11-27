@@ -1,9 +1,11 @@
 <?php
 
+require_once 'Framework/Model.php';
+
 /**
  * Class Card
  */
-class Card extends model {
+class Card extends Model {
 
     /**
      * @return array

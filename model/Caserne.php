@@ -13,18 +13,25 @@ class Caserne extends Model {
      */
     public function getCaserneById($id)
     {
-        $sql = "SELECT ville, addresse, nbMilitaire, nbOpex FROM caserne WHERE id=(?)";
+        $sql = "SELECT id, ville, addresse, nbMilitaire, nbOpex FROM caserne WHERE id=(?)";
 
         return $this->executeRequest($sql, array($id))->fetch();
     }
 
     /**
-     * @return bool|PDOStatement
+     * @return array
      */
     public function getAllCaserne() {
-        $sql = "SELECT ville, addresse, nbMilitaire, nbOpex FROM caserne";
+        $sql = "SELECT id, ville, addresse, nbMilitaire, nbOpex FROM caserne";
 
-        return $this->executeRequest($sql);
+        $dataArr = array();
+        $response = $this->executeRequest($sql);
+
+        while($data = $response->fetch()) {
+            $dataArr[$data['id']] = $data;
+        }
+
+        return $dataArr;
     }
 
     /**

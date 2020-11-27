@@ -5,10 +5,8 @@ $this->style = "public/css/index.css";
 
 ?>
 
-<?php include_once "view/header.html"; ?>
-
 <?php /** @noinspection PhpUndefinedVariableInspection */
-echo "<h1>Bienvenue ".$pseudo." sur le backoffice de  CubeTech</h1>" ?>
+echo "<h1>Bienvenue ".$this->sanitize($prenom)." sur le backoffice de  CubeTech</h1>" ?>
 
 <img id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
 

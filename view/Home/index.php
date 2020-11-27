@@ -4,14 +4,13 @@ $this->title = "Acceuil";
 $this->style = "public/css/index.css";
 $this->script = "public/js/home.js";
 ?>
-    <?php include_once "view/header.html"; ?>
-    <a onload="adminAccess()" href="Adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
+    <a onload="adminAccess()" href="adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
     <?php /** @noinspection PhpUndefinedVariableInspection */
     echo "<h1>Bienvenue ". $data['prenom'] . " sur le site CubeTech</h1>" ?>
 
     <img onload="adminAccess()" id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
 
-    <a href="Home/disconnect">Disconnect</a>
+    <a href="home/disconnect">Disconnect</a>
     
     <div>
         <h2>
