@@ -30,10 +30,9 @@ class ControllerLogin extends Controller
             $this->request->getSession()->setAttribute("user", $data);
             $this->request->getCookies()->setValue('statut', $data['statut']);
 
-            
-            setcookie("statut", $data['statut']);
-//            if($data['statut'] == 1) $this->redirect("adminhome");
-//            else $this->redirect("home");
+
+            if($data['statut'] == 1) $this->redirect("adminhome");
+            else $this->redirect("home");
         } else {
             throw new Exception("Vous avez rentré les mauvais identifiants");
         }

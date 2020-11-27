@@ -6,7 +6,7 @@ $this->script = "public/js/home.js";
 ?>
     <?php include_once "view/header.html"; ?>
     <a onload="adminAccess()" href="Adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
-    <?php echo "<h1>Bienvenue ". $prenom . " sur le site CubeTech</h1>" ?>
+    <?php echo "<h1>Bienvenue ". $data['prenom'] . " sur le site CubeTech</h1>" ?>
 
     <img onload="adminAccess()" id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
 
@@ -14,15 +14,15 @@ $this->script = "public/js/home.js";
     
     <div>
         <h2>
-            <?php echo  
-            "Numéro de matricule: " . $matricule . "<br/>" .
-            "Grade : " . $grade . "<br/>" .
-            "Nom : " . $nom . "<br/>" .
-            "Prénom : " . $prenom . "<br/>" .
-            "Date de naissance : " . $naissance . "<br/>" .
-            "Nationalité : " . $nationalite . "<br/>" .
-            "Caserne de rattachement : " . $caserne . "<br/>" .
-            "Corps d'armée : " . $corps . "<br/>" . $mail ?>
+            <?php echo
+            "Numéro de matricule: " . $data["matricule"] . "<br/>" .
+            "Grade : " . $data["grade"] . "<br/>" .
+            "Nom : " . $data["nom"] . "<br/>" .
+            "Prénom : " . $data['prenom'] . "<br/>" .
+            "Date de naissance : " . $data['naissance'] . "<br/>" .
+            "Nationalité : " . $data['nationalite'] . "<br/>" .
+            "Caserne de rattachement : " . $data['caserne'] . "<br/>" .
+            "Corps d'armée : " . $data['corps'] . "<br/>" . $data['mail'] ?>
         </h2>
     </div>
 
