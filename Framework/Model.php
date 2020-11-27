@@ -8,12 +8,13 @@ require_once("Configuration.php");
 abstract class Model   {
 
     private static $db;
-
+    
     /**
      * @param $sql
      * @param null $arg
      * @return bool|PDOStatement
      */
+
     protected function executeRequest($sql, $arg = null) {
         if($arg == null) {
             $results = self::getDb()->query($sql);
@@ -30,6 +31,7 @@ abstract class Model   {
      * @throws Exception
      * @throws Exception
      */
+
     private static function getDb()
     {
         if(self::$db == null) {

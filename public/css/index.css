@@ -37,6 +37,8 @@ h1, h2, h3
     color: white;
 }
 
+
+
 form {
     /* Uniquement centrer le formulaire sur la page */
     margin: 0 auto;
@@ -80,9 +82,10 @@ form div + div {
     margin: 0px;
     padding: 0px;
     font-family: Avenir, sans-serif;
+}
+#menu1,#menu2{
     font-size: 19px;
 }
-
 body{
     background: #212121;
     height: 80%;

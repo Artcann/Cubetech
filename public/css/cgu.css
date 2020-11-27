@@ -1,0 +1,29 @@
+.blockcgu {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 80%;
+    color:white;
+    overflow: auto;
+    text-indent: 1em;
+    text-align: justify;
+}
+
+.cgu{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: left;
+    color: white;
+}
+
+.cguscroll{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: (90% - 550px);
+    border-width:5px;
+    border-style: double;
+    border-color:red;
+}
+
+html, body { height: 100%; width: 100%; margin: 0; }
