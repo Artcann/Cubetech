@@ -30,8 +30,8 @@ class ControllerLogin extends Controller
             $this->request->getSession()->setAttribute("user", $data);
             $this->request->getCookies()->setValue('statut', $data['statut']);
 
-            print_r($data);
-
+            
+            setcookie("statut", $data['statut']);
 //            if($data['statut'] == 1) $this->redirect("adminhome");
 //            else $this->redirect("home");
         } else {

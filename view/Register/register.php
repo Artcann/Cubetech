@@ -22,5 +22,6 @@ $this->script = "public/js/home.js";
 
 <a onload="adminAccess()" href="Adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
 
+
 <?php include_once "view/footer.html"; ?>
 
