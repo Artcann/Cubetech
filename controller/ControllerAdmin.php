@@ -9,7 +9,10 @@ abstract class ControllerAdmin extends Controller
 {
 
     /**
+     * Je tente d'expliquer que cette fonction execute une action
+     *
      * @param $action
+     * @author Arthur Cann <arthur.cann@isep.fr>
      * @throws Exception
      */
     public function executeAction($action)
