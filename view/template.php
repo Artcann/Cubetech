@@ -5,6 +5,7 @@
     <base href="<?= $racineWeb ?>" >
     <title><?= $title ?></title>
     <script type="text/javascript" src="<?= $script ?>"></script>
+    <link href=<?= "public/css/index.css" ?> rel="stylesheet" />
     <link href=<?= $style ?> rel="stylesheet" />
 </head>
 
