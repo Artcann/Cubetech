@@ -63,4 +63,10 @@ class User extends Model
         $this->executeRequest($sql);
 
     }
+
+    public function modifyPassword($id, $password) {
+        $sql = "UPDATE user SET password= ? WHERE id= ?";
+
+        $this->executeRequest($sql, array($password, $id));
+    }
 }
