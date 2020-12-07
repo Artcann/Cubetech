@@ -16,7 +16,7 @@ class ControllerAdmincard extends ControllerAdmin {
 
     public function index() {
 
-        $this->generateView();
+        $this->generateView(array("data" => $this->card->getAllCards()));
     }
 
     public function create() {

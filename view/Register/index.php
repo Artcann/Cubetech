@@ -51,7 +51,7 @@ $this->script = "public/js/register.js";
     <div>
         <label for="password2">Confirmer mot de passe : </label><input type="password" name="password2" id="password2" required>
     </div>
-    <div onclick="return validateRegister();">
+    <div onclick="return validateForm();">
         <label for="submit">Envoyer</label><input type="submit">
     </div>
 </form>
