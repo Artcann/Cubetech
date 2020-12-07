@@ -18,15 +18,13 @@ abstract class ControllerAdmin extends Controller
     public function executeAction($action)
     {
 
-        if($this->request->getSession()->getAttribute("user")['statut'] == 1) {
 
-        if($this->request->getSession()->getAttribute("statut")["user"] == 1) {
+        if($this->request->getSession()->getAttribute("user")["statut"] == 1) {
 
             parent::executeAction($action);
         } else {
             parent::redirect('Home');
         }
-
     }
 
     public function disconnect()

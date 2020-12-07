@@ -13,7 +13,8 @@ $this->script = "public/js/home.js";
 </p>
 
 <?php /** @noinspection PhpUndefinedVariableInspection */
-echo "<h3>".$login."</h3>" ?>
+echo "<h3>".$login."</h3>";
+echo "<h3>".$test."</h3>"; ?>
 
 <img id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
 

@@ -36,22 +36,24 @@ class ControllerRegister extends Controller
         array_push($values, $login);
         $this->user->insertUser($values);
 
+        $test = "nada";
+
         if($this->request->isParameterSet('mail')) {
-            $to = $this->request->getParameter('mail');
+            //$to = $this->request->getParameter('mail');
             echo 'test';
-            //$to = "art.cann@orange.fr";
+            $to = "art.cann@orange.fr";
             $subject = "TESTING";
             $message = "Bonjour, votre identifiant de connexion est : " . $login . ".";
             $headers = "From: arthur.cann.29@gmail.com" . "\r\n" .
                 "MIME-Version: 1.0" . "\r\n" .
                 "Content-type: text/html; charset=utf8";
             if(mail($to, $subject, $message, $headers)) {
-                echo 'mail sent';
+                $test = 'mail sent';
             } else {
-                echo 'nope';
+                $test = 'nope';
             }
         }
 
-        $this->generateView(array("login" => $login));
+        $this->generateView(array("login" => $login, "test" => $test));
     }
 }

@@ -27,6 +27,7 @@ $this->script = "public/js/home.js";
                         "Nationalité : " . $data['nationalite'] . "<br/>" .
                         "Caserne de rattachement : " . $data['caserne'] . "<br/>" .
                         "Corps d'armée : " . $data['corps'] . "<br/>" .
+                        "Statut : " . $statut . "<br/>" .
                         "Adresse email : " . $data['mail'] . "</p>" ?> 
                     </p>
                 </div>
@@ -53,7 +54,7 @@ $this->script = "public/js/home.js";
                     <center><img src="public/images/calendar.jpg"></center>
                 </div>
                 <div class="row2-col3">
-                     <center><li id="bt1"><a id="button" href="">Déconnexion</a></li></center>
+                     <center><li id="bt1"><a id="button" href="home/disconnect">Déconnexion</a></li></center>
                 </div>     
             </div> 
          </div>

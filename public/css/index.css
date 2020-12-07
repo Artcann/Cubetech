@@ -88,7 +88,7 @@ form div + div {
 }
 body{
     background: #212121;
-    height: 80%;
+    height: 100%;
 }
 
 
@@ -191,7 +191,7 @@ footer {
     width: 100%;
     height: 75px;
     margin: 0 auto;
-    position: sticky;
+
 
 }
 
@@ -217,4 +217,32 @@ footer {
 
 #link2{
     padding-top: 23px;
+}
+
+.blockcgu {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 80%;
+    color:white;
+    overflow: auto;
+    text-indent: 1em;
+    text-align: justify;
+}
+
+.cgu{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: left;
+    color: white;
+}
+
+.cguscroll{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: (90% - 550px);
+    border-width:5px;
+    border-style: double;
+    border-color:red;
 }

@@ -10,13 +10,13 @@ echo "<h1>Bienvenue ".$this->sanitize($prenom)." sur le backoffice de  CubeTech<
 
 <img id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
 
-<a href="Adminhome/register">Enregistrer un nouvel utilisateur</a>
+<a class=button href="Adminhome/register">Enregistrer un nouvel utilisateur</a>
 
-<a href="Adminuser">Afficher les utilisateurs</a>
+<a class=button href="Adminuser">Afficher les utilisateurs</a>
 
-<a href="Admincard">Afficher les cartes</a>
-<a href="Admincard/create">Créer une nouvelle carte</a>
+<a class=button href="Admincard">Afficher les cartes</a>
+<a class=button href="Admincard/create">Créer une nouvelle carte</a>
 
-<a href="Adminhome/disconnect">Disconnect</a>
+<a class=button href="Adminhome/disconnect">Disconnect</a>
 
 <?php include_once "view/footer.html"; ?>

@@ -31,5 +31,10 @@ class ControllerAdminuser extends ControllerAdmin {
         $this->redirect('Adminuser');
     }
 
+    public function json() {
+        //header('Content-Type: application/json');
+
+        $this->generateView(array("data" => $this->user->getAllUsersRaw()));
+    }
 
 }

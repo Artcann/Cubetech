@@ -2,13 +2,11 @@
 
 $this->title = "CGU";
 
-$this->style = "public/css/cgu.css";
+$this->style = "public/css/index.css";
 
 #print_r($data);
 
 ?>
-
-<?php include_once "view/header.html"; ?>
 <br/>
 <h1 class="cgu" style="text-align: center">CGU</h1><br/>
 
@@ -21,5 +19,3 @@ foreach ($data as $datum) {
 }
 ?>
 </div>
-
-<?php include_once "view/footer.html"; ?>
