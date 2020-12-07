@@ -18,17 +18,15 @@ $this->script = "public/js/home.js";
                 </div>
                 <div class="row2-col1">
                     <p id="info">
-                        <?php echo
-                        "<p> Numéro de matricule: " . $data["matricule"] . "<br/>" .
-                        "Grade : " . $data["grade"] . "<br/>" .
-                        "Nom : " . $data["nom"] . "<br/>" .
-                        "Prénom : " . $data['prenom'] . "<br/>" .
-                        "Date de naissance : " . $data['naissance'] . "<br/>" .
-                        "Nationalité : " . $data['nationalite'] . "<br/>" .
-                        "Caserne de rattachement : " . $data['caserne'] . "<br/>" .
-                        "Corps d'armée : " . $data['corps'] . "<br/>" .
-                        "Statut : " . $statut . "<br/>" .
-                        "Adresse email : " . $data['mail'] . "</p>" ?> 
+                        Numéro de matricule : <span>$data["matricule"]</span> <br/>
+                        Grade : <span>$data["grade"]</span> <br/>
+                        Nom : <span>$data["nom"]</span> <br/>
+                        Prénom : <span>$data['prenom']</span> <br/>
+                        Date de naissance : <span>$data['naissance']</span> <br/>
+                        Nationalité : <span>$data['nationalite']</span> <br/>
+                        Caserne de rattachement : <span>$data['caserne']</span> <br/>
+                        Corps d'armée : <span>$data['corps']</span> <br/>
+                        Adresse email : <span>$data['mail']</span> 
                     </p>
                 </div>
             </div>
@@ -39,14 +37,16 @@ $this->script = "public/js/home.js";
                 </div>
                 <div class="row2-col2">
                     <h1>
-                      <?php 
-                        echo "<h1> Bienvenue ". $data['prenom'] . " sur le site CubeTech </h1>"?> 
+
+                       Bienvenue <span>$data['prenom']</span> sur le site CubeTech 
+                       
                     </h1>
                 </div>
                 <div class="row3-col2">
                     <center><li id="bt2"><a href="#" id="button2"> Accèder à mes résultats</a></li></center>
                 </div>
             </div>
+
 
             <div class="col3">
                 <div class="row1-col3">
