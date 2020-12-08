@@ -14,7 +14,7 @@ $this->script = "public/js/home.js";
          <div id="container">
             <div class="col1">
                 <div class="row1-col1">
-                     <img id="profil" src="<?php echo $data["avatar"];?>">
+                     <img id="profil" src="public/avatars/<?php echo $data["login"];?>.jpg">
                 </div>
                 <div class="row2-col1">
                     <p id="info">
@@ -26,8 +26,7 @@ $this->script = "public/js/home.js";
                         Nationalité : <span><?php echo $data["nationalite"];?></span> <br/>
                         Caserne de rattachement : <span><?php echo $data["caserne"];?></span> <br/>
                         Corps d'armée : <span><?php echo $data["corps"];?></span> <br/>
-                        Adresse email : <span><?php echo $data["mail"];?></span> <br/> 
-                        Avatar : <span><?php echo $data["avatar"];?></span> <br/> 
+                        Adresse email : <span><?php echo $data["mail"];?></span>
                     </p>
                 </div>
             </div>
