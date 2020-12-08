@@ -1,0 +1,175 @@
+
+	/* CSS commun */ 
+
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: Avenir, sans-serif;
+	font-size: 19px;
+}
+	
+body{
+	background: #212121;
+	height: 80%;
+}
+
+	 
+	 /* CSS page 1 */ 
+header{
+	background-color: black;
+	border-bottom: solid 1.5px;
+	border-color: #FF9000;
+}
+	
+#menu1 nav ul{
+	list-style: none;
+}
+
+#menu1 nav li{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+#menu1 nav ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#menu1 nav{
+	background-color: black;
+	width: 100%;
+	margin: 0;
+	position: sticky;
+	top: 0px;
+	
+}
+
+#menu1 nav a{
+	display: block;
+	text-decoration: none;
+	color: white;
+	vertical-align: center;
+	
+}
+
+#menu1 nav a:hover{
+	color: #FF9000;
+	transition-delay: 0s;
+	font-size: 19.5px;
+	text-shadow: 2px 2px 4px #FF9000;
+}
+
+#menu1 li a{
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+}
+
+#link{
+	padding-top: 26px;
+	text-align: center;
+	position: relative;
+}
+
+#pict{
+	padding-top: 3px;
+	width: 80px;
+	height:80px;
+}
+
+
+	/* CSS page 2 */ 
+
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0; 
+	right: 0;
+	border-top: solid 1.5px;
+	border-color: #FF9000;
+}
+
+
+#menu2 nav ul{
+	list-style: none;
+}
+
+#menu2 nav li{
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+
+#menu2 nav ul::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#menu2 nav{
+	background-color: black;
+	width: 100%;
+	height: 75px;
+	margin: 0 auto;
+	position: sticky;
+	
+}
+
+#menu2 nav a{
+	display: block;
+	text-decoration: none;
+	color: white;
+	vertical-align: center;
+	
+}
+
+#menu2 nav a:hover{
+	color: #FF9000;
+	transition-delay: 0s;
+	font-size: 19.5px;
+	text-shadow: 2px 2px 4px #FF9000;
+}
+
+#menu2 li a{
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#link2{
+	padding-top: 23px;
+}
+
+
+/*début du code css fait par yassine pour le formulaire de remplissage*/
+
+fieldset{
+	border-color: #FF9000;
+	color:white;
+	padding:10px;
+	text-align:left;
+	margin-top:30px;
+	margin-left:40px;
+	margin-right:70px;
+	border-radius:20px;
+	}
+
+pre{
+	text-align:left;
+}
+
+#nom{margin-left:20px;}
+#prénom{margin-left:20px;}
+#statut{margin-left:20px;}
+#corps{margin-left:20px;}
+#identifiant{margin-left:20px;}
+
+.boutons{padding-left:10%;}
+
+
+/*fin du code css fait par yassine pour le formulaire de remplissage*/
+
+
+
+
