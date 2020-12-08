@@ -14,7 +14,7 @@ $this->script = "public/js/home.js";
          <div id="container">
             <div class="col1">
                 <div class="row1-col1">
-                     <img id="profil" src="public/images/profil.png">
+                     <img id="profil" src="<?php echo $data["avatar"];?>">
                 </div>
                 <div class="row2-col1">
                     <p id="info">
@@ -26,7 +26,8 @@ $this->script = "public/js/home.js";
                         Nationalité : <span><?php echo $data["nationalite"];?></span> <br/>
                         Caserne de rattachement : <span><?php echo $data["caserne"];?></span> <br/>
                         Corps d'armée : <span><?php echo $data["corps"];?></span> <br/>
-                        Adresse email : <span><?php echo $data["mail"];?></span> 
+                        Adresse email : <span><?php echo $data["mail"];?></span> <br/> 
+                        Avatar : <span><?php echo $data["avatar"];?></span> <br/> 
                     </p>
                 </div>
             </div>
@@ -38,7 +39,7 @@ $this->script = "public/js/home.js";
                 <div class="row2-col2">
                     <h1>
 
-                       Bienvenue <span><?php echo $data["naissance"];?></span> sur le site CubeTech 
+                       Bienvenue <span><?php echo $data["login"];?></span> sur le site CubeTech 
                        
                     </h1>
                 </div>

@@ -14,7 +14,7 @@ class User extends Model
     public function getUserByLogin($login)
     {
 
-        $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail FROM user WHERE login='".$login."'";
+        $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail, avatar FROM user WHERE login='".$login."'";
 
         return $this->executeRequest($sql, array($login))->fetch();
     }
