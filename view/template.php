@@ -6,8 +6,6 @@
     $racineWeb ?>" >
     <title><?= /** @noinspection PhpUndefinedVariableInspection */
         $title ?></title>
-    <script type="text/javascript" src="<?= /** @noinspection PhpUndefinedVariableInspection */
-    $script ?>"></script>
     <link href=<?= /** @noinspection PhpUndefinedVariableInspection */
     $style ?> rel="stylesheet" />
     <script type="text/javascript" src="public/js/header.js"></script>
@@ -49,6 +47,8 @@ $content ?>
 </div>
 
 <script> isLoginPage() </script>
+<script type="text/javascript" src="<?= /** @noinspection PhpUndefinedVariableInspection */
+$script ?>"></script>
 
 </body>
 </html>

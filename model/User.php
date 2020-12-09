@@ -36,20 +36,6 @@ class User extends Model
         return $dataArr;
     }
 
-    public function getAllUsersRaw() {
-        $sql = "SELECT id, login, statut, prenom, nom FROM user";
-
-        $result = $this->executeRequest($sql);
-
-        $dataArr = array();
-
-        while ( $row = $result->fetch(PDO::FETCH_ASSOC))  {
-            $dbdata[]=$row;
-        }
-
-        return $dbdata;
-    }
-
     /**
      * @param $values
      * @return null |null
