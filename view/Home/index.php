@@ -24,8 +24,8 @@ $this->script = "public/js/home.js";
                         Prénom : <span><?php echo $data["prenom"];?></span> <br/>
                         Date de naissance : <span><?php echo $data["naissance"];?></span> <br/>
                         Nationalité : <span><?php echo $data["nationalite"];?></span> <br/>
-                        Caserne de rattachement : <span><?php echo $data["caserne"];?></span> <br/>
-                        Corps d'armée : <span><?php echo $data["corps"];?></span> <br/>
+                        Caserne de rattachement : <span><?php echo $caserne[$data['caserne']]["ville"];?></span> <br/>
+                        Corps d'armée : <span><?php echo $corps[$data["corps"]]['type'];?></span> <br/>
                         Adresse email : <span><?php echo $data["mail"];?></span>
                     </p>
                 </div>
