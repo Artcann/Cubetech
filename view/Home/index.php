@@ -14,19 +14,20 @@ $this->script = "public/js/home.js";
          <div id="container">
             <div class="col1">
                 <div class="row1-col1">
-                     <img id="profil" src="public/images/profil.png">
+                     <img id="profil" src="<?php echo $data["avatar"];?>">
                 </div>
                 <div class="row2-col1">
                     <p id="info">
-                        Numéro de matricule : <span>$data["matricule"]</span> <br/>
-                        Grade : <span>$data["grade"]</span> <br/>
-                        Nom : <span>$data["nom"]</span> <br/>
-                        Prénom : <span>$data['prenom']</span> <br/>
-                        Date de naissance : <span>$data['naissance']</span> <br/>
-                        Nationalité : <span>$data['nationalite']</span> <br/>
-                        Caserne de rattachement : <span>$data['caserne']</span> <br/>
-                        Corps d'armée : <span>$data['corps']</span> <br/>
-                        Adresse email : <span>$data['mail']</span> 
+                        Numéro de matricule : <span> <?php echo $data["matricule"];?></span> <br/>
+                        Grade : <span><?php echo $data["grade"];?></span> <br/>
+                        Nom : <span><?php echo $data["nom"];?></span> <br/>
+                        Prénom : <span><?php echo $data["prenom"];?></span> <br/>
+                        Date de naissance : <span><?php echo $data["naissance"];?></span> <br/>
+                        Nationalité : <span><?php echo $data["nationalite"];?></span> <br/>
+                        Caserne de rattachement : <span><?php echo $data["caserne"];?></span> <br/>
+                        Corps d'armée : <span><?php echo $data["corps"];?></span> <br/>
+                        Adresse email : <span><?php echo $data["mail"];?></span> <br/> 
+                        Avatar : <span><?php echo $data["avatar"];?></span> <br/> 
                     </p>
                 </div>
             </div>
@@ -38,7 +39,7 @@ $this->script = "public/js/home.js";
                 <div class="row2-col2">
                     <h1>
 
-                       Bienvenue <span>$data['prenom']</span> sur le site CubeTech 
+                       Bienvenue <span><?php echo $data["login"];?></span> sur le site CubeTech 
                        
                     </h1>
                 </div>
