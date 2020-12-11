@@ -7,7 +7,7 @@ class Test extends Model
     public function getTestByUser($idUser)
     {
 
-        $sql = "SELECT id, type, idCapteur, valeur, date, idUser, idRh, statut FROM test WHERE idUser='".$idUser."'";
+        $sql = "SELECT id, idCapteur, valeur, date,idUser, heure, idRh, statut, trame FROM test WHERE idUser='".$idUser."'";
 
         $response = $this->executeRequest($sql, array($idUser));
 

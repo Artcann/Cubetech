@@ -33,22 +33,18 @@ class ControllerHome extends ControllerSecure
             $this->generateView(array("data" => $this->request->getSession()->getAttribute('user'),
                                       "corps" => $this->corps->getAllCorps(),
                                       "caserne" => $this->caserne->getAllCaserne(),
-                                                              
-                                  ));
+                                      "test" => $this->test->getTestByUser($this->request->getSession()->getAttribute('user')['id'])                        ));
         }  else {
             $this->redirect("login");
         }
     }
 
-    public function testUser() {
-        $this->test->getTestByUser(5);
-    }
 
     public function disconnect()
     {
         parent::disconnect();
     }
-
+ 
 }
 
 
