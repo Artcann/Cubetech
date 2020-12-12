@@ -26,7 +26,7 @@ $this->script = "public/js/home.js";
                         Nationalité : <span><?php echo $data["nationalite"];?></span> <br/>
                         Caserne de rattachement : <span><?php echo $caserne[$data['caserne']]["ville"];?></span> <br/>
                         Corps d'armée : <span><?php echo $corps[$data["corps"]]['type'];?></span> <br/>
-                        Adresse email : <span><?php echo $data["mail"];?></span>
+                        Adresse email : <span><?php echo $data["mail"];?></span> <br/>
                     </p>
                 </div>
             </div>
@@ -50,8 +50,20 @@ $this->script = "public/js/home.js";
 
             <div class="col3">
                 <div class="row1-col3">
-                    <p> Agenda des rdv - Bientôt disponible </p>
-                    <center><img src="public/images/calendar.jpg"></center>
+                    <center><H3> Agenda des rendez-vous à venir </H3></center><br>
+                    
+                    <p>
+                      <?php
+                       foreach ($test as $i){
+                            if ($i['statut'] == 0){
+
+                            echo ' Le ' . $i['date'] . ' à ' . $i['heure'] . "</br>";
+
+                                }
+                            }
+                        ?>
+                    </p>
+                    
                 </div>
                 <div class="row2-col3">
                      <center><li id="bt1"><a id="button" href="home/disconnect">Déconnexion</a></li></center>
