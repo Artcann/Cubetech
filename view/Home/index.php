@@ -57,7 +57,7 @@ $this->script = "public/js/home.js";
                        foreach ($test as $i){
                             if ($i['statut'] == 0){
 
-                            echo ' Le ' . $i['date'] . ' à ' . $i['heure'] . ' avec ' . $i['idRh'] . ' pour ' . $i['idCapteur'] .  "</br>";
+                            echo ' Le ' . $i['date'] . ' à ' . $i['heure'] . "</br>";
 
                                 }
                             }

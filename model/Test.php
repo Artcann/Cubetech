@@ -19,7 +19,6 @@ class Test extends Model
 
         return($dataArr);
     }
-    
 
 
 }
