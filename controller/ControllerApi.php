@@ -24,15 +24,29 @@ class ControllerApi extends Controller
     }
 
     public function getUsers() {
-        header('Content-Type: application/json');
-        echo json_encode($this->user->getAllUsers());
+        if($this->verification()) {
+            header('Content-Type: application/json');
+            echo json_encode($this->user->getAllUsers());
+        }
     }
 
     /**
      * @param $id
      */
-    public function getTestByUser() {
-        header('Content-Type: application/json');
-        echo json_encode($this->test->getTestByUser($this->request->getParameter('id')), JSON_PRETTY_PRINT);
+    public function getRecentTestByUser() {
+        if($this->verification()) {
+            header('Content-Type: application/json');
+            echo json_encode($this->test->getRecentTestByUser($this->request->getParameter('id')), JSON_PRETTY_PRINT);
+        }
+    }
+
+
+
+    /**
+     * @return bool
+     */
+    private function verification() {
+        // return $this->request->getParameter('access') == 'moeve';
+        return true;
     }
 }

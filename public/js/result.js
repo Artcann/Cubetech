@@ -1,13 +1,21 @@
-var salles;
+var results = [0, 0, 0, 0, 0, 0, 0];
 
 let request = new XMLHttpRequest();
-request.open("GET","index.php?controller=api&action=getusers", true);
+request.open("GET","index.php?controller=api&action=getrecenttestbyuser&id=1", true);
 request.responseType = "json";
 request.onload = function() {
     if(request.status === 200) {
         let response = request.response;
-        console.log(response['1']['login']);
-
+        console.log(response);
+        let i = 0;
+        for (var key in response) {
+            if(response.hasOwnProperty(key)) {
+                results[i] = response[key]['valeur'];
+            }
+            i++;
+        }
+        console.log(results);
+        chart.update();
     } else {
         console.log('La demande réseau pour salles.json a échoué avec la réponse ' + request.status + ': ' + request.statusText)
     }
@@ -27,7 +35,7 @@ var chart = new Chart(ctx, {
             label: 'Résultat Test Fréquence Cardiaque',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [75, 80, 85, 78, 80, 83, 75]
+            data: results
         }]
     },
 

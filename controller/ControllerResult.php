@@ -11,4 +11,6 @@ class ControllerResult extends ControllerSecure
     {
         $this->generateView();
     }
+
+
 }
