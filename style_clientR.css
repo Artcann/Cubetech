@@ -165,9 +165,9 @@ pre{text-align:left;}
 
 
 button:hover{
-	transition:0.25s;
-	background:linear-gradient(to bottom right,#ff9000,red);
-	text-shadow:2px 2px 4px;
+	background-color:#ff9000;
+	text-shadow:2px 2px 5px;
+	font-size:20px;
 }
 	
 
