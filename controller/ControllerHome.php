@@ -34,7 +34,7 @@ class ControllerHome extends ControllerSecure
             $this->generateView(array("data" => $this->request->getSession()->getAttribute('user'),
                                       "corps" => $this->corps->getAllCorps(),
                                       "caserne" => $this->caserne->getAllCaserne(),
-                                      //"test" => $this->test->getTestByUser($this->request->getSession()->getAttribute('user')['id']),
+                                      "test" => $this->test->getTestByUser($this->request->getSession()->getAttribute('user')['id']),
                                       "statut" => $this->request->getSession()->getAttribute('user')['statut']
                                   )); 
 
