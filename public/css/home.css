@@ -1,3 +1,27 @@
+/* CSS commun */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir next;
+    color: white;
+}
+
+body{
+    background: #212121;
+    height: 80%;
+}
+
+li{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* CSS spécific */
+
 #container div{
     display: inline-block;
     width: 100%;
@@ -13,19 +37,25 @@
     display: block;
     margin-top: 36%;
     margin-bottom: 3%;
-    margin-left: 10%;
+    margin-left: 14%;
     border:1.5px solid #FF9000;
     box-shadow: 8px 8px 12px black;
 }
 
-#container div.col1 div.row2-col1 p{
+#container div.col1 div.row2-col1 p#info{
     height: 70%;
-    margin-left: 10%;
+    margin-left: 14%;
     font-size: 18px;
+    color: white;
 }
 
-#container div.col1 div.row2-col1 p#info{
-    color: white;
+#container div.col1 div.row2-col1 li a{
+    margin-left: 14%;
+    font-style: italic;
+}
+
+#container div.col1 div.row2-col1 li a:hover{
+    color: #FF9000;
 }
 
 #container div.col2{  
@@ -36,9 +66,11 @@
     height: 120px;
     padding-top: 6%;
 }
+
 span{
     color: #FF9000;
 }
+
 #container div.col2 div.row2-col2 h1{
     font-size: 20px;
     text-align: center;
@@ -46,24 +78,20 @@ span{
 }
 
 #bt1{
-    margin-top: 21%;
-    list-style: none;
+    margin-top: 9%;
     font-size: 18px;
 }
 
 #bt2{
-    margin-top: 68%;
-    list-style: none;
+    margin-top: 40%;
     font-size: 18px;
 }
 
 #button{
     font-weight:bold;
     background-color: #FF9000;
-    color: white;
     padding: 15px;
     border-radius: 2em;
-    text-decoration: none;
 }
 
 #button:hover{
@@ -75,10 +103,8 @@ span{
 #button2{
     font-weight:bold;
     background-color: #FF9000;
-    color: white;
     padding: 15px; 
     border-radius: 2em;
-    text-decoration: none;
     margin-top: 20%;
 }
 
@@ -103,7 +129,6 @@ span{
 }
 
 #container div.col2 div.row3-col2 a{
-    text-decoration: none;
     margin-top: 100px;
 }
 
@@ -111,155 +136,12 @@ span{
     text-align: center;
 }
 
-
-/* CSS commun */
-
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: Avenir next;
-    color: white;
-}
-
-body{
-    background: #212121;
-    height: 80%;
-}
-
-
-/* CSS menu 1 */
-header{
-    background-color: black;
-    border-bottom: solid 1.5px;
-    border-color: #FF9000;
-    font-size: 19px;
-}
-
-#menu1 nav ul{
-    list-style: none;
-}
-
-#menu1 nav li{
-    float: right;
-    width: 25%;
-    text-align: center;
-}
-
-#menu1 nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#menu1 nav{
-    background-color: black;
-    width: 100%;
-    margin: 0;
-    position: sticky;
-    top: 0px;
-
-}
-
-#menu1 nav a{
-    display: block;
-    text-decoration: none;
-    color: white;
-    vertical-align: center;
-
-}
-
-#menu1 nav a:hover{
-    color: #FF9000;
-    font-size: 21.5px;
-    text-shadow: 2px 2px 4px #FF9000;
-}
-
-#menu1 li a{
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-}
-
-#link{
-    padding-top: 26px;
-    text-align: center;
-    position: relative;
-}
-
-#pict{
-    padding-top: 3px;
-    height: 77px;
-    width: auto;
-}
-
-
-/* CSS menu 2 */
-
-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-top: solid 1.5px;
-    border-color: #FF9000;
-    font-size: 19px;
-}
-
-
-
-#menu2 nav ul{
-    list-style: none;
-}
-
-#menu2 nav li{
-    float: left;
-    width: 33%;
-    text-align: center;
-}
-
-#menu2 nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#menu2 nav{
-    background-color: black;
-    width: 100%;
-    height: 75px;
-    margin: 0 auto;
-    position: sticky;
-
-}
-
-#menu2 nav a{
-    display: block;
-    text-decoration: none;
-    color: white;
-    vertical-align: center;
-
-}
-
-#menu2 nav a:hover{
-    color: #FF9000;
-    font-size: 21.5px;
-    text-shadow: 2px 2px 4px #FF9000;
-}
-
-#menu2 li a{
-    vertical-align: middle;
-    display: inline-block;
-}
-
-#link2{
-    padding-top: 23px;
-}
-
+/* Media Queries */ 
 
 @media all and (max-width: 600px){
 
     #container div.col3 div.row1-col3 img{
-    height: 100px;
+        height: 100px;
     }
 
     #container div.col1 div.row2-col1 p{
@@ -273,60 +155,60 @@ footer {
     }
 
     #container div.col2 div.row1-col2 img{
-    height: 80px;
-    padding-top: 50%;
+        height: 80px;
+        padding-top: 50%;
     }
 
     #pict{
-    padding-top: 9px;
-    height: 60px;
+        padding-top: 9px;
+        height: 60px;
     }
 
     header{
-    font-size: 15px;
+        font-size: 15px;
     }   
 
     footer {
-    font-size: 15px;
+        font-size: 15px;
     }
 
     #bt2{
-    margin-top: 8%;
-    font-size: 9px;
+        margin-top: 8%;
+        font-size: 9px;
     }
 
     #button2{
-    padding: 1px; 
-    margin-top: 20%;
+        padding: 1px; 
+        margin-top: 20%;
     }
 
     #container div.col2 div.row2-col2 h1{
-    font-size: 0px;
-    padding-top: 0%;
+        font-size: 0px;
+        padding-top: 0%;
     }
 
     #container div.col3 div.row1-col3 img{
-    height: 60px;
-    margin-top: 12%;
-    margin-left: 10%;
+        height: 60px;
+        margin-top: 12%;
+        margin-left: 10%;
     }
 
     #container div.col3 div.row1-col3 p{
-    margin-top: 35%;
-    text-align: center;
-    font-size: 12px;
+        margin-top: 35%;
+        text-align: center;
+        font-size: 12px;
     }
 
     #bt1{
-    margin-top: 15%;
-    font-size: 9px;
+        margin-top: 15%;
+        font-size: 9px;
     }
 
     #button{
-    padding: 2px;
-    border-radius: 2em;
-    text-decoration: none;
-    margin-left: 9%;
+        padding: 2px;
+        border-radius: 2em;
+        text-decoration: none;
+        margin-left: 9%;
     }
 
     #button:hover{
@@ -336,12 +218,11 @@ footer {
         }
 
     #button2:hover{
-    padding: 3px;
-    font-size: 9px;
-    box-shadow: 2px 2px 3px black;
+        padding: 3px;
+        font-size: 9px;
+        box-shadow: 2px 2px 3px black;
     }
 }
-
 
 
 
