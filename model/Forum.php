@@ -1,6 +1,9 @@
 <?php
 require_once("Framework/Model.php");
 
+/**
+ * Class Forum
+ */
 class Forum extends Model
 {
     public function getCategoryList(){

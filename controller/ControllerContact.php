@@ -3,6 +3,9 @@ require_once 'Framework/Controller.php';
 require_once 'Framework/Configuration.php';
 require_once 'controller/ControllerSecure.php';
 
+/**
+ * Class ControllerContact
+ */
 class ControllerContact extends Controller
 {
     public function index()
