@@ -15,7 +15,7 @@ class Test extends Model
     {
 
 
-        $sql = "SELECT id, idCapteur, valeur, date,idUser, heure, idRh, statut, trame FROM test WHERE idUser='".$idUser."'";
+        $sql = "SELECT id, idCapteur, valeur, date,idUser, heure, idRh, statut, trame FROM test WHERE idUser= ?";
 
         $response = $this->executeRequest($sql, array($idUser));
 
@@ -28,13 +28,13 @@ class Test extends Model
         return($dataArr);
     }
 
-    public function getRecentTestByUser($idUser)
+    public function getRecentTestByUser($idUser, $idCapteur)
     {
 
-        $sql = "SELECT id, idCapteur, valeur, date, idUser, idRh, statut FROM test WHERE idUser='".$idUser."' 
+        $sql = "SELECT id, idCapteur, valeur, date, idUser, idRh, statut FROM test WHERE idUser= ? AND idCapteur = ?
                 ORDER BY id DESC LIMIT 7";
 
-        $response = $this->executeRequest($sql, array($idUser));
+        $response = $this->executeRequest($sql, array($idUser, $idCapteur));
 
         $dataArr = array();
 

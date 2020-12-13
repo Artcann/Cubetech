@@ -218,3 +218,8 @@ footer {
 #link2{
     padding-top: 23px;
 }
+
+#selectResult {
+    text-align: center;
+    height: 200px;
+}
