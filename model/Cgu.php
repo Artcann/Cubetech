@@ -17,4 +17,4 @@ class Cgu extends Model
         return $dataArr;
     }
 
-}
+}?>

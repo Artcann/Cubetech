@@ -30,13 +30,21 @@ class ControllerApi extends Controller
         }
     }
 
+    public function getCurrentUser() {
+        if($this->verification()) {
+            header('Content-Type: application/json');
+            echo json_encode($this->request->getSession()->getAttribute('user'));
+        }
+    }
+
     /**
      * @param $id
      */
     public function getRecentTestByUser() {
         if($this->verification()) {
             header('Content-Type: application/json');
-            echo json_encode($this->test->getRecentTestByUser($this->request->getParameter('id')), JSON_PRETTY_PRINT);
+            echo json_encode($this->test->getRecentTestByUser($this->request->getParameter('id'),
+                                                              $this->request->getParameter('idTest')), JSON_PRETTY_PRINT);
         }
     }
 

@@ -68,7 +68,7 @@ $this->script = "public/js/home.js";
                     </h1>
                 </div>
                 <div class="row3-col2">
-                    <center><li id="bt2"><a href="#" id="button2"> Accèder à mes résultats</a></li></center>
+                    <center><li id="bt2"><a href="result" id="button2"> Accèder à mes résultats</a></li></center>
                 </div>
                 <div class="row4-col2">
                      <center><li id="bt1"><a id="button" href="home/disconnect">Déconnexion</a></li></center>

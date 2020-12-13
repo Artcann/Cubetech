@@ -1,27 +1,42 @@
-var results = [0, 0, 0, 0, 0, 0, 0];
+function getUserId() {
+    return document.cookie
+        .split('; ')
+        .find(row => row.startsWith('id'))
+        .split('=')[1];
+}
 
-let request = new XMLHttpRequest();
-request.open("GET","index.php?controller=api&action=getrecenttestbyuser&id=1", true);
-request.responseType = "json";
-request.onload = function() {
-    if(request.status === 200) {
-        let response = request.response;
-        console.log(response);
-        let i = 0;
-        for (var key in response) {
-            if(response.hasOwnProperty(key)) {
-                results[i] = response[key]['valeur'];
+function ajaxRequest(idTest) {
+
+    let userId = getUserId();
+
+    let request = new XMLHttpRequest();
+    request.open("GET", "index.php?controller=api&action=getrecenttestbyuser&id=" + userId + "&idTest=" + idTest, true);
+
+    console.log("index.php?controller=api&action=getrecenttestbyuser&id=" + userId + "&idTest=" + idTest);
+
+    request.responseType = "json";
+    request.onload = function () {
+        if (request.status === 200) {
+            let response = request.response;
+            console.log(response);
+            let i = 0;
+            for (var key in response) {
+                if (response.hasOwnProperty(key)) {
+                    results[i] = response[key]['valeur'];
+                }
+                i++;
             }
-            i++;
+            chart.options.legend.display = true;
+            chart.update();
+        } else {
+            console.log('La demande réseau pour salles.json a échoué avec la réponse ' + request.status + ': ' + request.statusText)
         }
-        console.log(results);
-        chart.update();
-    } else {
-        console.log('La demande réseau pour salles.json a échoué avec la réponse ' + request.status + ': ' + request.statusText)
-    }
-};
+    };
 
-request.send();
+    request.send();
+}
+
+var results = [0, 0, 0, 0, 0, 0, 0];
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
@@ -32,7 +47,7 @@ var chart = new Chart(ctx, {
     data: {
         labels: ['0', '10', '20', '30', '40', '50', '60'],
         datasets: [{
-            label: 'Résultat Test Fréquence Cardiaque',
+            label: 'Test',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: results
@@ -40,5 +55,17 @@ var chart = new Chart(ctx, {
     },
 
     // Configuration options go here
-    options: {}
+    options: {
+        legend: {
+            display: false
+        }
+    }
 });
+
+const selectButton = document.querySelector("#selectResult");
+
+selectButton.addEventListener('change', (event) => {
+    const selectedTest = event.target.value;
+    ajaxRequest(selectedTest);
+});
+
