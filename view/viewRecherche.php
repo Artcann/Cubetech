@@ -6,7 +6,6 @@ $this->style = "public/css/styleR.css";
 
 <?php include_once "view/header.html"; ?>
 
-<?php foreach($row=mysql_fetch_array($resultat) as $row)?>
 <div>
 	<h1 id="titre">Voici le résultat de votre recherche :<h1>
 <table cellspacing="20">
@@ -24,6 +23,7 @@ $this->style = "public/css/styleR.css";
 	<th>Matricule</th>
 	</tr>
 	<tr>
+	<?php foreach($row=mysql_fetch_array($resultat) as $row)?>
 	<?php echo
 		"<th class="texte">".$row["nom"]."</th>"
 		"<th class="texte">".$row["nom"]."</th>"
