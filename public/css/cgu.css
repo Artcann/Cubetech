@@ -1,13 +1,17 @@
 .scroller {
   width: 99%;
-  height: 620px;
+  height: 80%;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
+  scrollbar-color: black;
   scrollbar-width: thin;
 }
 
 h2{
     text-align: center;
+}
+
+p{
+    text-align: justify;
 }
 
 /* CSS commun */

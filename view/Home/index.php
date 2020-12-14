@@ -19,40 +19,28 @@ $this->script = "public/js/home.js";
                 </div>
                 <div class="row2-col1">
                     <p id="info">
-                        Numéro de matricule : <span> <?php if ($data["statut"] == 3) {echo $data["matricule"];} else {echo "*";}?> </span> <br/>
 
-                        Grade : <span> <?php if ($data["statut"] == 3) {echo $data["grade"];} else {echo "*";} ?> </span> <br/>
+                        Numéro de matricule : <span> <?php echo $data["matricule"];?> </span> <br/>
 
-                        Nom : <span> <?php echo $data["nom"]; ?> </span> <br/>
+                        Grade : <span> <?php echo $data["grade"];?> </span> <br/>
 
-                        Prénom : <span> <?php echo $data["prenom"]; ?> </span> <br/>
+                        Nom : <span> <?php echo $data["nom"];?> </span> <br/>
 
-                        Date de naissance : <span> <?php echo $data["naissance"]; ?> </span> <br/>
+                        Prénom : <span> <?php echo $data["prenom"];?> </span> <br/>
 
-                        Nationalité : <span> <?php echo $data["nationalite"]; ?> </span> <br/>
+                        Date de naissance : <span> <?php echo $data["naissance"];?> </span> <br/>
 
-                        Caserne de rattachement : <span> <?php if ($data["statut"] == 3) {echo $caserne[$data['caserne']]["ville"];} else {echo "*";} ?> </span> <br/>
+                        Nationalité : <span> <?php echo $data["nationalite"];?> </span> <br/>
 
-                        Corps d'armée : <span> <?php if ($data["statut"] == 3) {echo $corps[$data["corps"]]['type'];} else{ echo "*";} ?></span> <br/>
+                        Caserne de rattachement : <span> <?php echo $caserne[$data['caserne']]["ville"];?> </span> <br/>
 
-                        Adresse email : <span> <?php echo $data["mail"]; ?> </span> <br/>
+                        Corps d'armée : <span> <?php echo $corps[$data["corps"]]['type'];?></span> <br/>
 
-                        Statut : <span><?php switch ($data["statut"]) {
-                                                    case '1':
-                                                        echo "Administrateur";
-                                                        break;
-                                                                    
-                                                    case '2':
-                                                        echo "Ressources Humaines";
-                                                        break;
-                                                                        
-                                                    case '3':
-                                                        echo "Militaire";
-                                                        break;
-                                                    }
-                                                    ;?></span> <br/>
+                        Adresse email : <span> <?php echo $data["mail"];?> </span> <br/>
+
+                        Statut : <span> <?php echo $data["statut"];?> </span> <br/>
                     </p>
-                    <li><a href="home/disconnect">Modifier mes informations </a></li>
+                    <li><a href="home/disconnect"> Modifier mes informations </a></li>
                 </div>
             </div>
 
@@ -82,13 +70,10 @@ $this->script = "public/js/home.js";
                     
                     <p>
                       <?php
-                        if ($data["statut"] == 3) {
-                           foreach ($test as $i){
-                                if ($i['statut'] == 0){
-                                echo ' Le ' . $i['date'] . ' à ' . $i['heure'] . "</br>";
-                                    }  
-                                }       
+                            foreach ($test as $i){
+                                echo $i;
                             }
+                           
                         ?>
                     </p>
                 </div>    
