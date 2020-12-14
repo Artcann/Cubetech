@@ -25,17 +25,17 @@ $this->style = "public/css/styleR.css";
 	</tr>
 	<tr>
 	<?php echo
-		"<th>".$row["nom"]"</th>"
-		"<th>".$row["prenom"]"</th>"
-		"<th>".$row["login"]"</th>"
-		"<th>".$row["mail"]"</th>"
-		"<th>".$row["naissance"]"</th>"
-		"<th>".$row["nationalite"]"</th>"
-		"<th>".$row["statut"]"</th>"
-		"<th>".$row["grade"]"</th>"
-		"<th>".$row["corps"]"</th>"
-		"<th>".$row["caserne"]"</th>"
-		"<th>".$row["matricule"]"</th>"
+		"<th>".$row["nom"]."</th>"
+		"<th>".$row["prenom"]."</th>"
+		"<th>".$row["login"]."</th>"
+		"<th>".$row["mail"]."</th>"
+		"<th>".$row["naissance"]."</th>"
+		"<th>".$row["nationalite"]."</th>"
+		"<th>".$row["statut"]."</th>"
+		"<th>".$row["grade"]."</th>"
+		"<th>".$row["corps"]."</th>"
+		"<th>".$row["caserne"]."</th>"
+		"<th>".$row["matricule"]."</th>"
 	?>
 	</tr>
 </table>
