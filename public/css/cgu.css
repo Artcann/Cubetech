@@ -18,14 +18,15 @@ h2{
     font-family: Avenir, sans-serif;
     color: white;
 }
+
 #menu1,#menu2{
     font-size: 19px;
 }
+
 body{
     background: #212121;
     height: 100%;
 }
-
 
 /* CSS page 1 */
 header{
