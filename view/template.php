@@ -6,6 +6,7 @@
     $racineWeb ?>" >
     <title><?= /** @noinspection PhpUndefinedVariableInspection */
         $title ?></title>
+    <link href="public/css/index.css" rel="stylesheet" />
     <link href=<?= /** @noinspection PhpUndefinedVariableInspection */
     $style ?> rel="stylesheet" />
     <script type="text/javascript" src="public/js/header.js"></script>
