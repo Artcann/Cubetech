@@ -39,6 +39,7 @@ $this->script = "public/js/home.js";
                         Adresse email : <span> <?php echo $data["mail"];?> </span> <br/>
 
                         Statut : <span> <?php echo $data["statut"];?> </span> <br/>
+                        
                     </p>
                     <li><a href="home/disconnect"> Modifier mes informations </a></li>
                 </div>

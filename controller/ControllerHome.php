@@ -90,13 +90,13 @@ class ControllerHome extends ControllerSecure
 
 
         $this->generateView(array("data" => $data, "corps" => $corps, "caserne" => $caserne, "test" => $tableauDeTest, "statut" => $statut)); 
-
     }
 
     public function disconnect()
     {
         parent::disconnect();
     }
+ 
  
 }
 
