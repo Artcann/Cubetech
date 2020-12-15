@@ -23,20 +23,21 @@ $this->style = "public/css/styleR.css";
 	<th>Matricule</th>
 	</tr>
 	<tr>
-	<?php foreach($row=mysql_fetch_array($resultat) as $row)?>
-	<?php echo
-		"<th class="texte">".$row["nom"]."</th>"
-		"<th class="texte">".$row["nom"]."</th>"
-		"<th class="texte">".$row["prenom"]."</th>"
-		"<th class="texte">".$row["login"]."</th>"
-		"<th class="texte">".$row["mail"]."</th>"
-		"<th class="texte">".$row["naissance"]."</th>"
-		"<th class="texte">".$row["nationalite"]."</th>"
-		"<th class="texte">".$row["statut"]."</th>"
-		"<th class="texte">".$row["grade"]."</th>"
-		"<th class="texte">".$row["corps"]."</th>"
-		"<th class="texte">".$row["caserne"]."</th>"
-		"<th class="texte">".$row["matricule"]."</th>"
+	<?php foreach($row=mysql_fetch_array($resultat) as $row)
+		{echo "<tr>
+		<th class="texte">".$row["nom"].</th>
+		<th class="texte">".$row["nom"].</th>
+		<th class="texte">".$row["prenom"].</th>
+		<th class="texte">".$row["login"].</th>
+		<th class="texte">".$row["mail"].</th>
+		<th class="texte">".$row["naissance"].</th>
+		<th class="texte">".$row["nationalite"].</th>
+		<th class="texte">".$row["statut"].</th>
+		<th class="texte">".$row["grade"].</th>
+		<th class="texte">".$row["corps"].</th>
+		<th class="texte">".$row["caserne"].</th>
+		<th class="texte">".$row["matricule"].</th>
+		       </tr>";}
 	?>
 	</tr>
 </table>
