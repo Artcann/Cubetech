@@ -1,5 +1,5 @@
 <?php
-$this->style = "public/css/index.css";
+$this->style = "public/css/contact.css";
 ?>
 
 <form id="contact" action="contact" method="post">
