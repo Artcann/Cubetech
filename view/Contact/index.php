@@ -15,5 +15,7 @@ $this->style = "public/css/index.css";
     </p>
     <textarea id="contenu" name="message" cols="45" rows="20" placeholder="Votre message...">
     </textarea>
-    <input type="submit" value="Valider">
+    <p>
+    <input id="contactsubmit" type="submit" value="Valider">
+    </p>
 </form>
