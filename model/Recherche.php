@@ -186,6 +186,6 @@ else{
 	$ctrtable="0";
 	$sql=$db->query("SELECT id,nom,prenom,login,mail,naissance,nationalite,statut,grade,corps,caserne,matricule FROM user WHERE (nom LIKE'"$_GET["nom"]".%' XOR prenom LIKE'"$_GET["prenom"]".%')
 					ORDER BY nom ASC");
-	$resultat = mysqli_query($db,$sql)}	
+	$resultat = mysqli_query($db,$sql) or die("Aucun résultat");}	
 }
 ?>
