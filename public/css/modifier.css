@@ -1,0 +1,303 @@
+.bienvenue{
+    margin-top: 10px;
+}
+
+.container{
+    height: 80%;
+    margin-top: 5%;
+    margin-left: 10%;
+    font-size: 20px;
+
+}
+
+.informations{
+    border: 2px dashed #FF9000;
+    border-radius: 5px;
+    width:20%;
+    padding: 20px;
+    display: block;
+    float: left;
+    box-shadow: 8px 8px 15px black;
+    font-size: 20px;
+}
+
+.head {
+    margin: 2px 2px 15px 2px;
+    overflow: hidden;
+}
+
+.head img {
+    height: 100px;
+    display: block;
+    margin-right: 4px;
+    border:1.5px solid #FF9000;
+    box-shadow: 8px 8px 12px black;
+    float:left;
+}
+.name{
+    display: block;
+    font-size: 150%;
+    margin: 0px 5px 5px 5px;
+    float: left;
+}
+.description{
+    color:white;
+    line-height: 2em;
+}
+span{
+    color: #FF9000;
+    margin-left: 10px;
+}
+
+.col2{
+    display: inline-block;
+    margin: 0px 10% 0px 5%;
+    height: 80%;
+    width: 55%;
+}
+.explication{
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.deconnexion{
+    padding-top: 10%;
+}
+
+#submit{
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-top: 5px;
+    padding: 5px;
+    width:auto;
+}
+
+/*COMMON CSS*/
+a
+{
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p
+{
+    text-align: center;
+    display: block;
+    color: white;
+}
+
+#LogoPNG
+{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+}
+
+h1, h3
+{
+    text-align: center;
+}
+
+h1, h2, h3
+{
+    color: white;
+}
+
+
+
+form {
+    /* Uniquement centrer le formulaire sur la page */
+    margin: 0 auto;
+    width: 500px;
+    /* Encadré pour voir les limites du formulaire */
+    padding: 1em;
+    border: 1px solid #ff9000;
+    border-radius: 1em;
+
+}
+
+label {
+    /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+    display: inline-block;
+    width: 175px;
+    text-align: left;
+    color: white;
+}
+
+input {
+    /* Pour s'assurer que tous les champs texte ont la même police.
+       Par défaut, les textarea ont une police monospace */
+    font: 1em sans-serif;
+
+
+    /* Pour que tous les champs texte aient la même dimension */
+    width: 300px;
+    box-sizing: border-box;
+
+    /* Pour harmoniser le look & feel des bordures des champs texte */
+    border: 1px solid #999;
+}
+
+form div + div {
+    margin-top: 1em;
+}
+
+/* CSS commun */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Avenir, sans-serif;
+}
+#menu1,#menu2{
+    font-size: 19px;
+}
+body{
+    background: #212121;
+    height: 100%;
+}
+
+
+/* CSS page 1 */
+header{
+    background-color: black;
+    border-bottom: solid 1.5px;
+    border-color: #FF9000;
+}
+
+#menu1 nav ul{
+    list-style: none;
+}
+
+#menu1 nav li{
+    float: right;
+    width: 25%;
+    text-align: center;
+}
+
+#menu1 nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#menu1 nav{
+    background-color: black;
+    width: 100%;
+    margin: 0;
+    position: sticky;
+    top: 0px;
+
+}
+
+#menu1 nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    vertical-align: center;
+
+}
+
+#menu1 nav a:hover{
+    color: #FF9000;
+
+    font-size: 19.5px;
+    text-shadow: 2px 2px 4px #FF9000;
+}
+
+#menu1 li a{
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+}
+
+#link{
+    padding-top: 26px;
+    text-align: center;
+    position: relative;
+}
+
+#pict{
+    padding-top: 3px;
+    height: 77px;
+    width: auto;
+}
+
+
+/* CSS page 2 */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: solid 1.5px;
+    border-color: #FF9000;
+}
+
+
+#menu2 nav ul{
+    list-style: none;
+}
+
+#menu2 nav li{
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+#menu2 nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#menu2 nav{
+    background-color: black;
+    width: 100%;
+    height: 75px;
+    margin: 0 auto;
+
+
+}
+
+#menu2 nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    vertical-align: center;
+
+}
+
+#menu2 nav a:hover{
+    color: #FF9000;
+    transition-delay: 0.25s;
+    font-size: 19.5px;
+    text-shadow: 2px 2px 4px #FF9000;
+}
+
+#menu2 li a{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#link2{
+    padding-top: 23px;
+}
+
+#selectResult {
+    text-align: center;
+    height: 200px;
+}
