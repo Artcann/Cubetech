@@ -4,9 +4,7 @@ require_once 'model/User.php';
 require_once 'Framework/Controller.php';
 require_once 'controller/ControllerSecure.php';
 
-/**
- * Class ControllerHome
- */
+
 class ControllerModifier extends ControllerSecure
 {
     private $user;
@@ -52,3 +50,4 @@ class ControllerModifier extends ControllerSecure
 
     }
 }
+

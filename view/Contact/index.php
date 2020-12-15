@@ -18,3 +18,4 @@ $this->style = "public/css/contact.css";
     </textarea>
     <input type="submit" value="Valider">
 </form>
+
