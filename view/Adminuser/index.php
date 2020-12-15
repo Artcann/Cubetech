@@ -24,9 +24,9 @@ $this->style = "public/css/userTable.css";
             <td><?php echo $v['statut']; ?></td>
             <td><?php echo $v['prenom']; ?></td>
             <td><?php echo $v['nom']; ?></td>
-            <td><a href="Adminuser/modification" class=button>Modifier</a></td>
+            <td><a href="adminuser/modification" class=button>Modifier</a></td>
             <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
-                   href="Adminuser/delete/' . $v['id'] . '" class="button">Supprimer</a>' ?></td>
+                   href="adminuser/delete/' . $v['id'] . '" class="button">Supprimer</a>' ?></td>
         </tr>
     <?php endforeach ?>
     </tbody>

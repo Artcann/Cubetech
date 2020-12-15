@@ -18,9 +18,9 @@
     <header id="menu1">
         <nav>
             <ul>
-                <li id="link"><a id="b1" href="#"> Forum </a></li>
                 <li id="link"><a id="b2" href="#"> Notifications </a></li>
-                <li id="link"><a id="b3" href="client.html"> Mon compte </a></li>
+                <li id="link"><a id="b1" href="#"> Forum </a></li>
+                <li id="link"><a id="b3" href="home"> Mon compte </a></li>
                 <li><a href="home"><img id="pict" src="public/images/logo_notext.png" alt="Logo du site"/></a></li>
             </ul>
         </nav>
@@ -36,8 +36,8 @@ $content ?>
         <nav>
             <ul>
                 <li id="link2"><a href="#">FAQ</a></li>
-                <li id="link2"><a href="#">CGU</a></li>
-                <li id="link2"><a href="#">Contact</a></li>
+                <li id="link2"><a href="cgu">CGU</a></li>
+                <li id="link2"><a href="contact">Contact</a></li>
             </ul>
         </nav>
     </footer>

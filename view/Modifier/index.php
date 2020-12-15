@@ -4,7 +4,6 @@ $this->title = "Modifier vos informations";
 $this->style = "public/css/index.css";
 $this->script = "public/js/home.js";
 ?>
-<?php include_once "view/header.html"; ?>
 <a onload="adminAccess()" href="Adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
 <?php /** @noinspection PhpUndefinedVariableInspection */
 echo "<h1>Bienvenue ". $data['prenom'] . " sur le site CubeTech</h1>" ?>
@@ -34,9 +33,3 @@ echo "<h1>Bienvenue ". $data['prenom'] . " sur le site CubeTech</h1>" ?>
 
 <a href="#"> Accèder à mes résultats </a>
 <a href="Home/disconnect">Disconnect</a>
-
-
-
-
-<?php include_once "view/footer.html"; ?>
-

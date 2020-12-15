@@ -19,11 +19,11 @@ class ControllerTest extends Controller {
         $this->generateView();
     }
 
-    public function ajoutTest() {
+    public function add() {
         $this->test->insertTest($this->request->getParameter('trame'),
                                 $this->request->getParameter('UserName'),
                                 $this->request->getSession()->getAttribute('user')['id']);
-        $this->redirect("Adminhome");
+        $this->redirect("adminhome");
     }
 
 }

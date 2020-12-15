@@ -3,7 +3,7 @@ $this->style = "public/css/index.css";
 $this->title = "Lancement d'un test";
 ?>
 
-<form id="insertTest" action="index.php?controller=Test&action=ajoutTest" method="post">
+<form id="insertTest" action="index.php?controller=Test&action=add" method="post">
 
     <label>
         Entrez les résultats du test : <input type="text" name="trame">

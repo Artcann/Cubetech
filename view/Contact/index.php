@@ -1,7 +1,7 @@
 <?php
 $this->style = "public/css/index.css";
 ?>
-<form action="ControllerContact.php" method="post">
+<form action="contact" method="post">
     <select name="type">
         <option value="">--Choisissez une option--</option>
         <option value="rendez-vous">rendez-vous</option>

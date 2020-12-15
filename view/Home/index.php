@@ -52,7 +52,7 @@ $this->script = "public/js/home.js";
                                                     }
                                                     ;?></span> <br/>
                     </p>
-                    <li><a href="home/disconnect">Modifier mes informations </a></li>
+                    <li><a href="modifier">Modifier mes informations </a></li>
                 </div>
             </div>
 

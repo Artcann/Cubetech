@@ -12,7 +12,7 @@ class ControllerContact extends Controller
     {
             $this->generateView();
     }
-    public function Getdestinataire()
+    public function getdestinataire()
     {
         if ($_POST['type']=='rendez-vous')
             $destinataire=2;
