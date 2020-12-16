@@ -3,7 +3,7 @@
 require_once 'model/Sav.php';
 require_once 'ControllerAdmin.php';
 
-class ControllerSav extends ControllerAdmin{
+class ControllerAdminsav extends ControllerAdmin {
 
     private $sav;
 
