@@ -23,4 +23,3 @@ else
 
 include('DeconnexionRecherche.php');/*déconexion à la db*/
 
-?>
