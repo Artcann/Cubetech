@@ -37,7 +37,6 @@ $this->style = "public/css/styleR.css";
 		<th>.$row["corps"].</th>
 		<th>.$row["caserne"].</th>
 		<th>.$row["matricule"].</th>
-		<th>.$row["matricule"].</th>
 			</tr>";}
 	?>
 	</tr>
