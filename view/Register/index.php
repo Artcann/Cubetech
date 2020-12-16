@@ -55,7 +55,3 @@ $this->script = "public/js/register.js";
         <label for="submit">Envoyer</label><input type="submit">
     </div>
 </form>
-
-<?php include_once "view/footer.html"; ?>
-
-

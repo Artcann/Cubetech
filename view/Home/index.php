@@ -41,7 +41,7 @@ $this->script = "public/js/home.js";
                         Statut : <span> <?php echo $data["statut"];?> </span> <br/>
                         
                     </p>
-                    <li><a href="home/disconnect"> Modifier mes informations </a></li>
+                    <li><a href="modifier">Modifier mes informations </a></li>
                 </div>
             </div>
 

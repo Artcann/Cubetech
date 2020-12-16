@@ -1,80 +1,93 @@
-#LogoPNG
-{
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 150px;
+.scroller {
+    padding: 1% 5% 5% 5%;
+    height: 620px;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+    text-align: justify;
 }
-
-h1, h3
-{
+h1{
     text-align: center;
 }
-
-h1, h2, h3
-{
-    color: white;
-}
-
-
-
-form {
-    /* Uniquement centrer le formulaire sur la page */
-    margin: 0 auto;
-    width: 500px;
-    /* Encadré pour voir les limites du formulaire */
-    padding: 1em;
-    border: 1px solid #ff9000;
-    border-radius: 1em;
-
-}
-
-label {
-    /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
-    display: inline-block;
-    width: 175px;
-    text-align: left;
-    color: white;
-}
-
-input {
-    /* Pour s'assurer que tous les champs texte ont la même police.
-       Par défaut, les textarea ont une police monospace */
-    font: 1em sans-serif;
-
-
-    /* Pour que tous les champs texte aient la même dimension */
-    width: 300px;
-    box-sizing: border-box;
-
-    /* Pour harmoniser le look & feel des bordures des champs texte */
-    border: 1px solid #999;
-}
-
-form div + div {
-    margin-top: 1em;
+h2{
+    text-align: center;
 }
 
 /* CSS commun */
 
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: Avenir, sans-serif;
+    color: white;
 }
 #menu1,#menu2{
     font-size: 19px;
 }
-
-html {
+body{
+    background: #212121;
     height: 100%;
 }
 
-body{
-    background: #212121;
-    height: 80%;
+/*CSS POPUP */
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 3px solid red;
 }
 
+/* The actual popup */
+.popup .textPopUp {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    height: 50px;
+    width: 500px;
+    padding: 8px 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .textPopUp::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
 
 /* CSS page 1 */
 header{
@@ -189,7 +202,7 @@ footer {
 
 #menu2 nav a:hover{
     color: #FF9000;
-    transition-delay: 0.05s;
+    transition-delay: 0.25s;
     font-size: 19.5px;
     text-shadow: 2px 2px 4px #FF9000;
 }
@@ -201,9 +214,4 @@ footer {
 
 #link2{
     padding-top: 23px;
-}
-
-#selectResult {
-    text-align: center;
-    height: 200px;
 }

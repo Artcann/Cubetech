@@ -23,7 +23,7 @@ abstract class ControllerAdmin extends Controller
 
             parent::executeAction($action);
         } else {
-            parent::redirect('Home');
+            parent::redirect('home');
         }
     }
 

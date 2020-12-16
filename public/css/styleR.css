@@ -1,6 +1,5 @@
 
 	/* CSS commun */ 
-    /*Début du code CSS du Gabarit, qui n'a pas éé fait par Yassine*/
 *{
 	margin: 0px;
 	padding: 0px;
@@ -141,8 +140,8 @@ footer {
 	padding-top: 23px;
 }
 
-/*Fin du code CSS (Gabarit) qui n'a pas été fait par Yassine*/
-/*Début du code CSS fait par Yassine pour le formulaire de remplissage de la page Recherche*/
+
+/*Début du code CSS pour le formulaire de remplissage de la page Recherche*/
 
 fieldset{
 	border-color: #FF9000;
@@ -165,6 +164,7 @@ pre{text-align:left;}
 
 
 button:hover{
+	
 	background-color:#ff9000;
 	text-shadow:2px 2px 5px;
 	font-size:20px;
@@ -178,10 +178,26 @@ button:hover{
 	padding:3px;
 	font-style: italic;
  }
+table{
+	 padding:20x;
+	 font-size:25px;
+	 border: 2px solid #ff9000;
+	 border-radius:15px;
+	 margin:0 auto;
+	 
+	 
+ }
+#titre{
+	padding:20px;
+	text-align:center;
+	color:white;
+	font-size:25px;
+}
 
-/*Fin du code CSS fait par Yassine pour le formulaire de remplissage de la page Recherche*/
 
-
+.texte{
+	color:#ff9000;
+}
 
 
 

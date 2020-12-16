@@ -20,8 +20,4 @@ echo "<h3>".$test."</h3>"; ?>
 
 <a href="Login">Retour à la page de connexion</a>
 
-<a onload="adminAccess()" href="Adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
-
-
-<?php include_once "view/footer.html"; ?>
-
+<a onload="adminAccess()" href="adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>

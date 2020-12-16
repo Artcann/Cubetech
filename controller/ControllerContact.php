@@ -12,21 +12,23 @@ class ControllerContact extends Controller
     {
             $this->generateView();
     }
-    public function Getdestinataire()
+
+    public function getDestinataire()
     {
-        if ($_POST['type']=='rendez-vous')
+        $type=$this->request->getSession()->getAttribute("user")['type'];
+        if ($type=='rendez-vous')
             $destinataire=2;
-        if ($_POST['type']=='Bug')
+        if ($type['type']=='Bug')
             $destinataire=3;
-        if ($_POST['type']=='suggestion')
+        if ($type['type']=='suggestion')
             $destinataire=3;
 
     }
 
     public function Message()
     {
-        $contenu=$_POST['message'];
-        $destinataire=$_POST['destinataire'];
+        $contenu=$this->request->getSession()->getAttribute("user")['message'];
+        $status=0;
         $date= date('F h:i:s A');
         $idUser=$this->request->getSession()->getAttribute("user")['name'];
     }
