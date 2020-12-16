@@ -1,4 +1,4 @@
-*<?php
+<?php
 
 $this->title = "Rechercher un militaire";
 $this->style = "public/css/styleR.css";
