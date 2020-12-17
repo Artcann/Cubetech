@@ -9,7 +9,7 @@ class ControllerResult extends ControllerSecure
 
     public function index()
     {
-        $this->generateView();
+        $this->generateView(array("id" => $this->request->getSession()->getAttribute('user')['id']));
     }
 
 
