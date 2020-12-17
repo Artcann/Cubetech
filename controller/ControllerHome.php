@@ -35,15 +35,15 @@ class ControllerHome extends ControllerSecure
     public function index() {
 
 
-        $data = $this->request->getSession()->getAttribute('user');
+        $data = $this->session->getAttribute('user');
 
         $corps = $this->corps->getAllCorps();
 
         $caserne = $this->caserne->getAllCaserne();
 
-        $test = $this->test->getTestByUser($this->request->getSession()->getAttribute('user')['id']);
+        $test = $this->test->getTestByUser($this->session->getAttribute('user')['id']);
 
-        $statut = $this->request->getSession()->getAttribute('user')['statut'];
+        $statut = $this->session->getAttribute('user')['statut'];
 
         $tableauDesRdv = array();
 
