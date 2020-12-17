@@ -1,4 +1,4 @@
-<?php
+       <?php
 
 $this->title = "Accueil";
 $this->script = "public/js/home.js";
@@ -16,18 +16,16 @@ $this->script = "public/js/home.js";
             <div class="col1">
                 <div class="row1-col1">
                      <img id="profil" src="public/avatars/<?php echo $data["login"];?>.jpg">
+                     <div class="col2-row1-col1">
+                       <b><?php echo $data['prenom'] ." " . $data['nom'] ?> </b></br>
+                       <?php if ($data["statut"] == 3) {echo $data["matricule"];} else {echo "*";}?>
+                     </div>
                 </div>
                 <div class="row2-col1">
                     <p id="info">
 
-                        Numéro de matricule : <span> <?php echo $data["matricule"];?> </span> <br/>
-
                         Grade : <span> <?php echo $data["grade"];?> </span> <br/>
-
-                        Nom : <span> <?php echo $data["nom"];?> </span> <br/>
-
-                        Prénom : <span> <?php echo $data["prenom"];?> </span> <br/>
-
+                                      
                         Date de naissance : <span> <?php echo $data["naissance"];?> </span> <br/>
 
                         Nationalité : <span> <?php echo $data["nationalite"];?> </span> <br/>
@@ -39,9 +37,9 @@ $this->script = "public/js/home.js";
                         Adresse email : <span> <?php echo $data["mail"];?> </span> <br/>
 
                         Statut : <span> <?php echo $data["statut"];?> </span> <br/>
-                        
+
                     </p>
-                    <li><a href="modifier">Modifier mes informations </a></li>
+                    <li></br><a href="modifier">Modifier mes informations </a></li>
                 </div>
             </div>
 
@@ -52,8 +50,8 @@ $this->script = "public/js/home.js";
                 <div class="row2-col2">
                     <h1>
 
-                       Bienvenue <span><?php echo $data["login"];?></span> sur le site CubeTech 
-                       
+                       Bienvenue <span><?php echo $data["login"];?></span> sur le site CubeTech
+
                     </h1>
                 </div>
                 <div class="row3-col2">
@@ -61,24 +59,24 @@ $this->script = "public/js/home.js";
                 </div>
                 <div class="row4-col2">
                      <center><li id="bt1"><a id="button" href="home/disconnect">Déconnexion</a></li></center>
-                </div> 
+                </div>
             </div>
 
 
             <div class="col3">
                 <div class="row1-col3">
                     <center><H3> Agenda des rendez-vous à venir </H3></center><br>
-                    
+
                     <p>
                       <?php
                             foreach ($test as $i){
                                 echo $i;
                             }
-                           
+
                         ?>
                     </p>
-                </div>    
-            </div> 
+                </div>
+            </div>
          </div>
 </body>
 </html>

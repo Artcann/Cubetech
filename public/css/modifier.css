@@ -72,19 +72,18 @@ a{
 }
 
 .formulaire form{
-  /* Uniquement centrer le formulaire sur la page */
-  /* margin: 0 auto; */
+
   width: 600px;
-  /* Encadré pour voir les limites du formulaire */
   padding: 1em;
   border: 1px solid #ff9000;
   border-radius: 1em;
 }
 
 .formulaire label{
-    width: 250px;
+    width: 280px;
 }
-
+.formulaire input{
+}
 
 
 #submit{
