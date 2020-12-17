@@ -11,24 +11,31 @@ $this->script = "public/js/home.js";
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="public/css/adminSav.css">
 </head>
 <body>
-	
-	<h1> RDV </h1>
+	<div>
+	<h1> Rendez-vous </h1>
 
-	<?php print_r($rdv);?>
-	<a href="#"> répondre </a>
+	<?php foreach ($rdv as $key) {
+		echo '<center>' . '<p>' . $key['date'] . ' : ' . $key['idUser'] . ' : ' . $key['contenu'] . ' ' . '<a href=""> répondre </a>' . '</p>' . '</br>' . '</center>';
+	}
+	?>
 
     <h1> BUG </h1>
 
-    <?php print_r($bug);?>
-    <a href="#"> répondre </a>
-    <h1> Suggestion </h1>
+ 	<?php foreach ($bug as $key) {
+		echo '<center>' . '<p>' . $key['date'] . ' : ' . $key['idUser'] . ' : ' . $key['contenu'] . ' ' . '<a href=""> répondre </a>'. '</p>' . '</br>' . '</center>';
+	}
+	?>
 
-    <?php print_r($suggestion);?>
-    <a href="#"> répondre </a>
-	
+	<h1> Suggestion </h1>
 
+	<?php foreach ($suggestion as $key) {
+		echo '<center>' . '<p>' . $key['date'] . ' : ' . $key['idUser'] . ' : ' . $key['contenu'] . ' ' . '<a href=""> répondre </a>'. '</p>' . '</br>' . '</center>';
+	}
+	?>
+	</div>
 </body>
 </html>
 
