@@ -73,21 +73,17 @@ $this->script = "public/js/modifier.js";
         </div>
         <div class="formulaire">
             <form action="modifier/modifier" name="modifier" method="post">
-                <label for="verifiedPassword">Current MDP :</label><input type="password" name="verifiedPassword" id="verifiedPassword">
-                <label for="password">Nouveau MDP :</label><input type="password" name="password" id="password">
+                <label for="verifiedPassword">Ancien Mot de Passe :</label><input type="password" name="verifiedPassword" id="verifiedPassword">
+                <label for="password">Nouveau Mot de Passe :</label><input type="password" name="password" id="password">
                 <span id="test"></span> <span id="same"></span>
                 <input id="submit" type="submit" value="Changer le mdp">
             </form>
         </div>
+        <div class="deconnexion">
+            <a href="Home/disconnect">Disconnect</a>
+        </div>
+
     </div>
 
-    <div class="deconnexion">
-        <a href="Home/disconnect">Disconnect</a>
-    </div>
 
 </div>
-
-
-
-<?php include_once "view/footer.html"; ?>
-
