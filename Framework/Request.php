@@ -9,7 +9,7 @@ class Request
 {
     private $parameters;
 
-    private $session;
+    //private $session;
 
     private $cookie;
 
@@ -19,7 +19,7 @@ class Request
      */
     public function __construct($parameters) {
         $this->parameters = $parameters;
-        $this->session = new Session();
+        //$this->session = new Session();
         $this->cookie = new Cookie();
     }
 
@@ -47,9 +47,9 @@ class Request
     /**
      * @return Session
      */
-    public function getSession() {
-        return $this->session;
-    }
+//    public function getSession() {
+//        return $this->session;
+//    }
 
     /**
      * @return Cookie

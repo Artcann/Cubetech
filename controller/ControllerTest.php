@@ -22,7 +22,7 @@ class ControllerTest extends Controller {
     public function add() {
         $this->test->insertTest($this->request->getParameter('trame'),
                                 $this->request->getParameter('UserName'),
-                                $this->request->getSession()->getAttribute('user')['id']);
+                                $this->session->getAttribute('user')['id']);
         $this->redirect("adminhome");
     }
 

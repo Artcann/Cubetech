@@ -33,7 +33,7 @@ class ControllerApi extends Controller
     public function getCurrentUser() {
         if($this->verification()) {
             header('Content-Type: application/json');
-            echo json_encode($this->request->getSession()->getAttribute('user'));
+            echo json_encode($this->session->getAttribute('user'));
         }
     }
 
