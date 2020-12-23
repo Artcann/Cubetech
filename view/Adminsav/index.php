@@ -14,28 +14,98 @@ $this->script = "public/js/home.js";
 	<link rel="stylesheet" type="text/css" href="public/css/adminSav.css">
 </head>
 <body>
-	<div>
+
+	<center>
+
 	<h1> Rendez-vous </h1>
 
-	<?php foreach ($rdv as $key) {
-		echo '<center>' . '<p>' . $key['date'] . ' : ' . $key['idUser'] . ' : ' . $key['contenu'] . ' ' . '<a href=""> répondre </a>' . '</p>' . '</br>' . '</center>';
-	}
-	?>
+	<div class="tableau1">
 
-    <h1> BUG </h1>
+		<table class="tableauRdv">
+	    <thead>
+	    <tr>
+	        <td>IdUser</td>
+	        <td>Date</td>
+	        <td>Contenu</td>
+	        <td>Répondre</td>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    <?php /** @noinspection PhpUndefinedVariableInspection */
+	    foreach($rdv as $k => $v): ?>
+	        <tr>
+	            <td><?php echo $v['idUser']; ?></td>
+	            <td><?php echo $v['date']; ?></td>
+	            <td><?php echo $v['contenu']; ?></td>
+	            <td><a href="">Répondre</a></td>
+	        </tr>
+	    <?php endforeach ?>
+	    </tbody>
+	    </table>
 
- 	<?php foreach ($bug as $key) {
-		echo '<center>' . '<p>' . $key['date'] . ' : ' . $key['idUser'] . ' : ' . $key['contenu'] . ' ' . '<a href=""> répondre </a>'. '</p>' . '</br>' . '</center>';
-	}
-	?>
-
-	<h1> Suggestion </h1>
-
-	<?php foreach ($suggestion as $key) {
-		echo '<center>' . '<p>' . $key['date'] . ' : ' . $key['idUser'] . ' : ' . $key['contenu'] . ' ' . '<a href=""> répondre </a>'. '</p>' . '</br>' . '</center>';
-	}
-	?>
 	</div>
+
+
+    <h1> Bug </h1>
+
+    <div class="tableau2">
+
+	    <table class="tableauBug">
+	    <thead>
+	    <tr>
+	        <td>IdUser</td>
+	        <td>Date</td>
+	        <td>Contenu</td>
+	        <td>Répondre</td>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    <?php /** @noinspection PhpUndefinedVariableInspection */
+	    foreach($bug as $k => $v): ?>
+	        <tr>
+	            <td><?php echo $v['idUser']; ?></td>
+	            <td><?php echo $v['date']; ?></td>
+	            <td><?php echo $v['contenu']; ?></td>
+	            <td><a href=""> Répondre </a></td>
+	        </tr>
+	    <?php endforeach ?>
+	    </tbody>
+	    </table>
+
+	</div>
+
+
+    <h1> Suggestion </h1>
+
+
+    <div class="tableau3">
+
+	    <table class="tableauSuggestion">
+	    <thead>
+	    <tr>
+	        <td>IdUser</td>
+	        <td>Date</td>
+	        <td>Contenu</td>
+	        <td>Répondre</td>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    <?php /** @noinspection PhpUndefinedVariableInspection */
+	    foreach($suggestion as $k => $v): ?>
+	        <tr>
+	            <td><?php echo $v['idUser']; ?></td>
+	            <td><?php echo $v['date']; ?></td>
+	            <td><?php echo $v['contenu']; ?></td>
+	            <td><a href="">Répondre</a></td>
+	        </tr>
+	    <?php endforeach ?>
+	    </tbody>
+	    </table>
+
+	</div>
+
+	</center>
+
 </body>
 </html>
 

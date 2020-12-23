@@ -25,6 +25,7 @@ class ControllerAdminsav extends ControllerAdmin {
 
 
 
+
         foreach ($sav as $key) {
 
         	if ($key['statut'] == 0) {
@@ -43,6 +44,7 @@ class ControllerAdminsav extends ControllerAdmin {
 	        	}
 	        }
         }
+
 
 
         $this->generateView(array("sav" => $sav, "rdv" => $rdv, "bug" => $bug, "suggestion" => $suggestion));
