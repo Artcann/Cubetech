@@ -189,7 +189,6 @@ footer {
 
 #menu2 nav a:hover{
     color: #FF9000;
-    transition-delay: 0.05s;
     font-size: 19.5px;
     text-shadow: 2px 2px 4px #FF9000;
 }

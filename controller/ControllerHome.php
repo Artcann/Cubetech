@@ -88,8 +88,12 @@ class ControllerHome extends ControllerSecure
             }
         }
 
+        $scriptData = Array(
+          'statut'=> $data['statut']
+        );
 
-        $this->generateView(array("data" => $data, "corps" => $corps, "caserne" => $caserne, "test" => $tableauDeTest, "statut" => $statut)); 
+        $this->generateView(array("data" => $data, "corps" => $corps, "caserne" => $caserne, "test" => $tableauDeTest, "statut" => $statut,  
+            "scriptData"=>$scriptData)); 
     }
 
     public function disconnect()
@@ -99,6 +103,7 @@ class ControllerHome extends ControllerSecure
  
  
 }
+
 
 
 

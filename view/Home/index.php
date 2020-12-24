@@ -10,6 +10,9 @@ $this->script = "public/js/home.js";
     <title></title>
     <link rel="stylesheet" type="text/css" href="public/css/template.css">
     <link rel="stylesheet" type="text/css" href="public/css/home.css">
+    <script type="text/javascript">
+        scriptData = <?php echo json_encode($scriptData); ?>;
+    </script>
 </head>
 <body>
          <div id="container">
@@ -52,7 +55,7 @@ $this->script = "public/js/home.js";
                 <div class="row2-col2">
                     <h1>
 
-                       Bienvenue <span><?php echo $data["login"];?></span> sur le site CubeTech 
+                       Bienvenue <span><?php echo $data["prenom"];?></span> sur le site CubeTech 
                        
                     </h1>
                 </div>
@@ -67,16 +70,19 @@ $this->script = "public/js/home.js";
 
             <div class="col3">
                 <div class="row1-col3">
-                    <center><H3> Agenda des rendez-vous à venir </H3></center><br>
+                    <center><H3 id ="agenda"> Agenda des rendez-vous à venir </H3></center><br>
                     
-                    <p>
-                      <?php
-                            foreach ($test as $i){
-                                echo $i;
-                            }
-                           
-                        ?>
-                    </p>
+                    <center><table class="tableau">
+                        <tbody>
+                            <?php /** @noinspection PhpUndefinedVariableInspection */
+                            foreach($test as $k): ?>
+                                <tr>
+                                    <td><?php echo $k; ?></td>
+                                    <td><a href="">  </a></td>
+                                </tr>
+                            <?php endforeach ?>
+                        </tbody>
+                    </center></table>
                 </div>    
             </div> 
          </div>

@@ -1,24 +1,38 @@
-/* CSS commun */
-
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Avenir sans-serif;
-    color: white;
-}
-
-body{
-    background: #212121;
-    height: 80%;
-}
-
 li{
     list-style: none;
 }
 
 a {
     text-decoration: none;
+    color: white;
 }
+
+p{
+    color: white;
+}
+
+.tableau{
+    border-collapse: collapse;
+    color: white;
+    min-width: 400px;
+    width: 80%;
+    box-shadow: 0 5px 50px rgba(0,0,0,1);
+    cursor: pointer;
+    margin-top: 15%;
+    border: 2px solid #FF9000;
+    
+}
+
+thead tr {
+    background-color: black;
+}
+
+th,td {
+    padding: 15px 20px;
+    text-align: center;
+    border: 2px solid #FF9000;
+}
+
 
 /* CSS spécific */
 

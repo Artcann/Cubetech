@@ -2,9 +2,8 @@
 
 $this->title = "AdminSav";
 $this->style = "public/css/index.css";
-$this->script = "public/js/home.js";
+$this->script = "public/js/adminSav.js";
 ?>
-
 
 
 <!DOCTYPE html>
@@ -27,7 +26,8 @@ $this->script = "public/js/home.js";
 	        <td>IdUser</td>
 	        <td>Date</td>
 	        <td>Contenu</td>
-	        <td>Répondre</td>
+	        <td>Contact</td>
+	        <td>Valider</td>
 	    </tr>
 	    </thead>
 	    <tbody>
@@ -37,7 +37,8 @@ $this->script = "public/js/home.js";
 	            <td><?php echo $v['idUser']; ?></td>
 	            <td><?php echo $v['date']; ?></td>
 	            <td><?php echo $v['contenu']; ?></td>
-	            <td><a href="">Répondre</a></td>
+	            <td><a href=""><center><img class="mail" src="public/images/mail.png" data-alt-src="public/images/mail2.png"></center></a></td>
+	            <td class="valider"><a href=""><center><img class="valider" src="public/images/valider.png" data-alt-src="public/images/valider1.png"></center></a></td>
 	        </tr>
 	    <?php endforeach ?>
 	    </tbody>
@@ -56,7 +57,8 @@ $this->script = "public/js/home.js";
 	        <td>IdUser</td>
 	        <td>Date</td>
 	        <td>Contenu</td>
-	        <td>Répondre</td>
+	        <td>Contact</td>
+	        <td>Valider</td>
 	    </tr>
 	    </thead>
 	    <tbody>
@@ -66,7 +68,8 @@ $this->script = "public/js/home.js";
 	            <td><?php echo $v['idUser']; ?></td>
 	            <td><?php echo $v['date']; ?></td>
 	            <td><?php echo $v['contenu']; ?></td>
-	            <td><a href=""> Répondre </a></td>
+	           	<td><a href=""><center><img class="mail" src="public/images/mail.png" data-alt-src="public/images/mail2.png"></center></a></td>
+	            <td class="valider"><a href=""><center><img class="valider" src="public/images/valider.png" data-alt-src="public/images/valider1.png"></center></a></td>
 	        </tr>
 	    <?php endforeach ?>
 	    </tbody>
@@ -86,7 +89,8 @@ $this->script = "public/js/home.js";
 	        <td>IdUser</td>
 	        <td>Date</td>
 	        <td>Contenu</td>
-	        <td>Répondre</td>
+	        <td>Contact</td>
+	        <td>Valider</td>
 	    </tr>
 	    </thead>
 	    <tbody>
@@ -96,7 +100,8 @@ $this->script = "public/js/home.js";
 	            <td><?php echo $v['idUser']; ?></td>
 	            <td><?php echo $v['date']; ?></td>
 	            <td><?php echo $v['contenu']; ?></td>
-	            <td><a href="">Répondre</a></td>
+	           	<td><a href=""><center><img class="mail" src="public/images/mail.png" data-alt-src="public/images/mail2.png"></center></a></td>
+	            <td class="valider"><a href=""><center><img class="valider" src="public/images/valider.png" data-alt-src="public/images/valider1.png"></center></a></td>
 	        </tr>
 	    <?php endforeach ?>
 	    </tbody>
