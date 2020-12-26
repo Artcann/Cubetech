@@ -33,7 +33,17 @@ th,td {
     border: 2px solid #FF9000;
 }
 
+#french {
+    width: 40px;
+}
 
+#english{
+    width: 40px;
+}
+
+.flag{
+    padding: 40px;
+}
 /* CSS spécific */
 
 #container div{

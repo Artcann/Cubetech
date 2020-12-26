@@ -46,6 +46,10 @@ $this->script = "public/js/home.js";
                     </p>
                     <li><a href="modifier">Modifier mes informations </a></li>
                 </div>
+
+                <div class="row3-col1">
+
+                </div>  
             </div>
 
             <div class="col2">
@@ -83,8 +87,14 @@ $this->script = "public/js/home.js";
                             <?php endforeach ?>
                         </tbody>
                     </center></table>
-                </div>    
+                </div>  
             </div> 
          </div>
 </body>
 </html>
+
+
+
+
+
+
