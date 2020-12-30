@@ -43,11 +43,17 @@ class ControllerHome extends ControllerSecure
 
         $test = $this->test->getTestByUser($this->session->getAttribute('user')['id']);
 
+        $testRh = $this->test->getTestByRh($this->session->getAttribute('user')['id']);
+
         $statut = $this->session->getAttribute('user')['statut'];
 
         $tableauDesRdv = array();
 
         $tableauDeTest = array();
+
+        $testRhATraiter = array();
+
+        $tableauTestRh = array();
 
 
         if ($data["statut"] != 3){
@@ -82,18 +88,30 @@ class ControllerHome extends ControllerSecure
                 }  
             }
 
-
             foreach ($tableauDesRdv as $test_à_afficher) {
                 array_push($tableauDeTest, ' Le ' . $test_à_afficher['date'] . ' à ' . $test_à_afficher['heure'] . '</br>');
             }
         }
+
+
+        else if ($data['statut'] == 'Ressource humaine') {
+
+            foreach ($testRh as $i) {
+                array_push($testRhATraiter, $i);
+            }
+
+            foreach ($testRhATraiter as $j) {
+                array_push($tableauTestRh, ' Le ' . $j['date'] . ' à ' . $j['heure'] . ' avec ' . $j['idUser'] . '</br>');
+            }
+        }
+
 
         $scriptData = Array(
           'statut'=> $data['statut']
         );
 
         $this->generateView(array("data" => $data, "corps" => $corps, "caserne" => $caserne, "test" => $tableauDeTest, "statut" => $statut,  
-            "scriptData"=>$scriptData)); 
+            "tableauTestRh" => $tableauTestRh, "scriptData"=> $scriptData)); 
     }
 
     public function disconnect()

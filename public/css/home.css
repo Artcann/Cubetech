@@ -1,3 +1,7 @@
+.alert{
+    width: 40px;
+}
+
 li{
     list-style: none;
 }

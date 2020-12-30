@@ -78,11 +78,24 @@ $this->script = "public/js/home.js";
                             foreach($test as $k): ?>
                                 <tr>
                                     <td><?php echo $k; ?></td>
-                                    <td><a href="">  </a></td>
+                                    <td><a href=""><center><img class="alert" src="public/images/notification.png"></center></a></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
                     </center></table>
+
+                     <center><table class="tableau">
+                        <tbody>
+                            <?php /** @noinspection PhpUndefinedVariableInspection */
+                            foreach($tableauTestRh as $k): ?>
+                                <tr>
+                                    <td><?php echo $k; ?></td>
+                                    <td><a href=""><center><img class="alert" src="public/images/notification.png"></td>
+                                </tr>
+                            <?php endforeach ?>
+                        </tbody>
+                    </center></table>
+
                 </div>  
             </div> 
          </div>
