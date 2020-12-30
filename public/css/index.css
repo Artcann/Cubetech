@@ -18,16 +18,7 @@ h1, h2, h3
 
 
 
-form {
-    /* Uniquement centrer le formulaire sur la page */
-    margin: 0 auto;
-    width: 500px;
-    /* Encadré pour voir les limites du formulaire */
-    padding: 1em;
-    border: 1px solid #ff9000;
-    border-radius: 1em;
 
-}
 
 label {
     /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
@@ -189,7 +180,6 @@ footer {
 
 #menu2 nav a:hover{
     color: #FF9000;
-    transition-delay: 0.05s;
     font-size: 19.5px;
     text-shadow: 2px 2px 4px #FF9000;
 }
