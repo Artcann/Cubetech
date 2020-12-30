@@ -10,6 +10,8 @@
     <link href=<?= /** @noinspection PhpUndefinedVariableInspection */
     $style ?> rel="stylesheet" />
     <script type="text/javascript" src="public/js/header.js"></script>
+    <link rel="shortcut icon" href="public/images/logo_notext.png" type="image/x-icon">
+    <link rel="icon" href="public/images/logo_notext.png" type="image/x-icon">
 </head>
 
 <body style="background-color: #212121">
@@ -35,7 +37,7 @@ $content ?>
     <footer id="menu2">
         <nav>
             <ul>
-                <li id="link2"><a href="#">FAQ</a></li>
+                <li id="link2"><a href="faq">FAQ</a></li>
                 <li id="link2"><a href="cgu">CGU</a></li>
                 <li id="link2"><a href="contact">Contact</a></li>
             </ul>

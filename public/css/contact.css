@@ -1,9 +1,11 @@
-
+*{
+    color:black;
+}
 .select-style {
     padding: 0;
     margin: 0;
-    width: 40%;
-    border-radius: 3px;
+    width: 33%;
+    border-radius: 5px;
     overflow: hidden;
     background-color: #FF9000;
     position: relative;
@@ -19,9 +21,10 @@
     -moz-appearance: none;
     appearance: none;
     text-align: center;
+    font-size: 100%;
 }
 .select-style option{
-    background-color: #999999;
+    background-color: #ddd;
     outline-color: #ddd;
 }
 .select-style select:focus {
@@ -33,26 +36,25 @@
     margin-top: 3vh;
     margin-bottom: 3vh;
     font-size: 25px;
-    width: 190px;
+    width: 20%;
 }
-form{
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-}
-#contact{margin-top: 2vh;
-    margin-bottom: 2vh;
-    height: 65vh;
+#contact{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 80%;
+    height: 100%;
+    padding-bottom: 5%;
 }
 textarea{
     border-radius: 5px;
     border: 2px solid #FF9000;
-    height: 40vh;
-    width: 70vh;
+    height: 80%;
+    width: 70%;
     resize: none;
     padding-left: 2vh;
     padding-right: 2vh;
 }
-input[type=submit]{
+#contactsubmit{
     margin-top: 2vh;
     border-radius: 13px;
     background-color: #FF9000;
@@ -60,10 +62,15 @@ input[type=submit]{
     border: none;
     text-decoration: none;
     text-align: center;
+    float: left;
 }
-input[type=submit]:hover{
+#contactsubmit:hover{
     background-color: green;
     transition: background-color 0.5s;
+}
+
+html{
+    height: 60%;
 }
 
 

@@ -1,44 +1,10 @@
 /*.scroller {
   width: 99%;
-  height: 80%;
+  height: 620px;
   overflow-y: scroll;
-  scrollbar-color: black;
+  scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
-}
-
-h2{
-    text-align: center;
-}
-
-p{
-    text-align: justify;
-}
-
-/* CSS commun */
-
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: Avenir, sans-serif;
-    color: white;
-}
-
-#menu1,#menu2{
-    font-size: 19px;
-}
-
-body{
-    background: #212121;
-    height: 100%;
-}
-
-/* CSS page 1 */
-header{
-    background-color: black;
-    border-bottom: solid 1.5px;
-    border-color: #FF9000;
-}
-
+}*/
 
 
 

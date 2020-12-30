@@ -1,7 +1,7 @@
 <?php
 require_once "Framework/Controller.php";
-require_once "Model/Test.php";
-require_once "Model/User.php";
+require_once "model/Test.php";
+require_once "model/User.php";
 
 /**
  * Class ControllerApi
@@ -33,7 +33,7 @@ class ControllerApi extends Controller
     public function getCurrentUser() {
         if($this->verification()) {
             header('Content-Type: application/json');
-            echo json_encode($this->session->getAttribute('user'));
+            echo json_encode($this->request->getSession()->getAttribute('user'));
         }
     }
 

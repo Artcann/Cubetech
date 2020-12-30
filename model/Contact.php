@@ -1,6 +1,6 @@
 <?php
 require_once "Framework/Model.php";
-require("controller/ControllerContact.php");
+require("Controller/ControllerContact.php");
 
 class Contact extends Model
 {

@@ -70,5 +70,3 @@ class User extends Model
         $this->executeRequest($sql, array($password, $id));
     }
 }
-
-

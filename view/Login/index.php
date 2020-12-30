@@ -1,5 +1,5 @@
 <?php
-$this->title = "Connexion";
+$this->title = "Connexion | Cubetech";
 $this->style = "public/css/index.css";
 ?>
     <tr>
@@ -17,6 +17,6 @@ $this->style = "public/css/index.css";
             <label for="password">Mot de passe : </label><input type="password" name="password" id="password" required>
         </div>
         <div>
-            <label for="submit">Envoyer</label><input type="submit">
+            <label for="submit"></label><input type="submit">
         </div>
     </form>

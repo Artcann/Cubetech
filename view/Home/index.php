@@ -1,4 +1,4 @@
-       <?php
+<?php
 
 $this->title = "Accueil";
 $this->script = "public/js/home.js";
@@ -16,30 +16,43 @@ $this->script = "public/js/home.js";
             <div class="col1">
                 <div class="row1-col1">
                      <img id="profil" src="public/avatars/<?php echo $data["login"];?>.jpg">
-                     <div class="col2-row1-col1">
-                       <b><?php echo $data['prenom'] ." " . $data['nom'] ?> </b></br>
-                       <?php if ($data["statut"] == 3) {echo $data["matricule"];} else {echo "*";}?>
-                     </div>
                 </div>
                 <div class="row2-col1">
                     <p id="info">
+                        Numéro de matricule : <span> <?php if ($data["statut"] == 3) {echo $data["matricule"];} else {echo "*";}?> </span> <br/>
 
-                        Grade : <span> <?php echo $data["grade"];?> </span> <br/>
+                        Grade : <span> <?php if ($data["statut"] == 3) {echo $data["grade"];} else {echo "*";} ?> </span> <br/>
 
-                        Date de naissance : <span> <?php echo $data["naissance"];?> </span> <br/>
+                        Nom : <span> <?php echo $data["nom"]; ?> </span> <br/>
 
-                        Nationalité : <span> <?php echo $data["nationalite"];?> </span> <br/>
+                        Prénom : <span> <?php echo $data["prenom"]; ?> </span> <br/>
 
-                        Caserne de rattachement : <span> <?php echo $caserne[$data['caserne']]["ville"];?> </span> <br/>
+                        Date de naissance : <span> <?php echo $data["naissance"]; ?> </span> <br/>
 
-                        Corps d'armée : <span> <?php echo $corps[$data["corps"]]['type'];?></span> <br/>
+                        Nationalité : <span> <?php echo $data["nationalite"]; ?> </span> <br/>
 
-                        Adresse email : <span> <?php echo $data["mail"];?> </span> <br/>
+                        Caserne de rattachement : <span> <?php if ($data["statut"] == 3) {echo $caserne[$data['caserne']]["ville"];} else {echo "*";} ?> </span> <br/>
 
-                        Statut : <span> <?php echo $data["statut"];?> </span> <br/>
+                        Corps d'armée : <span> <?php if ($data["statut"] == 3) {echo $corps[$data["corps"]]['type'];} else{ echo "*";} ?></span> <br/>
 
+                        Adresse email : <span> <?php echo $data["mail"]; ?> </span> <br/>
+
+                        Statut : <span><?php switch ($data["statut"]) {
+                                                    case '1':
+                                                        echo "Administrateur";
+                                                        break;
+                                                                    
+                                                    case '2':
+                                                        echo "Ressources Humaines";
+                                                        break;
+                                                                        
+                                                    case '3':
+                                                        echo "Militaire";
+                                                        break;
+                                                    }
+                                                    ;?></span> <br/>
                     </p>
-                    <li></br><a href="modifier">Modifier mes informations </a></li>
+                    <li><a href="modifier">Modifier mes informations </a></li>
                 </div>
             </div>
 
@@ -50,36 +63,36 @@ $this->script = "public/js/home.js";
                 <div class="row2-col2">
                     <h1>
 
-                       Bienvenue <span><?php echo $data["prenom"];?></span> sur le site CubeTech
-
+                       Bienvenue <span><?php echo $data["login"];?></span> sur le site CubeTech 
+                       
                     </h1>
                 </div>
                 <div class="row3-col2">
-                    <li id="bt2"><a href="result" id="button2"> Accèder à mes résultats</a></li>
+                    <center><li id="bt2"><a href="result" id="button2"> Accèder à mes résultats</a></li></center>
                 </div>
                 <div class="row4-col2">
-                     <li id="bt1"><a id="button" href="home/disconnect">Déconnexion</a></li>
-                </div>
+                     <center><li id="bt1"><a id="button" href="home/disconnect">Déconnexion</a></li></center>
+                </div> 
             </div>
 
 
             <div class="col3">
                 <div class="row1-col3">
                     <center><H3> Agenda des rendez-vous à venir </H3></center><br>
-
-                    <div class="listeRDV">
+                    
+                    <p>
                       <?php
-                      if(empty($test)){
-                        echo "Vous n'avez pas de rendez-vous de prévu.";
-                      }else{
-                            foreach ($test as $i){
-                                echo $i;
-                            }}
-
+                        if ($data["statut"] == 3) {
+                           foreach ($test as $i){
+                                if ($i['statut'] == 0){
+                                echo ' Le ' . $i['date'] . ' à ' . $i['heure'] . "</br>";
+                                    }  
+                                }       
+                            }
                         ?>
-                    </div>
-                </div>
-            </div>
+                    </p>
+                </div>    
+            </div> 
          </div>
 </body>
 </html>

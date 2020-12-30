@@ -1,7 +1,6 @@
 <?php
 
 require_once 'Request.php';
-require_once 'Session.php';
 require_once 'View.php';
 
 /**
@@ -13,21 +12,11 @@ abstract class Controller
 
     protected $request;
 
-    protected $session;
-
-
     /**
      * @param Request $request
      */
     public function setRequest(Request $request) {
         $this->request = $request;
-    }
-
-    /**
-     * @param Session $session
-     */
-    public function setSession(Session $session) {
-        $this->session = $session;
     }
 
     /**
@@ -73,7 +62,7 @@ abstract class Controller
 
     public function disconnect()
     {
-        $this->session->destroy();
+        $this->request->getSession()->destroy();
 
         header('Location: /');
     }

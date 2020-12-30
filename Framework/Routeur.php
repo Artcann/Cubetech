@@ -41,7 +41,6 @@ class Routeur
             require($fileController);
             $controller = new $classController;
             $controller->setRequest($request);
-            $controller->setSession(new Session());
             return $controller;
         } else {
             throw new Exception("Fichier '$fileController' introuvable");
