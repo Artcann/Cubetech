@@ -11,6 +11,9 @@ $this->script = "public/js/adminSav.js";
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="public/css/adminSav.css">
+	<script type="text/javascript">
+        scriptData = <?php echo json_encode($scriptData); ?>;
+    </script>
 </head>
 <body>
 
