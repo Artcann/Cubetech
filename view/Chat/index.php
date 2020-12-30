@@ -1,0 +1,31 @@
+<?php
+$this->style = "public/css/chat.css";
+$this->script = "public/js/chat.js";
+?>
+
+<div class="messages-container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum gravida nisi et accumsan. Maecenas congue justo nec vulputate bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin id tellus suscipit nulla molestie fermentum. Nulla eget enim eget lacus luctus rutrum quis a ante. Nulla convallis orci semper neque tincidunt, vitae aliquet lectus tincidunt.
+
+Sed bibendum sit amet velit eget pellentesque. Donec vitae vestibulum mi. Nunc iaculis lobortis purus at porttitor. Nulla quis venenatis turpis, pellentesque tristique justo. In vel arcu enim. Mauris consectetur mauris vel varius hendrerit. Praesent fringilla odio purus, et viverra quam tincidunt nec. Donec in porttitor risus. Phasellus vitae lorem diam. Duis ac aliquet libero. Ut mi dolor, imperdiet et metus quis, luctus euismod orci. Fusce metus lacus, ullamcorper in viverra a, tempus sed sem. Phasellus quis orci eu dui mollis vulputate. Aenean vulputate mauris leo, eget gravida sapien scelerisque sit amet. Mauris malesuada sem eros, vitae efficitur ligula lobortis vitae. Nullam vitae ex rutrum, sodales elit ac, sollicitudin sapien.
+
+Nulla et lectus sit amet leo congue posuere eu et ligula. Donec suscipit lectus elit, a viverra diam luctus nec. Pellentesque sed sagittis metus. Aenean eros sapien, euismod sed diam vitae, interdum placerat augue. Donec porta justo id iaculis porttitor. Integer eu sapien eu eros malesuada vehicula. Etiam ac est vitae felis gravida feugiat. In commodo justo sed nunc lacinia placerat. In et lacus sed eros cursus accumsan nec non lectus. Nam ut risus eget leo blandit finibus. Nullam placerat nunc nec orci commodo, sit amet dictum purus convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a viverra tortor, eu aliquet sapien. Donec gravida ullamcorper dui at commodo.
+
+Cras consectetur magna sed pellentesque lacinia. Duis pellentesque consequat pulvinar. Morbi molestie lorem in dolor malesuada, non sodales augue pretium. Aenean cursus tellus ac pulvinar euismod. Praesent sodales risus sit amet quam feugiat, vel ornare risus vestibulum. Duis arcu urna, suscipit eget mi at, laoreet pulvinar diam. Nulla a eros ut ipsum elementum sodales a sit amet augue. Integer maximus tincidunt nibh, vel imperdiet mi euismod vel. Nulla id porttitor massa.
+
+Proin eleifend iaculis mauris, ut egestas mi sollicitudin id. Cras id dictum nunc. Integer sagittis efficitur ex quis mattis. Aliquam tristique augue malesuada dui facilisis ornare. Duis iaculis nunc eu aliquet gravida. Ut eu lectus ut arcu convallis auctor. Pellentesque vehicula, neque et tincidunt vehicula, ex odio dictum augue, quis fringilla sem mi ac arcu. Morbi dignissim ligula mi, nec condimentum nibh euismod sed. Aenean vitae ligula sem.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum gravida nisi et accumsan. Maecenas congue justo nec vulputate bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin id tellus suscipit nulla molestie fermentum. Nulla eget enim eget lacus luctus rutrum quis a ante. Nulla convallis orci semper neque tincidunt, vitae aliquet lectus tincidunt.
+
+Sed bibendum sit amet velit eget pellentesque. Donec vitae vestibulum mi. Nunc iaculis lobortis purus at porttitor. Nulla quis venenatis turpis, pellentesque tristique justo. In vel arcu enim. Mauris consectetur mauris vel varius hendrerit. Praesent fringilla odio purus, et viverra quam tincidunt nec. Donec in porttitor risus. Phasellus vitae lorem diam. Duis ac aliquet libero. Ut mi dolor, imperdiet et metus quis, luctus euismod orci. Fusce metus lacus, ullamcorper in viverra a, tempus sed sem. Phasellus quis orci eu dui mollis vulputate. Aenean vulputate mauris leo, eget gravida sapien scelerisque sit amet. Mauris malesuada sem eros, vitae efficitur ligula lobortis vitae. Nullam vitae ex rutrum, sodales elit ac, sollicitudin sapien.
+
+Nulla et lectus sit amet leo congue posuere eu et ligula. Donec suscipit lectus elit, a viverra diam luctus nec. Pellentesque sed sagittis metus. Aenean eros sapien, euismod sed diam vitae, interdum placerat augue. Donec porta justo id iaculis porttitor. Integer eu sapien eu eros malesuada vehicula. Etiam ac est vitae felis gravida feugiat. In commodo justo sed nunc lacinia placerat. In et lacus sed eros cursus accumsan nec non lectus. Nam ut risus eget leo blandit finibus. Nullam placerat nunc nec orci commodo, sit amet dictum purus convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a viverra tortor, eu aliquet sapien. Donec gravida ullamcorper dui at commodo.
+
+Cras consectetur magna sed pellentesque lacinia. Duis pellentesque consequat pulvinar. Morbi molestie lorem in dolor malesuada, non sodales augue pretium. Aenean cursus tellus ac pulvinar euismod. Praesent sodales risus sit amet quam feugiat, vel ornare risus vestibulum. Duis arcu urna, suscipit eget mi at, laoreet pulvinar diam. Nulla a eros ut ipsum elementum sodales a sit amet augue. Integer maximus tincidunt nibh, vel imperdiet mi euismod vel. Nulla id porttitor massa.
+
+Proin eleifend iaculis mauris, ut egestas mi sollicitudin id. Cras id dictum nunc. Integer sagittis efficitur ex quis mattis. Aliquam tristique augue malesuada dui facilisis ornare. Duis iaculis nunc eu aliquet gravida. Ut eu lectus ut arcu convallis auctor. Pellentesque vehicula, neque et tincidunt vehicula, ex odio dictum augue, quis fringilla sem mi ac arcu. Morbi dignissim ligula mi, nec condimentum nibh euismod sed. Aenean vitae ligula sem.</p>
+</div>
+
+<div class="typing-container">
+    <form>
+        <textarea id="message" class="textinput" placeholder="Message"></textarea>
+        <input id="valid" type='submit' value="Envoyer">
+    </form>
+</div>

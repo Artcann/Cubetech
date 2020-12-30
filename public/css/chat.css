@@ -1,0 +1,23 @@
+.messages-container {
+    height: 90%;
+    width: 100%;
+    background-color: red;
+    overflow: auto;
+}
+
+.typing-container {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    display: table;
+    position: fixed;
+    background-color: green;
+}
+
+.typing-container textarea {
+    display: table-cell;
+    vertical-align: middle;
+    width: 70%;
+    outline: none;
+    resize: none;
+}
