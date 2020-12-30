@@ -23,7 +23,7 @@ class ControllerAdminsav extends ControllerAdmin {
 
         $suggestion = array();
 
-
+        $archive = array();
 
 
         foreach ($sav as $key) {
@@ -43,13 +43,30 @@ class ControllerAdminsav extends ControllerAdmin {
 	        			break;
 	        	}
 	        }
+
+	        else if ($key['statut'] == 1) {
+	        	array_push($archive, $key);
+	        }
         }
 
+        $scriptData = Array(
+          'sav'=> $sav,
+          'rdv'=> $rdv,
+          'bug'=> $bug,
+          'suggestion'=> $suggestion,
+          'archive' => $archive
+        );
 
-        $this->generateView(array("sav" => $sav, "rdv" => $rdv, "bug" => $bug, "suggestion" => $suggestion));
+        $this->generateView(array("sav" => $sav, "rdv" => $rdv, "bug" => $bug, "suggestion" => $suggestion, "archive" => $archive,
+        "scriptData" => $scriptData));
 
     }
+
 }
 
 ?>
+
+
+
+
 
