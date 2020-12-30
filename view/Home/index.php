@@ -84,6 +84,8 @@ $this->script = "public/js/home.js";
                         </tbody>
                     </center></table>
 
+
+                    <div class="tableau2">
                      <center><table class="tableau">
                         <tbody>
                             <?php /** @noinspection PhpUndefinedVariableInspection */
@@ -95,7 +97,7 @@ $this->script = "public/js/home.js";
                             <?php endforeach ?>
                         </tbody>
                     </center></table>
-
+                    </div>
                 </div>  
             </div> 
          </div>
