@@ -55,12 +55,23 @@ class ControllerApi extends Controller
         }
     }
 
-    public function getRecentMessages() {
-        if($this->verification() && $this->request->getMethod() == 'GET') {
+    public function chat() {
+        if($this->request->getMethod() == 'GET') {
             header('Content-Type: application/json');
             http_response_code(200);
-            echo json_encode($this->chat->getRecentMessages($this->session->getAttribute('user')['id'], $idContact), JSON_PRETTY_PRINT);
+            echo json_encode($this->chat->getRecentMessages($this->session->getAttribute('user')['id'], 
+                                                            $this->request->getParameter('id'),
+                                                            $this->request->getParameter('lastId')), JSON_PRETTY_PRINT);
             //echo json_encode($this->chat->getRecentMessages(1, $this->request->getParameter('id')), JSON_PRETTY_PRINT);    
+        } else if ($this->request->getMethod() == 'POST') {
+            header('Content-Type: application/json');
+            http_response_code(204);
+            $this->chat->insertMessage($this->session->getAttribute('user')['id'],
+                                       $this->request->getParameter('idContact'),
+                                       $this->request->getParameter('message'));
+        } else {
+            header('Content-Type: application/json');
+            http_response_code(400);
         }
     }
 

@@ -1,23 +1,44 @@
-.messages-container {
-    height: 90%;
-    width: 100%;
-    background-color: red;
+#message-container p {
+    font-size: 16px;
+    color : white;
+}
+
+#message-container {
+    height: 85%;
+    width: 95%;
     overflow: auto;
+    margin-left: auto;
 }
 
 .typing-container {
-    height: 10%;
+    height: 15%;
     width: 100%;
     text-align: center;
     display: table;
     position: fixed;
-    background-color: green;
 }
 
 .typing-container textarea {
     display: table-cell;
     vertical-align: middle;
     width: 70%;
+    height: 100%;
     outline: none;
     resize: none;
+    border: 2px solid #FF9000;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.typing-container input {
+    font-weight:bold;
+    padding: 12px;
+    border-radius: 2em;
+}
+
+.typing-container input:hover {
+    background-color: #FF9000;
+    padding: 15px;
+    box-shadow: 4px 4px 6px black;
 }
