@@ -29,6 +29,7 @@ class ControllerAdminsav extends ControllerAdmin {
         foreach ($sav as $key) {
 
         	if ($key['statut'] == 0) {
+
 	        	switch ($key["type"]) {
 	        		case '1':
 	        			array_push($rdv, $key);
@@ -41,27 +42,20 @@ class ControllerAdminsav extends ControllerAdmin {
 	        		case '3':
 	        			array_push($suggestion, $key);
 	        			break;
+
 	        	}
 	        }
 
 	        else if ($key['statut'] == 1) {
+
 	        	array_push($archive, $key);
+
 	        }
         }
 
-        $scriptData = Array(
-          'sav'=> $sav,
-          'rdv'=> $rdv,
-          'bug'=> $bug,
-          'suggestion'=> $suggestion,
-          'archive' => $archive
-        );
-
-        $this->generateView(array("sav" => $sav, "rdv" => $rdv, "bug" => $bug, "suggestion" => $suggestion, "archive" => $archive,
-        "scriptData" => $scriptData));
+        $this->generateView(array("sav" => $sav, "rdv" => $rdv, "bug" => $bug, "suggestion" => $suggestion, "archive" => $archive));
 
     }
-
 }
 
 ?>

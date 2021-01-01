@@ -20,6 +20,7 @@ class ControllerHome extends ControllerSecure
 
     private $caserne;
 
+
     public function __construct() {
         
         $this->user = new User();
@@ -29,6 +30,7 @@ class ControllerHome extends ControllerSecure
         $this->corps = new Corps();
 
         $this->caserne = new Caserne();
+
     }    
 
 
@@ -56,15 +58,22 @@ class ControllerHome extends ControllerSecure
         $tableauTestRh = array();
 
 
-        if ($data["statut"] != 3){
+
+        if ($data["statut"] != 3) {
+
             $data["matricule"] = '*';
+
             $data["grade"] = '*';
+
             $caserne[$data['caserne']]["ville"] = '*';
+
             $corps[$data["corps"]]['type'] = '*';
+
         }
 
 
         switch ($data['statut']) { 
+
             case '1':
                 $data['statut'] = "Administrateur";
                 break;
@@ -76,43 +85,57 @@ class ControllerHome extends ControllerSecure
             case '3':
                 $data['statut'] = "Militaire";
                 break;
+
         }
 
 
         if ($data['statut'] == 'Militaire') {
 
-
             foreach ($test as $rdv){
+
                 if ($rdv['statut'] == 0){
+
                     array_push($tableauDesRdv, $rdv);
+
                 }  
             }
 
             foreach ($tableauDesRdv as $test_à_afficher) {
+
                 array_push($tableauDeTest, ' Le ' . $test_à_afficher['date'] . ' à ' . $test_à_afficher['heure'] . '</br>');
+
             }
         }
+
 
 
         else if ($data['statut'] == 'Ressource humaine') {
 
             foreach ($testRh as $i) {
+
                 array_push($testRhATraiter, $i);
+
             }
 
             foreach ($testRhATraiter as $j) {
+
                 array_push($tableauTestRh, ' Le ' . $j['date'] . ' à ' . $j['heure'] . ' avec ' . $j['idUser'] . '</br>');
+
             }
         }
 
 
-        $scriptData = Array(
-          'statut'=> $data['statut']
-        );
+        $scriptData = Array('statut'=> $data['statut']);
 
-        $this->generateView(array("data" => $data, "corps" => $corps, "caserne" => $caserne, "test" => $tableauDeTest, "statut" => $statut,  
-            "tableauTestRh" => $tableauTestRh, "scriptData"=> $scriptData)); 
+
+        $this->generateView(array("data" => $data, "corps" => $corps, 
+                                  "caserne" => $caserne, "test" => $tableauDeTest, 
+                                  "statut" => $statut, "tableauTestRh" => $tableauTestRh, 
+                                  "scriptData"=> $scriptData
+                                 )); 
+
     }
+
 
     public function disconnect()
     {

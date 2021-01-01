@@ -21,7 +21,6 @@ $this->script = "public/js/home.js";
                      <img id="profil" src="public/avatars/<?php echo $data["login"];?>.jpg">
                      <div class="col2-row1-col1">
                        <b><?php echo $data['prenom'] ." " . $data['nom'] ?> </b></br>
-                       <?php if ($data["statut"] == 3) {echo $data["matricule"];} else {echo "*";}?>
                      </div>
                 </div>
                 <div class="row2-col1">
@@ -40,6 +39,8 @@ $this->script = "public/js/home.js";
                         Adresse email : <span> <?php echo $data["mail"];?> </span> <br/>
 
                         Statut : <span> <?php echo $data["statut"];?> </span> <br/>
+
+                        Matricule : <span> <?php echo $data["matricule"];?> </span> <br/>
 
                     </p>
                     <li></br><a href="modifier">Modifier mes informations </a></li>
