@@ -8,8 +8,32 @@ p {
     width: 100%;
 }
 
+#container input {
+    font-weight:bold;
+    padding: 12px;
+    border-radius: 2em;
+}
+
+#container input:hover {
+    background-color: #FF9000;
+    padding: 15px;
+    box-shadow: 4px 4px 6px black;
+}
+
+#container label {
+    font-size: large;
+    width: auto;
+    margin-top: 10px;
+}
+
 #container textarea {
     width: 80%;
+    font-size: 18px;
+    margin-top: 10px;
+    border: 2px solid #FF9000;
+    border-radius: 10px;
+    padding: 5px;
+    resize: none;
 }
 
 #container #title {
