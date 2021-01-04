@@ -1,0 +1,21 @@
+p {
+    color: white;
+}
+
+#container {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+#container textarea {
+    width: 80%;
+}
+
+#container #title {
+    height: 20%;
+}
+
+#container #content {
+    height: 60%;
+}

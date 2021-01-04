@@ -16,4 +16,11 @@ class Faq extends Model
         return $dataArr;
     }
 
+    public function getFaqById($id) {
+        $sql = "SELECT contenu, titre FROM faq WHERE id=?";
+        $val = array($id);
+
+        return $this->executeRequest($sql, $val)->fetch();
+    }
+
 }?>

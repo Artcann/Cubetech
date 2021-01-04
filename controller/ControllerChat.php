@@ -11,7 +11,12 @@ class ControllerChat extends Controller {
     }
 
     public function index() {
-        $this->generateView();
+        if(!$this->request->isParameterSet('id')) {
+            http_response_code(404);
+            throw new Exception('Page Not Found');
+        } else {
+            $this->generateView();
+        }
     }
 
     public function insert() {
