@@ -20,7 +20,7 @@
             <ul>
                 <li id="link"><a id="b2" href="#"> Notifications </a></li>
                 <li id="link"><a id="b1" href="#"> Forum </a></li>
-                <li id="link"><a id="b3" href="home"> Mon compte </a></li>
+                <li id="link"><a id="b3" href="Modifier"> Mon compte </a></li>
                 <li><a href="home"><img id="pict" src="public/images/logo_notext.png" alt="Logo du site"/></a></li>
             </ul>
         </nav>
@@ -53,5 +53,3 @@ $script ?>"></script>
 
 </body>
 </html>
-
-
