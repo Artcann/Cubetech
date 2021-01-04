@@ -1,7 +1,8 @@
 <?php
-$this->style = "public/css/index.css";
+$this->style = "public/css/contact.css";
 ?>
-<form id="contact" action="ControllerContact.php" method="post">
+
+<form id="contact" action="contact" method="post">
     <div class="select-style">
     <select name="type">
         <option value="">--Choisissez une option--</option>
@@ -19,3 +20,4 @@ $this->style = "public/css/index.css";
     <input id="contactsubmit" type="submit" value="Valider">
     </p>
 </form>
+
