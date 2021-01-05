@@ -21,9 +21,9 @@ class Sav extends Model
     }
 
     public function archiveSavById($id) {
-    	$sql = "UPDATE sav SET statut = 1";
+    	$sql = "UPDATE sav SET statut = 1 WHERE id= $id";
 
-    	$this->executeRequest($sql, $id);
+    	$this->executeRequest($sql);
     }
 
 }
