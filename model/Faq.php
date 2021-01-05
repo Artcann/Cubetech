@@ -29,5 +29,12 @@ class Faq extends Model
 
         return $this->executeRequest($sql, $val);
     }
+
+    public function addFaq($title, $content) {
+        $sql = "INSERT INTO faq (titre, contenu) VALUES (?, ?)";
+        $val = array($title, $content);
+
+        return $this->executeRequest($sql, $val);
+    }
 }
 ?>

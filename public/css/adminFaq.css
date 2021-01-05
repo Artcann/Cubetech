@@ -139,3 +139,7 @@ a.add-button:hover {
     border: 2px solid black;
     box-shadow: 4px 4px 6px black;
 }
+
+form {
+    height: 100%;
+}

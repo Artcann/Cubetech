@@ -27,4 +27,4 @@ $this->style = "public/css/adminFaq.css";
         </tbody>
     </table>
 </div>
-<a href='admingfaq/ajout' class='add-button'>Ajouter une question</a>
+<a href='adminfaq/ajout' class='add-button'>Ajouter une question</a>

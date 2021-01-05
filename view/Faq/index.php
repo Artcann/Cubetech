@@ -13,9 +13,9 @@ $this->script = "public/js/faq.js";
     <h1>Foire Aux Questions </h1><br/>
     <?php
     foreach ($data as $datum) {
-        echo '<h2>'.$datum['titre'].'</h2>';
+        echo MarkdownParser::render($datum['titre']);
         echo '<br/>';
-        echo '<p class="blockcgu">'.$datum['contenu'].'</p>';
+        echo MarkdownParser::render($datum['contenu']);
         echo '<br/>';
     }
     ?>
