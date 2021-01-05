@@ -4,6 +4,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 70%;
+    height: 80%;
 }
 
 #userTable thead tr td {
@@ -19,7 +20,7 @@ a.button {
     height: 20px;
     margin-top: 5px;
     text-decoration: none;
-    color: white;
+    color: black;
     border-radius: 6px;
     margin-left: auto;
     margin-right: auto;

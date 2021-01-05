@@ -23,7 +23,9 @@ $this->style = "public/css/adminHome.css";
             <a class=button href="admincard/create">Créer une nouvelle carte</a>
             <h3>Gestion de la FAQ</h3>
             <a class="button" href="adminfaq">Gérer la FAQ</a>
-
+    </div>
+    <div class="row-3">
+        <a class="button" href="home/disconnect">Déconnexion</a>
     </div>
 
 

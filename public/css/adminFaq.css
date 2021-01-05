@@ -12,6 +12,8 @@ p {
     font-weight:bold;
     padding: 12px;
     border-radius: 2em;
+    background-color:  #FF9000;
+    color: black;
 }
 
 #container input:hover {
@@ -34,6 +36,7 @@ p {
     border-radius: 10px;
     padding: 5px;
     resize: none;
+    outline: none;
 }
 
 #container #title {
@@ -42,4 +45,97 @@ p {
 
 #container #content {
     height: 60%;
+}
+
+thead tr {
+	background-color: black;
+}
+
+th,td {
+	padding: 15px 20px;
+}
+
+tbody tr, td, th{
+	border: 1.9px solid black;
+}
+
+td{
+	color: white;
+}
+
+.tableau1 { 
+  width: 100%;
+  height: 90%;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+#questionTable {
+    border-collapse: collapse;
+	min-width: 400px;
+	width: 80%;
+	box-shadow: 0 5px 50px rgba(0,0,0,1);
+	cursor: pointer;
+	padding: 15px 75px auto;
+    border: 2px solid #FF9000;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+a.button {
+    text-align: center;
+    display: block;
+    background-color: dimgrey;
+    justify-content: center;
+    width: 60%;
+    height: 20px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid orange;
+}
+
+a.button:visited {
+    color: black;
+}
+
+a.button:hover {
+    background-color: #FF9000;
+    border: 2px solid black;
+    box-shadow: 4px 4px 6px black;
+}
+
+a.add-button {
+    text-align: center;
+    display: block;
+    background-color: dimgrey;
+    justify-content: center;
+    width: 50%;
+    height: 25px;
+    padding: 7px;
+    text-decoration: none;
+    color: black;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid orange;
+    font-weight: bolder; 
+}
+
+a.add-button:visited {
+    color: black;
+}
+
+a.add-button:hover {
+    background-color: #FF9000;
+    border: 2px solid black;
+    box-shadow: 4px 4px 6px black;
 }

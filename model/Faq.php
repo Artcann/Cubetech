@@ -22,5 +22,12 @@ class Faq extends Model
 
         return $this->executeRequest($sql, $val)->fetch();
     }
+    
+    public function update($title, $content, $id) {
+        $sql = "UPDATE faq SET titre=?, contenu=? WHERE id=?";
+        $val = array($title, $content, $id);
 
-}?>
+        return $this->executeRequest($sql, $val);
+    }
+}
+?>

@@ -26,6 +26,7 @@ a.button:hover {
     box-shadow: 4px 4px 6px black;
 }
 
+
 #container {
     height: 100%;
     width: 100%;
@@ -60,4 +61,6 @@ a.button:hover {
 #container div.row-3 {
     width: 100%;
     float: bottom;
+    position: absolute;
+    bottom: 10%;
 }

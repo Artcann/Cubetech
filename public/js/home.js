@@ -7,6 +7,7 @@ if (statut === 'Administrateur'){
     document.getElementById('agenda').innerText = '';
 
     $("#button2").attr("href", "adminhome");
+
 }
 
 
