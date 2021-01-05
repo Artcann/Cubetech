@@ -56,6 +56,12 @@ class ControllerAdminsav extends ControllerAdmin {
         $this->generateView(array("sav" => $sav, "rdv" => $rdv, "bug" => $bug, "suggestion" => $suggestion, "archive" => $archive));
 
     }
+
+    public function archive() {
+    	$this->sav->archiveSavById($this->request->getParameter('id'));
+
+        $this->redirect('adminsav');
+    }
 }
 
 ?>

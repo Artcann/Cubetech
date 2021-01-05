@@ -79,7 +79,7 @@ $this->script = "public/js/home.js";
                             foreach($test as $k): ?>
                                 <tr>
                                     <td><?php echo $k; ?></td>
-                                    <td><a href=""><center><img class="alert" src="public/images/notification.png"></center></a></td>
+                                    <td><a href=""><center><img class="alert" src="public/images/notification.png" data-alt-src="public/images/alert2.png"></center></a></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
@@ -93,7 +93,7 @@ $this->script = "public/js/home.js";
                             foreach($tableauTestRh as $k): ?>
                                 <tr>
                                     <td><?php echo $k; ?></td>
-                                    <td><a href=""><center><img class="alert" src="public/images/notification.png"></td>
+                                    <td><a href=""><center><img class="alert" src="public/images/notification.png" data-alt-src="public/images/alert2.png"></td>
                                 </tr>
                             <?php endforeach ?>
                         </tbody>
@@ -104,6 +104,7 @@ $this->script = "public/js/home.js";
          </div>
 </body>
 </html>
+
 
 
 
