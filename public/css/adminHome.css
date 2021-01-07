@@ -1,20 +1,4 @@
-a.button {
-    text-align: center;
-    display: block;
-    background-color: dimgrey;
-    justify-content: center;
-    width: 50%;
-    height: 25px;
-    padding: 7px;
-    margin-top: 5px;
-    text-decoration: none;
-    color: black;
-    border-radius: 6px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid orange;
-    font-weight: bolder; 
-}
+
 
 a.button:visited {
     color: black;
@@ -26,39 +10,33 @@ a.button:hover {
     box-shadow: 4px 4px 6px black;
 }
 
-
-#container {
-    height: 100%;
-    width: 100%;
-}
-
-#container div.row-1 {
+.container div.row-1 {
     height: 10%;
     width: 100%;
     display: table;
     text-align: center;
 }
 
-#container div.row-1 h1 {
+.container div.row-1 h1 {
     display: table-cell;
     vertical-align: middle;
 }
 
-#container div.row-2 {
+.container div.row-2 {
     height: 70%;
 }
 
-#container div.row-2 div.row-2-col-1 {
+.container div.row-2 div.row-2-col-1 {
     width: 50%;
     float: left;
 }
 
-#container div.row-2 div.row-2-col-2 {
+.container div.row-2 div.row-2-col-2 {
     width: 50%;
     margin-left: 50%;
 }
 
-#container div.row-3 {
+.container div.row-3 {
     width: 100%;
     float: bottom;
     position: absolute;

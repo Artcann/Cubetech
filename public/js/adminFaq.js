@@ -4,14 +4,12 @@ let sendModif = function() {
 
     $.ajax({
         type: "POST",
-        url: "adminfaq/modify",
+        url: "adminfaq/modification",
         data: "title=" + titleArea.value 
         + "&content=" + contentArea.value
         +"&id=" + id,
         success: function (response, statut, xhr) {
-            console.log(response);
-            console.log(statut);
-            console.log(xhr);
+            window.location.href = "adminfaq";
         }
     });
 }

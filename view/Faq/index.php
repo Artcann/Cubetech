@@ -7,9 +7,7 @@ $this->script = "public/js/faq.js";
 
 
 ?>
-<br/>
-
-<div class="scroller">
+<div class="container">
     <h1>Foire Aux Questions </h1><br/>
     <?php
     foreach ($data as $datum) {

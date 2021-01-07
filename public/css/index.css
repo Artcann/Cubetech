@@ -16,7 +16,9 @@ h1, h2, h3
     color: white;
 }
 
-
+h1{
+	padding: 25px;
+}
 
 
 
@@ -57,15 +59,32 @@ form div + div {
     font-size: 19px;
 }
 
-html {
+html, body {
     height: 100%;
 }
 
 body{
     background: #212121;
-    height: 80%;
 }
 
+
+footer {
+    height: 10%;
+}
+
+header {
+    height: 10%;
+}
+
+
+/* Global Container Div */
+
+.container {
+    text-align: center;
+    height: 80%;
+    width: 100%;
+    overflow-y: scroll;
+}
 
 /* CSS page 1 */
 header{
@@ -76,6 +95,7 @@ header{
 
 #menu1 nav ul{
     list-style: none;
+    height: 100%;
 }
 
 #menu1 nav li{
@@ -93,18 +113,17 @@ header{
 #menu1 nav{
     background-color: black;
     width: 100%;
+    height: 100%;
     margin: 0;
     position: sticky;
     top: 0px;
-
 }
 
 #menu1 nav a{
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: white;
-    vertical-align: center;
-
+    vertical-align: middle;
 }
 
 #menu1 nav a:hover{
@@ -124,6 +143,7 @@ header{
     padding-top: 26px;
     text-align: center;
     position: relative;
+    vertical-align: middle;
 }
 
 #pict{
@@ -164,7 +184,7 @@ footer {
 #menu2 nav{
     background-color: black;
     width: 100%;
-    height: 75px;
+    height: 100%;
     margin: 0 auto;
 
 
@@ -196,4 +216,75 @@ footer {
 #selectResult {
     text-align: center;
     height: 200px;
+}
+
+/* Buttons */
+
+a.button {
+    text-align: center;
+    display: block;
+    background-color: dimgrey;
+    justify-content: center;
+    width: 50%;
+    height: 25px;
+    padding: 3px;
+    padding-top: 9px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid orange;
+    font-weight: bolder; 
+}
+
+a.button:visited {
+    color: black;
+}
+
+a.button:hover {
+    background-color: #FF9000;
+    border: 2px solid black;
+    box-shadow: 4px 4px 6px black;
+}
+
+/* Tables */
+
+thead tr {
+	background-color: black;
+}
+
+th,td {
+	padding: 15px 20px;
+}
+
+tbody tr, td, th{
+	border: 1.9px solid black;
+}
+
+td{
+	color: white;
+}
+
+.table-container { 
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;  
+}
+
+.table {
+    border-collapse: collapse;
+	min-width: 400px;
+	width: 80%;
+	box-shadow: 0 5px 50px rgba(0,0,0,1);
+	cursor: pointer;
+	padding: 15px 75px auto;
+    border: 2px solid #FF9000;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow: hidden;
 }

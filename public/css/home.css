@@ -23,6 +23,7 @@ p{
   scrollbar-width: thin;
   margin-top: 0px;
   padding-top: 0px;
+  overflow: hidden;
 }
 
 .tableau{

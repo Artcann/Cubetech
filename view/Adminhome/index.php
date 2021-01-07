@@ -5,7 +5,7 @@ $this->style = "public/css/adminHome.css";
 
 ?>
 
-<div id="container">
+<div class="container">
     <div class="row-1">
         <?php echo "<h1>Bienvenue ".$this->sanitize($prenom)." sur le backoffice de  CubeTech</h1>" ?>
     </div>

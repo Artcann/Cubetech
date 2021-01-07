@@ -17,7 +17,6 @@
 
 <body style="background-color: #212121">
 
-<div id="header" style="visibility: visible" >
     <header id="menu1">
         <nav>
             <ul>
@@ -28,23 +27,20 @@
             </ul>
         </nav>
     </header>
-</div>
 
 <?= /** @noinspection PhpUndefinedVariableInspection */
 $content ?>
 
 <!-- Footer : les éléments propres à la navigation du footer sont indicés "2" -->
-<div id="footer" style="display: block;">
     <footer id="menu2">
         <nav>
             <ul>
-                <li id="link2"><a href="#">FAQ</a></li>
+                <li id="link2"><a href="faq">FAQ</a></li>
                 <li id="link2"><a href="cgu">CGU</a></li>
                 <li id="link2"><a href="contact">Contact</a></li>
             </ul>
         </nav>
     </footer>
-</div>
 
 <script> isLoginPage() </script>
 <script type="text/javascript" src="<?= /** @noinspection PhpUndefinedVariableInspection */

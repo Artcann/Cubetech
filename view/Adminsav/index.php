@@ -1,29 +1,14 @@
 <?php
 
 $this->title = "AdminSav";
-$this->style = "public/css/index.css";
+$this->style = "public/css/adminSav.css";
 $this->script = "public/js/adminSav.js";
 ?>
 
+	<div class="table-container">
+		<h1> Rendez-vous </h1>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="public/css/adminSav.css">
-	<script type="text/javascript">
-        scriptData = <?php echo json_encode($scriptData); ?>;
-    </script>
-</head>
-<body>
-
-	<center>
-
-	<h1> Rendez-vous </h1>
-
-	<div class="tableau1">
-
-		<table class="tableauRdv">
+		<table class="table">
 	    <thead>
 	    <tr>
 	        <td>IdUser</td>
@@ -47,14 +32,9 @@ $this->script = "public/js/adminSav.js";
 	    </tbody>
 	    </table>
 
-	</div>
+    	<h1> Bug </h1>
 
-
-    <h1> Bug </h1>
-
-    <div class="tableau2">
-
-	    <table class="tableauBug">
+	    <table class="table">
 	    <thead>
 	    <tr>
 	        <td>IdUser</td>
@@ -78,14 +58,9 @@ $this->script = "public/js/adminSav.js";
 	    </tbody>
 	    </table>
 
-	</div>
+    	<h1> Suggestion </h1>
 
-
-    <h1> Suggestion </h1>
-
-    <div class="tableau3">
-
-	    <table class="tableauSuggestion">
+	    <table class="table">
 	    <thead>
 	    <tr>
 	        <td>IdUser</td>
@@ -110,9 +85,6 @@ $this->script = "public/js/adminSav.js";
 	    </table>
 
 	</div>
-
-	</center>
-
 </body>
 </html>
 

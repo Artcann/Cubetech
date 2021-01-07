@@ -1,4 +1,4 @@
-#userTable {
+/* #userTable {
     margin-top: 20px;
     color: white;
     margin-left: auto;
@@ -9,9 +9,9 @@
 
 #userTable thead tr td {
     font-weight: bold;
-}
+} */
 
-a.button {
+/* a.button {
     text-align: center;
     display: block;
     background-color: dimgrey;
@@ -35,4 +35,4 @@ a.button:hover {
     background-color: #FF9000;
     border: 2px solid black;
     box-shadow: 4px 4px 6px black;
-}
+} */

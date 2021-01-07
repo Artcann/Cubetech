@@ -5,8 +5,11 @@ $this->style = "public/css/adminFaq.css";
 
 
 ?>
-<div class="tableau1">
-    <table id="questionTable">
+<div class="table-container">
+
+    <h1>Gestion de la FAQ</h1>
+
+    <table class="table">
         <thead>
         <tr>
             <td>Titre de la question</td>
@@ -19,12 +22,12 @@ $this->style = "public/css/adminFaq.css";
         foreach($faq as $k => $v): ?>
             <tr>
                 <td><?php echo $v['titre']; ?></td>
-                <td><?php echo '<a href="adminfaq/modification'. $v['id'] .'" class=button>Modifier</a>'?></td>
-                <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
+                <td><?php echo '<a href="adminfaq/modification/'. $v['id'] .'" class=button>Modifier</a>'?></td>
+                <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cette question ?\')"
                     href="adminfaq/delete/' . $v['id'] . '" class="button">Supprimer</a>' ?></td>
             </tr>
         <?php endforeach ?>
         </tbody>
     </table>
+    <a href='adminfaq/ajout' class='button'>Ajouter une question</a>
 </div>
-<a href='adminfaq/ajout' class='add-button'>Ajouter une question</a>
