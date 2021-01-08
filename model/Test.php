@@ -28,6 +28,25 @@ class Test extends Model
         return($dataArr);
     }
 
+
+    public function getTestByRh($idRh)
+    {
+
+
+        $sql = "SELECT id, idCapteur, valeur, date, idUser, heure, idRh, statut, trame FROM test WHERE idRh= ?";
+
+        $response = $this->executeRequest($sql, array($idRh));
+
+        $dataArr = array();
+
+        while($data = $response->fetch()) {
+            $dataArr[$data['id']] = $data;
+        }
+
+        return($dataArr);
+    }
+
+
     public function getRecentTestByUser($idUser, $idCapteur)
     {
 
