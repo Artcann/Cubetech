@@ -1,5 +1,5 @@
 <?php
-$this->style = "public/css/contact.css";
+$this->style = "public/css/contct.css";
 ?>
 
 <form id="contact" action="contact" method="post">
@@ -11,10 +11,8 @@ $this->style = "public/css/contact.css";
         <option value="suggestion">Suggestion</option>
     </select>
     </div>
-    <p>
     <label id="title" for="contenu"> Votre message:</label>
-    </p>
-    <textarea id="contenu" name="message" cols="45" rows="20" placeholder="Votre message...">
+    <textarea id="contenu" name="message" placeholder="Votre message...">
     </textarea>
     <input type="submit" value="Valider">
 </form>

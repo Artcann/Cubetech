@@ -2,6 +2,7 @@
 
 $this->title = "Accueil";
 $this->script = "public/js/home.js";
+$this->style = "public/css/home.css"
 ?>
 
 <!DOCTYPE html>

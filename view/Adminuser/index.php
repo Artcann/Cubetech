@@ -36,4 +36,4 @@ $this->title = "Gestion Utilisateurs";
         <?php endforeach ?>
         </tbody>
     </table>
-<div>
+</div>

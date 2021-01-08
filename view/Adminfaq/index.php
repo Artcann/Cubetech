@@ -29,5 +29,5 @@ $this->style = "public/css/adminFaq.css";
         <?php endforeach ?>
         </tbody>
     </table>
-    <a href='adminfaq/ajout' class='button'>Ajouter une question</a>
+    <a href='adminfaq/ajout' class='button' id="add-button">Ajouter une question</a>
 </div>
