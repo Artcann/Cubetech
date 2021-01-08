@@ -13,7 +13,7 @@ class ControllerLancerletest extends Controller {
 
     public function index()
     {
-        $this->generateView();
+        $this->generateView(array("test" => $test));
     }
 
 }
