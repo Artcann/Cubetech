@@ -13,5 +13,3 @@ echo "<h1>Bienvenue ".$pseudo." sur le backoffice de  CubeTech</h1>" ?>
 <a href="Admin/register">Enregistrer un nouvel utilisateur</a>
 
 <a href="Admin/disconnect">Disconnect</a>
-
-<?php include_once "view/footer.html"; ?>

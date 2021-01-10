@@ -6,6 +6,10 @@ header{
     font-size: 19px;
 }
 
+html, body {
+    height: 100%;
+}
+
 #menu1 nav ul{
     list-style: none;
 }
@@ -125,4 +129,3 @@ footer {
 #link2{
     padding-top: 23px;
 }
-

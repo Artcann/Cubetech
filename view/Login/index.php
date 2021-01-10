@@ -9,7 +9,7 @@ $this->style = "public/css/index.css";
 
     <h3>Veuillez remplir le formulaire</h3>
 
-    <form class="loginForm" action="index.php?controller=login&action=login" method="post">
+    <form class="loginForm" action="login/login" method="post">
         <div>
             <label for="login">Identifiant : </label><input type="text" name="login" id="login" required>
         </div>

@@ -1,29 +1,46 @@
-function adminAccess() {
-    var statut = getCookie("statut");
-    console.log(statut);
-    console.log(typeof(statut));
+var imageSwap = function () {
 
-    if(statut === "1") {
-        document.getElementById('adminAccess').style.display = "block";
-    }
+    var $this = $(this);
+
+    var newSource = $this.data('alt-src');
+
+    $this.data('alt-src', $this.attr('src'));
+
+    $this.attr('src', newSource);
 }
 
-function getCookie(name) {
-    // Split cookie string and get all individual name=value pairs in an array
-    var cookieArr = document.cookie.split(";");
 
-    // Loop through the array elements
-    for(var i = 0; i < cookieArr.length; i++) {
-        var cookiePair = cookieArr[i].split("=");
+$(function () {
+    $('img.alert').hover(imageSwap, imageSwap);
+});
 
-        /* Removing whitespace at the beginning of the cookie name
-        and compare it with the given string */
-        if(name === cookiePair[0].trim()) {
-            // Decode the cookie value and return
-            return decodeURIComponent(cookiePair[1]);
-        }
-    }
 
-    // Return null if not found
-    return null;
+
+let statut = scriptData.statut;
+
+let boutonText = document.getElementById('button2').innerText;
+
+let agenda = document.getElementById('agenda').innerText;
+
+
+
+if (statut === 'Administrateur'){
+
+    document.getElementById('button2').innerText = 'Accèder au back office';
+
+    $("#button2").attr("href", "adminhome");
+
+    document.getElementById('agenda').innerText = '';  
 }
+
+
+else if (statut === 'Ressource humaine') {
+
+	document.getElementById('button2').innerText = 'Démarrer un test';
+
+	$("#button2").attr("href", "lancerLeTest");
+}
+
+
+
+
