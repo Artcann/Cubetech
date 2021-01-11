@@ -51,9 +51,9 @@ form div + div {
 /* CSS commun */
 
 *{
+    margin: 0;
+    padding: 0;
     font-family: Avenir, sans-serif;
-    margin: 0px;
-    padding: 0px;
 }
 #menu1,#menu2{
     font-size: 19px;
@@ -67,108 +67,150 @@ body{
     background: #212121;
 }
 
+
 footer {
-    position: absolute;
-    background-color: black;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-top: solid 1.5px;
-    border-color: #FF9000;
-    height: 70px;
+    height: 10%;
 }
 
-#page-container {
-    position: relative;
-    top: 70px;
-    min-height: calc(100% - 70px);
-}
-
-#content-wrapper {
-    padding-bottom: 80px;
-}
-
-.navbar {
-    width: 100%;
-    height: 70px;
-    text-align: center;
-}
-
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-}
-
-#navbar-header {
-    position: fixed;
-    background-color: black;
-    border-bottom: solid 1.5px;
-    border-color: #FF9000;
-    z-index: 1;
-}
-
-#navbar-header ul {
-    top: 0;
-    background-color: black;
-    border-bottom: solid 1.5px;
-    border-color: #FF9000;
-    height: 70px;
-}
-
-#navbar-footer ul {
-    bottom: 0;
-    position: absolute;
-}
-
-.navbar li {
-    float: left;
-}
-
-#navbar-header li {
-    width: 25%;
-}
-
-#navbar-footer li {
-    width: 33.3%;
-}
-
-.navbar li a {
-    display: inline-block;
-    text-decoration: none;
-    color: white;
-    vertical-align: middle;
-    padding: 25px;
-    font-size: 18px;
-}
-
-.navbar li a:hover {
-    color: #FF9000;
-    font-size: 19.5px;
-    text-shadow: 2px 2px 4px #FF9000;
-    padding: 23px;
-}
-
-#pict{
-    padding-top: 3px;
-    height: 65px;
-    width: auto;
-}
-
-#pict-link {
-    padding: 0px;
+header {
+    height: 10%;
 }
 
 
 /* Global Container Div */
 
 .container {
-    height: 100%;
+    text-align: center;
+    height: 80%;
     width: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
+}
+
+/* CSS page 1 */
+header{
+    background-color: black;
+    border-bottom: solid 1.5px;
+    border-color: #FF9000;
+}
+
+#menu1 nav ul{
+    list-style: none;
+    height: 100%;
+}
+
+#menu1 nav li{
+    float: right;
+    width: 25%;
+    text-align: center;
+}
+
+#menu1 nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#menu1 nav{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: sticky;
+    top: 0px;
+}
+
+#menu1 nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    vertical-align: middle;
+}
+
+#menu1 nav a:hover{
+    color: #FF9000;
+
+    font-size: 19.5px;
+    text-shadow: 2px 2px 4px #FF9000;
+}
+
+#menu1 li a{
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+}
+
+#link{
+    padding-top: 26px;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+}
+
+#pict{
+    padding-top: 3px;
+    height: 77px;
+    width: auto;
+}
+
+
+/* CSS page 2 */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: solid 1.5px;
+    border-color: #FF9000;
+}
+
+
+#menu2 nav ul{
+    list-style: none;
+}
+
+#menu2 nav li{
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+#menu2 nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#menu2 nav{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+
+}
+
+#menu2 nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    vertical-align: center;
+
+}
+
+#menu2 nav a:hover{
+    color: #FF9000;
+    font-size: 19.5px;
+    text-shadow: 2px 2px 4px #FF9000;
+}
+
+#menu2 li a{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#link2{
+    padding-top: 23px;
 }
 
 #selectResult {
@@ -227,8 +269,8 @@ td{
 
 .table-container { 
     width: 100%;
-    height: 100%;
-    overflow-y: auto;
+    height: 80%;
+    overflow-y: scroll;
     scrollbar-color: rebeccapurple green;
     scrollbar-width: thin;  
 }
