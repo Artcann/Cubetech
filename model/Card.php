@@ -25,4 +25,6 @@ class Card extends Model {
         return $dataArr;
     }
 
+    
+
 }
