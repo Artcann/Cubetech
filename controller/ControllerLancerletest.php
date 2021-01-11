@@ -13,6 +13,7 @@ class ControllerLancerletest extends Controller {
 
     public function index()
     {
+    	$test = $this->test->getTestByRh($this->session->getAttribute('user')['id']);
         $this->generateView(array("test" => $test));
     }
 
