@@ -39,7 +39,7 @@ class ControllerLancerletest extends Controller{
 
         $caserne = $this->caserne->getAllCaserne();
 
-        $card = $this->card->getAllCards();
+        $card = $this->card->getCardByCaserne($this->session->getAttribute('user')['caserne']);
 
         $this->generateView(array("test" => $test, "data" => $data, 'caserne' => $caserne, "card" => $card));
 

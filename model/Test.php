@@ -14,12 +14,8 @@ class Test extends Model
     public function getTestByUser($idUser)
     {
 
-
-<<<<<<< Updated upstream
-        $sql = "SELECT id, id_carte date,idUser, heure, idRh, statut FROM test WHERE idUser= ?";
-=======
         $sql = "SELECT id, date,idUser, heure, idRh, statut FROM test WHERE idUser= ?";
->>>>>>> Stashed changes
+
 
         $response = $this->executeRequest($sql, array($idUser));
 
@@ -36,12 +32,7 @@ class Test extends Model
     public function getTestByRh($idRh)
     {
 
-
-<<<<<<< Updated upstream
-        $sql = "SELECT id, id_carte, date, idUser, heure, idRh, statut FROM test WHERE idRh= ?";
-=======
         $sql = "SELECT id, date, idUser, heure, idRh, statut FROM test WHERE idRh= ?";
->>>>>>> Stashed changes
 
         $response = $this->executeRequest($sql, array($idRh));
 
@@ -58,11 +49,8 @@ class Test extends Model
     public function getRecentTestByUser($idUser, $idCapteur)
     {
 
-<<<<<<< Updated upstream
-        $sql = "SELECT id, id_carte date, idUser, idRh, statut FROM test WHERE idUser= ? AND idCapteur = ?
-=======
+
         $sql = "SELECT id, date, idUser, idRh, statut FROM test WHERE idUser= ? AND idCapteur = ?
->>>>>>> Stashed changes
                 ORDER BY id DESC LIMIT 7";
 
         $response = $this->executeRequest($sql, array($idUser, $idCapteur));
@@ -76,11 +64,7 @@ class Test extends Model
         return($dataArr);
     }
 
-    /**
-     * @param $trame
-     * @param $idUser
-     * @param $idRh
-     */
+  
     public function insertTest($trame, $idUser, $idRh) {
 
         $sql = "INSERT into test (idCapteur, valeur, date, heure, idUser, idRh, statut) 
