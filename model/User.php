@@ -36,6 +36,16 @@ class User extends Model
         return $dataArr;
     }
 
+    public function getUserById($id)
+    {
+
+        $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail FROM user WHERE id='".$id."'";
+
+        return $this->executeRequest($sql, array($id))->fetch();
+    }
+
+
+
     /**
      * @param $values
      * @return null |null
