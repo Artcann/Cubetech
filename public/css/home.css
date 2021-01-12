@@ -1,3 +1,7 @@
+.alert{
+    width: 40px;
+}
+
 li{
     list-style: none;
 }
@@ -9,6 +13,17 @@ a {
 
 p{
     color: white;
+}
+
+.tableau2 {
+  width: 100%;
+  height: 200px;
+  overflow-y: scroll;
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+  margin-top: 0px;
+  padding-top: 0px;
+  overflow: hidden;
 }
 
 .tableau{
@@ -214,19 +229,6 @@ span{
     #container div.col2 div.row1-col2 img{
         height: 80px;
         padding-top: 50%;
-    }
-
-    #pict{
-        padding-top: 9px;
-        height: 60px;
-    }
-
-    header{
-        font-size: 15px;
-    }
-
-    footer {
-        font-size: 15px;
     }
 
     #bt2{

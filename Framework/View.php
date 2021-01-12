@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Configuration.php';
+require_once 'MarkdownParser.php';
 
 /**
  * Class View
@@ -66,6 +67,10 @@ class View
             throw new Exception("Fichier ".$file." introuvable");
         }
     }
+
+    private function markdownToHtml($markdownText) {
+
+    }  
 
     private function sanitize($value) {
         return htmlspecialchars($value, ENT_QUOTES, 'UTF-8', false);
