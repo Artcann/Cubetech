@@ -5,6 +5,7 @@ $this->script = "public/js/home.js";
 $this->style = "public/css/home.css"
 ?>
 
+<script> let statut="<?php echo $scriptData['statut']?>"; </script>
 
 <div id="container">
     <div class="col1">

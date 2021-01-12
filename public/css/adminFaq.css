@@ -2,7 +2,20 @@ p {
     color: white;
 }
 
-.container input {
+#page-container {
+    height: calc(100% - 70px);
+}
+
+#content-wrapper {
+    height: calc(100% - 90px);
+}
+
+.form-container {
+    height: 100%;
+    text-align: center;
+}
+
+.form-container input {
     font-weight:bold;
     padding: 12px;
     border-radius: 2em;
@@ -10,19 +23,19 @@ p {
     color: black;
 }
 
-.container input:hover {
+.form-container input:hover {
     background-color: #FF9000;
     padding: 15px;
     box-shadow: 4px 4px 6px black;
 }
 
-.container label {
+.form-container label {
     font-size: large;
     width: auto;
     margin-top: 10px;
 }
 
-.container textarea {
+.form-container textarea {
     width: 80%;
     font-size: 18px;
     margin-top: 10px;
@@ -33,11 +46,11 @@ p {
     outline: none;
 }
 
-.container #title {
+#title {
     height: 20%;
 }
 
-.container #content {
+#content {
     height: 60%;
 }
 
