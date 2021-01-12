@@ -117,4 +117,13 @@ class Forum extends Model
 
         return $dataArr;
     }
+
+    public function insertPosts($user_id, $topic_id, $message) {
+        $sql = "INSERT INTO posts(user_id, topic_id, message, created)
+                VALUES (?, ?, ?, current_timestamp)";
+
+        $values = array($id_contact, $id_user, $message);
+
+        $this->executeRequest($sql, $values);
+    }
 }

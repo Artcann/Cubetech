@@ -22,3 +22,27 @@ foreach ($data['listTopics'] as $datum){
 
 print_r($data['listTopics']);
 ?>
+
+<table class="table">
+	    <thead>
+	    <tr>
+	        <td>IdUser</td>
+	        <td>Date</td>
+	        <td>Contenu</td>
+	        <td>Contact</td>
+	        <td>Valider</td>
+	    </tr>
+	    </thead>
+	    <tbody>
+	    <?php /** @noinspection PhpUndefinedVariableInspection */
+	    foreach($rdv as $k => $v): ?>
+	        <tr>
+	            <td><?php echo $v['idUser']; ?></td>
+	            <td><?php echo $v['date']; ?></td>
+	            <td><?php echo $v['contenu']; ?></td>
+	            <td><a href=""><center><img class="mail" src="public/images/mail.png" data-alt-src="public/images/mail2.png"></center></a></td>
+	            <td class="valider"><a href="adminsav/archive/<?php echo $v['id']?>"><center><img class="valider" src="public/images/valider.png" data-alt-src="public/images/valider1.png"></center></a></td>
+	        </tr>
+	    <?php endforeach ?>
+	    </tbody>
+	    </table>
