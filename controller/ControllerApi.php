@@ -37,12 +37,12 @@ class ControllerApi extends Controller
         }
     }
 
-    // public function getCurrentUser() {
-    //     if($this->verification()) {
-    //         header('Content-Type: application/json');
-    //         echo json_encode($this->session->getAttribute('user'));
-    //     }
-    // }
+    public function getCurrentUser() {
+        if($this->verification()) {
+            header('Content-Type: application/json');
+            echo json_encode($this->session->getAttribute('user'));
+        }
+    }
 
     /**
      * @param $id
@@ -62,7 +62,6 @@ class ControllerApi extends Controller
             echo json_encode($this->chat->getRecentMessages($this->session->getAttribute('user')['id'], 
                                                             $this->request->getParameter('id'),
                                                             $this->request->getParameter('lastId')), JSON_PRETTY_PRINT);
-            //echo json_encode($this->chat->getRecentMessages(1, $this->request->getParameter('id')), JSON_PRETTY_PRINT);    
         } else if ($this->request->getMethod() == 'POST') {
             header('Content-Type: application/json');
             http_response_code(204);
@@ -74,6 +73,7 @@ class ControllerApi extends Controller
             http_response_code(400);
         }
     }
+
 
     /**
      * @return bool

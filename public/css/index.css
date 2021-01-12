@@ -16,7 +16,13 @@ h1, h2, h3
     color: white;
 }
 
+h3 {
+    padding: 10px;
+}
 
+h1{
+	padding: 25px;
+}
 
 
 
@@ -49,151 +55,198 @@ form div + div {
 /* CSS commun */
 
 *{
-    margin: 0;
-    padding: 0;
     font-family: Avenir, sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 #menu1,#menu2{
     font-size: 19px;
 }
 
-html {
+html, body {
     height: 100%;
 }
 
 body{
     background: #212121;
-    height: 80%;
 }
-
-
-/* CSS page 1 */
-header{
-    background-color: black;
-    border-bottom: solid 1.5px;
-    border-color: #FF9000;
-}
-
-#menu1 nav ul{
-    list-style: none;
-}
-
-#menu1 nav li{
-    float: right;
-    width: 25%;
-    text-align: center;
-}
-
-#menu1 nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#menu1 nav{
-    background-color: black;
-    width: 100%;
-    margin: 0;
-    position: sticky;
-    top: 0px;
-
-}
-
-#menu1 nav a{
-    display: block;
-    text-decoration: none;
-    color: white;
-    vertical-align: center;
-
-}
-
-#menu1 nav a:hover{
-    color: #FF9000;
-
-    font-size: 19.5px;
-    text-shadow: 2px 2px 4px #FF9000;
-}
-
-#menu1 li a{
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-}
-
-#link{
-    padding-top: 26px;
-    text-align: center;
-    position: relative;
-}
-
-#pict{
-    padding-top: 3px;
-    height: 77px;
-    width: auto;
-}
-
-
-/* CSS page 2 */
 
 footer {
     position: absolute;
+    background-color: black;
     bottom: 0;
     left: 0;
     right: 0;
     border-top: solid 1.5px;
     border-color: #FF9000;
+    height: 70px;
 }
 
-
-#menu2 nav ul{
-    list-style: none;
+#page-container {
+    position: relative;
+    top: 70px;
+    min-height: calc(100% - 70px);
 }
 
-#menu2 nav li{
-    float: left;
-    width: 33%;
+#content-wrapper {
+    padding-bottom: 80px;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
     text-align: center;
 }
 
-#menu2 nav ul::after{
-    content: "";
-    display: table;
-    clear: both;
-}
-
-#menu2 nav{
-    background-color: black;
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
     width: 100%;
-    height: 75px;
-    margin: 0 auto;
-
-
 }
 
-#menu2 nav a{
-    display: block;
+#navbar-header {
+    position: fixed;
+    background-color: black;
+    border-bottom: solid 1.5px;
+    border-color: #FF9000;
+    z-index: 1;
+}
+
+#navbar-header ul {
+    top: 0;
+    background-color: black;
+    border-bottom: solid 1.5px;
+    border-color: #FF9000;
+    height: 70px;
+}
+
+#navbar-footer ul {
+    bottom: 0;
+    position: absolute;
+}
+
+.navbar li {
+    float: left;
+}
+
+#navbar-header li {
+    width: 25%;
+}
+
+#navbar-footer li {
+    width: 33.3%;
+}
+
+.navbar li a {
+    display: inline-block;
     text-decoration: none;
     color: white;
-    vertical-align: center;
-
+    vertical-align: middle;
+    padding: 25px;
+    font-size: 18px;
 }
 
-#menu2 nav a:hover{
+.navbar li a:hover {
     color: #FF9000;
     font-size: 19.5px;
     text-shadow: 2px 2px 4px #FF9000;
+    padding: 23px;
 }
 
-#menu2 li a{
-    vertical-align: middle;
-    display: inline-block;
+#pict{
+    padding-top: 3px;
+    height: 65px;
+    width: auto;
 }
 
-#link2{
-    padding-top: 23px;
+#pict-link {
+    padding: 0px;
+}
+
+
+/* Global Container Div */
+
+.container {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
 }
 
 #selectResult {
     text-align: center;
     height: 200px;
+}
+
+/* Buttons */
+
+a.button {
+    text-align: center;
+    display: block;
+    background-color: dimgrey;
+    justify-content: center;
+    width: 50%;
+    height: 25px;
+    padding: 3px;
+    padding-top: 9px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid orange;
+    font-weight: bolder; 
+}
+
+a.button:visited {
+    color: black;
+}
+
+a.button:hover {
+    background-color: #FF9000;
+    border: 2px solid black;
+    box-shadow: 4px 4px 6px black;
+}
+
+/* Tables */
+
+thead tr {
+	background-color: black;
+}
+
+th,td {
+	padding: 15px 20px;
+}
+
+tbody tr, td, th{
+	border: 1.9px solid black;
+}
+
+td{
+	color: white;
+}
+
+.table-container { 
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;  
+}
+
+.table {
+    border-collapse: collapse;
+	min-width: 400px;
+	width: 80%;
+	box-shadow: 0 5px 50px rgba(0,0,0,1);
+	cursor: pointer;
+	padding: 15px 75px auto;
+    border: 2px solid #FF9000;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    overflow: hidden;
 }

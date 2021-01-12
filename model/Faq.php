@@ -16,4 +16,32 @@ class Faq extends Model
         return $dataArr;
     }
 
-}?>
+    public function getFaqById($id) {
+        $sql = "SELECT contenu, titre FROM faq WHERE id=?";
+        $val = array($id);
+
+        return $this->executeRequest($sql, $val)->fetch();
+    }
+    
+    public function update($title, $content, $id) {
+        $sql = "UPDATE faq SET titre=?, contenu=? WHERE id=?";
+        $val = array($title, $content, $id);
+
+        return $this->executeRequest($sql, $val);
+    }
+
+    public function addFaq($title, $content) {
+        $sql = "INSERT INTO faq (titre, contenu) VALUES (?, ?)";
+        $val = array($title, $content);
+
+        return $this->executeRequest($sql, $val);
+    }
+
+    public function delete($id) {
+        $sql = "DELETE FROM faq WHERE id=?";
+        $val = array($id);
+
+        $this->executeRequest($sql, $val);
+    }
+}
+?>

@@ -5,7 +5,7 @@ $this->style = "public/css/adminHome.css";
 
 ?>
 
-<div id="container">
+<div class="container">
     <div class="row-1">
         <?php echo "<h1>Bienvenue ".$this->sanitize($prenom)." sur le backoffice de  CubeTech</h1>" ?>
     </div>
@@ -21,7 +21,13 @@ $this->style = "public/css/adminHome.css";
             <h3>Gestion des cartes</h3>
             <a class=button href="admincard">Afficher les cartes</a>
             <a class=button href="admincard/create">Créer une nouvelle carte</a>
-
+            <h3>Gestion de la FAQ</h3>
+            <a class="button" href="adminfaq">Gérer la FAQ</a>
+            <h3>Gestion des CGU </h3>
+            <a class="button" href="admincgu">Gérer les CGU</a>
+    </div>
+    <div class="row-3">
+        <a class="button" href="home/disconnect">Déconnexion</a>
     </div>
 
 

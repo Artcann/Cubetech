@@ -17,3 +17,18 @@ function isLoginPage() {
         document.getElementById('footer').style = "display: none";
     }
 }
+
+let getUser = function() {
+    $.ajax({
+        type: "get",
+        url: "index.php?controller=api&action=getcurrentuser&access=moeve",
+        success: function (response, code, xhr) {
+            let statut = response['statut'];
+            if (statut == 1) {
+                $('#pict-link').attr('href', 'adminhome');
+            }
+        }
+    });
+}
+
+getUser();
