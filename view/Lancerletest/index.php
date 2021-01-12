@@ -1,6 +1,7 @@
 <?php
 $this->title = "Lancerletest";
 $this->style = "public/css/lancementTest.css";
+$this->script = "public/js/lancementTest.js"
 ?>
 
 
@@ -51,16 +52,25 @@ $this->style = "public/css/lancementTest.css";
 
 				</td>
 
-				<td><input type="submit" value="LANCER LE TEST"></td>
+				<td><input name="startstop" type="submit" value="LANCER LE TEST" onclick="chronoStart()"></td>
 
 	        </tr>
 
 	    <?php endforeach ?>
 
 	    </tbody>
-	    
 	</table>
 </div>
+
+
+<center><span id="chronotime">0:00:00:00</span>
+	<form name="chronoForm">
+	    <input type="button" name="startstop" value="stop!" onClick="chronoStart()" />
+	    <input type="button" name="reset" value="reset!" onClick="chronoReset()" />
+	</form></center>
+
+
+
 
 
 
