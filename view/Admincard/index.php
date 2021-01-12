@@ -20,7 +20,7 @@ $this->style = "public/css/index.css";
             <td><?php echo $v['id']; ?></td>
             <td><?php echo $v['statut']; ?></td>
             <td><?php echo $v['date']; ?></td>
-            <td><a href="Admincard/modification">Modifier</a></td>
+            <td><a href="admincard/modification">Modifier</a></td>
             <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
                    href="Admincard/delete/' . $v['id'] . '">Supprimer</a>' ?></td>
         </tr>

@@ -19,11 +19,11 @@ abstract class ControllerAdmin extends Controller
     {
 
 
-        if($this->request->getSession()->getAttribute("user")["statut"] == 1) {
+        if($this->session->getAttribute("user")["statut"] == 1) {
 
             parent::executeAction($action);
         } else {
-            parent::redirect('Home');
+            parent::redirect('home');
         }
     }
 

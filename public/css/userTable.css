@@ -1,0 +1,38 @@
+#userTable {
+    margin-top: 20px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 80%;
+}
+
+#userTable thead tr td {
+    font-weight: bold;
+}
+
+a.button {
+    text-align: center;
+    display: block;
+    background-color: dimgrey;
+    justify-content: center;
+    width: 60%;
+    height: 20px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid orange;
+}
+
+a.button:visited {
+    color: black;
+}
+
+a.button:hover {
+    background-color: #FF9000;
+    border: 2px solid black;
+    box-shadow: 4px 4px 6px black;
+}

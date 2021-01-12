@@ -6,8 +6,12 @@
     $racineWeb ?>" >
     <title><?= /** @noinspection PhpUndefinedVariableInspection */
         $title ?></title>
+    <link href="public/css/index.css" rel="stylesheet" />
     <link href=<?= /** @noinspection PhpUndefinedVariableInspection */
     $style ?> rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
     <script type="text/javascript" src="public/js/header.js"></script>
 </head>
 
@@ -17,10 +21,10 @@
     <header id="menu1">
         <nav>
             <ul>
-                <li id="link"><a id="b1" href="#"> Forum </a></li>
                 <li id="link"><a id="b2" href="#"> Notifications </a></li>
-                <li id="link"><a id="b3" href="client.html"> Mon compte </a></li>
-                <li><a href="home"><img id="pict" src="public/images/logo_notext.png" alt="Logo du site"/></a></li>
+                <li id="link"><a id="b1" href="#"> Forum </a></li>
+                <li id="link"><a id="b3" href="home"> Mon compte </a></li>
+                <li><a href="home" id="pict-link"><img id="pict" src="public/images/logo_notext.png" alt="Logo du site"/></a></li>
             </ul>
         </nav>
     </header>
@@ -35,15 +39,11 @@ $content ?>
         <nav>
             <ul>
                 <li id="link2"><a href="#">FAQ</a></li>
-                <li id="link2"><a href="#">CGU</a></li>
-                <li id="link2"><a href="#">Contact</a></li>
+                <li id="link2"><a href="cgu">CGU</a></li>
+                <li id="link2"><a href="contact">Contact</a></li>
             </ul>
         </nav>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous"></script>
 </div>
 
 <script> isLoginPage() </script>
