@@ -4,7 +4,7 @@ let sendModif = function() {
 
     $.ajax({
         type: "POST",
-        url: "adminfaq/modification",
+        url: pageName + "/modification",
         data: "title=" + titleArea.value 
         + "&content=" + contentArea.value
         +"&id=" + id,
@@ -13,6 +13,10 @@ let sendModif = function() {
         }
     });
 }
+
+let currentPage = window.location.href;
+
+let pageName = currentPage.split("/")[4];
 
 function getId() {
     let url = window.location.href.split('/');
