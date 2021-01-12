@@ -1,25 +1,34 @@
+/*Controller*/
+
 <?php
-include ('ConnexionRecherche.php');/*connexion à la db*/
-include('Recherche.php'); /*le modèle*/
-include('view/viewRecherche.php'); /*la vue*/
+require_once 'model/Recherche.php';
+require_once 'Framework/Controller.php';
+
+class ControllerRecherche extends Controller {
 
 
-class ControllerRecherche extends Controller
 
+ 
+ public function index()
 
-public function getUser()
 {
-if (isset($_GET['identifiant'])||$_GET['nom']||$_GET['prenom']||$_GET['login']||$_GET['naissance']||$_GET['mail']||$_GET['statut']||$_GET['grade']||$_GET['corps']||$_GET['matricule']||$_GET['nationalite'])) 
-{
-    $resultat->query($db,$sql);
-    $row=mysqli_fetch_array($resultat);
-	foreach($row as $row)
-		{$this->generateView($row);}
+     
+ $id = $this->request->getParameter('identifiant');
+	$nom = $this->request->getParameter('nom');
+	$prenom = $this->request->getParameter('prénom');
+	$naissance = $this->request->getParameter('date');
+	$grade = $this->request->getParameter('grade');
+	$caserne = $this->request->getParameter('caserne');
+	$nationalite = $this->request->getParameter('nationalité')
+	$corps = $this->request->getParameter('corps');
+	$statut = $this->request->getParameter('statut');
+	$matricule = $this->request->getParameter('matricule');
+	$login = $this->getParameter('login');	
+	        
+	
+	$dataArr = $this->getAllUsers($id);
+
+    $this->generateView(array("data" => $dataArr));
 }
-else 
-{echo 'Veuillez renseigner au moins 1 champ !';}
+
 }
-
-
-include('DeconnexionRecherche.php');/*déconexion à la db*/
-
