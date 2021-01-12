@@ -1,13 +1,4 @@
-function getUserId() {
-    return document.cookie
-        .split('; ')
-        .find(row => row.startsWith('id'))
-        .split('=')[1];
-}
-
 function ajaxRequest(idTest) {
-
-    let userId = getUserId();
 
     let request = new XMLHttpRequest();
     request.open("GET", "index.php?controller=api&action=getrecenttestbyuser&id=" + userId + "&idTest=" + idTest, true);

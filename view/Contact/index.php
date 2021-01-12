@@ -1,17 +1,19 @@
 <?php
-$this->style = "public/css/index.css";
+$this->style = "public/css/contct.css";
 ?>
-<form action="ControllerContact.php" method="post">
+
+<form id="contact" action="contact" method="post">
+    <div class="select-style">
     <select name="type">
         <option value="">--Choisissez une option--</option>
-        <option value="rendez-vous">rendez-vous</option>
+        <option value="rendez-vous">Rendez-vous</option>
         <option value="Bug">Bug</option>
-        <option value="suggestion">suggestion</option>
+        <option value="suggestion">Suggestion</option>
     </select>
-    <p>
-    <label for="contenu"> Votre message:</label>
-    </p>
-    <textarea id="contenu" name="message" cols="45" rows="20" placeholder="Votre message...">
+    </div>
+    <label id="title" for="contenu"> Votre message:</label>
+    <textarea id="contenu" name="message" placeholder="Votre message...">
     </textarea>
     <input type="submit" value="Valider">
 </form>
+

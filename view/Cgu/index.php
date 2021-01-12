@@ -8,9 +8,10 @@ $this->style = "public/css/cgu.css";
 ?>
 <br/>
 
-<center>
-<div class="scroller">
+
 <h1 class="cgu" style="text-align: center">CGU</h1><br/>
+<div class="cguscroll">
+
 <?php
 foreach ($data as $datum) {
     echo '<h2 class="cgu">'.$datum['titre'].'</h2>';
@@ -19,4 +20,3 @@ foreach ($data as $datum) {
 }
 ?>
 </div>
-</center>

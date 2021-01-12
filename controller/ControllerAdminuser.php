@@ -28,7 +28,7 @@ class ControllerAdminuser extends ControllerAdmin {
     public function delete() {
         $this->user->deleteUserById($this->request->getParameter('id'));
 
-        $this->redirect('Adminuser');
+        $this->redirect('adminuser');
     }
 
     public function json() {
@@ -38,3 +38,4 @@ class ControllerAdminuser extends ControllerAdmin {
     }
 
 }
+

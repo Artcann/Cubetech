@@ -4,9 +4,7 @@ require_once 'model/User.php';
 require_once 'Framework/Controller.php';
 require_once 'controller/ControllerSecure.php';
 
-/**
- * Class ControllerHome
- */
+
 class ControllerModifier extends ControllerSecure
 {
     private $user;
@@ -17,8 +15,8 @@ class ControllerModifier extends ControllerSecure
 
     public function index() {
 
-        if($this->request->getSession()->isAttributeSet('user')) {
-            $this->generateView(array("data" => $this->request->getSession()->getAttribute('user')));
+        if($this->session->isAttributeSet('user')) {
+            $this->generateView(array("data" => $this->session->getAttribute('user')));
         }  else {
             $this->redirect("login");
         }
@@ -30,10 +28,10 @@ class ControllerModifier extends ControllerSecure
     }
 
     public function modifier() {
-        $currentPassword=$this->request->getSession()->getAttribute("user")['password'];
+        $currentPassword=$this->session->getAttribute("user")['password'];
         $verifiedPassword=$this->request->getParameter('verifiedPassword');
         $newPassword= $this->request->getParameter('password');
-        $idUser=$this->request->getSession()->getAttribute("user")['id'];
+        $idUser=$this->session->getAttribute("user")['id'];
 
        if (!password_verify($verifiedPassword,$currentPassword)){
             //header("Location: /Cubetech/Modifier?password=false");
@@ -52,3 +50,4 @@ class ControllerModifier extends ControllerSecure
 
     }
 }
+
