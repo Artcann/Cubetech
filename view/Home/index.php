@@ -10,7 +10,7 @@ $this->style = "public/css/home.css"
 <div id="container">
   <div class="col1">
         <div class="row1-col1">
-          <img src="public/images/logo.png">
+        
         </div>
         <div class="row2-col1">
              <h1>Bienvenue <span><?php echo $data["prenom"];?></span> sur le site CubeTech</h1>

@@ -9,7 +9,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 25%;
+  bottom:0;
   left: 0;
 
 }
@@ -58,7 +58,7 @@
 @media all and (max-width: 600px){
 
   .col1 {
-  width: 300px;
+  width: auto;
   height:250px;
   bottom: 40%;
   }
