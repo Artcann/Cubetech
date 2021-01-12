@@ -23,15 +23,14 @@ $this->script = "public/js/modifier.js";
             </div>
         </div>
         <div class="description">
-          <div class="part1">
-            Matricule :<span> <?php if ($data["statut"] == 3) {echo $data["matricule"];} else {echo "*";}?> </span> <br/>
+            Numéro de matricule :<span> <?php if ($data["statut"] == 3) {echo $data["matricule"];} else {echo "*";}?> </span> <br/>
 
             Grade : <span> <?php if ($data["statut"] == 3) {echo $data["grade"];} else {echo "*";} ?> </span> <br/>
 
             Nom : <span> <?php echo $data["nom"]; ?> </span> <br/>
 
             Prénom : <span> <?php echo $data["prenom"]; ?> </span> <br/>
-</div> <div class="part2">
+
             Date de naissance : <span> <?php echo $data["naissance"]; ?> </span> <br/>
 
             Nationalité : <span> <?php echo $data["nationalite"]; ?> </span> <br/>
@@ -51,7 +50,7 @@ $this->script = "public/js/modifier.js";
                         echo "Militaire";
                         break;
                 }
-                ;?></span> <br/></div>
+                ;?></span> <br/>
         </div>
     </div>
 

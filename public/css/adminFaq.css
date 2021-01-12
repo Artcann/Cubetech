@@ -44,3 +44,7 @@ p {
 form {
     height: 100%;
 }
+
+#add-button {
+    margin: 15px auto;
+}

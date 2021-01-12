@@ -6,7 +6,6 @@
     height: 80%;
     margin-top: 5%;
     margin-left: 10%;
-    margin-right:10%;
     font-size: 20px;
 
 }
@@ -14,7 +13,7 @@
 .informations{
     border: 2px dashed #FF9000;
     border-radius: 5px;
-    width:25%;
+    width:20%;
     padding: 20px;
     display: block;
     float: left;
@@ -44,7 +43,6 @@
 .description{
     color:white;
     line-height: 2em;
-    font-size: 2vh;
 }
 span{
     color: #FF9000;
@@ -55,7 +53,7 @@ span{
     display: inline-block;
     margin: 0px 10% 0px 5%;
     height: 80%;
-    width: 50%;
+    width: 55%;
 }
 .explication{
     padding: 20px;
@@ -82,77 +80,17 @@ a{
 }
 
 .formulaire label{
-    width: 40%;
+    width: 280px;
 }
 .formulaire input{
-  width: 50%;
 }
 
 
 #submit{
     margin-right: 40%;
     margin-left: 40%;
+
     margin-top: 5px;
     padding: 5px;
     width:auto;
-}
-
-@media screen and (max-width: 1000px) {
-  .container {
-  }
-
-  .head img{
-    height: 70px;
-  }
-  .head .name{
-    float:none;
-    margin: auto;
-  }
-  .informations{
-    width: 80%;
-    margin:auto;
-    height: 40%;
-    float: none;
-    padding-left: 10%;
-  }
-  .description{
-    font-size: 2vw;
-  }
-  .part1{
-    float:left;
-    display: inline-block;
-
-  }
-  .part2{
-    margin-left: 10%;
-    float:left;
-    display: inline-block;
-  }
-  .col2{
-    width:90%;
-    float: none;
-    height: auto;
-  }
-  .explication{
-    margin: auto;
-    font-size: 2.5vw;
-  }
-  .formulaire form{
-    width: 80%;
-  }
-  .formulaire label{
-    text-align: center;
-    font-size: 2vw;
-  }
-  .deconnexion{
-    margin:0;
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-
-  .informations{
-    height:30%;
-  }
 }
