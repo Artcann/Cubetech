@@ -1,11 +1,11 @@
 .select-style {
     padding: 0;
-    margin: 0;
     width: 33%;
     border-radius: 5px;
     overflow: hidden;
     background-color: #FF9000;
     position: relative;
+    margin: 2vh;
 }
 
 .select-style select {
@@ -31,25 +31,26 @@
     display: block;
     text-align: right;
     margin-top: 3vh;
-    margin-bottom: 3vh;
+    margin-bottom: 3%;
     font-size: 25px;
     width: 20%;
 }
 #contact{
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-bottom: 2vh;
     width: 80%;
-    height: 100%;
-    padding-bottom: 5%;
+    height: 100vh;
+    padding-bottom: 5vh;
+    padding-top: 2vh;
 }
 textarea{
     border-radius: 5px;
-    border: 2px solid #FF9000;
-    height: 80%;
+    border: 2px solid #FF9900;
+    height: 70%;
     width: 70%;
     resize: none;
     padding-left: 2vh;
     padding-right: 2vh;
+    margin-left: 6vh;
 }
 #contactsubmit{
     margin-top: 2vh;
@@ -60,15 +61,14 @@ textarea{
     text-decoration: none;
     text-align: center;
     float: left;
+    margin-bottom: 2vh;
+    margin-left: 6vh;
 }
 #contactsubmit:hover{
     background-color: green;
     transition: background-color 0.5s;
 }
 
-html{
-    height: 60%;
-}
 
 
 
