@@ -136,26 +136,35 @@ class ControllerModifier extends ControllerSecure
     }
 
     public function modifier() {
+      if($this->request->isParameterSet('verifiedPassword')){
         $currentPassword=$this->session->getAttribute("user")['password'];
 
         $verifiedPassword=$this->request->getParameter('verifiedPassword');
         $newPassword= $this->request->getParameter('password');
         $idUser=$this->session->getAttribute("user")['id'];
+        $confirmedPassword = $this->session->getAttribute("confirmNewPass");
 
        if (!password_verify($verifiedPassword,$currentPassword)){
             //header("Location: /Cubetech/Modifier?password=false");
             //exit();
-            throw new Exception("Vous ne connaissez plus votre propre MDP ou vous êtes un criminel !");
+          throw new Exception("Vous ne connaissez plus votre propre MDP ou vous êtes un criminel !");
         }
         elseif (password_verify($newPassword,$currentPassword)){
              //header("Location: /Cubetech/Modifier?password=same");
              //exit();
-            throw new Exception("Vous avez changer votre mot de passe avec celui que vous avez déjà !");
+          throw new Exception("Vous avez changer votre mot de passe avec celui que vous avez déjà !");
+        }
+        elseif(!password_verify($newPassword,$confirmedPassword)){
+          throw new Exception("Vous avez pas mis les deux mêmes mot de passes...");
         }
         else{
             $this->user->modifyPassword($idUser, password_hash($newPassword, PASSWORD_DEFAULT));
             $this->generateView();
         }
+      }
+      else{
+        throw new Exception("Vous n'avez rien rempli");
+      }
 
     }
 }

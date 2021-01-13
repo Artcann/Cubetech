@@ -76,7 +76,7 @@ $this->script = "public/js/modifier.js";
             <form action="modifier/modifier" name="modifier" method="post">
                 <label for="verifiedPassword">Ancien Mot de Passe :</label><input type="password" name="verifiedPassword" id="verifiedPassword">
                 <label for="password">Nouveau Mot de Passe :</label><input type="password" name="password" id="password">
-                <label for="confirmNewPass">Confirmez-le :</label><input type="password" name="confirmNewPasspassword" id="confirmNewPass">
+                <label for="confirmNewPass">Confirmez-le :</label><input type="password" name="confirmNewPass" id="confirmNewPass">
                 <span id="test"></span> <span id="same"></span>
                 <div id="bas">
                 <input id="submit" type="submit" value="Changez">
