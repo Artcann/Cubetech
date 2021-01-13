@@ -1,7 +1,6 @@
-/*vue résultat*/
 <?php
 $this->title='Page Recherche';
-$this->style='public/css/styleR.css';
+#$this->style='public/css/styleR.css';
 /*$this->script='recherche.js';*/
 ?>
 
@@ -25,7 +24,7 @@ $this->style='public/css/styleR.css';
 
 <tbody>
 <?php
-    foreach($dataArr as $k => $v): ?>
+    foreach($data as $k => $v): ?>
         <tr>
             <td><?php echo $v['nom']; ?></td>
             <td><?php echo $v['prenom']; ?></td>
@@ -40,8 +39,5 @@ $this->style='public/css/styleR.css';
             <td><?php echo $v['matricule']; ?></td>
         </tr>
     <?php endforeach ?>
-    <?php if(empty($id,$nom,$prenom,$login,$naissance,$grade,$nationalite,$statut,$matricule,$corps,$caserne)) {
-        echo'<p>"Veuillez renseigner au moins 1 champ"</p>';}?>
-    <?php if($reponse==0) {echo '<p>Désolé, votre recherche n\'a rien donné</p>';}?>
 </tbody>
 </table>

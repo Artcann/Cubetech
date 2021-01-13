@@ -2,11 +2,10 @@
 <?php
 require_once("Framework/Model.php");
 
-class Recherche extends Model
+class Recherche extends Model {
 
- public function getAllUsers($id, $nom, $prenom, $naissance, $grade, $caserne, $nationalite, $corps, $statut, $matricule, $login)
-{
-  if getParameter()
+  public function getAllUsers($id, $nom, $prenom, $naissance, $grade, $caserne, $nationalite, $corps, $statut, $matricule, $login) {
+      if getParameter()
         {
         $sql = "SELECT nom,prenom,login,mail,naissance,nationalite,statut,grade,corps,caserne,matricule FROM user
         NATURAL JOIN caserne 
@@ -15,8 +14,12 @@ class Recherche extends Model
         ORDER BY nom";
 
         $response = $this->executeRequest($sql);
+        $dataArr = array();
+        while($data = $response->fetch()) {
+            $dataArr[$data['id']] = $data;
+        }
 
-        $dataArr = array($reponse);
         return $dataArr;
         }
+    }
 }
