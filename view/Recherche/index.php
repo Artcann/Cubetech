@@ -15,6 +15,7 @@ $this->style='public/css/styleRform.css';
       <tr><td align="left">Prénom :</td><td align="center"><input type="text" name ="prenom" id="prenom"/></td></tr>
       <tr><td align="left">Naissance :</td><td align="center">&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="âge" id="date"/></td></tr>
       <tr><td align="left">Grade :</td><td align="center">&nbsp;&nbsp;&nbsp;&nbsp;<select><option value="">--Choisissez une option--</option>
+            <option value="général">Général</option>
             <option value="capitaine">Capitaine</option>
             <option value="lieutenant">Lieutenant</option>
             <option value="sergent">Sergent</option>
