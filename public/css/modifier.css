@@ -1,9 +1,33 @@
 
+#bas{
+  height:40px;
+  padding-top:10px;
+}
+input#submit,#close{
+  background-color: #FF9000;
+  border-radius: 5px;
+  border: 2px solid black;
 
+
+}
+#submit{
+  display: block;
+  float: left;
+  width: auto;
+  padding: 3px;
+  margin-left: 30%;
+}
+#close{
+  width: auto;
+  float: left;
+  display: block;
+  padding:3px;
+}
 #container{
     height: 80%;
     margin-left: 10%;
     font-size: 20px;
+
 
 }
 .bienvenue{
@@ -59,9 +83,12 @@ span{
     color: white;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
-
+#faireModif{
+  margin-top: 3px;
+  font-style: italic;
+}
 .deconnexion{
     text-align: center;
     padding-top: 10%;
@@ -69,8 +96,11 @@ span{
 a{
   color: white;
 }
+#formulaire{
 
-.formulaire form{
+  margin-bottom: 10px;
+}
+#formulaire form{
   margin: auto;
   width: 600px;
   padding: 1em;
@@ -78,21 +108,45 @@ a{
   border-radius: 1em;
 }
 
-.formulaire label{
+#formulaire label{
     width: 280px;
 }
-.formulaire input{
-}
 
 
-#submit{
+
+/* #submit{
     margin-right: 40%;
     margin-left: 40%;
 
     margin-top: 5px;
     padding: 5px;
     width:auto;
+} */
+
+.tableau{
+    border-collapse: collapse;
+    color: white;
+    min-width: 400px;
+    margin: auto;
+    box-shadow: 0 5px 50px rgba(0,0,0,1);
+    cursor: pointer;
+    border: 2px solid #FF9000;
+
 }
+
+.alert{
+    width: 40px;
+}
+thead tr {
+    background-color: black;
+}
+
+th,td {
+    padding: 15px 20px;
+    text-align: center;
+    border: 2px solid #FF9000;
+}
+
 @media screen and (max-width: 1000px) {
   .container {
   }
@@ -131,10 +185,10 @@ a{
     margin: auto;
     font-size: 2.5vw;
   }
-  .formulaire form{
+  #formulaire form{
     width: 80%;
   }
-  .formulaire label{
+  #formulaire label{
     text-align: center;
     font-size: 2vw;
   }

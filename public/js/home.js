@@ -14,29 +14,23 @@ $(function () {
     $('img.alert').hover(imageSwap, imageSwap);
 });
 
-let boutonText = document.getElementById('button2').innerText;
 
-let agenda = document.getElementById('agenda').innerText;
 
 
 
 if (statut === 'Administrateur'){
 
-    document.getElementById('button2').innerText = 'Accèder au back office';
+    document.getElementById('button1').innerText = 'Accèder au back office';
+    $("#button1").attr("href", "adminhome");
+    document.getElementById('button2').style.display="none";
 
-    $("#button2").attr("href", "adminhome");
-
-    document.getElementById('agenda').innerText = '';  
+    document.getElementById('agenda').innerText = '';
 }
 
 
 else if (statut === 'Ressource humaine') {
 
-	document.getElementById('button2').innerText = 'Démarrer un test';
-
-	$("#button2").attr("href", "lancerLeTest");
+	document.getElementById('button1').innerText = 'Démarrer un test';
+  $("#button1").attr("href", "lancerLeTest");
+  document.getElementById('button2').innerText= 'Voir mon agenda';
 }
-
-
-
-

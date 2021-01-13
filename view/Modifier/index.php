@@ -6,6 +6,8 @@ $this->script = "public/js/home.js";
 $this->script = "public/js/modifier.js";
 ?>
 <a onload="adminAccess()" href="Adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
+<script> let statut="<?php echo $scriptData['statut']?>"; </script>
+
 <div id="container">
 
   <div class="bienvenue">
@@ -68,16 +70,55 @@ $this->script = "public/js/modifier.js";
                     case '3':
                         echo "Vous ne pouvez que modifier votre mot de passe, si vous voulez procédé à d'autres changements n'hésitez pas à écrire un mail à <b> contact@cubetech.fr</b>";
                         break;}; ?>
-
+            <div id="faireModif">Si vous souhaitez faire des modifications, cliquez ici. </div>
         </div>
-        <div class="formulaire">
+        <div id="formulaire">
             <form action="modifier/modifier" name="modifier" method="post">
                 <label for="verifiedPassword">Ancien Mot de Passe :</label><input type="password" name="verifiedPassword" id="verifiedPassword">
-                <label for="password">Nouveau Mot de Passe :</label><input type="passcv   word" name="password" id="password">
+                <label for="password">Nouveau Mot de Passe :</label><input type="password" name="password" id="password">
+                <label for="confirmNewPass">Confirmez-le :</label><input type="password" name="confirmNewPasspassword" id="confirmNewPass">
                 <span id="test"></span> <span id="same"></span>
-                <input id="submit" type="submit" value="Changer">
+                <div id="bas">
+                <input id="submit" type="submit" value="Changez">
+                <div id="close"> Abandonnez </div>
+              </div>
             </form>
+
         </div>
+        <div id="agenda">
+          <div class="row1-col3">
+            <H3 id ="agenda"> Agenda des rendez-vous à venir </H3><br>
+
+            <div class="table-container">
+                <table class="tableau">
+                    <tbody>
+                        <?php /** @noinspection PhpUndefinedVariableInspection */
+                        foreach($test as $k): ?>
+                            <tr>
+                                <td><?php echo $k; ?></td>
+                                <td><a href=""><img class="alert" src="public/images/notification.png" data-alt-src="public/images/alert2.png"></center></a></td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <table class="table">
+                    <tbody>
+                        <?php /** @noinspection PhpUndefinedVariableInspection */
+                        foreach($tableauTestRh as $k): ?>
+                            <tr>
+                                <td><?php echo $k; ?></td>
+                                <td><a href=""><img class="alert" src="public/images/notification.png" data-alt-src="public/images/alert2.png"></td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+
         <div class="deconnexion">
             <a href="Home/disconnect">Disconnect</a>
         </div>

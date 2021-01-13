@@ -33,3 +33,34 @@ document.getElementById("password").addEventListener("input", function (e) {
     test.textContent = longueurMdp; // Texte de l'aide
     test.style.color = couleurMsg; // Couleur du texte de l'aide
 });
+//affichage du formulaire
+function showStuff(id){
+  document.getElementById(id).style.display="block";
+}
+function hideStuff(evt,id){
+  document.getElementById(id).style.display="none";
+  evt.stopPropagation();
+}
+
+document.getElementById("formulaire").style.display="none"; //de base le formulaire est caché
+
+$("#faireModif").click(function(){
+  document.getElementById("formulaire").style.display="block"});
+$("#close").click(function(){
+  document.getElementById("formulaire").style.display="none"});
+
+  var imageSwap = function () {
+
+      var $this = $(this);
+
+      var newSource = $this.data('alt-src');
+
+      $this.data('alt-src', $this.attr('src'));
+
+      $this.attr('src', newSource);
+  }
+
+
+  $(function () {
+      $('img.alert').hover(imageSwap, imageSwap);
+  });
