@@ -88,6 +88,7 @@ footer {
 	right: 0;
 	border-top: solid 1.5px;
 	border-color: #FF9000;
+	font-size: 19px;
 }
 
 
@@ -126,8 +127,7 @@ footer {
 
 #menu2 nav a:hover{
 	color: #FF9000;
-	transition-delay: 0s;
-	font-size: 19.5px;
+	font-size: 21.5px;
 	text-shadow: 2px 2px 4px #FF9000;
 }
 
@@ -148,7 +148,7 @@ fieldset{
 	color:white;
 	padding:10px;
 	text-align:left;
-	margin-top:20px;
+	margin-top:70px;
 	margin-left:40px;
 	margin-right:70px;
 	border-radius:30px;	
@@ -180,9 +180,5 @@ button{
  }
 
 .texte{
-	color:#ff9000;
+	color:white;
 }
-
-
-
-

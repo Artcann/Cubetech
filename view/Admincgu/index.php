@@ -1,30 +1,27 @@
 <?php
-
-$this->title = "Acceuil Admin Faq";
-$this->style = "public/css/adminFaq.css";
-
-
+$this->title = "Gestion CGU";
 ?>
+
 <div class="table-container">
 
-    <h1>Gestion de la FAQ</h1>
+    <h1>Gestion des CGU</h1>
 
     <table class="table">
         <thead>
         <tr>
-            <td>Titre de la question</td>
-            <td>Modifer la question</td>
-            <td>Supprimer la question</td>
+            <td>Titre de la partie</td>
+            <td>Modifer la partie</td>
+            <td>Supprimer la partie</td>
         </tr>
         </thead>
         <tbody>
         <?php /** @noinspection PhpUndefinedVariableInspection */
-        foreach($faq as $k => $v): ?>
+        foreach($data as $k => $v): ?>
             <tr>
                 <td><?php echo MarkdownParser::render($v['titre']); ?></td>
-                <td><?php echo '<a href="adminfaq/modification/'. $v['id'] .'" class=button>Modifier</a>'?></td>
+                <td><?php echo '<a href="admincgu/modification/'. $v['id'] .'" class=button>Modifier</a>'?></td>
                 <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cette question ?\')"
-                    href="adminfaq/delete/' . $v['id'] . '" class="button">Supprimer</a>' ?></td>
+                    href="admincgu/delete/' . $v['id'] . '" class="button">Supprimer</a>' ?></td>
             </tr>
         <?php endforeach ?>
         </tbody>

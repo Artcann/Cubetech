@@ -36,4 +36,9 @@ class ControllerAdminfaq extends ControllerAdmin {
                             $this->request->getParameter('content'));
         $this->redirect("adminfaq");
     }
+
+    public function delete() {
+        $this->faq->delete($this->request->getParameter('id'));
+        $this->redirect("adminfaq");
+    }
 }
