@@ -2,8 +2,8 @@
 
 $this->title = "Forum | Topic";
 
-/*$this->style = "public/css/forum.css";*/
-
+$this->style = "public/css/forum.css";
+$this->script = "public/js/forum.js"
 ?>
 
     <h2>Liste des topics :</h2>
@@ -24,25 +24,25 @@ print_r($data['listTopics']);
 ?>
 
 <table class="table">
-	    <thead>
-	    <tr>
-	        <td>IdUser</td>
-	        <td>Date</td>
-	        <td>Contenu</td>
-	        <td>Contact</td>
-	        <td>Valider</td>
-	    </tr>
-	    </thead>
-	    <tbody>
-	    <?php /** @noinspection PhpUndefinedVariableInspection */
-	    foreach($rdv as $k => $v): ?>
-	        <tr>
-	            <td><?php echo $v['idUser']; ?></td>
-	            <td><?php echo $v['date']; ?></td>
-	            <td><?php echo $v['contenu']; ?></td>
-	            <td><a href=""><center><img class="mail" src="public/images/mail.png" data-alt-src="public/images/mail2.png"></center></a></td>
-	            <td class="valider"><a href="adminsav/archive/<?php echo $v['id']?>"><center><img class="valider" src="public/images/valider.png" data-alt-src="public/images/valider1.png"></center></a></td>
-	        </tr>
-	    <?php endforeach ?>
-	    </tbody>
-	    </table>
+    <thead>
+    <tr>
+        <td>Sujet</td>
+        <td>Auteur</td>
+        <td>Nombre de réponses</td>
+        <td>Créé le </td>
+
+    </tr>
+    </thead>
+    <tbody>
+    <?php /** @noinspection PhpUndefinedVariableInspection */
+    foreach($data['listTopics'] as $datum): ?>
+        <tr <?php echo 'data-href="forum/post/' . $datum['topic_id'] . '".'?>>
+            <td><?php echo '<a href="forum/post/'.$datum['topic_id'].'">'.$datum['subject'].'</a>'?></td>
+            <td><?php echo $datum['nom'].' '.$datum['prenom'] ?></td>
+            <td><?php echo $datum['total_topics'] ?></td>
+            <td><?php echo $datum['created'] ?></td>
+
+        </tr>
+    <?php endforeach ?>
+    </tbody>
+</table>

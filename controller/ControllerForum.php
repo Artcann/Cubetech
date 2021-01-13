@@ -3,6 +3,7 @@
 require_once 'model/Forum.php';
 require_once 'Framework/Controller.php';
 require_once 'Framework/Request.php';
+require_once 'controller/ControllerSecure.php';
 
 class ControllerForum extends Controller
 {
@@ -36,22 +37,54 @@ class ControllerForum extends Controller
 
     public function topic()
     {
-        $id=$this->request->getParameter('id');
-        $catTopics=$this->forum->getTopicList($id);
-        $this->generateView(array(
-            "listTopics"=>$catTopics,
-        ));
+        if(!$this->request->isParameterSet('id')) {
+            http_response_code(404);
+            throw new Exception('Page Not Found');
+        } else {
+            $id=$this->request->getParameter('id');
+            $catTopics=$this->forum->getTopicList($id);
+            $this->generateView(array(
+                "listTopics"=>$catTopics,
+            ));
+        }
+
     }
 
     public function post()
     {
-        $id=$this->request->getParameter('id');
-        /*$id=1;*/
-        $subjectTopic=$this->forum->getTopicSubject($id);
-        $topPosts=$this->forum->getPostList($id);
-        $this->generateView(array(
-            "subject"=>$subjectTopic,
-            "listPosts"=>$topPosts,
-        ));
+        if(!$this->request->isParameterSet('id')) {
+            http_response_code(404);
+            throw new Exception('Page Not Found');
+        } else {
+            $id=$this->request->getParameter('id');
+            $subjectTopic=$this->forum->getTopicSubject($id);
+            $topPosts=$this->forum->getPostList($id);
+            $this->generateView(array(
+                "subject"=>$subjectTopic,
+                "listPosts"=>$topPosts,
+                "refTopic"=>$id,
+            ));
+        }
+
+    }
+
+    public function postmessage(){
+        $user_id=$this->session->getAttribute("user")['id'];
+        $message=$this->request->getParameter('message');
+        /*$id=$this->request->getParameter('id');*/
+        $id=1;
+        $this->forum->insertPosts($message, $id, $user_id);
+        $this->redirect("forum/topic/1");
+
+    }
+
+    public function newTopic(){
+        $user_id=$this->session->getAttribute("user")['id'];
+        $message=$this->request->getParameter('message');
+        /*$id=$this->request->getParameter('id');*/
+        $id=1;
+        $this->forum->insertPosts($message, $id, $user_id);
+        $this->redirect("forum/topic/1");
+
     }
 }

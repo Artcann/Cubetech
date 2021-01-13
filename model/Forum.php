@@ -63,7 +63,7 @@ class Forum extends Model
     public function getTopicList($id){
 
         $sql = "
-                SELECT t.topic_id, t.subject, t.user_id, t.created, u.nom, u.prenom, count(t.topic_id) as total_topics	
+                SELECT t.topic_id, t.subject, t.user_id, t.created, u.nom, u.prenom, count(t.topic_id) as total_topics, p.created	
 				FROM forum_topics as t
 				LEFT JOIN user as u ON t.user_id = u.id
 				LEFT JOIN forum_posts as p ON t.topic_id = p.topic_id
@@ -85,9 +85,10 @@ class Forum extends Model
     public function getPostList($id){
 
         $sql = "
-                SELECT p.post_id, p.message, p.user_id, p.created, u.nom, u.prenom 		
+                SELECT p.post_id, p.message, p.user_id, p.created, u.nom, u.prenom, s.nom as role 		
 				FROM forum_posts as p
 				LEFT JOIN user as u ON p.user_id = u.id
+				LEFT JOIN statut as s ON u.statut = s.id
 				WHERE p.topic_id = ".$id."
 				";
 
@@ -104,25 +105,26 @@ class Forum extends Model
 
     public function getTopicSubject($id){
         $sql = "
-                SELECT subject
+                SELECT subject, topic_id
                 FROM forum_topics
-                WHERE topic_id =".$id."";
+                WHERE topic_id =".$id."
+                GROUP BY topic_id";
 
         $response = $this->executeRequest($sql);
 
         $dataArr = array();
         while ($data = $response->fetch()) {
-            $dataArr[$data['subject']] = $data;
+            $dataArr[$data['topic_id']] = $data;
         }
 
         return $dataArr;
     }
 
-    public function insertPosts($user_id, $topic_id, $message) {
-        $sql = "INSERT INTO posts(user_id, topic_id, message, created)
+    public function insertPosts($message, $topic_id, $user_id) {
+        $sql = "INSERT INTO forum_posts(message, topic_id, user_id, created)
                 VALUES (?, ?, ?, current_timestamp)";
 
-        $values = array($id_contact, $id_user, $message);
+        $values = array($message, $topic_id, $user_id) ;
 
         $this->executeRequest($sql, $values);
     }
