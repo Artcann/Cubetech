@@ -16,7 +16,6 @@ class Test extends Model
 
         $sql = "SELECT id, date,idUser, heure, idRh, statut FROM test WHERE idUser= ?";
 
-
         $response = $this->executeRequest($sql, array($idUser));
 
         $dataArr = array();
@@ -32,6 +31,7 @@ class Test extends Model
     public function getTestByRh($idRh)
     {
 
+
         $sql = "SELECT id, date, idUser, heure, idRh, statut FROM test WHERE idRh= ?";
 
         $response = $this->executeRequest($sql, array($idRh));
@@ -46,7 +46,7 @@ class Test extends Model
     }
 
 
-    public function getRecentTestByUser($idUser, $idCapteur)
+/*     public function getRecentTestByUser($idUser, $idCapteur)
     {
 
 
@@ -62,7 +62,7 @@ class Test extends Model
         }
 
         return($dataArr);
-    }
+    } */
 
   
     public function insertTest($trame, $idUser, $idRh) {

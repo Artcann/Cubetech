@@ -14,10 +14,6 @@ $(function () {
     $('img.alert').hover(imageSwap, imageSwap);
 });
 
-
-
-let statut = scriptData.statut;
-
 let boutonText = document.getElementById('button2').innerText;
 
 let agenda = document.getElementById('agenda').innerText;
