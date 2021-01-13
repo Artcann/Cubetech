@@ -147,6 +147,18 @@ th,td {
     border: 2px solid #FF9000;
 }
 
+/*PAGE MODIFIER */
+#correct{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+a#retour{
+  margin-left: 45%;
+  padding-top:40%;
+}
+
 @media screen and (max-width: 1000px) {
   .container {
   }

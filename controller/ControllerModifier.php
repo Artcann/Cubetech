@@ -138,12 +138,10 @@ class ControllerModifier extends ControllerSecure
     public function modifier() {
       if($this->request->isParameterSet('verifiedPassword')){
         $currentPassword=$this->session->getAttribute("user")['password'];
-
         $verifiedPassword=$this->request->getParameter('verifiedPassword');
         $newPassword= $this->request->getParameter('password');
         $idUser=$this->session->getAttribute("user")['id'];
-        $confirmedPassword = $this->session->getAttribute("confirmNewPass");
-
+        $confirmedPassword = $this->request->getParameter("confirmNewPass");
        if (!password_verify($verifiedPassword,$currentPassword)){
             //header("Location: /Cubetech/Modifier?password=false");
             //exit();
@@ -154,7 +152,7 @@ class ControllerModifier extends ControllerSecure
              //exit();
           throw new Exception("Vous avez changer votre mot de passe avec celui que vous avez déjà !");
         }
-        elseif(!password_verify($newPassword,$confirmedPassword)){
+        elseif($newPassword!=$confirmedPassword){
           throw new Exception("Vous avez pas mis les deux mêmes mot de passes...");
         }
         else{
