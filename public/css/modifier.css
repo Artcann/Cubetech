@@ -1,15 +1,14 @@
-.bienvenue{
-    margin-top: 10px;
-}
 
-.container{
+
+#container{
     height: 80%;
-    margin-top: 5%;
     margin-left: 10%;
     font-size: 20px;
 
 }
-
+.bienvenue{
+  padding-top: 2%;
+}
 .informations{
     border: 2px dashed #FF9000;
     border-radius: 5px;
@@ -21,12 +20,12 @@
     font-size: 20px;
 }
 
-.head {
+.tete {
     margin: 2px 2px 15px 2px;
     overflow: hidden;
 }
 
-.head img {
+.tete img {
     height: 100px;
     display: block;
     margin-right: 4px;
@@ -51,7 +50,7 @@ span{
 
 .col2{
     display: inline-block;
-    margin: 0px 10% 0px 5%;
+    margin: 0px 10% 0px 10%;
     height: 80%;
     width: 55%;
 }
@@ -72,7 +71,7 @@ a{
 }
 
 .formulaire form{
-
+  margin: auto;
   width: 600px;
   padding: 1em;
   border: 1px solid #ff9000;
@@ -93,4 +92,59 @@ a{
     margin-top: 5px;
     padding: 5px;
     width:auto;
+}
+@media screen and (max-width: 1000px) {
+  .container {
+  }
+  .head img{
+    height: 70px;
+  }
+  .head .name{
+    float:none;
+    margin: auto;
+  }
+  .informations{
+    width: 80%;
+    margin:auto;
+    height: 40%;
+    float: none;
+    padding-left: 10%;
+  }
+  .description{
+    font-size: 2vw;
+  }
+  .part1{
+    float:left;
+    display: inline-block;
+  }
+  .part2{
+    margin-left: 10%;
+    float:left;
+    display: inline-block;
+  }
+  .col2{
+    width:90%;
+    float: none;
+    height: auto;
+  }
+  .explication{
+    margin: auto;
+    font-size: 2.5vw;
+  }
+  .formulaire form{
+    width: 80%;
+  }
+  .formulaire label{
+    text-align: center;
+    font-size: 2vw;
+  }
+  .deconnexion{
+    margin:0;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .informations{
+    height:30%;
+  }
 }
