@@ -58,6 +58,8 @@ class ControllerHome extends ControllerSecure
 
         $tableauTestRh = array();
 
+        $_SESSION['lang'] = $data['nationalite'];
+
 
 
         if ($data["statut"] != 3) {
@@ -124,6 +126,8 @@ class ControllerHome extends ControllerSecure
 
             }
         }
+
+
 
 
         $scriptData = Array('statut'=> $data['statut']);
