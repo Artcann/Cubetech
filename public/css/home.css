@@ -2,9 +2,9 @@
 
 
 
-#container div.col1{
+#container .col1{
   margin: auto;
-  width: 600px;
+  width: auto;
   height:500px;
   position: absolute;
   top: 0;
@@ -46,13 +46,6 @@
 /* Media Queries */
 
 @media all and (max-width: 600px){
-  .col1 {
-  width: auto;
-  height:250px;
-  bottom: 40%;
-  }
+  
 
-  .col1 .row1-col1 img{
-   height: 100px;
-  }
 }
