@@ -5,22 +5,6 @@ $this->script = "public/js/home.js";
 $this->style = "public/css/home.css"
 ?>
 
-<?php 
-$lang = $_SESSION['lang'];
-
-switch($lang) {
-    
-    case 'Français':
-        include('Langues/lang-fr.php');
-    break;
-    
-    default:
-        include('Langues/lang-en.php');
-    break;
-
-}
-
-?>
 
 <script> let statut="<?php echo $scriptData['statut']?>"; </script>
 

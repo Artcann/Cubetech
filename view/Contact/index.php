@@ -2,23 +2,6 @@
 $this->style = "public/css/contact.css";
 ?>
 
-<?php 
-$lang = $_SESSION['lang'];
-
-switch($lang) {
-    
-    case 'Français':
-        include('Langues/lang-fr.php');
-    break;
-    
-    default:
-        include('Langues/lang-en.php');
-    break;
-
-}
-
-?>
-
 
 <form id="contact" action="contact" method="post">
     <div class="select-style">
@@ -34,4 +17,5 @@ switch($lang) {
     </textarea>
     <input type="submit" value="<?php echo TXT_BT1_CONTACT;?>">
 </form>
+
 

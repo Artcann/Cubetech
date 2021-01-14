@@ -59,6 +59,13 @@ class View
 
             ob_start();
 
+            if ($lang == "Français") {
+                include('Langues/lang-fr.php');
+            }
+            else if ($lang !== "Français") {
+                include('Langues/lang-en.php');
+            } 
+            
             require($file);
 
             return ob_get_clean();

@@ -50,6 +50,8 @@ class ControllerHome extends ControllerSecure
 
         $statut = $this->session->getAttribute('user')['statut'];
 
+        $lang = $this->session->getAttribute('user')['nationalite'];
+
         $tableauDesRdv = array();
 
         $tableauDeTest = array();
@@ -57,9 +59,6 @@ class ControllerHome extends ControllerSecure
         $testRhATraiter = array();
 
         $tableauTestRh = array();
-
-        $_SESSION['lang'] = $data['nationalite'];
-
 
 
         if ($data["statut"] != 3) {
@@ -136,7 +135,7 @@ class ControllerHome extends ControllerSecure
         $this->generateView(array("data" => $data, "corps" => $corps, 
                                   "caserne" => $caserne, "test" => $tableauDeTest, 
                                   "statut" => $statut, "tableauTestRh" => $tableauTestRh, 
-                                  "scriptData"=> $scriptData
+                                  "scriptData"=> $scriptData, "lang" => $lang
                                  )); 
 
     }
