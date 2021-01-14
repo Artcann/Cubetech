@@ -19,11 +19,17 @@
 
     <nav class="navbar" id="navbar-header">
         <ul>
+            <a  href="javascript:void(0)" class="icon" id="ham" >
+              <img class="bars" src="public/images/icon.png" alt="Hamburger"/>
+            </a>
             <li><a href="home" id="pict-link"><img id="pict" src="public/images/logo_notext.png" alt="Logo du site"/></a></li>
+
             <li><a class="link" href="home"> Mon compte </a></li>
             <li><a class="link" href="#"> Forum </a></li>
             <li><a class="link" href="#"> Notifications </a></li>
+
         </ul>
+
     </nav>
 
     <div id="page-container">
@@ -31,7 +37,7 @@
             <?= /** @noinspection PhpUndefinedVariableInspection */
             $content ?>
         </div>
-    
+
         <footer>
             <nav class="navbar" id="navbar-footer">
                 <ul>
@@ -48,5 +54,3 @@ $script ?>"></script>
 
 </body>
 </html>
-
-

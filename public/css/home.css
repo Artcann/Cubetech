@@ -15,16 +15,6 @@
 }
 
 
-#container div.col1 div.row1-col1 img{
-  display: block;
-  height: 120px;
-  padding-top: 6%;
-  padding-bottom: 6%;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
 
 /*buttons*/
 /*DEFINIT LA BALISE A,LI*/
@@ -56,15 +46,12 @@
 /* Media Queries */
 
 @media all and (max-width: 600px){
-
   .col1 {
   width: auto;
   height:250px;
   bottom: 40%;
   }
-  h1{
-   font-size: 30px;
-  }
+
   .col1 .row1-col1 img{
    height: 100px;
   }

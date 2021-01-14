@@ -14,6 +14,7 @@ $this->style = "public/css/home.css"
         </div>
         <div class="row2-col1">
              <h1>Bienvenue <span><?php echo $data["prenom"];?></span> sur le site CubeTech</h1>
+             <i class="fas fa-cat"></i>
         </div>
          <div class="row3-col1">
            <li id="bt1"><a href="result" id="button1"> Prendre un rendez-vous</a></li>
