@@ -5,8 +5,9 @@ $this->title = "Forum | Topic";
 $this->style = "public/css/forum.css";
 $this->script = "public/js/forum.js"
 ?>
-
+<br>
     <h2>Liste des topics :</h2>
+<br><br>
 <?php
 
 
@@ -14,13 +15,15 @@ $this->script = "public/js/forum.js"
     echo '<p><strong>'.$datum['name'].'</strong>'.' ('.$datum['total_topics'].')</p>';
     echo '<p>'.$datum['description'].'</p><br>';
 }*/
-foreach ($data['listTopics'] as $datum){
+/*foreach ($data['listTopics'] as $datum){
     echo '<strong><a href="forum/post/'.$datum['topic_id'].'">'.$datum['subject'].'</strong>'.' ('.$datum['total_topics'].')</a>';
     echo '<p>'.$datum['nom'].' '.$datum['prenom'].'</p><br>';
 }
 
 
-print_r($data['listTopics']);
+*/
+/*print_r($data['listTopics']);*/
+
 ?>
 
 <table class="table">
@@ -46,3 +49,24 @@ print_r($data['listTopics']);
     <?php endforeach ?>
     </tbody>
 </table>
+
+<img class="open-button" src="public/images/plus.png" onclick="openForm()">
+
+
+<div class="form-popup" id="myForm">
+    <form action="forum/newTopic" class="form-container" method="post">
+        <input type="hidden" id="category_id" name="category_id" value="<?php echo $data['refCat']?>">
+        <h1>Nouveau sujet</h1>
+
+        <label><b>Sujet</b></label>
+        <input type="text" placeholder="Écrivez le sujet" name="subject" required>
+
+        <!--<label for="msg"><b>Message</b></label>
+        <textarea placeholder="Détaillez votre problème" name="message" required></textarea>-->
+
+        <button type="submit" class="btn">Envoyer</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Annuler</button>
+    </form>
+</div>
+
+

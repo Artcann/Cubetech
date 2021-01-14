@@ -5,13 +5,14 @@ $this->title = "Forum | Post";
 /*$this->style = "public/css/forum.css";*/
 
 ?>
-
-    <h2>Sujet : <?php echo $data['refTopic'] ?></h2>
+<br>
+    <h2>Sujet : <?php echo $data['refTopic'] ?></h2><br><br>
 <?php
 
 /*print_r($data['listPosts']);*/
 /*print_r($data['subject']);*/
-print_r($data['refTopic'])
+/*print_r($data['refTopic']);
+print_r($data['reftop']);*/
 ?>
 
 <table class="table">
@@ -35,6 +36,7 @@ print_r($data['refTopic'])
         </tr>
     <?php endforeach ?>
     <form action="forum/postmessage" method="post">
+        <input type="hidden" id="topic_id" name="topic_id" value="<?php echo $data['refTopic']?>">
 
         <tr>
             <td>Répondre : </td>

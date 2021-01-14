@@ -45,6 +45,8 @@ class ControllerForum extends Controller
             $catTopics=$this->forum->getTopicList($id);
             $this->generateView(array(
                 "listTopics"=>$catTopics,
+                "refCat"=>$id,
+
             ));
         }
 
@@ -59,10 +61,12 @@ class ControllerForum extends Controller
             $id=$this->request->getParameter('id');
             $subjectTopic=$this->forum->getTopicSubject($id);
             $topPosts=$this->forum->getPostList($id);
+            $topic_id=$this->forum->getTopicIdBySubject('sujet 7');
             $this->generateView(array(
                 "subject"=>$subjectTopic,
                 "listPosts"=>$topPosts,
                 "refTopic"=>$id,
+                "reftop"=>$topic_id,
             ));
         }
 
@@ -71,20 +75,24 @@ class ControllerForum extends Controller
     public function postmessage(){
         $user_id=$this->session->getAttribute("user")['id'];
         $message=$this->request->getParameter('message');
-        /*$id=$this->request->getParameter('id');*/
-        $id=1;
-        $this->forum->insertPosts($message, $id, $user_id);
-        $this->redirect("forum/topic/1");
+        $id=$this->request->getParameter('topic_id');
+        $this->forum->insertPost($message, $id, $user_id);
+        $this->redirect("forum/post/$id");
 
     }
 
     public function newTopic(){
         $user_id=$this->session->getAttribute("user")['id'];
-        $message=$this->request->getParameter('message');
-        /*$id=$this->request->getParameter('id');*/
-        $id=1;
-        $this->forum->insertPosts($message, $id, $user_id);
-        $this->redirect("forum/topic/1");
+        $subject=$this->request->getParameter('subject');
+        /*$message=$this->request->getParameter('message');*/
+        $id_cat=$this->request->getParameter('category_id');
+        $this->forum->insertTopic($subject, $id_cat, $user_id);
+
+
+
+
+
+        $this->redirect("forum/topic/$id_cat");
 
     }
 }

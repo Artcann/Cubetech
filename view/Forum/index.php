@@ -7,8 +7,8 @@ $this->script = "public/js/forum.js"
 
 
 ?>
-<
-<h2>Liste des catégories :</h2>
+<br>
+    <h2>Liste des catégories :</h2><br><br>
 <?php
 
 
@@ -48,6 +48,6 @@ $this->script = "public/js/forum.js"
 	    </table>
 
 <?php
-print_r($data['totalDesc'])
+/*print_r($data['totalDesc'])*/
  /*echo 'data-href="forum/topic/' . $datum['category_id'] . '".'?>*/
 ?>
