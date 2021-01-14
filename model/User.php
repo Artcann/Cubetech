@@ -60,7 +60,7 @@ class User extends Model
         
 
 
-        $sql = "SELECT nom,prenom,login,mail,naissance,nationalite,statut,grade,corps,caserne,matricule FROM user
+        $sql = "SELECT id, nom, prenom, login, mail, naissance, nationalite, statut, grade, corps, caserne, matricule FROM user
         WHERE (nom LIKE ? OR prenom LIKE ? OR naissance = ? OR grade = ? OR caserne = ? OR nationalite LIKE ?
         OR corps = ? OR statut = ? OR matricule LIKE ?)";
 

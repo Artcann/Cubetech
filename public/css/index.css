@@ -187,7 +187,7 @@ a.button {
     display: block;
     background-color: dimgrey;
     justify-content: center;
-    width: 50%;
+    width: 75%;
     height: 25px;
     padding: 3px;
     padding-top: 9px;
@@ -237,7 +237,7 @@ td{
     scrollbar-width: thin;  
 }
 
-.table {
+table {
     border-collapse: collapse;
 	min-width: 400px;
 	width: 80%;
