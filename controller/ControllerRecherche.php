@@ -1,5 +1,5 @@
 <?php
-require_once 'model/User.php';
+require_once 'model/Recherche1.php';
 require_once 'Framework/Controller.php';
 
 class ControllerRecherche extends Controller {
@@ -7,18 +7,17 @@ class ControllerRecherche extends Controller {
     private $user;
 
     public function __construct()
-    {
+      {
         $this->user = new User();
-    }
+      }
 
     public function index()
-    {
+      {
         $this->generateView();
-    }
+      }
 
     public function result()
-
-    {
+      {
         $params = array('id', 'nom', 'prenom', 'naissance', 'grade', 'caserne', 'nationalite', 'corps', 'statut', 'matricule');
 
         foreach($params as $param) {
@@ -40,6 +39,6 @@ class ControllerRecherche extends Controller {
 
 
         $this->generateView(array("data" => $dataUser));
-}
+      }
 
 }
