@@ -61,12 +61,12 @@ class ControllerForum extends Controller
             $id=$this->request->getParameter('id');
             $subjectTopic=$this->forum->getTopicSubject($id);
             $topPosts=$this->forum->getPostList($id);
-            $topic_id=$this->forum->getTopicIdBySubject('sujet 7');
+
             $this->generateView(array(
                 "subject"=>$subjectTopic,
                 "listPosts"=>$topPosts,
                 "refTopic"=>$id,
-                "reftop"=>$topic_id,
+
             ));
         }
 

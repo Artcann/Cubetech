@@ -139,6 +139,9 @@ class Forum extends Model
         $this->executeRequest($sql, $values);
     }
 
+
+    
+    /*Pas encore fonctionnel : */
     public function getTopicIdBySubject ($subject){
         $sql = "
                 SELECT topic_id
