@@ -6,16 +6,15 @@ $this->script = "public/js/home.js";
 $this->script = "public/js/modifier.js";
 ?>
 <a onload="adminAccess()" href="Adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
+<div id="container">
 
-<div class="bienvenue">
-    <?php /** @noinspection PhpUndefinedVariableInspection */
-    echo "<h1>Bienvenue ". $data['prenom'] . " sur la page pour modifier vos informations</h1>" ?>
+  <div class="bienvenue">
+      <?php /** @noinspection PhpUndefinedVariableInspection */
+      echo "<h1>Bienvenue ". $data['prenom'] . " sur votre compte</h1>" ?>
 
-</div>
-<div class="container">
-
+  </div>
     <div class="informations">
-        <div class="head">
+        <div class="tete">
             <img alt="" id="profil" src="public/avatars/<?php echo $data["login"];?>.jpg">
             <div class="name">
                 <h3> <?php echo $data['prenom'] ." " . $data['nom'] ?></h3>
@@ -57,7 +56,7 @@ $this->script = "public/js/modifier.js";
 
     <div class="col2">
         <div class="explication">
-            Bonjour, bienvenue sur la page qui permet de modfiier votre compte. <?php switch ($data["statut"]) {
+            Bienvenue sur la page de votre compte. <?php switch ($data["statut"]) {
                     case '1':
                         echo "Vous êtes administrateur, vous avez le droit de tout modifier ! ";
                         break;

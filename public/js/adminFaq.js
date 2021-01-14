@@ -4,17 +4,19 @@ let sendModif = function() {
 
     $.ajax({
         type: "POST",
-        url: "adminfaq/modify",
+        url: pageName + "/modification",
         data: "title=" + titleArea.value 
         + "&content=" + contentArea.value
         +"&id=" + id,
         success: function (response, statut, xhr) {
-            console.log(response);
-            console.log(statut);
-            console.log(xhr);
+            window.location.href = "adminfaq";
         }
     });
 }
+
+let currentPage = window.location.href;
+
+let pageName = currentPage.split("/")[4];
 
 function getId() {
     let url = window.location.href.split('/');

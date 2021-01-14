@@ -27,11 +27,18 @@ class ControllerAdminfaq extends ControllerAdmin {
         }
     }
 
-    public function test() {
-        echo $this->faq->update('explication',
-                            'Vous trouverez les questions les plus répondues, il est important de vérifier ici avant de poser une question dans le forum ! La <b> Foire Aux Questions </b> est un endroit où l administrateur du site répond à vos questions et souvent à des démarches utilent ',
-                               '1')->debugDumpParams();
+    public function ajout() {
+        $this->generateView();
     }
 
+    public function ajoutpost() {
+        $this->faq->addFaq($this->request->getParameter('title'),
+                            $this->request->getParameter('content'));
+        $this->redirect("adminfaq");
+    }
 
+    public function delete() {
+        $this->faq->delete($this->request->getParameter('id'));
+        $this->redirect("adminfaq");
+    }
 }

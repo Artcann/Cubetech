@@ -6,6 +6,11 @@
     scrollbar-width: thin;
     text-align: justify;
 }
+
+.container {
+    color: white;
+}
+
 h1{
     text-align: center;
 }
