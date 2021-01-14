@@ -23,17 +23,6 @@ class ControllerRecherche extends Controller {
         foreach($params as $param) {
             ${$param} = ($this->request->isParameterSet($param)) ? $this->request->getParameter($param) : "";
         }
-
-        /* $id = ($this->request->isParameterSet('identifiant')) ? $this->request->getParameter('identifiant') : "";
-        $nom = $this->request->getParameter('nom');
-        $prenom = $this->request->getParameter('prénom');
-        $naissance = $this->request->getParameter('date');
-        $grade = $this->request->getParameter('grade');
-        $caserne = $this->request->getParameter('caserne');
-        $nationalite = $this->request->getParameter('nationalité');
-        $corps = $this->request->getParameter('corps');
-        $statut = $this->request->getParameter('statut');
-        $matricule = $this->request->getParameter('matricule'); */	
   
         $dataUser = $this->user->researchUsers($nom, $prenom, $naissance, $grade, $caserne, $nationalite, $corps, $statut, $matricule);
 
