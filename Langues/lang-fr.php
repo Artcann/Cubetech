@@ -108,7 +108,46 @@
 
     //Fin register2
 
+
+    //Début SAV
+
+    define('TXT_TITRE1_SAV', 'Rendez-vous');
+    define('TXT_TITRE2_SAV', 'Bug');
+    define('TXT_TITRE3_SAV', 'Suggestion');
+    define('TXT_TD1_SAV', 'IdUser');
+    define('TXT_TD2_SAV', 'Date');
+    define('TXT_TD3_SAV', 'Contenu');
+    define('TXT_TD4_SAV', 'Contact');
+    define('TXT_TD5_SAV', 'Valider');
+
+    //Fin SAV
+
+
+    //Début Card
+
+    define('TXT_TITRE1_CAR', 'Modifier les cartes');
+    define('TXT_TD1_CAR', 'ID');
+    define('TXT_TD2_CAR', 'Statut');
+    define('TXT_TD3_CAR', 'Date mise en service');
+    define('TXT_TD4_CAR', 'Modifier');
+    define('TXT_TD5_CAR', 'Supprimer');
+    //Fin Card
+
+
+    //Début Card2
+
+    define('TXT_TITRE1_CAR2', 'Ajouter une carte de test');
+    define('TXT_TEXT1_CAR2', 'Etat de la carte:');
+    define('TXT_SELECT_CAR2', '--Choisissez une option--');
+    define('TXT_SELECT1_CAR2', 'Déployée');
+    define('TXT_SELECT2_CAR2', 'En réparation');
+    define('TXT_SELECT3_CAR2', 'En attente de déploiment');
+    define('TXT_TEXT2_CAR2', 'Entrez la date de sortie d usine de la carte');
+    
+    //Fin Card2
+
 ?>
+
 
 
 

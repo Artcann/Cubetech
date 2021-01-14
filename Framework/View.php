@@ -39,8 +39,15 @@ class View
 
         $root = Configuration::get("racineWeb", "/");
 
-        $view = $this->generateFile("view/template.php", array('title' => $this->title, 'content' => $content,
+
+        if ($lang == "Français") {
+             $view = $this->generateFile("view/template.php", array('title' => $this->title, 'content' => $content,
             'racineWeb' => $root, 'style' => $this->style, 'script' => $this->script));
+        }
+        else if ($lang !== "Français") {
+             $view = $this->generateFile("view/template-en.php", array('title' => $this->title, 'content' => $content,
+            'racineWeb' => $root, 'style' => $this->style, 'script' => $this->script));
+        } 
 
         echo $view;
     }

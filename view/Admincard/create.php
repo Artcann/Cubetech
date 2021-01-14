@@ -5,16 +5,16 @@ $this->script = "public/js/register.js";
 
 ?>
 
-<h1>Ajouter une carte de test</h1>
+<h1><?php echo TXT_TITRE1_CAR2;?></h1>
 <form action="admincard/create_post" method="post">
-    <label for="statut">Etat de la carte :</label>
+    <label for="statut"><?php echo TXT_TEXT1_CAR2;?></label>
     <select name="statut" id="statut">
-        <option value="">--Choisissez une option--</option>
-        <option value="1">Déployée</option>
-        <option value="2">En réparation</option>
-        <option value="3">En attente de déploiment</option>
+        <option value=""><?php echo TXT_SELECT_CAR2;?></option>
+        <option value="1"><?php echo TXT_SELECT1_CAR2;?></option>
+        <option value="2"><?php echo TXT_SELECT2_CAR2;?></option>
+        <option value="3"><?php echo TXT_SELECT3_CAR2;?></option>
     </select>
-    <label for="date">Entrez la date de sortie d'usine de la carte</label>
+    <label for="date"><?php echo TXT_TEXT2_CAR2;?></label>
     <input type="date" name="creationDate" id="date">
     <div onclick="return validateForm();">
         <input type="submit" id="submit-button">

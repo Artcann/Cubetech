@@ -108,8 +108,48 @@
     //Fin register2
 
 
+    //Début SAV
+
+    define('TXT_TITRE1_SAV', 'Appointment');
+    define('TXT_TITRE2_SAV', 'Bug');
+    define('TXT_TITRE3_SAV', 'Suggestion');
+    define('TXT_TD1_SAV', 'IdUser');
+    define('TXT_TD2_SAV', 'Date');
+    define('TXT_TD3_SAV', 'Content');
+    define('TXT_TD4_SAV', 'Contact');
+    define('TXT_TD5_SAV', 'Submit');
+
+    //Fin SAV
+
+
+    //Début Card
+
+    define('TXT_TITRE1_CAR', 'Edit cards');
+    define('TXT_TD1_CAR', 'ID');
+    define('TXT_TD2_CAR', 'Status');
+    define('TXT_TD3_CAR', 'Date commissioned');
+    define('TXT_TD4_CAR', 'Update');
+    define('TXT_TD5_CAR', 'Delete');
+
+    //Fin Card
+
+ 
+    //Début Card2
+
+    define('TXT_TITRE1_CAR2', 'Add a test card');
+    define('TXT_TEXT1_CAR2', 'Card status:');
+    define('TXT_SELECT_CAR2', '--Choose an option--');
+    define('TXT_SELECT1_CAR2', 'Deployed');
+    define('TXT_SELECT2_CAR2', 'Under reparation');
+    define('TXT_SELECT3_CAR2', 'Awaiting deployment');
+    define('TXT_TEXT2_CAR2', 'Enter the date the card left the factory');
+    
+    //Fin Card2
+
 
 ?>
+
+
 
 
 
