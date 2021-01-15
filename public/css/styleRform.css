@@ -151,7 +151,7 @@ fieldset{
 	margin-top:70px;
 	margin-left:40px;
 	margin-right:70px;
-	border-radius:30px;	
+	border-radius:20px;	
 	}
 
 pre{text-align:left;}
@@ -171,7 +171,7 @@ button:hover{
 }
 	
 
-button{
+ button{
 	border-radius:30px;
 	font: 20px solid Arial;
 	position:relative; left:11%; bottom:20px;
@@ -182,3 +182,4 @@ button{
 .texte{
 	color:white;
 }
+
