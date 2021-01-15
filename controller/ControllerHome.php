@@ -135,14 +135,19 @@ class ControllerHome extends ControllerSecure
         $this->generateView(array("data" => $data, "corps" => $corps, 
                                   "caserne" => $caserne, "test" => $tableauDeTest, 
                                   "statut" => $statut, "tableauTestRh" => $tableauTestRh, 
-                                  "scriptData"=> $scriptData, "lang" => $lang
+                                  "scriptData"=> $scriptData
                                  )); 
 
     }
 
     public function switchlang() {
-        $this->setLang("en");
-        header("Refresh:0");
+        if($this->request->getParameter('id') == 1) {
+            $this->session->setAttribute("lang", "en");
+            $this->redirect("home");
+        } else {
+            $this->session->setAttribute("lang", "fr");
+            $this->redirect("home");
+        }
     }
 
 

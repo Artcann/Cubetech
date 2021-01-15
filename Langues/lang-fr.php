@@ -1,7 +1,7 @@
 <?php
- 
+
     //Début home
- 
+
     define('TXT_TITRE1_HOME', 'Bienvenue');
     define('TXT_TITRE2_HOME', 'sur le site CubeTech');
     define('TXT_BT1_HOME', 'Prendre un rendez-vous');
@@ -208,15 +208,4 @@
 
     //Fin ajout CGU
 
-
 ?>
-
-
-
-
-
-
-
-
-
-

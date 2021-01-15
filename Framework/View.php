@@ -36,17 +36,16 @@ class View
      * @throws Exception
      */
     public function generate($data = null, $lang) {
-        $content = $this->generateFile($this->file, $data);
+        $content = $this->generateFile($this->file, $data, $lang);
 
         $root = Configuration::get("racineWeb", "/");
 
         if($lang == "fr") {
-            echo 'test';
             $view = $this->generateFile("view/template.php", array('title' => $this->title, 'content' => $content,
-            'racineWeb' => $root, 'style' => $this->style, 'script' => $this->script), $lang);
+            'racineWeb' => $root, 'style' => $this->style, 'script' => $this->script));
         } else if($lang == 'en') {    
             $view = $this->generateFile("view/template-en.php", array('title' => $this->title, 'content' => $content,
-            'racineWeb' => $root, 'style' => $this->style, 'script' => $this->script), $lang);
+            'racineWeb' => $root, 'style' => $this->style, 'script' => $this->script));
        }
 
         echo $view;
@@ -58,24 +57,22 @@ class View
      * @return false|string
      * @throws Exception
      */
-    private function generateFile($file, $data, $lang=null) {
+    private function generateFile($file, $data, $lang=null) {   
         if (file_exists($file)) {
             if($data != null) {
+                #var_dump($data);
                 extract($data);
             }
-
-            ob_start();
-
-            var_dump($lang);
 
             if ($lang == "fr") {
                 include_once('Langues/lang-fr.php');
             }
             else if ($lang == "en") {
-                echo 'test2';
                 include_once('Langues/lang-en.php');
             }
-            
+
+            ob_start();
+
             require($file);
 
             return ob_get_clean();
