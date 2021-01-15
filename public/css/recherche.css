@@ -1,0 +1,33 @@
+
+fieldset{
+	border-color: #FF9000;
+ padding:20px;
+ text-align: center;
+	align:center;
+	border-radius:30px;
+ width: 50%;
+ margin: auto;
+ margin-top: 10px;
+    
+    }
+    
+button:hover{
+
+	background:#ff9000;
+	font-weight: 600;
+	font-size:20px;
+ }
+	
+button{
+	border-radius:50px;
+	font: 20px solid Arial;
+	position:relative;
+	font-style:italic;
+	padding:3px;
+ }
+ 
+ #titre{
+    color: white;
+    position: relative;  
+ }
+
