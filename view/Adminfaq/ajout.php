@@ -7,12 +7,12 @@ $this->script = "public/js/adminFaq.js";
 
 <div id="container">
     <form action="adminfaq/ajoutpost" method="post">
-        <label for="title">Titre de la question</label></br>
+        <label for="title"><?php echo TXT_TEXT3_FAQ ;?></label></br>
         <textarea class="textarea" id='title' name="title"></textarea></br>
         
-        <label for="content">Contenu de la réponse</label></br>
+        <label for="content"><?php echo TXT_TEXT4_FAQ ;?></label></br>
         <textarea class="textarea" id='content' name="content"></textarea></br>
         
-        <input id='valid' type='submit' value="Ajouter">
+        <input id='valid' type='submit' value=<?php echo TXT_BT5_FAQ ;?>>
     </form>
 </div>

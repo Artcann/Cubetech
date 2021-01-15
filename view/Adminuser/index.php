@@ -34,8 +34,9 @@ $this->title = "Gestion Utilisateurs";
                 <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
                     href="adminuser/delete/' . $v['id'] . '" class="button">Supprimer</a>' ?></td>
             </tr>
-        <?php endforeach ?>
+        
         </tbody>
     </table>
 </div>
 
+<?php echo TXT_BT2_AU; ?>

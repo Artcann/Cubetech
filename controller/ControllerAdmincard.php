@@ -22,6 +22,9 @@ class ControllerAdmincard extends ControllerAdmin {
     }
 
     public function create() {
+
+        $lang = $this->session->getAttribute('user')['nationalite'];
+        
         $this->generateView(array("lang" => $lang));
     }
 

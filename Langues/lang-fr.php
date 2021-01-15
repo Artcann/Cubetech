@@ -146,7 +146,74 @@
     
     //Fin Card2
 
+
+    //Début gestion FAQ
+
+    define('TXT_TITRE1_FAQ', 'Gestion de la FAQ');
+    define('TXT_TD1_FAQ', 'Titre de la question');
+    define('TXT_TD2_FAQ', 'Modifier la question');
+    define('TXT_TD3_FAQ', 'Supprimer la question');
+    define('TXT_BT1_FAQ', 'Modifier');
+    define('TXT_BT2_FAQ', 'Supprimer');
+    define('TXT_BT3_FAQ', 'Ajouter une question');
+
+    //Fin gestion FAQ
+
+
+    //Début modification FAQ
+
+    define('TXT_TEXT1_FAQ', 'Titre de la question');
+    define('TXT_TEXT2_FAQ', 'Contenu de la réponse');
+    define('TXT_BT4_FAQ', 'Modifier');
+
+    //Fin modification FAQ
+
+
+    //Début ajout FAQ
+
+    define('TXT_TEXT3_FAQ', 'Titre de la question');
+    define('TXT_TEXT4_FAQ', 'Contenu de la réponse');
+    define('TXT_BT5_FAQ', 'Ajouter');
+
+    //Fin ajout FAQ
+
+
+    //Début gestion CGU
+
+    define('TXT_TITRE1_CGU', 'Gestion des CGU');
+    define('TXT_TD1_CGU', 'Titre de la partie');
+    define('TXT_TD2_CGU', 'Modifier la partie');
+    define('TXT_TD3_CGU', 'Supprimer la partie');
+    define('TXT_BT1_CGU', 'Modifier');
+    define('TXT_BT2_CGU', 'Supprimer');
+    define('TXT_BT3_CGU', 'Ajouter une CGU');
+
+    //Fin gestion CGU
+
+
+    //Début modification CGU
+
+    define('TXT_TEXT1_CGU', 'Titre de la question');
+    define('TXT_TEXT2_CGU', 'Contenu de la réponse');
+    define('TXT_BT4_CGU', 'Modifier');
+
+    //Fin modification CGU
+
+
+    //Début ajout CGU
+
+    define('TXT_TEXT3_CGU', 'Titre de la question');
+    define('TXT_TEXT4_CGU', 'Contenu de la réponse');
+    define('TXT_BT5_CGU', 'Ajouter');
+
+    //Fin ajout CGU
+
+
 ?>
+
+
+
+
 
 
 

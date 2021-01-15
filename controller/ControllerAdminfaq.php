@@ -12,13 +12,15 @@ class ControllerAdminfaq extends ControllerAdmin {
     }
 
     public function index() {
-        $this->generateView(array("faq" => $this->faq->getFaq()));
+        $lang = $this->session->getAttribute('user')['nationalite'];
+        $this->generateView(array("faq" => $this->faq->getFaq(), "lang" => $lang));
     }
 
     public function modification() {
         if ($this->request->getMethod() == 'GET') {
             $id = $this->request->getParameter('id');
-            $this->generateView(array("faq" => $this->faq->getFaqById($id)));
+            $lang = $this->session->getAttribute('user')['nationalite'];
+            $this->generateView(array("faq" => $this->faq->getFaqById($id), "lang" => $lang));
         } else if ($this->request->getMethod() == 'POST') {
             http_response_code(200);
             $this->faq->update($this->request->getParameter('title'),
@@ -28,7 +30,8 @@ class ControllerAdminfaq extends ControllerAdmin {
     }
 
     public function ajout() {
-        $this->generateView();
+        $lang = $this->session->getAttribute('user')['nationalite'];
+        $this->generateView(array("lang" => $lang));
     }
 
     public function ajoutpost() {
