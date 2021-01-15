@@ -4,14 +4,14 @@ $this->title = "Gestion CGU";
 
 <div class="table-container">
 
-    <h1>Gestion des CGU</h1>
+    <h1><?php echo TXT_TITRE1_CGU; ?></h1>
 
     <table class="table">
         <thead>
         <tr>
-            <td>Titre de la partie</td>
-            <td>Modifer la partie</td>
-            <td>Supprimer la partie</td>
+            <td><?php echo TXT_TD1_CGU; ?></td>
+            <td><?php echo TXT_TD2_CGU; ?></td>
+            <td><?php echo TXT_TD3_CGU; ?></td>
         </tr>
         </thead>
         <tbody>
@@ -26,5 +26,5 @@ $this->title = "Gestion CGU";
         <?php endforeach ?>
         </tbody>
     </table>
-    <a href='adminfaq/ajout' class='button' id="add-button">Ajouter une question</a>
+    <a href='adminfaq/ajout' class='button' id="add-button"><?php echo TXT_BT3_CGU; ?></a>
 </div>

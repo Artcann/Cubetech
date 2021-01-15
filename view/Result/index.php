@@ -4,12 +4,13 @@ $this->script="public/js/result.js";
 $this->title="Résultat";
 ?>
 
+
 <div id="selectResult">
-    <label for="select">Selectionnez les résultats à afficher</label>
+    <label for="select"><?php echo TXT_TEXT1_RESULTS;?></label>
     <select id="select">
-        <option value="0">---Select---</option>
-        <option value="3">Température</option>
-        <option value="5">Rythme Cardiaque</option>
+        <option value="0"><?php echo TXT_TEXT2_RESULTS;?></option>
+        <option value="3"><?php echo TXT_TEXT3_RESULTS;?></option>
+        <option value="5"><?php echo TXT_TEXT4_RESULTS;?></option>
     </select>
 </div>
 
@@ -20,3 +21,4 @@ $this->title="Résultat";
 <script>let userId = "<?php echo $id?>"</script>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
