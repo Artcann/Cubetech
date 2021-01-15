@@ -8,7 +8,8 @@ require_once 'ControllerAdmin.php';
 class ControllerAdminhome extends ControllerAdmin
 {
     public function index() {
-        $this->generateView(array("prenom" => $this->session->getAttribute("user")['prenom']));
+        $lang = $this->session->getAttribute('user')['nationalite'];
+        $this->generateView(array("prenom" => $this->session->getAttribute("user")['prenom'], "lang" => $lang));
     }
 
     public function register() {

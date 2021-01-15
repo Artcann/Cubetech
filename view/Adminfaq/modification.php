@@ -6,11 +6,11 @@ $this->script = "public/js/adminFaq.js";
 ?>
 
 <div class="form-container">
-    <label for="title">Titre de la question</label></br>
+    <label for="title"><?php echo TXT_TEXT1_FAQ ;?></label></br>
     <textarea class="textarea" id='title'><?php echo $faq['titre']?></textarea></br>
     
-    <label for="content">Contenu de la réponse</label></br>
+    <label for="content"><?php echo TXT_TEXT2_FAQ ;?></label></br>
     <textarea class="textarea" id='content'><?php echo $faq['contenu'] ?></textarea></br>
     
-    <input id='valid' type='button' value="Modifier">
+    <input id='valid' type='button' value=<?php echo TXT_BT4_FAQ ;?>>
 </div>

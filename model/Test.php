@@ -14,7 +14,6 @@ class Test extends Model
     public function getTestByUser($idUser)
     {
 
-
         $sql = "SELECT id, date,idUser, heure, idRh, statut FROM test WHERE idUser= ?";
 
         $response = $this->executeRequest($sql, array($idUser));
@@ -50,7 +49,8 @@ class Test extends Model
 /*     public function getRecentTestByUser($idUser, $idCapteur)
     {
 
-        $sql = "SELECT id, idCapteur, valeur, date, idUser, idRh, statut FROM test WHERE idUser= ? AND idCapteur = ?
+
+        $sql = "SELECT id, date, idUser, idRh, statut FROM test WHERE idUser= ? AND idCapteur = ?
                 ORDER BY id DESC LIMIT 7";
 
         $response = $this->executeRequest($sql, array($idUser, $idCapteur));
@@ -64,14 +64,10 @@ class Test extends Model
         return($dataArr);
     } */
 
-    /**
-     * @param $trame
-     * @param $idUser
-     * @param $idRh
-     */
+  
     public function insertTest($trame, $idUser, $idRh) {
 
-        $sql = "INSERT into test (idCapteur, valeur, date, heure, idUser, idRh, statut, trame) 
+        $sql = "INSERT into test (idCapteur, valeur, date, heure, idUser, idRh, statut) 
                 VALUES (?, ?, current_date, ?, ?, ?, ?, ?)";
 
         $idCapteur = substr($trame, 6,1);

@@ -5,16 +5,16 @@ $this->title = "Gestion Cartes";
 ?>
     <div class="table-container">
 
-        <h1>Modifer les cartes</h1>
+        <h1><?php echo TXT_TITRE1_CAR; ?></h1>
 
         <table class="table">
         <thead>
         <tr>
-            <td>ID</td>
-            <td>Statut</td>
-            <td>Date mise en service</td>
-            <td>Modifier</td>
-            <td>Supprimer</td>
+            <td><?php echo TXT_TD1_CAR; ?></td>
+            <td><?php echo TXT_TD2_CAR; ?></td>
+            <td><?php echo TXT_TD3_CAR; ?></td>
+            <td><?php echo TXT_TD4_CAR; ?></td>
+            <td><?php echo TXT_TD5_CAR; ?></td>
         </tr>
         </thead>
         <tbody>
@@ -24,7 +24,7 @@ $this->title = "Gestion Cartes";
                 <td><?php echo $v['id']; ?></td>
                 <td><?php echo $v['statut']; ?></td>
                 <td><?php echo $v['date']; ?></td>
-                <td><a href="admincard/modification" class="button">Modifier</a></td>
+                <td><a href="admincard/modification" class="button"><?php echo TXT_TD4_CAR; ?></a></td>
                 <td><?php echo '<a class="button" onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
                     href="Admincard/delete/' . $v['id'] . '">Supprimer</a>' ?></td>
             </tr>
@@ -32,3 +32,4 @@ $this->title = "Gestion Cartes";
         </tbody>
         </table>
     </div>
+

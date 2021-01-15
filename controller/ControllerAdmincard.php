@@ -16,11 +16,16 @@ class ControllerAdmincard extends ControllerAdmin {
 
     public function index() {
 
-        $this->generateView(array("data" => $this->card->getAllCards()));
+        $lang = $this->session->getAttribute('user')['nationalite'];
+        
+        $this->generateView(array("data" => $this->card->getAllCards(), "lang" => $lang));
     }
 
     public function create() {
-        $this->generateView();
+
+        $lang = $this->session->getAttribute('user')['nationalite'];
+        
+        $this->generateView(array("lang" => $lang));
     }
 
     public function create_post() {

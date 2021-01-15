@@ -25,6 +25,8 @@ class ControllerAdminsav extends ControllerAdmin {
 
         $archive = array();
 
+        $lang = $this->session->getAttribute('user')['nationalite'];
+
 
         foreach ($sav as $key) {
 
@@ -53,7 +55,8 @@ class ControllerAdminsav extends ControllerAdmin {
 	        }
         }
 
-        $this->generateView(array("sav" => $sav, "rdv" => $rdv, "bug" => $bug, "suggestion" => $suggestion, "archive" => $archive));
+        $this->generateView(array("sav" => $sav, "rdv" => $rdv, "bug" => $bug, "suggestion" => $suggestion, "archive" => $archive, 
+                                  "lang" => $lang));
 
     }
 

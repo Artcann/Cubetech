@@ -55,6 +55,7 @@ class ControllerApi extends Controller
         }
     }
 
+
     public function chat() {
         if($this->request->getMethod() == 'GET') {
             header('Content-Type: application/json');

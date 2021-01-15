@@ -7,14 +7,14 @@ $this->style = "public/css/adminFaq.css";
 ?>
 <div class="table-container">
 
-    <h1>Gestion de la FAQ</h1>
+    <h1><?php echo TXT_TITRE1_FAQ ;?></h1>
 
     <table class="table">
         <thead>
         <tr>
-            <td>Titre de la question</td>
-            <td>Modifer la question</td>
-            <td>Supprimer la question</td>
+            <td><?php echo TXT_TD1_FAQ ;?></td>
+            <td><?php echo TXT_TD2_FAQ ;?></td>
+            <td><?php echo TXT_TD3_FAQ ;?></td>
         </tr>
         </thead>
         <tbody>
@@ -29,5 +29,5 @@ $this->style = "public/css/adminFaq.css";
         <?php endforeach ?>
         </tbody>
     </table>
-    <a href='adminfaq/ajout' class='button' id="add-button">Ajouter une question</a>
+    <a href='adminfaq/ajout' class='button' id="add-button"><?php echo TXT_BT3_FAQ ;?></a>
 </div>

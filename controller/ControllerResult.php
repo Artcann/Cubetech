@@ -9,7 +9,8 @@ class ControllerResult extends ControllerSecure
 
     public function index()
     {
-        $this->generateView(array("id" => $this->session->getAttribute('user')['id']));
+    	$lang = $this->session->getAttribute('user')['nationalite'];
+        $this->generateView(array("id" => $this->session->getAttribute('user')['id'], "lang" => $lang));
     }
 
 
