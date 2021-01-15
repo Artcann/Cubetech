@@ -25,6 +25,7 @@ $this->style = "public/css/adminHome.css";
             <a class="button" href="adminfaq">Gérer la FAQ</a>
             <h3>Gestion des CGU </h3>
             <a class="button" href="admincgu">Gérer les CGU</a>
+        </div>
     </div>
     <div class="row-3">
         <a class="button" href="home/disconnect">Déconnexion</a>
