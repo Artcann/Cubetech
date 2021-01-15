@@ -39,10 +39,10 @@ $this->title='Page Recherche';
                 <td><?php echo $v['mail']; ?></td>
                 <td><?php echo $v['naissance']; ?></td>
                 <td><?php echo $v['nationalite']; ?></td>
-                <td><?php echo $v['statut']; ?></td>
+                <td><?php echo $v['statutName']; ?></td>
                 <td><?php echo $v['grade']; ?></td>
-                <td><?php echo $v['corps']; ?></td>
-                <td><?php echo $v['caserne']; ?></td>
+                <td><?php echo $v['type']; ?></td>
+                <td><?php echo $v['ville']; ?></td>
                 <td><?php echo $v['matricule']; ?></td>
                 <td><a href="result/<?php echo $v["id"];?>"><img class="logo" src="public/images/graph.png"></a></td>
                 <td><a href="chat/<?php echo $v["id"];?>"><img class="logo" src="public/images/mail.png" data-alt-src="public/images/mail2.png"></a></td>
