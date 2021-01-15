@@ -140,6 +140,11 @@ class ControllerHome extends ControllerSecure
 
     }
 
+    public function switchlang() {
+        $this->setLang("en");
+        header("Refresh:0");
+    }
+
 
     public function disconnect()
     {
