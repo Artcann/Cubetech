@@ -27,6 +27,23 @@ class Test extends Model
         return($dataArr);
     }
 
+    public function getAllTests() {
+
+        $sql = "SELECT test.id, date, idUser, heure, idRh, test.statut, user.nom, user.prenom FROM test 
+                INNER JOIN user on test.idUser = user.id 
+                WHERE test.statut = 0 ORDER BY date 
+               ";
+
+        $response = $this->executeRequest($sql);
+
+        $dataArr = array();
+
+        while($data = $response->fetch()) {
+            $dataArr[$data['id']] = $data;
+        }
+
+        return $dataArr;
+    }
 
     public function getTestByRh($idRh)
     {
@@ -79,4 +96,16 @@ class Test extends Model
         $this->executeRequest($sql, $values);
     }
 
+    public function delete($id) {
+        $sql = "DELETE FROM test WHERE id=?";
+        $val = array($id);
+
+        $this->executeRequest($sql, $val);
+    }
+
 }
+
+
+
+
+

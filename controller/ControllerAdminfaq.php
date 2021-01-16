@@ -45,3 +45,4 @@ class ControllerAdminfaq extends ControllerAdmin {
         $this->redirect("adminfaq");
     }
 }
+

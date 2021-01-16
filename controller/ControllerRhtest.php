@@ -7,16 +7,31 @@ require_once 'Framework/Controller.php';
 
 class ControllerRhTest extends Controller {
 
-    
+    private $test;
+
+    private $user;
 
     public function __construct() {
         
-       
+        $this->test = new Test();  
+
+        $this->user = new User(); 
 
     }    
 
      public function index() {
-     	$this->generateView(); 
+
+     	$test = $this->test->getAllTests();
+
+     	$user = $this->user->getAllUsers();
+
+     	$this->generateView(array("test" => $test, 'user' => $user)); 
+
+    }
+
+    public function delete() {
+        $this->test->delete($this->request->getParameter('id'));
+        $this->redirect("rhtest");
     }
 
 
@@ -28,3 +43,4 @@ class ControllerRhTest extends Controller {
  
  
 }
+
