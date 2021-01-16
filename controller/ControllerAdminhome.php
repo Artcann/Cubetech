@@ -9,7 +9,7 @@ class ControllerAdminhome extends ControllerAdmin
 {
     public function index() {
         $lang = $this->session->getAttribute('user')['nationalite'];
-        $this->generateView(array("prenom" => $this->session->getAttribute("user")['prenom'], "lang" => $lang));
+        $this->generateView(array("prenom" => $this->session->getAttribute("user")['prenom']));
     }
 
     public function register() {

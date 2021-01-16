@@ -18,14 +18,14 @@ class ControllerAdmincard extends ControllerAdmin {
 
         $lang = $this->session->getAttribute('user')['nationalite'];
         
-        $this->generateView(array("data" => $this->card->getAllCards(), "lang" => $lang));
+        $this->generateView(array("data" => $this->card->getAllCards()));
     }
 
     public function create() {
 
         $lang = $this->session->getAttribute('user')['nationalite'];
         
-        $this->generateView(array("lang" => $lang));
+        $this->generateView();
     }
 
     public function create_post() {
