@@ -55,8 +55,7 @@ class ControllerAdminsav extends ControllerAdmin {
 	        }
         }
 
-        $this->generateView(array("sav" => $sav, "rdv" => $rdv, "bug" => $bug, "suggestion" => $suggestion, "archive" => $archive, 
-                                  "lang" => $lang));
+        $this->generateView(array("sav" => $sav, "rdv" => $rdv, "bug" => $bug, "suggestion" => $suggestion, "archive" => $archive));
 
     }
 

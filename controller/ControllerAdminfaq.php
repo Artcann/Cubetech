@@ -13,14 +13,14 @@ class ControllerAdminfaq extends ControllerAdmin {
 
     public function index() {
         $lang = $this->session->getAttribute('user')['nationalite'];
-        $this->generateView(array("faq" => $this->faq->getFaq(), "lang" => $lang));
+        $this->generateView(array("faq" => $this->faq->getFaq()));
     }
 
     public function modification() {
         if ($this->request->getMethod() == 'GET') {
             $id = $this->request->getParameter('id');
             $lang = $this->session->getAttribute('user')['nationalite'];
-            $this->generateView(array("faq" => $this->faq->getFaqById($id), "lang" => $lang));
+            $this->generateView(array("faq" => $this->faq->getFaqById($id)));
         } else if ($this->request->getMethod() == 'POST') {
             http_response_code(200);
             $this->faq->update($this->request->getParameter('title'),
@@ -31,7 +31,7 @@ class ControllerAdminfaq extends ControllerAdmin {
 
     public function ajout() {
         $lang = $this->session->getAttribute('user')['nationalite'];
-        $this->generateView(array("lang" => $lang));
+        $this->generateView();
     }
 
     public function ajoutpost() {
