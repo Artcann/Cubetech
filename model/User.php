@@ -60,8 +60,16 @@ class User extends Model
         
 
 
-        $sql = "SELECT nom,prenom,login,mail,naissance,nationalite,statut,grade,corps,caserne,matricule FROM user
-        WHERE (nom LIKE ? OR prenom LIKE ? OR naissance = ? OR grade = ? OR caserne = ? OR nationalite LIKE ?
+        $sql = "SELECT user.id AS id, user.nom, prenom, login, mail, naissance, nationalite,
+        grade, corps, caserne, matricule, caserne.ville, statut.nom AS statutName, corps.type
+        FROM user
+        INNER JOIN caserne
+        ON user.caserne = caserne.id
+        INNER JOIN statut
+        ON user.statut = statut.id
+        INNER JOIN corps
+        ON user.corps = corps.id
+        WHERE (user.nom LIKE ? OR prenom LIKE ? OR naissance = ? OR grade = ? OR caserne = ? OR nationalite LIKE ?
         OR corps = ? OR statut = ? OR matricule LIKE ?)";
 
         $val = array($nom, $prenom, $naissance);

@@ -15,7 +15,9 @@ $this->style = "public/css/contact.css";
     <label id="title" for="contenu"><?php echo TXT_TEXT_CONTACT;?></label>
     <textarea id="contenu" name="message" placeholder="Votre message...">
     </textarea>
-    <input type="submit" value="<?php echo TXT_BT1_CONTACT;?>">
+
+    <input id="contactsubmit" type="submit" value="<?php echo TXT_BT1_CONTACT;?>">
+
 </form>
 
 
