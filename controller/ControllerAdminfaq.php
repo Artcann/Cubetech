@@ -30,7 +30,7 @@ class ControllerAdminfaq extends ControllerAdmin {
     }
 
     public function ajout() {
-        $lang = $this->session->getAttribute('user')['nationalite'];
+
         $this->generateView();
     }
 

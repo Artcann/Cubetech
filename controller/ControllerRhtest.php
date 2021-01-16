@@ -11,13 +11,15 @@ class ControllerRhTest extends Controller {
 
     private $user;
 
+
     public function __construct() {
         
         $this->test = new Test();  
 
         $this->user = new User(); 
 
-    }    
+    }   
+
 
      public function index() {
 
@@ -29,9 +31,25 @@ class ControllerRhTest extends Controller {
 
     }
 
+
     public function delete() {
+
         $this->test->delete($this->request->getParameter('id'));
+
         $this->redirect("rhtest");
+    }
+
+
+
+    public function ajout() {
+	
+		$this->generateView();
+    }
+
+
+    public function modification() {
+	
+		$this->generateView();
     }
 
 
