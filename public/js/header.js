@@ -33,7 +33,8 @@ let getUser = function() {
 
 getUser();
 
-
+//Fonction pour le responsive
+//Jquery !!
 $(document).ready(function(){
   $(".icon").click(function () {
     $('#navbar-header li:not(:nth-child(2))').toggle();

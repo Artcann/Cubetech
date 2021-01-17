@@ -11,8 +11,11 @@ $this->script = "public/js/modifier.js";
 <div id="container">
 
   <div class="bienvenue">
-      <?php /** @noinspection PhpUndefinedVariableInspection */
-      echo "<h1>Bienvenue ". $data['prenom'] . " sur votre compte</h1>" ?>
+
+      <h1>Bienvenue  <?php echo $data['prenom'] ?> </h1>
+
+  </div>
+  <div class="date" id="nowDate">
 
   </div>
     <div class="informations">
@@ -58,7 +61,7 @@ $this->script = "public/js/modifier.js";
 
     <div class="col2">
         <div class="explication">
-            Bienvenue sur la page de votre compte. <?php switch ($data["statut"]) {
+            Bienvenue sur la page de votre compte ce <span id="jour"></span>   <?php switch ($data["statut"]) {
                     case '1':
                         echo "Vous êtes administrateur, vous avez le droit de tout modifier ! ";
                         break;

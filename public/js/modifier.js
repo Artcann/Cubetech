@@ -7,7 +7,7 @@ var same = document.getElementById("same");
 document.getElementById("verifiedPassword").addEventListener("input",function (e){
     verifiedPassword=e.target.value;
 })
-
+/*Pour le mdp*/
 document.getElementById("password").addEventListener("input", function (e) {
     var password = e.target.value; // Valeur saisie dans le champ mdp
     var longueurMdp = "faible";
@@ -64,3 +64,9 @@ $("#close").click(function(){
   $(function () {
       $('img.alert').hover(imageSwap, imageSwap);
   });
+
+/*pour la date*/
+var days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+var today= new Date();
+var nomJour= days[today.getDay()]
+document.getElementById("jour").textContent=nomJour;

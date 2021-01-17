@@ -135,17 +135,17 @@ class ControllerModifier extends ControllerSecure
         parent::disconnect();
     }
 
-    public function modifier() {
-      if($this->request->isParameterSet('verifiedPassword')){
+    public function modifier() {  /*FONCTION QUI REDIRIGE QUAND LE GARS A CHANGE SON MDP*/
+      if($this->request->isParameterSet('verifiedPassword')){  /*n utilise pas les variables GET ET post mais utilise le meme principe*/
         $currentPassword=$this->session->getAttribute("user")['password'];
         $verifiedPassword=$this->request->getParameter('verifiedPassword');
         $newPassword= $this->request->getParameter('password');
         $idUser=$this->session->getAttribute("user")['id'];
         $confirmedPassword = $this->request->getParameter("confirmNewPass");
        if (!password_verify($verifiedPassword,$currentPassword)){
-            //header("Location: /Cubetech/Modifier?password=false");
+            //header("Location: /Cubetech/Modifier?password=false");  /*j'ai enlevé le header pque c'est pas ce qu'il fallait faire
             //exit();
-          throw new Exception("Vous ne connaissez plus votre propre MDP ou vous êtes un criminel !");
+          throw new Exception("Vous ne connaissez plus votre propre MDP ou vous êtes un criminel !"); /*je gere les exceptions */
         }
         elseif (password_verify($newPassword,$currentPassword)){
              //header("Location: /Cubetech/Modifier?password=same");
