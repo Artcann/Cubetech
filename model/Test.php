@@ -11,6 +11,7 @@ class Test extends Model
      * @param $idUser
      * @return array
      */
+
     public function getTestByUser($idUser)
     {
 
@@ -26,6 +27,15 @@ class Test extends Model
 
         return($dataArr);
     }
+
+
+    public function getTestById($id) {
+        $sql = "SELECT id, date,idUser, heure, idRh, statut FROM test WHERE id= ?";
+        $val = array($id);
+
+        return $this->executeRequest($sql, $val)->fetch();
+    }
+
 
     public function getAllTests() {
 
@@ -45,8 +55,26 @@ class Test extends Model
         return $dataArr;
     }
 
-    public function getTestByRh($idRh)
-    {
+
+    public function delete($id) {
+
+        $sql = "DELETE FROM test WHERE id=?";
+        $val = array($id);
+
+        $this->executeRequest($sql, $val);
+    }
+
+
+    public function update($date, $heure, $idRh, $id) {
+
+        $sql = "UPDATE test SET date=?, heure=?, idRh =? WHERE id=?";
+        $val = array($date, $heure, $idRh);
+
+        return $this->executeRequest($sql, $val);
+    }
+
+
+    public function getTestByRh($idRh){
 
 
         $sql = "SELECT id, date, idUser, heure, idRh, statut FROM test WHERE idRh= ?";
@@ -96,12 +124,7 @@ class Test extends Model
         $this->executeRequest($sql, $values);
     }
 
-    public function delete($id) {
-        $sql = "DELETE FROM test WHERE id=?";
-        $val = array($id);
-
-        $this->executeRequest($sql, $val);
-    }
+   
 
 }
 

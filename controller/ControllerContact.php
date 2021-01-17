@@ -10,8 +10,8 @@ class ControllerContact extends Controller
 {
     public function index()
     {
-            $lang = $this->session->getAttribute('user')['nationalite'];
-            $this->generateView(array("lang" => $lang));
+            
+            $this->generateView(array());
     }
 
     public function getDestinataire()

@@ -47,9 +47,18 @@ class ControllerRhTest extends Controller {
     }
 
 
-    public function modification() {
-	
-		$this->generateView();
+  	public function modification() {
+        if ($this->request->getMethod() == 'GET') {
+            $id = $this->request->getParameter('id');
+            $this->generateView(array("test" => $this->test->getTestById($id)));
+        } 
+        else if ($this->request->getMethod() == 'POST') {
+            http_response_code(200);
+            $this->test->update($this->request->getParameter('date'),
+                               	$this->request->getParameter('heure'),
+                               	$this->request->getParameter('idRh'),
+                           	   	$this->request->getParameter('id'));
+        }
     }
 
 
