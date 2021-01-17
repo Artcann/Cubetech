@@ -33,6 +33,7 @@
     </nav>
 
     <div id="page-container">
+        <a href="home/switchlang/1">TEST</a>
         <div id="content-wrapper">
             <?= /** @noinspection PhpUndefinedVariableInspection */
             $content ?>

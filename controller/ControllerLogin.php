@@ -17,6 +17,7 @@ class ControllerLogin extends Controller
     }
 
     public function index() {
+
         $this->generateView();
     }
 

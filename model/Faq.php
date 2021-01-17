@@ -36,5 +36,12 @@ class Faq extends Model
 
         return $this->executeRequest($sql, $val);
     }
+
+    public function delete($id) {
+        $sql = "DELETE FROM faq WHERE id=?";
+        $val = array($id);
+
+        $this->executeRequest($sql, $val);
+    }
 }
 ?>

@@ -55,8 +55,13 @@ abstract class Controller
         $classController = get_class($this);
         $controller = str_replace("Controller", "", $classController);
 
+        if(!$this->session->isAttributeSet('lang')) {
+            echo 'test';
+            $this->session->setAttribute('lang', 'fr');
+        }
+
         $view = new View($this->action, $controller);
-        $view->generate($dataView);
+        $view->generate($dataView, $this->session->getAttribute('lang'));
     }
 
     /**

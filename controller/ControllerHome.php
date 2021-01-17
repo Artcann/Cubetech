@@ -50,6 +50,8 @@ class ControllerHome extends ControllerSecure
 
         $statut = $this->session->getAttribute('user')['statut'];
 
+        $lang = $this->session->getAttribute('user')['nationalite'];
+
         $tableauDesRdv = array();
 
         $tableauDeTest = array();
@@ -57,7 +59,6 @@ class ControllerHome extends ControllerSecure
         $testRhATraiter = array();
 
         $tableauTestRh = array();
-
 
 
         if ($data["statut"] != 3) {
@@ -126,6 +127,8 @@ class ControllerHome extends ControllerSecure
         }
 
 
+
+
         $scriptData = Array('statut'=> $data['statut']);
 
 
@@ -137,6 +140,16 @@ class ControllerHome extends ControllerSecure
 
     }
 
+    public function switchlang() {
+        if($this->request->getParameter('id') == 1) {
+            $this->session->setAttribute("lang", "en");
+            $this->redirect("home");
+        } else {
+            $this->session->setAttribute("lang", "fr");
+            $this->redirect("home");
+        }
+    }
+
 
     public function disconnect()
     {
@@ -145,3 +158,4 @@ class ControllerHome extends ControllerSecure
  
  
 }
+

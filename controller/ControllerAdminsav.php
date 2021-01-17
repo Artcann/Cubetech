@@ -25,6 +25,8 @@ class ControllerAdminsav extends ControllerAdmin {
 
         $archive = array();
 
+        $lang = $this->session->getAttribute('user')['nationalite'];
+
 
         foreach ($sav as $key) {
 

@@ -14,8 +14,13 @@ class ControllerFaq extends Controller
 
 
     public function index() {
+    	
         $data=$this->faq->getFaq();
-        $this->generateView($data);
+
+        $lang = $this->session->getAttribute('user')['nationalite'];
+
+        $this->generateView(array("data" => $data, "lang" => $lang));
+
     }
 
 }

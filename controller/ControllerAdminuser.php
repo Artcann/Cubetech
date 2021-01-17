@@ -17,8 +17,9 @@ class ControllerAdminuser extends ControllerAdmin {
 
     public function index() {
         $data = $this->user->getAllUsers();
+        $lang = $this->session->getAttribute('user')['nationalite'];
 
-        $this->generateView($data);
+        $this->generateView(array("data" => $data, 'lang' => $lang));
     }
 
     public function register() {
@@ -38,4 +39,5 @@ class ControllerAdminuser extends ControllerAdmin {
     }
 
 }
+
 

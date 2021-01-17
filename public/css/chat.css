@@ -4,18 +4,19 @@
 }
 
 #message-container {
-    height: 85%;
+    height: 75vh;
     width: 95%;
+    padding-top: 10px;
     overflow: auto;
     margin-left: auto;
 }
 
 .typing-container {
-    height: 15%;
     width: 100%;
     text-align: center;
     display: table;
-    position: fixed;
+    position: absolute;
+    bottom: 10%;
 }
 
 .typing-container textarea {
