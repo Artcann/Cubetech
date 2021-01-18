@@ -1,8 +1,8 @@
 <?php
 require_once "Framework/Controller.php";
-require_once "Model/Test.php";
-require_once "Model/User.php";
-require_once "Model/Chat.php";
+require_once "model/Test.php";
+require_once "model/User.php";
+require_once "model/Chat.php";
 
 /**
  * Class ControllerApi

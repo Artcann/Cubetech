@@ -1,6 +1,6 @@
 <?php
 
-require_once 'model/faq.php';
+require_once 'model/Faq.php';
 require_once 'Framework/Controller.php';
 
 class ControllerFaq extends Controller

@@ -1,7 +1,7 @@
 <?php
 
 require_once 'ControllerAdmin.php';
-require_once 'Model/Cgu.php';
+require_once 'model/Cgu.php';
 
 class ControllerAdmincgu extends ControllerAdmin {
 
