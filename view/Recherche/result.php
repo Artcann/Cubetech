@@ -4,7 +4,7 @@ $this->style='public/css/recherche.css';
 
 <div class="table-container">
 
-    <h1>Resultat de la recherche</h1>
+    <h1>Résultat de la recherche</h1>
 <a href="recherche/">Retourner à la recherche</a>
     <table>
     <thead>
