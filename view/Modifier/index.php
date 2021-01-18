@@ -77,6 +77,7 @@ $this->script = "public/js/modifier.js";
         </div>
         <div id="formulaire">
             <form action="modifier/modifier" name="modifier" method="post">
+              <span id="errorMsg"><?php echo $error ?></span></br>
                 <label for="verifiedPassword">Ancien Mot de Passe :</label><input type="password" name="verifiedPassword" id="verifiedPassword">
                 <label for="password">Nouveau Mot de Passe :</label><input type="password" name="password" id="password">
                 <label for="confirmNewPass">Confirmez-le :</label><input type="password" name="confirmNewPass" id="confirmNewPass">

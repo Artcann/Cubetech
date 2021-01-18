@@ -70,3 +70,5 @@ var days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Same
 var today= new Date();
 var nomJour= days[today.getDay()]
 document.getElementById("jour").textContent=nomJour;
+
+/* pour les excpetions */
