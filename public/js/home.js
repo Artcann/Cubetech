@@ -1,19 +1,4 @@
 
-//
-//
-//     $this.data('alt-src', $this.attr('src'));
-//
-//     $this.attr('src', newSource);
-// }
-//
-//
-// $(function () {
-//     $('img.alert').hover(imageSwap, imageSwap);
-// });
-
-
-
-
 
 if (statut === 'Administrateur'){
     $("#button1").attr("href", "adminhome");

@@ -158,11 +158,12 @@ th,td {
   color: white;
   font-size: 30px;
   text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 a#retour{
   margin-left: 45%;
-  padding-top:40%;
 }
 
 @media screen and (max-width: 1000px) {
