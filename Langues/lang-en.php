@@ -41,6 +41,9 @@
     define('TXT_TEXT5_BACK', 'CGU management');
     define('TXT_BT7_BACK', 'CGU management');
     define('TXT_BT8_BACK', 'Logout');
+    define('TXT_TEXT6_BACK', 'Test management');
+    define('TXT_BT9_BACK', 'Show test');
+    define('TXT_BT10_BACK', 'Add test');
  
     //Fin backoffice
  
@@ -200,7 +203,27 @@
     //Fin modification CGU
 
 
+    //Début gestion test
 
+    define('TXT_TITRE1_TEST', 'Test management');
+    define('TXT_TD1_TEST', 'Date');
+    define('TXT_TD2_TEST', 'Hour');
+    define('TXT_TD3_TEST', 'Patient');
+    define('TXT_TD4_TEST', 'Hr');
+    define('TXT_TD5_TEST', 'Edit');
+    define('TXT_TD6_TEST', 'Delete');
+
+    //Fin gestion test
+
+
+    //Début ajout test
+
+    define('TXT_TD1_TEST2', 'Date');
+    define('TXT_TD2_TEST2', 'Hour');
+    define('TXT_TD3_TEST2', 'idRh');
+    define('TXT_TD4_TEST2', 'idUser');
+
+    //Fin  ajout test
 
 ?>
 

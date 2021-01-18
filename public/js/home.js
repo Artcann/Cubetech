@@ -22,6 +22,7 @@ if (statut === 'Administrateur'){
 
 
 else if (statut === 'Ressource humaine') {
-  $("#button1").attr("href", "lancerLeTest");
+  $("#button1").attr("href", "Lancerletest");
   $("#button2").attr("href","Modifier");
 }
+
