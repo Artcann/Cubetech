@@ -27,8 +27,10 @@
     </nav>
 
     <div id="page-container">
-        <a href="home/switchlang/2">TEST</a>
         <div id="content-wrapper">
+            <div id="lang-fixed">
+                <a class="switch-lang" href="home/switchlang/2"><img class="flag" src="public/images/france.png"/></a>
+            </div>
             <?= /** @noinspection PhpUndefinedVariableInspection */
             $content ?>
         </div>

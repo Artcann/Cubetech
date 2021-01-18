@@ -34,7 +34,9 @@
 
     <div id="page-container">
         <div id="content-wrapper">
-            <a class="switch-lang" href="home/switchlang/1"><img class="flag" src="public/images/france.png"/></a>
+            <div id="lang-fixed">
+                <a class="switch-lang" href="home/switchlang/1"><img class="flag" src="public/images/united-kingdom.png"/></a>
+            </div>
             <?= /** @noinspection PhpUndefinedVariableInspection */
             $content ?>
         </div>
