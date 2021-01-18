@@ -1,6 +1,6 @@
 <?php
 
-require_once 'controller/ControllerAdmin.php';
+require_once 'Controller/ControllerAdmin.php';
 require_once 'Model/Caserne.php';
 
 /**

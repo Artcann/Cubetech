@@ -5,7 +5,7 @@ require_once 'model/Test.php';
 require_once 'model/Corps.php';
 require_once 'model/Caserne.php';
 require_once 'Framework/Controller.php';
-require_once 'controller/ControllerSecure.php';
+require_once 'Controller/ControllerSecure.php';
 
 /**
  * Class ControllerHome

@@ -2,9 +2,9 @@
 
 include_once 'Framework/Controller.php';
 include_once 'model/User.php';
-include_once 'Model/Test.php';
-include_once 'Model/Caserne.php';
-include_once 'Model/Card.php';
+include_once 'model/Test.php';
+include_once 'model/Caserne.php';
+include_once 'model/Card.php';
 
 class ControllerLancerletest extends Controller{
 
