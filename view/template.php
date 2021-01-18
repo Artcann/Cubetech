@@ -33,8 +33,8 @@
     </nav>
 
     <div id="page-container">
-        <a href="home/switchlang/1">TEST</a>
         <div id="content-wrapper">
+            <a class="switch-lang" href="home/switchlang/1"><img class="flag" src="public/images/france.png"/></a>
             <?= /** @noinspection PhpUndefinedVariableInspection */
             $content ?>
         </div>
