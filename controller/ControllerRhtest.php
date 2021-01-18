@@ -42,8 +42,18 @@ class ControllerRhTest extends Controller {
 
 
     public function ajout() {
-	
+	   
 		$this->generateView();
+    }
+
+    public function ajoutTest() {
+       
+        $this->test->addTest($this->request->getParameter('date'),
+                             $this->request->getParameter('heure'),
+                             $this->request->getParameter('idRh'),
+                             $this->request->getParameter('idUser')
+                       );
+        $this->redirect("RhTest");
     }
 
 
@@ -70,4 +80,5 @@ class ControllerRhTest extends Controller {
  
  
 }
+
 
