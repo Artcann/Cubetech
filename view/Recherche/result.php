@@ -1,13 +1,11 @@
 <?php
 $this->title='Page Recherche';
 #$this->style='public/css/styleR.css';
-/*$this->script='recherche.js';*/
-?>
 
 <div class="table-container">
 
     <h1>Resultat de la recherche</h1>
-
+<a href="recherche/">Retourner à la recherche</a>
     <table>
     <thead>
     <tr>
