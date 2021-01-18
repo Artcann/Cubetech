@@ -67,11 +67,12 @@ class Forum extends Model
 				FROM forum_topics as t
 				LEFT JOIN user as u ON t.user_id = u.id
 				LEFT JOIN forum_posts as p ON t.topic_id = p.topic_id
-				WHERE category_id = ".$id."
+				WHERE category_id = ?
 				GROUP BY t.topic_id
 				ORDER BY t.topic_id DESC";
 
-        $response = $this->executeRequest($sql);
+        $value = array($id);
+        $response = $this->executeRequest($sql, $value);
 
         $dataArr = array();
         while ($data = $response->fetch()) {
@@ -90,10 +91,11 @@ class Forum extends Model
 				FROM forum_posts as p
 				LEFT JOIN user as u ON p.user_id = u.id
 				LEFT JOIN statut as s ON u.statut = s.id
-				WHERE p.topic_id = ".$id."
+				WHERE p.topic_id = ?
 				";
 
-        $response = $this->executeRequest($sql);
+        $value = array($id);
+        $response = $this->executeRequest($sql,$value);
 
         $dataArr = array();
         while ($data = $response->fetch()) {
@@ -108,10 +110,11 @@ class Forum extends Model
         $sql = "
                 SELECT subject, topic_id
                 FROM forum_topics
-                WHERE topic_id =".$id."
+                WHERE topic_id = ?
                 GROUP BY topic_id";
 
-        $response = $this->executeRequest($sql);
+        $value = array($id);
+        $response = $this->executeRequest($sql, $value);
 
         $dataArr = array();
         while ($data = $response->fetch()) {
@@ -157,5 +160,19 @@ class Forum extends Model
 
         return $dataArr;
 
+    }
+
+    public function deletePost($id) {
+        $sql = "DELETE FROM forum_posts WHERE id=?";
+        $val = array($id);
+
+        $this->executeRequest($sql, $val);
+    }
+
+    public function deleteTopic($id) {
+        $sql = "DELETE FROM forum_topics WHERE id=?";
+        $val = array($id);
+
+        $this->executeRequest($sql, $val);
     }
 }
