@@ -1,6 +1,6 @@
 <?php
 $this->title='Page Recherche';
-#$this->style='public/css/styleR.css';
+$this->style='public/css/recherche.css';
 
 <div class="table-container">
 
