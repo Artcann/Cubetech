@@ -14,3 +14,4 @@ $this->script = "public/js/adminFaq.js";
     
     <input id='valid' type='button' value=<?php echo TXT_BT4_FAQ ;?>>
 </div>
+

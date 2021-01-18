@@ -25,7 +25,7 @@
             <li><a href="home" id="pict-link"><img id="pict" src="public/images/logo_notext.png" alt="Logo du site"/></a></li>
 
             <li><a class="link" href="home"> Mon compte </a></li>
-            <li><a class="link" href="#"> Forum </a></li>
+            <li><a class="link" href="forum"> Forum </a></li>
             <li><a class="link" href="#"> Notifications </a></li>
 
         </ul>
@@ -33,8 +33,10 @@
     </nav>
 
     <div id="page-container">
-        <a href="home/switchlang/1">TEST</a>
         <div id="content-wrapper">
+            <div id="lang-fixed">
+                <a class="switch-lang" href="home/switchlang/1"><img class="flag" src="public/images/united-kingdom.png"/></a>
+            </div>
             <?= /** @noinspection PhpUndefinedVariableInspection */
             $content ?>
         </div>

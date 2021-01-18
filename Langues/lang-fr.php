@@ -1,18 +1,32 @@
 <?php
 
     //Début home
-
     define('TXT_TITRE1_HOME', 'Bienvenue');
     define('TXT_TITRE2_HOME', 'sur le site CubeTech');
-    define('TXT_BT1_HOME', 'Prendre un rendez-vous');
-    define('TXT_BT2_HOME', 'Accèder à mes résultats');
-    define('TXT_BT3_HOME', 'Déconnexion');
+    if($statut=="1"){
+      define('TXT_BT1_HOME', 'Accéder au back office');
+      define('TXT_BT2_HOME', 'Test');
+      define('TXT_BT3_HOME', 'Déconnexion');
 
- 
+    }
+    else if($statut=="2"){
+      define('TXT_BT1_HOME', 'Lancer un test');
+      define('TXT_BT2_HOME', 'Consulter mon agenda');
+      define('TXT_BT3_HOME', 'Déconnexion');
+    }
+    else{
+      define('TXT_BT1_HOME', 'Prendre un rendez-vous');
+      define('TXT_BT2_HOME', 'Accèder à mes résultats');
+      define('TXT_BT3_HOME', 'Déconnexion');
+
+    }
+
+
+
     //Fin home
- 
+
 	//Début contact
- 
+
     define('TXT_SELECT_CONTACT', '--Choisissez une option--');
     define('TXT_SELECT1_CONTACT', 'Rendez-vous');
     define('TXT_SELECT2_CONTACT', 'Bug');
@@ -20,12 +34,12 @@
     define('TXT_TEXT_CONTACT', 'Votre message:');
     define('TXT_BT1_CONTACT', 'Valider');
 
- 
+
     //Fin contact
 
 
     //Début backoffice
- 
+
     define('TXT_TITRE1_BACK', 'Bienvenue');
     define('TXT_TITRE2_BACK', 'sur le backoffice de CubeTech');
     define('TXT_TEXT1_BACK', 'Gestion des utilisateurs');
@@ -41,18 +55,18 @@
     define('TXT_TEXT5_BACK', 'Gestion des CGU');
     define('TXT_BT7_BACK', 'Gérer les CGU');
     define('TXT_BT8_BACK', 'Déconnexion');
- 
+
     //Fin backoffice
- 
+
 
     //Début resultats
- 
+
     define('TXT_TEXT1_RESULTS', 'Selectionnez les résultats à afficher');
     define('TXT_TEXT2_RESULTS', '---Select---');
     define('TXT_TEXT3_RESULTS', 'Température');
     define('TXT_TEXT4_RESULTS', 'Rythme Cardiaque');
 
- 
+
     //Fin resultats
 
 
@@ -143,7 +157,7 @@
     define('TXT_SELECT2_CAR2', 'En réparation');
     define('TXT_SELECT3_CAR2', 'En attente de déploiment');
     define('TXT_TEXT2_CAR2', 'Entrez la date de sortie d usine de la carte');
-    
+
     //Fin Card2
 
 

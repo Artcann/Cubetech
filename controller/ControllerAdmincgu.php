@@ -12,15 +12,14 @@ class ControllerAdmincgu extends ControllerAdmin {
     }
 
     public function index() {
-        $lang = $this->session->getAttribute('user')['nationalite'];
-        $this->generateView(array("data" => $this->cgu->getCgu(), "lang" => $lang));
+        
+        $this->generateView(array("data" => $this->cgu->getCgu()));
     }
 
     public function modification() {
         if ($this->request->getMethod() == 'GET') {
             $id = $this->request->getParameter('id');
-            $lang = $this->session->getAttribute('user')['nationalite'];
-            $this->generateView(array("cgu" => $this->cgu->getCguById($id), "lang" => $lang));
+            $this->generateView(array("cgu" => $this->cgu->getCguById($id)));
         } else if ($this->request->getMethod() == 'POST') {
             http_response_code(200);
             $this->cgu->update($this->request->getParameter('title'),

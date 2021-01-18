@@ -30,7 +30,7 @@ input#submit,#close{
   padding:3px;
 }
 #container{
-    height: 80%;
+    overflow: hidden;
     margin-left: 10%;
     font-size: 20px;
 

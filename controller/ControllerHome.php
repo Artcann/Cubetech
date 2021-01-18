@@ -50,7 +50,6 @@ class ControllerHome extends ControllerSecure
 
         $statut = $this->session->getAttribute('user')['statut'];
 
-        $lang = $this->session->getAttribute('user')['nationalite'];
 
         $tableauDesRdv = array();
 
@@ -126,9 +125,6 @@ class ControllerHome extends ControllerSecure
             }
         }
 
-
-
-
         $scriptData = Array('statut'=> $data['statut']);
 
 
@@ -158,4 +154,5 @@ class ControllerHome extends ControllerSecure
  
  
 }
+
 

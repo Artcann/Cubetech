@@ -298,3 +298,14 @@ table {
     text-align: center;
     overflow: hidden;
 }
+
+#lang-fixed {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    top: 80px;
+    right: 50px;
+}
+#lang-fixed img {
+    width: 50px;
+}

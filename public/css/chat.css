@@ -1,5 +1,4 @@
 #message-container p {
-    font-size: 16px;
     color : white;
 }
 
@@ -42,4 +41,17 @@
     background-color: #FF9000;
     padding: 15px;
     box-shadow: 4px 4px 6px black;
+}
+
+#message {
+    margin-left: 30px;
+    font-size: 22px;
+}
+
+strong {
+    font-size: 20px;
+}
+
+i {
+    font-size: 12px;
 }
