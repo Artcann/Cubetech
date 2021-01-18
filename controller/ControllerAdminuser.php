@@ -38,5 +38,3 @@ class ControllerAdminuser extends ControllerAdmin {
     }
 
 }
-
-

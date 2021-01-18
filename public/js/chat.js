@@ -27,8 +27,8 @@ let loadMessages = function() {
             success: function (response) {
                 for(let i = 0; i < response.length; i++) {
                     let row = response[i];
-                    let string = "<p>" + row['prenom'] + " says : " + row['message'] 
-                    + " at " + row['created_at'] + "</p></br>";
+                    let string = "<p><strong>" + row['prenom'] + "</strong><i> " + row['created_at']
+                    + " </i></p><p id='message'>" + row['message'] +  "</p></br>";
                     $('#message-container').append(string);
                     messageContainerDiv.scrollTop = messageContainerDiv.scrollHeight;
                 }
