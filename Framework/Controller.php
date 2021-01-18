@@ -61,7 +61,7 @@ abstract class Controller
         }
 
         $view = new View($this->action, $controller);
-        $view->generate($dataView, $this->session->getAttribute('lang'));
+        $view->generate($dataView, $this->session->getAttribute('lang'), $this->session->getAttribute('user')['statut']);
     }
 
     /**

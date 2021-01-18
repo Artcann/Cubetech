@@ -1,16 +1,15 @@
 <?php
 
     //Début home
-    $statut = $scriptData['statut'];
     define('TXT_TITRE1_HOME', 'Bienvenue');
     define('TXT_TITRE2_HOME', 'sur le site CubeTech');
-    if($statut=="Administrateur"){
+    if($statut=="1"){
       define('TXT_BT1_HOME', 'Accéder au back office');
       define('TXT_BT2_HOME', 'Test');
       define('TXT_BT3_HOME', 'Déconnexion');
 
     }
-    else if($statut=="Ressource Humaine"){
+    else if($statut=="2"){
       define('TXT_BT1_HOME', 'Lancer un test');
       define('TXT_BT2_HOME', 'Consulter mon agenda');
       define('TXT_BT3_HOME', 'Déconnexion');

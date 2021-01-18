@@ -125,9 +125,6 @@ class ControllerHome extends ControllerSecure
             }
         }
 
-
-
-
         $scriptData = Array('statut'=> $data['statut']);
 
 
