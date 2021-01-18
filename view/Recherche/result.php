@@ -21,7 +21,7 @@ $this->style='public/css/recherche.css';
         <td>Corps d'armée</td>
         <td>Caserne de rattachement</td>
         <td>Matricule</td>
-        <td>Acceder aux resultats</td>
+        <td>Acceder aux résultats</td>
         <td>Envoyer un message</td>
     </tr>    
     </thead>
