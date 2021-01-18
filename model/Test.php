@@ -11,8 +11,8 @@ class Test extends Model
      * @param $idUser
      * @return array
      */
-    public function getTestByUser($idUser)
-    {
+
+    public function getTestByUser($idUser){
 
         $sql = "SELECT id, date,idUser, heure, idRh, statut FROM test WHERE idUser= ?";
 
@@ -28,9 +28,65 @@ class Test extends Model
     }
 
 
-    public function getTestByRh($idRh)
-    {
+    public function getTestById($id){
 
+        $sql = "SELECT id, date,idUser, heure, idRh, statut FROM test WHERE id= ?";
+
+        $val = array($id);
+
+        return $this->executeRequest($sql, $val)->fetch();
+    }
+
+
+    public function getAllTests(){
+
+        $sql = "SELECT test.id, date, idUser, heure, idRh, test.statut, user.nom, user.prenom, user.caserne FROM test 
+                INNER JOIN user on test.idUser = user.id 
+                WHERE test.statut = 0 ORDER BY date 
+               ";
+
+        $response = $this->executeRequest($sql);
+
+        $dataArr = array();
+
+        while($data = $response->fetch()) {
+            $dataArr[$data['id']] = $data;
+        }
+
+        return $dataArr;
+    }
+
+
+    public function delete($id){
+
+        $sql = "DELETE FROM test WHERE id=?";
+
+        $val = array($id);
+
+        $this->executeRequest($sql, $val);
+    }
+
+
+    public function update($date, $heure, $idRh, $id){
+
+        $sql = "UPDATE test SET date=?, heure=?, idRh =? WHERE id=?";
+
+        $val = array($date, $heure, $idRh);
+
+        return $this->executeRequest($sql, $val);
+    }
+
+    public function addTest($date, $heure, $idRh, $idUser){
+
+        $sql = "INSERT INTO test (date, heure, idRh, idUser) VALUES (?, ?, ?, ?)";
+
+        $val = array($date, $heure, $idRh, $idUser);
+
+        return $this->executeRequest($sql, $val);
+    }
+
+
+    public function getTestByRh($idRh){
 
         $sql = "SELECT id, date, idUser, heure, idRh, statut FROM test WHERE idRh= ?";
 
@@ -65,7 +121,7 @@ class Test extends Model
     } */
 
   
-    public function insertTest($trame, $idUser, $idRh) {
+    public function insertTest($trame, $idUser, $idRh){
 
         $sql = "INSERT into test (idCapteur, valeur, date, heure, idUser, idRh, statut) 
                 VALUES (?, ?, current_date, ?, ?, ?, ?, ?)";
@@ -79,4 +135,11 @@ class Test extends Model
         $this->executeRequest($sql, $values);
     }
 
+   
+
 }
+
+
+
+
+
