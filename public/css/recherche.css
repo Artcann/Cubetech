@@ -8,15 +8,14 @@ fieldset{
  width: 50%;
  margin: auto;
  margin-top: 10px;
-    
-    }
+}
     
 button:hover{
 
 	background:#ff9000;
 	font-weight: 600;
 	font-size:20px;
- }
+}
 	
 button{
 	border-radius:50px;
@@ -24,10 +23,19 @@ button{
 	position:relative;
 	font-style:italic;
 	padding:3px;
- }
+}
  
  #titre{
     color: white;
     position: relative;  
- }
+}
+	
+#bouton{
+	border-color:#ff9000;
+	border-radius:5px;
+	height:85px;
+}
+
+
+    
 
