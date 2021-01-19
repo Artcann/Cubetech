@@ -1,18 +1,34 @@
 <?php
- 
-    //Début home
- 
-    define('TXT_TITRE1_HOME', 'Welcome');
-    define('TXT_TITRE2_HOME', 'on Cubetech');
-    define('TXT_BT1_HOME', 'Make an appointment');
-    define('TXT_BT2_HOME', 'Access my results');
-    define('TXT_BT3_HOME', 'Logout');
 
- 
+    //Début home
+
+    //Début home
+    define('TXT_TITRE1_HOME', 'Welcome');
+    define('TXT_TITRE2_HOME', 'on CubeTech');
+    if($statut=="1"){
+      define('TXT_BT1_HOME', 'Go to the back office');
+      define('TXT_BT2_HOME', 'Test');
+      define('TXT_BT3_HOME', 'Logout');
+
+    }
+    else if($statut=="2"){
+      define('TXT_BT1_HOME', 'Start a test');
+      define('TXT_BT2_HOME', 'See my agenda');
+      define('TXT_BT3_HOME', 'Logout');
+    }
+    else{
+      define('TXT_BT1_HOME', 'Schedule an appointment');
+      define('TXT_BT2_HOME', 'See my results');
+      define('TXT_BT3_HOME', 'Logout');
+
+    }
+
+
+
     //Fin home
 
    //Début contact
- 
+
     define('TXT_SELECT_CONTACT', '--Choose an option--');
     define('TXT_SELECT1_CONTACT', 'Appointment');
     define('TXT_SELECT2_CONTACT', 'Bug');
@@ -20,12 +36,12 @@
     define('TXT_TEXT_CONTACT', 'Your message:');
     define('TXT_BT1_CONTACT', 'Submit');
 
- 
+
     //Fin contact
- 
-    
+
+
     //Début backoffice
- 
+
     define('TXT_TITRE1_BACK', 'Welcome');
     define('TXT_TITRE2_BACK', 'on Cubetech s backoffice');
     define('TXT_TEXT1_BACK', 'User Management');
@@ -41,18 +57,18 @@
     define('TXT_TEXT5_BACK', 'CGU management');
     define('TXT_BT7_BACK', 'CGU management');
     define('TXT_BT8_BACK', 'Logout');
- 
+
     //Fin backoffice
- 
+
 
     //Début resultats
- 
+
     define('TXT_TEXT1_RESULTS', 'Select the results to display');
     define('TXT_TEXT2_RESULTS', '---Select---');
     define('TXT_TEXT3_RESULTS', 'Temperature');
     define('TXT_TEXT4_RESULTS', 'Heartbeat');
 
- 
+
     //Fin resultats
 
 
@@ -133,7 +149,7 @@
 
     //Fin Card
 
- 
+
     //Début Card2
 
     define('TXT_TITRE1_CAR2', 'Add a test card');
@@ -143,7 +159,7 @@
     define('TXT_SELECT2_CAR2', 'Under reparation');
     define('TXT_SELECT3_CAR2', 'Awaiting deployment');
     define('TXT_TEXT2_CAR2', 'Enter the date the card left the factory');
-    
+
     //Fin Card2
 
 
@@ -203,17 +219,3 @@
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
