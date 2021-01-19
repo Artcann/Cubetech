@@ -142,6 +142,14 @@ class Forum extends Model
         $this->executeRequest($sql, $values);
     }
 
+    public function insertCategory($cat_name,$description) {
+        $sql = "INSERT INTO forum_category(name, description)
+                VALUES (?, ?)";
+
+        $values = array($cat_name, $description) ;
+
+        $this->executeRequest($sql, $values);
+    }
 
     
     /*Pas encore fonctionnel : */
@@ -163,14 +171,21 @@ class Forum extends Model
     }
 
     public function deletePost($id) {
-        $sql = "DELETE FROM forum_posts WHERE id=?";
+        $sql = "DELETE FROM forum_posts WHERE post_id=?";
         $val = array($id);
 
         $this->executeRequest($sql, $val);
     }
 
     public function deleteTopic($id) {
-        $sql = "DELETE FROM forum_topics WHERE id=?";
+        $sql = "DELETE FROM forum_topics WHERE topic_id=?";
+        $val = array($id);
+
+        $this->executeRequest($sql, $val);
+    }
+
+    public function deleteCategory($id) {
+        $sql = "DELETE FROM forum_category WHERE category_id=?";
         $val = array($id);
 
         $this->executeRequest($sql, $val);

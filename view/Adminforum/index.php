@@ -1,33 +1,76 @@
 <?php
 
-$this->title = "Forum | Administration";
-$this->style = "public/css/adminFaq.css";
+$this->title = "Forum";
+
+$this->style = "public/css/forum.css";
+$this->script = "public/js/forum.js"
 
 
 ?>
-<div class="table-container">
+<br>
+    <h2>Liste des catégories :</h2><br><br>
+<?php
 
-    <h1><?php echo TXT_TITRE1_FAQ ;?></h1>
 
-    <table class="table">
-        <thead>
-        <tr>
-            <td><?php echo TXT_TD1_FAQ ;?></td>
-            <td><?php echo TXT_TD2_FAQ ;?></td>
-            <td><?php echo TXT_TD3_FAQ ;?></td>
-        </tr>
-        </thead>
-        <tbody>
-        <?php /** @noinspection PhpUndefinedVariableInspection */
-        foreach($faq as $k => $v): ?>
-            <tr>
-                <td><?php echo MarkdownParser::render($v['titre']); ?></td>
-                <td><?php echo '<a href="adminfaq/modification/'. $v['id'] .'" class=button>Modifier</a>'?></td>
-                <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cette question ?\')"
-                    href="adminfaq/delete/' . $v['id'] . '" class="button">Supprimer</a>' ?></td>
-            </tr>
-        <?php endforeach ?>
-        </tbody>
-    </table>
-    <a href='adminfaq/ajout' class='button' id="add-button"><?php echo TXT_BT3_FAQ ;?></a>
+/*foreach ($data['totalDesc'] as $datum){
+    echo '<p><strong>'.$datum['name'].'</strong>'.' ('.$datum['total_topics'].')</p>';
+    echo '<p>'.$datum['description'].'</p><br>';
+}*/
+
+/*foreach ($data['totalDesc'] as $datum){
+    echo '<p><strong><a href="forum/topic/'.$datum['category_id'].'">'.$datum['name'].'</strong>'.' ('.$datum['total_topics'].')</a></p>';
+    echo '<p>'.$datum['description'].'</p><br>';
+}*/
+?>
+
+<table class="table">
+	    <thead>
+	    <tr>
+	        <td>Catégorie</td>
+            <td>Description</td>
+	        <td>Nombre de topics</td>
+	        <td>Dernière intéraction</td>
+            <td>Suppression</td>
+
+	    </tr>
+	    </thead>
+	    <tbody>
+	    <?php /** @noinspection PhpUndefinedVariableInspection */
+	    foreach($data['totalDesc'] as $datum): ?>
+	        <tr <?php echo 'data-href="adminforum/topic/' . $datum['category_id'] . '".'?>>
+	            <td><?php echo '<a href="adminforum/topic/'.$datum['category_id'].'">'.$datum['name'].'</a>'?></td>
+                <td><?php echo $datum['description'] ?></td>
+	            <td><?php echo $datum['total_topics'] ?></td>
+	            <td><?php echo 'date' ?></td>
+                <td><?php echo '<a onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer cette catégorie ?\')"
+                    href="adminforum/deleteCategory/' . $datum['category_id'] . '" class="button">Supprimer</a>' ?></td>
+
+	        </tr>
+	    <?php endforeach ?>
+	    </tbody>
+	    </table>
+
+<img class="open-button" src="public/images/plus.png" onclick="openForm()">
+
+
+<div class="form-popup" id="myForm">
+    <form action="adminforum/newCategory" class="form-container" method="post">
+
+        <h1>Nouvelle catégorie</h1>
+
+        <label><b>Catégorie</b></label>
+        <input type="text" placeholder="Écrivez la catégorie" name="cat_name" required>
+
+        <label for="msg"><b>Description</b></label>
+        <textarea placeholder="Détaillez votre problème" name="description" required></textarea>
+
+        <button type="submit" class="btn">Créer</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Annuler</button>
+    </form>
 </div>
+
+
+<?php
+/*print_r($data['totalDesc'])*/
+ /*echo 'data-href="forum/topic/' . $datum['category_id'] . '".'?>*/
+?>
