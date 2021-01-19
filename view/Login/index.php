@@ -9,6 +9,7 @@ $this->style = "public/css/index.css";
 
     <h3>Veuillez remplir le formulaire</h3>
 
+<div class="form">
     <form class="loginForm" action="login/login" method="post">
         <div>
             <label for="login">Identifiant : </label><input type="text" name="login" id="login" required>
@@ -17,6 +18,7 @@ $this->style = "public/css/index.css";
             <label for="password">Mot de passe : </label><input type="password" name="password" id="password" required>
         </div>
         <div>
-            <label for="submit">Envoyer</label><input type="submit">
+            <label class = submit for="submit">Envoyer</label><input class = button type="submit">
         </div>
     </form>
+</div>
