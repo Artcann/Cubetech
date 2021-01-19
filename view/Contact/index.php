@@ -6,9 +6,9 @@ $this->style = "public/css/contact.css";
     <div class="select-style">
     <select name="type">
         <option value="">--Choisissez une option--</option>
-        <option value="rendez-vous">Rendez-vous</option>
-        <option value="Bug">Bug</option>
-        <option value="suggestion">Suggestion</option>
+        <?php foreach($data as $k => $v): ?>
+        <option value="<?php echo $v['id']?>"><?php echo $v['type']?></option>
+        <?php endforeach ?>
     </select>
     </div>
     <label id="title" for="contenu"> Votre message:</label>

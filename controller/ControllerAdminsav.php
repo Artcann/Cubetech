@@ -59,6 +59,7 @@ class ControllerAdminsav extends ControllerAdmin {
 
     public function archive() {
     	$this->sav->archiveSavById($this->request->getParameter('id'));
+    	$this->sav->createNotif($this->request->getParameter('id2'));
 
         $this->redirect('adminsav');
     }

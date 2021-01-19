@@ -2,15 +2,23 @@
 require_once 'Framework/Controller.php';
 require_once 'Framework/Configuration.php';
 require_once 'controller/ControllerSecure.php';
+require_once 'model/Contact.php';
 
 /**
  * Class ControllerContact
  */
 class ControllerContact extends Controller
 {
+    private $contact;
+
+    public function __construct()
+    {
+        $this->contact = new Contact();
+    }
     public function index()
     {
-            $this->generateView();
+       $liste=$this->contact->getType();
+       $this->generateView($liste);
     }
 
     public function getDestinataire()
