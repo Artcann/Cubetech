@@ -20,8 +20,8 @@
     <nav class="navbar" id="navbar-header">
         <ul>
             <li><a href="home" id="pict-link"><img id="pict" src="public/images/logo_notext.png" alt="Logo du site"/></a></li>
-            <li><a class="link" href="home"> My account </a></li>
-            <li><a class="link" href="#"> Forum </a></li>
+            <li><a class="link" href="modifier"> My account </a></li>
+            <li><a class="link" href="forum"> Forum </a></li>
             <li><a class="link" href="#"> Notifications </a></li>
         </ul>
     </nav>

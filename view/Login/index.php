@@ -1,6 +1,6 @@
 <?php
 $this->title = "Connexion";
-$this->style = "public/css/index.css";
+$this->style = "public/css/login.css";
 ?>
     <tr>
         <td><img src="public/images/logo.png" alt="Logo CubeTech" id="LogoPNG"></td>
@@ -9,16 +9,17 @@ $this->style = "public/css/index.css";
 
     <h3>Veuillez remplir le formulaire</h3>
 
-<div class="form">
-    <form class="loginForm" action="login/login" method="post">
-        <div>
-            <label for="login">Identifiant : </label><input type="text" name="login" id="login" required>
-        </div>
-        <div>
-            <label for="password">Mot de passe : </label><input type="password" name="password" id="password" required>
-        </div>
-        <div>
-            <label class = submit for="submit">Envoyer</label><input class = button type="submit">
-        </div>
-    </form>
-</div>
+
+    <div class="form-container">
+        <form class="loginForm" action="login/login" method="post">
+            <div>
+                <label for="login">Identifiant : </label><input type="text" name="login" id="login" required>
+            </div>
+            <div>
+                <label for="password">Mot de passe : </label><input type="password" name="password" id="password" required>
+            </div>
+            <div>
+                <label for="submit">Envoyer</label><input type="submit">
+            </div>
+        </form>
+    </div>

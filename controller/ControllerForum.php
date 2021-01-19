@@ -3,15 +3,13 @@
 require_once 'model/Forum.php';
 require_once 'Framework/Controller.php';
 require_once 'Framework/Request.php';
-require_once 'controller/ControllerSecure.php';
+require_once 'Controller/ControllerSecure.php';
 
 class ControllerForum extends Controller
 {
-    private $categoryTable = 'forum_category';
-    private $topicTable = 'forum_topics';
-    private $postTable = 'forum_posts';
+
     private $forum;
-    private $listCategory;
+
 
     public function __construct()
     {

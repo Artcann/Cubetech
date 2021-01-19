@@ -1,19 +1,4 @@
 
-//
-//
-//     $this.data('alt-src', $this.attr('src'));
-//
-//     $this.attr('src', newSource);
-// }
-//
-//
-// $(function () {
-//     $('img.alert').hover(imageSwap, imageSwap);
-// });
-
-
-
-
 
 if (statut === 'Administrateur'){
     $("#button1").attr("href", "adminhome");
@@ -26,3 +11,7 @@ else if (statut === 'Ressource humaine') {
   $("#button2").attr("href","Modifier");
 }
 
+else{
+  $("#button1").attr("href", "contact");
+  $("#button2").attr("href","result");
+}

@@ -35,7 +35,7 @@ class View
      * @param null $data
      * @throws Exception
      */
-    public function generate($data = null, $lang, $statut) {
+    public function generate($data = null, $lang, $statut = null) {
         $content = $this->generateFile($this->file, $data, $lang, $statut);
 
         $root = Configuration::get("racineWeb", "/");
@@ -57,7 +57,7 @@ class View
      * @return false|string
      * @throws Exception
      */
-    private function generateFile($file, $data, $lang=null, $statut=null) {   
+    private function generateFile($file, $data, $lang=null, $statut = null) {   
         if (file_exists($file)) {
             if($data != null) {
                 #var_dump($data);

@@ -32,10 +32,11 @@ $this->title = "Gestion Utilisateurs";
                 <td><?php echo $v['nom']; ?></td>
                 <td><a href="adminuser/modification" class=button><?php echo TXT_BT1_AU ;?></a></td>
                 <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
-                    href="adminuser/delete/' . $v['id'] . '" class="button">' . TXT_BT2_CGU . ' </a>' ?></td>
+                href="adminuser/delete/' . $v['id'] . '" class="button">Supprimer</a>'?></td>
             </tr>
         <?php endforeach ?>
         </tbody>
     </table>
 </div>
+
 

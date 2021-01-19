@@ -1,18 +1,18 @@
-p {
-    color: white;
+textarea {
+    resize: none;
+    width: 80%;
 }
 
-/* #page-container {
-    height: calc(100% - 70px);
+#title {
+    height: 20px;
 }
 
-#content-wrapper {
-    height: calc(100% - 90px);
-} */
+#content {
+    height: 20px;
+}
 
 .form-container {
-    height: 100%;
-    text-align: center;
+    width: 30%;
 }
 
 .form-container input {
@@ -29,10 +29,6 @@ p {
     box-shadow: 4px 4px 6px black;
 }
 
-form {
-    height: 100%;
-}
-
-#add-button {
-    margin: 15px auto;
+label {
+    text-align: center;
 }

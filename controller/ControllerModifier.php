@@ -5,7 +5,7 @@ require_once 'model/Test.php';
 require_once 'model/Corps.php';
 require_once 'model/Caserne.php';
 require_once 'Framework/Controller.php';
-require_once 'controller/ControllerSecure.php';
+require_once 'Controller/ControllerSecure.php';
 
 
 class ControllerModifier extends ControllerSecure
@@ -16,6 +16,8 @@ class ControllerModifier extends ControllerSecure
     private $test;
 
     private $caserne;
+    private $result;
+    private $succesMessage;
 
     public function __construct() {
         $this->user = new User();
@@ -27,6 +29,8 @@ class ControllerModifier extends ControllerSecure
     }
 
     public function index() {
+      $error=NULL;
+
 
         if($this->session->isAttributeSet('user')) {
 
@@ -42,6 +46,7 @@ class ControllerModifier extends ControllerSecure
             $testRh = $this->test->getTestByRh($this->session->getAttribute('user')['id']);
 
             $statut = $this->session->getAttribute('user')['statut'];
+
 
             $tableauDesRdv = array();
 
@@ -114,16 +119,17 @@ class ControllerModifier extends ControllerSecure
 
                 }
             }
+
+            else if($data['statut'] =="Administrateur"){
+            }
             $scriptData = Array('statut'=> $data['statut']);
 
 
             $this->generateView(array("data" => $data, "corps" => $corps,
                                       "caserne" => $caserne, "test" => $tableauDeTest,
                                       "statut" => $statut, "tableauTestRh" => $tableauTestRh,
-                                      "scriptData"=> $scriptData
+                                      "scriptData"=> $scriptData,"error"=>$error
                                      ));
-
-
             /*end code ugo*/
         }  else {
             $this->redirect("login");
@@ -136,32 +142,35 @@ class ControllerModifier extends ControllerSecure
     }
 
     public function modifier() {  /*FONCTION QUI REDIRIGE QUAND LE GARS A CHANGE SON MDP*/
-      if($this->request->isParameterSet('verifiedPassword')){  /*n utilise pas les variables GET ET post mais utilise le meme principe*/
+
+      if($this->request->isParameterSet('newPass','verifiedPassword','confirmNewPass')){  /*n utilise pas les variables GET ET post mais utilise le meme principe*/
         $currentPassword=$this->session->getAttribute("user")['password'];
         $verifiedPassword=$this->request->getParameter('verifiedPassword');
-        $newPassword= $this->request->getParameter('password');
+        $newPassword= $this->request->getParameter('newPass');
         $idUser=$this->session->getAttribute("user")['id'];
         $confirmedPassword = $this->request->getParameter("confirmNewPass");
+        $result = "Quelque chose s'est mal passé...";
        if (!password_verify($verifiedPassword,$currentPassword)){
-            //header("Location: /Cubetech/Modifier?password=false");  /*j'ai enlevé le header pque c'est pas ce qu'il fallait faire
-            //exit();
-          throw new Exception("Vous ne connaissez plus votre propre MDP ou vous êtes un criminel !"); /*je gere les exceptions */
+          $succesMessage= "Vous ne connaissez même plus votre mot de passe actuel !";
+          $this->generateView(array("result"=>$result,"succesMessage"=>$succesMessage));
         }
         elseif (password_verify($newPassword,$currentPassword)){
-             //header("Location: /Cubetech/Modifier?password=same");
-             //exit();
-          throw new Exception("Vous avez changer votre mot de passe avec celui que vous avez déjà !");
+          $succesMessage= "Vous n'avez pas effectué de changement... Vous avez changé avec le même mot de passe !";
+          $this->generateView(array("result"=>$result,"succesMessage"=>$succesMessage));
         }
         elseif($newPassword!=$confirmedPassword){
-          throw new Exception("Vous avez pas mis les deux mêmes mot de passes...");
+          $succesMessage= "Vous n'avez pas bien confirmé votre mot de passe !";
+          $this->generateView(array("result"=>$result,"succesMessage"=>$succesMessage));
         }
         else{
             $this->user->modifyPassword($idUser, password_hash($newPassword, PASSWORD_DEFAULT));
-            $this->generateView();
+            $result = "Enregistrement terminé !";
+            $succesMessage= "Vous avez modifié votre mot de passe avec succès.";
+            $this->generateView(array("result"=>$result,"succesMessage"=>$succesMessage));
         }
       }
       else{
-        throw new Exception("Vous n'avez rien rempli");
+        throw new Exception("Vous n'avez pas tout rempli !");
       }
 
     }

@@ -1,11 +1,11 @@
 <?php
 
 $this->title = "Ajout test";
-$this->style = "";
+$this->style = "public/css/ajoutTest.css";
 $this->script = "";
 ?>
 
-<div id="container">
+<div class="form-container">
     <form action="rhtest/ajoutTest" method="post">
         <label for=""><?php echo TXT_TD1_TEST2;?></label></br>
         <textarea class="textarea" id='title' name="date"></textarea></br>

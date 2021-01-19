@@ -1,7 +1,7 @@
 <?php
 
 include_once 'Framework/Controller.php';
-include_once 'Model/Test.php';
+include_once 'model/Test.php';
 
 /**
  * Class ControllerTest

@@ -5,7 +5,7 @@ require_once 'model/Test.php';
 require_once 'model/Corps.php';
 require_once 'model/Caserne.php';
 require_once 'Framework/Controller.php';
-require_once 'controller/ControllerSecure.php';
+require_once 'Controller/ControllerSecure.php';
 
 /**
  * Class ControllerHome
@@ -139,10 +139,10 @@ class ControllerHome extends ControllerSecure
     public function switchlang() {
         if($this->request->getParameter('id') == 1) {
             $this->session->setAttribute("lang", "en");
-            $this->redirect("home");
+            $this->redirect("login");
         } else {
             $this->session->setAttribute("lang", "fr");
-            $this->redirect("home");
+            $this->redirect("login");
         }
     }
 

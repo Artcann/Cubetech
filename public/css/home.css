@@ -43,9 +43,18 @@
   border: 2px solid #FF9000;
 }
 
-/* Media Queries */
+.rickroll {
+  position: absolute;
+  bottom: 150px;
+  background-color: #212121;
+  text-decoration: none;
+  padding : 20px;
+}
 
-@media all and (max-width: 600px){
-  
+.rickroll:visited {
+  text-decoration: none;
+}
 
+.rickroll:hover {
+  cursor: default;
 }

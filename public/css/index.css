@@ -299,6 +299,46 @@ table {
     overflow: hidden;
 }
 
+.form-container {
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 30px;
+    width: 80%;
+}
+
+.form-container form {
+    border: 2px solid #FF9000;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.form-container .textarea-add {
+    width: 80%;
+    font-size: 18px;
+    margin-top: 10px;
+    border: 2px solid #FF9000;
+    border-radius: 10px;
+    padding: 5px;
+    resize: none;
+    outline: none;
+}
+
+
+.form-container label {
+    font-size: large;
+    margin-top: 10px;
+}
+
+
+#title {
+    height: 20vh;
+}
+
+#content {
+    height: 35vh;
+}
+
 #lang-fixed {
     position: fixed;
     width: 25px;

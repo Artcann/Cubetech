@@ -1,7 +1,7 @@
 <?php
 require_once 'Framework/Controller.php';
 require_once 'Framework/Configuration.php';
-require_once 'controller/ControllerSecure.php';
+require_once 'Controller/ControllerSecure.php';
 
 /**
  * Class ControllerContact
