@@ -139,10 +139,10 @@ class ControllerHome extends ControllerSecure
     public function switchlang() {
         if($this->request->getParameter('id') == 1) {
             $this->session->setAttribute("lang", "en");
-            $this->redirect("home");
+            $this->redirect("login");
         } else {
             $this->session->setAttribute("lang", "fr");
-            $this->redirect("home");
+            $this->redirect("login");
         }
     }
 

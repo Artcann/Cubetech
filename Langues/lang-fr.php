@@ -78,8 +78,8 @@
     define('TXT_TD3_AU', 'Statut');
     define('TXT_TD4_AU', 'Prenom');
     define('TXT_TD5_AU', 'Nom');
-    define('TXT_TD6_AU', 'Modifier l utilisateur');
-    define('TXT_TD7_AU', 'Supprimer l utilisateur');
+    define('TXT_TD6_AU', 'Modifier l\'utilisateur');
+    define('TXT_TD7_AU', 'Supprimer l\'utilisateur');
     define('TXT_BT1_AU', 'Modifier');
     define('TXT_BT2_AU', 'Supprimer');
 
@@ -93,7 +93,7 @@
     define('TXT_TD1_RE', 'Nom :');
     define('TXT_TD2_RE', 'Prenom :');
     define('TXT_TD3_RE', 'Date de naissance :');
-    define('TXT_SELECT_RE', 'Niveau d habilitation :');
+    define('TXT_SELECT_RE', 'Niveau d\'habilitation :');
     define('TXT_SELECT1_RE', '--Choose an option--');
     define('TXT_SELECT2_RE', 'Admin');
     define('TXT_SELECT3_RE', 'RH');
