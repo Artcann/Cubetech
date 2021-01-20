@@ -120,14 +120,18 @@ a{
 
 
 
-/* #submit{
-    margin-right: 40%;
-    margin-left: 40%;
+#submit:hover,#close:hover{
+  background-color: #FF9000;
+  border: 2px solid black;
+  box-shadow: 4px 4px 6px black;
+  font-size: 23px;
+  font-weight: bold;
+}
 
-    margin-top: 5px;
-    padding: 5px;
-    width:auto;
-} */
+#faireModif:hover{
+  font-size: 23px;
+  color: #FF9000;
+}
 
 .tableau{
     border-collapse: collapse;
