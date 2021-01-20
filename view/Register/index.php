@@ -1,5 +1,5 @@
 <?php
-$this->title = "Inscription";
+$this->title = "Inscription | Cubetech";
 $this->style = "public/css/index.css";
 $this->script = "public/js/register.js";
 ?>

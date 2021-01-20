@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8" />
     <base href="<?= /** @noinspection PhpUndefinedVariableInspection */
@@ -13,6 +13,8 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"></script>
     <script type="text/javascript" src="public/js/header.js"></script>
+    <link rel="shortcut icon" href="public/images/logo_notext.png" type="image/x-icon">
+    <link rel="icon" href="public/images/logo_notext.png" type="image/x-icon">
 </head>
 
 <body>
@@ -26,7 +28,7 @@
 
             <li><a class="link" href="modifier"> Mon compte </a></li>
             <li><a class="link" href="forum"> Forum </a></li>
-            <li><a class="link" href="#"> Notifications </a></li>
+            <li><a class="link" href="notifications"> Notifications </a></li>
 
         </ul>
 

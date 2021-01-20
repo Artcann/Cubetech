@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Accueil Changement test";
+$this->title = "Accueil Changement test | Cubetech";
 $this->style = "public/css/ajoutTest.css"
 ?>
 

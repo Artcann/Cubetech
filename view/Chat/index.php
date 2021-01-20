@@ -1,4 +1,5 @@
 <?php
+$this->title = "Chat | Cubetech";
 $this->style = "public/css/chat.css";
 $this->script = "public/js/chat.js";
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "AdminSav";
+$this->title = "SAV Administrateur | Cubetech";
 $this->style = "public/css/adminSav.css";
 $this->script = "public/js/adminSav.js";
 ?>

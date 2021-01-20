@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "CGU";
+$this->title = "CGU | Cubetech";
 
 $this->style = "public/css/cgu.css";
 

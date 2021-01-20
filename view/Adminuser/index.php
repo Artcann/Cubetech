@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Gestion Utilisateurs";
+$this->title = "Gestion des Utilisateurs | Cubetech";
 
 ?>
 

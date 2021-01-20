@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Modifier vos informations";
+$this->title = "Modifier vos informations | Cubetech";
 $this->style = "public/css/modifier.css";
 $this->script = "public/js/home.js";
 $this->script = "public/js/modifier.js";
