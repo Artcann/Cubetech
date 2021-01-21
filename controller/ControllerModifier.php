@@ -143,7 +143,7 @@ class ControllerModifier extends ControllerSecure
 
     public function modifier() {  /*FONCTION QUI REDIRIGE QUAND LE GARS A CHANGE SON MDP*/
 
-      if($this->request->isParameterSet('newPass','verifiedPassword','confirmNewPass')){  /*n utilise pas les variables GET ET post mais utilise le meme principe*/
+      // if($this->request->isParameterSet('newPass','verifiedPassword','confirmNewPass')){  /*n utilise pas les variables GET ET post mais utilise le meme principe*/
         $currentPassword=$this->session->getAttribute("user")['password'];
         $verifiedPassword=$this->request->getParameter('verifiedPassword');
         $newPassword= $this->request->getParameter('newPass');
@@ -168,10 +168,10 @@ class ControllerModifier extends ControllerSecure
             $succesMessage= "Vous avez modifié votre mot de passe avec succès.";
             $this->generateView(array("result"=>$result,"succesMessage"=>$succesMessage));
         }
-      }
-      else{
-        throw new Exception("Vous n'avez pas tout rempli !");
-      }
+      // }
+      // else{
+      //   throw new Exception("Vous n'avez pas tout rempli !");
+      // }
 
     }
 }
