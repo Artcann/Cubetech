@@ -47,6 +47,7 @@ class User extends Model
                 $param = "%".$param."%";
             }
             array_push($formated, $param);
+        }
 
         $sql = "SELECT user.id AS id, user.nom, prenom, login, mail, naissance, nationalite,
         grade, corps, caserne, matricule, caserne.ville, statut.nom AS statutName, corps.type
