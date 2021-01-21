@@ -56,7 +56,9 @@
     define('TXT_BT6_BACK', 'FAQ management');
     define('TXT_TEXT5_BACK', 'CGU management');
     define('TXT_BT7_BACK', 'CGU management');
-    define('TXT_BT8_BACK', 'Logout');
+    define('TXT_BT8_BACK', 'Forum management');
+    define('TXT_TEXT6_BACK', 'Forum management');
+    define('TXT_BT9_BACK', 'Logout');
 
     //Fin backoffice
 

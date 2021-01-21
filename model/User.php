@@ -40,8 +40,6 @@ class User extends Model
 
         $params = func_get_args();
 
-        #print_r($params);
-
         $formated = array();
 
         foreach($params as $param) {
@@ -49,16 +47,7 @@ class User extends Model
                 $param = "%".$param."%";
             }
             array_push($formated, $param);
-        }
-
-        #print_r($formated);
-
-/*         $id = "%".$id."%";
-        $nom = "%".$nom."%";
-        $prenom = "%".$prenom."%";
-        $naissance = "%".$naissance."%"; */
-        
-
+        }     
 
         $sql = "SELECT user.id AS id, user.nom, prenom, login, mail, naissance, nationalite,
         grade, corps, caserne, matricule, caserne.ville, statut.nom AS statutName, corps.type
@@ -75,13 +64,10 @@ class User extends Model
         $val = array($nom, $prenom, $naissance);
 
         $response = $this->executeRequest($sql, $formated);
-        #echo $response->debugDumpParams();
         $dataArr = array();
         while($data = $response->fetch()) {
             array_push($dataArr,$data);
         }
-
-        #print_r($dataArr);
 
         return $dataArr;
     }

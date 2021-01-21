@@ -54,7 +54,9 @@
     define('TXT_BT6_BACK', 'Gérer la FAQ');
     define('TXT_TEXT5_BACK', 'Gestion des CGU');
     define('TXT_BT7_BACK', 'Gérer les CGU');
-    define('TXT_BT8_BACK', 'Déconnexion');
+    define('TXT_BT8_BACK', 'Gestion du Forum');
+    define('TXT_TEXT6_BACK', 'Gérer le Forum');
+    define('TXT_BT9_BACK', 'Déconnexion');
 
     //Fin backoffice
 

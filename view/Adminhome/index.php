@@ -30,10 +30,12 @@ $this->style = "public/css/adminHome.css";
             <a class="button" href="adminfaq"><?php echo TXT_BT6_BACK; ?></a>
             <h3><?php echo TXT_TEXT5_BACK; ?></h3>
             <a class="button" href="admincgu"><?php echo TXT_BT7_BACK; ?></a>
+            <h3><?php echo TXT_TEXT6_BACK; ?></h3>
+            <a class="button" href="adminforum"><?php echo TXT_BT8_BACK; ?></a>
         </div>
     </div>
     <div class="row-3">
-        <a class="button" href="home/disconnect"><?php echo TXT_BT8_BACK; ?></a>
+        <a class="button" href="home/disconnect"><?php echo TXT_BT9_BACK; ?></a>
     </div>
 
 
