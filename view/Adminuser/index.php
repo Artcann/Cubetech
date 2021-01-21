@@ -1,5 +1,5 @@
 <?php
-$this->title = "Gestion Utilisateurs";
+$this->title = "Gestion Utilisateurs | Cubetech";
 $this->style = "public/css/index.css";
 ?>
 <div class="table-container">

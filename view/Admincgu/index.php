@@ -1,5 +1,5 @@
 <?php
-$this->title = "Gestion CGU";
+$this->title = "Gestion des CGU | Cubetech";
 ?>
 
 <div class="table-container">

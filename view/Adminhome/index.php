@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Acceuil Adminhome";
+$this->title = "Accueil Administrateur | Cubetech";
 $this->style = "public/css/adminHome.css";
 
 ?>

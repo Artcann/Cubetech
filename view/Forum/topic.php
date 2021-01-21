@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Forum | Topic";
+$this->title = "Forum Topic | Cubetech";
 
 $this->style = "public/css/forum.css";
 $this->script = "public/js/forum.js"
