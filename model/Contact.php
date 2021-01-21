@@ -4,13 +4,26 @@ require("controller/ControllerContact.php");
 
 class Contact extends Model
 {
+    private function getDestinataire()
+    {
+
+    }
     private function insertMessage($idUser,$contenu,$type,$date,$status,$destinataire)
     {
-        $sql= "INSERT INTO `sav` VALUES ($idUser,$contenu,$type,$date,$status,$destinataire)";
+        $sql= "INSERT INTO `sav` VALUES (?,?,?,?,?,?)";
 
-        $this->executeInsert($sql);
+        $this->executeRequest($sql);
 
+    }
+    public function getType()
+    {
+        $sql="SELECT id,type FROM sav_type";
+        $response=$this->executeRequest($sql);
+        $dataArr = array();
 
-        return null;
+        while($data = $response->fetch()) {
+            $dataArr[$data['id']] = $data;
+        }
+        return $dataArr;
     }
 }

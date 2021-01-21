@@ -3,22 +3,20 @@ $this->title = "Contact | Cubetech";
 $this->style = "public/css/contact.css";
 ?>
 
-
 <form id="contact" action="contact" method="post">
     <div class="select-style">
     <select name="type">
-        <option value=""><?php echo TXT_SELECT_CONTACT;?></option>
-        <option value="rendez-vous"><?php echo TXT_SELECT1_CONTACT;?></option>
-        <option value="Bug"><?php echo TXT_SELECT2_CONTACT;?></option>
-        <option value="suggestion"><?php echo TXT_SELECT3_CONTACT;?></option>
+        <option value="">--Choisissez une option--</option>
+        <?php foreach($data as $k => $v): ?>
+        <option value="<?php echo $v['id']?>"><?php echo $v['type']?></option>
+        <?php endforeach ?>
     </select>
     </div>
-    <label id="title" for="contenu"><?php echo TXT_TEXT_CONTACT;?></label>
+    <label id="title" for="contenu"> Votre message:</label>
     <textarea id="contenu" name="message" placeholder="Votre message...">
     </textarea>
-
-    <input id="contactsubmit" type="submit" value="<?php echo TXT_BT1_CONTACT;?>">
-
+    <p>
+    <input id="contactsubmit" type="submit" value="Valider">
+    </p>
 </form>
-
 
