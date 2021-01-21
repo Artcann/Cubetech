@@ -5,100 +5,26 @@ $this->script = "public/js/home.js";
 $this->style = "public/css/home.css"
 ?>
 
+
 <script> let statut="<?php echo $scriptData['statut']?>"; </script>
 
 <div id="container">
-    <div class="col1">
+  <div class="col1">
         <div class="row1-col1">
-                <img id="profil" src="public/avatars/<?php echo $data["login"];?>.jpg">
-                <div class="col2-row1-col1">
-                <b><?php echo $data['prenom'] ." " . $data['nom'] ?> </b></br>
-                </div>
+
         </div>
         <div class="row2-col1">
-            <p id="info">
-
-                Grade : <span> <?php echo $data["grade"];?> </span> <br/>
-
-                Date de naissance : <span> <?php echo $data["naissance"];?> </span> <br/>
-
-                Nationalité : <span> <?php echo $data["nationalite"];?> </span> <br/>
-
-                Caserne de rattachement : <span> <?php echo $caserne[$data['caserne']]["ville"];?> </span> <br/>
-
-                Corps d'armée : <span> <?php echo $corps[$data["corps"]]['type'];?></span> <br/>
-
-                Adresse email : <span> <?php echo $data["mail"];?> </span> <br/>
-
-                Statut : <span> <?php echo $data["statut"];?> </span> <br/>
-
-                Matricule : <span> <?php echo $data["matricule"];?> </span> <br/>
-
-            </p>
-            <li></br><a href="modifier">Modifier mes informations </a></li>
+            <h1><?php echo TXT_TITRE1_HOME . ' ' . $data['prenom'] . ' ' . TXT_TITRE2_HOME; ?></h1>
         </div>
-
         <div class="row3-col1">
+          <li id="bt1"><a href="result" id="button1"> <?php echo TXT_BT1_HOME ;?></a></li>
+          <li id="bt2"><a href="result" id="button2"> <?php echo TXT_BT2_HOME ;?></a></li>
+          <li id="bt3"><a href="home/disconnect" id="button3"><?php echo TXT_BT3_HOME ;?></a></li>
+        </div>
+        </div>
+        <div class="row4-col1">
+          <a class="rickroll" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></a>
+        </div>
 
-        </div>  
     </div>
-
-    <div class="col2">
-        <div class="row1-col2">
-            <center><p><img src="public/images/logo.png"></p></center>
-        </div>
-        <div class="row2-col2">
-            <h1>
-                Bienvenue <span><?php echo $data["prenom"];?></span> sur le site CubeTech 
-            </h1>
-        </div>
-        <div class="row3-col2">
-            <li id="bt2"><a href="result" id="button2"> Accèder à mes résultats</a></li>
-        </div>
-        <div class="row4-col2">
-                <li id="bt1"><a id="button" href="home/disconnect">Déconnexion</a></li>
-        </div>
-    </div>
-
-
-    <div class="col3">
-        <div class="row1-col3">
-            <H3 id ="agenda"> Agenda des rendez-vous à venir </H3><br>
-            
-            <div class="table-container">
-                <table class="tableau">
-                    <tbody>
-                        <?php /** @noinspection PhpUndefinedVariableInspection */
-                        foreach($test as $k): ?>
-                            <tr>
-                                <td><?php echo $k; ?></td>
-                                <td><a href=""><img class="alert" src="public/images/notification.png" data-alt-src="public/images/alert2.png"></center></a></td>
-                            </tr>
-                        <?php endforeach ?>
-                    </tbody>
-                </table>
-            </div>                
-
-            <div class="table-container">
-                <table class="table">
-                    <tbody>
-                        <?php /** @noinspection PhpUndefinedVariableInspection */
-                        foreach($tableauTestRh as $k): ?>
-                            <tr>
-                                <td><?php echo $k; ?></td>
-                                <td><a href=""><img class="alert" src="public/images/notification.png" data-alt-src="public/images/alert2.png"></td>
-                            </tr>
-                        <?php endforeach ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>  
-    </div> 
 </div>
-
-
-
-
-
-
-

@@ -1,0 +1,34 @@
+textarea {
+    resize: none;
+    width: 80%;
+}
+
+#title {
+    height: 20px;
+}
+
+#content {
+    height: 20px;
+}
+
+.form-container {
+    width: 30%;
+}
+
+.form-container input {
+    font-weight:bold;
+    padding: 12px;
+    border-radius: 2em;
+    background-color:  #FF9000;
+    color: black;
+}
+
+.form-container input:hover {
+    background-color: #FF9000;
+    padding: 15px;
+    box-shadow: 4px 4px 6px black;
+}
+
+label {
+    text-align: center;
+}

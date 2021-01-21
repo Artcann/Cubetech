@@ -6,16 +6,16 @@ $this->script = "public/js/adminSav.js";
 ?>
 
 	<div class="table-container">
-		<h1> Rendez-vous </h1>
+		<h1> <?php echo TXT_TITRE1_SAV;?> </h1>
 
 		<table class="table">
 	    <thead>
 	    <tr>
-	        <td>IdUser</td>
-	        <td>Date</td>
-	        <td>Contenu</td>
-	        <td>Contact</td>
-	        <td>Valider</td>
+	        <td><?php echo TXT_TD1_SAV;?></td>
+	        <td><?php echo TXT_TD2_SAV;?></td>
+	        <td><?php echo TXT_TD3_SAV;?></td>
+	        <td><?php echo TXT_TD4_SAV;?></td>
+	        <td><?php echo TXT_TD5_SAV;?></td>
 	    </tr>
 	    </thead>
 	    <tbody>
@@ -33,16 +33,16 @@ $this->script = "public/js/adminSav.js";
 	    </tbody>
 	    </table>
 
-    	<h1> Bug </h1>
+    	<h1> <?php echo TXT_TITRE2_SAV;?> </h1>
 
 	    <table class="table">
 	    <thead>
 	    <tr>
-	        <td>IdUser</td>
-	        <td>Date</td>
-	        <td>Contenu</td>
-	        <td>Contact</td>
-	        <td>Valider</td>
+	        <td><?php echo TXT_TD1_SAV;?></td>
+	        <td><?php echo TXT_TD2_SAV;?></td>
+	        <td><?php echo TXT_TD3_SAV;?></td>
+	        <td><?php echo TXT_TD4_SAV;?></td>
+	        <td><?php echo TXT_TD5_SAV;?></td>
 	    </tr>
 	    </thead>
 	    <tbody>
@@ -59,16 +59,16 @@ $this->script = "public/js/adminSav.js";
 	    </tbody>
 	    </table>
 
-    	<h1> Suggestion </h1>
+    	<h1> <?php echo TXT_TITRE3_SAV;?> </h1>
 
 	    <table class="table">
 	    <thead>
 	    <tr>
-	        <td>IdUser</td>
-	        <td>Date</td>
-	        <td>Contenu</td>
-	        <td>Contact</td>
-	        <td>Valider</td>
+	        <td><?php echo TXT_TD1_SAV;?></td>
+	        <td><?php echo TXT_TD2_SAV;?></td>
+	        <td><?php echo TXT_TD3_SAV;?></td>
+	        <td><?php echo TXT_TD4_SAV;?></td>
+	        <td><?php echo TXT_TD5_SAV;?></td>
 	    </tr>
 	    </thead>
 	    <tbody>

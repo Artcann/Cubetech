@@ -16,7 +16,8 @@ class ControllerRegister extends Controller
     }
 
     public function index() {
-        $this->generateView();
+        
+        $this->generateView(array());
     }
 
     public function register() {
@@ -53,7 +54,7 @@ class ControllerRegister extends Controller
                 $test = 'nope';
             }
         }
-
-        $this->generateView(array("login" => $login, "test" => $test));
+        $lang = $this->session->getAttribute('user')['nationalite'];
+        $this->generateView(array("login" => $login, "test" => $test, "lang" => $lang));
     }
 }

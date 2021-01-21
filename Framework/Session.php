@@ -34,11 +34,11 @@ class Session
      * @return mixed
      */
     public function getAttribute($name) {
-//        if ($this->isAttributeSet($name)) {
-//            return $_SESSION[$name];
-//        } else {
-//            throw new Exception("Attribut '$name' absent de la session");
-//        }
+/*         if ($this->isAttributeSet($name)) {
+            return $_SESSION[$name];
+        } else {
+            throw new Exception("Attribut '$name' absent de la session");
+        } */
         return $_SESSION[$name];
     }
 }

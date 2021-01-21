@@ -1,15 +1,44 @@
-.bienvenue{
-    margin-top: 10px;
+.date{
+  color: white;
+  text-align: center;
+  font-size: 30px;
 }
 
-.container{
-    height: 80%;
-    margin-top: 5%;
+
+#bas{
+  height:40px;
+  padding-top:10px;
+}
+input#submit,#close{
+  background-color: #FF9000;
+  border-radius: 5px;
+  border: 2px solid black;
+
+
+}
+#submit{
+  display: block;
+  float: left;
+  width: auto;
+  padding: 3px;
+  margin-left: 30%;
+}
+#close{
+  width: auto;
+  float: left;
+  display: block;
+  padding:3px;
+}
+#container{
+    overflow: hidden;
     margin-left: 10%;
     font-size: 20px;
 
-}
 
+}
+.bienvenue{
+  padding-top: 2%;
+}
 .informations{
     border: 2px dashed #FF9000;
     border-radius: 5px;
@@ -21,12 +50,12 @@
     font-size: 20px;
 }
 
-.head {
+.tete {
     margin: 2px 2px 15px 2px;
     overflow: hidden;
 }
 
-.head img {
+.tete img {
     height: 100px;
     display: block;
     margin-right: 4px;
@@ -51,7 +80,7 @@ span{
 
 .col2{
     display: inline-block;
-    margin: 0px 10% 0px 5%;
+    margin: 0px 10% 0px 10%;
     height: 80%;
     width: 55%;
 }
@@ -60,9 +89,12 @@ span{
     color: white;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
-
+#faireModif{
+  margin-top: 3px;
+  font-style: italic;
+}
 .deconnexion{
     text-align: center;
     padding-top: 10%;
@@ -70,27 +102,122 @@ span{
 a{
   color: white;
 }
+#formulaire{
 
-.formulaire form{
-
+  margin-bottom: 10px;
+}
+#formulaire form{
+  margin: auto;
   width: 600px;
   padding: 1em;
   border: 1px solid #ff9000;
   border-radius: 1em;
 }
 
-.formulaire label{
+#formulaire label{
     width: 280px;
 }
-.formulaire input{
-}
 
 
-#submit{
+
+/* #submit{
     margin-right: 40%;
     margin-left: 40%;
 
     margin-top: 5px;
     padding: 5px;
     width:auto;
+} */
+
+.tableau{
+    border-collapse: collapse;
+    color: white;
+    min-width: 400px;
+    margin: auto;
+    box-shadow: 0 5px 50px rgba(0,0,0,1);
+    cursor: pointer;
+    border: 2px solid #FF9000;
+
+}
+
+.alert{
+    width: 40px;
+}
+thead tr {
+    background-color: black;
+}
+
+th,td {
+    padding: 15px 20px;
+    text-align: center;
+    border: 2px solid #FF9000;
+}
+
+/*PAGE MODIFIER */
+#correct{
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+a#retour{
+  margin-left: 45%;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+  }
+  .head img{
+    height: 70px;
+  }
+  .head .name{
+    float:none;
+    margin: auto;
+  }
+  .informations{
+    width: 80%;
+    margin:auto;
+    height: 40%;
+    float: none;
+    padding-left: 10%;
+  }
+  .description{
+    font-size: 2vw;
+  }
+  .part1{
+    float:left;
+    display: inline-block;
+  }
+  .part2{
+    margin-left: 10%;
+    float:left;
+    display: inline-block;
+  }
+  .col2{
+    width:90%;
+    float: none;
+    height: auto;
+  }
+  .explication{
+    margin: auto;
+    font-size: 2.5vw;
+  }
+  #formulaire form{
+    width: 80%;
+  }
+  #formulaire label{
+    text-align: center;
+    font-size: 2vw;
+  }
+  .deconnexion{
+    margin:0;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .informations{
+    height:30%;
+  }
 }

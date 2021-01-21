@@ -19,19 +19,28 @@
 
     <nav class="navbar" id="navbar-header">
         <ul>
+            <a  href="javascript:void(0)" class="icon" id="ham" >
+              <img class="bars" src="public/images/icon.png" alt="Hamburger"/>
+            </a>
             <li><a href="home" id="pict-link"><img id="pict" src="public/images/logo_notext.png" alt="Logo du site"/></a></li>
-            <li><a class="link" href="home"> Mon compte </a></li>
-            <li><a class="link" href="#"> Forum </a></li>
+
+            <li><a class="link" href="modifier"> Mon compte </a></li>
+            <li><a class="link" href="forum"> Forum </a></li>
             <li><a class="link" href="#"> Notifications </a></li>
+
         </ul>
+
     </nav>
 
     <div id="page-container">
         <div id="content-wrapper">
+            <div id="lang-fixed">
+                <a class="switch-lang" href="home/switchlang/1"><img class="flag" src="public/images/united-kingdom.png"/></a>
+            </div>
             <?= /** @noinspection PhpUndefinedVariableInspection */
             $content ?>
         </div>
-    
+
         <footer>
             <nav class="navbar" id="navbar-footer">
                 <ul>
@@ -48,5 +57,3 @@ $script ?>"></script>
 
 </body>
 </html>
-
-

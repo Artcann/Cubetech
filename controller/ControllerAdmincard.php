@@ -1,6 +1,6 @@
 <?php
 
-require_once 'controller/ControllerAdmin.php';
+require_once 'Controller/ControllerAdmin.php';
 require_once 'model/Card.php';
 
 /**
@@ -15,11 +15,12 @@ class ControllerAdmincard extends ControllerAdmin {
     }
 
     public function index() {
-
+        
         $this->generateView(array("data" => $this->card->getAllCards()));
     }
 
     public function create() {
+        
         $this->generateView();
     }
 

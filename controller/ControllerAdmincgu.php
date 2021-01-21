@@ -1,7 +1,7 @@
 <?php
 
 require_once 'ControllerAdmin.php';
-require_once 'Model/Cgu.php';
+require_once 'model/Cgu.php';
 
 class ControllerAdmincgu extends ControllerAdmin {
 
@@ -12,6 +12,7 @@ class ControllerAdmincgu extends ControllerAdmin {
     }
 
     public function index() {
+        
         $this->generateView(array("data" => $this->cgu->getCgu()));
     }
 

@@ -32,3 +32,20 @@ let getUser = function() {
 }
 
 getUser();
+
+//Fonction pour le responsive
+//Jquery !!
+$(document).ready(function(){
+  $(".icon").click(function () {
+    $('#navbar-header li:not(:nth-child(2))').toggle();
+})
+  $(window).resize(function(){
+
+  if($(this).width()>600){
+    $('#navbar-header li:not(:nth-child(2))').toggle(true);}
+
+  else
+    {
+      $('#navbar-header li:not(:nth-child(2))').toggle(false);
+      }
+    })})

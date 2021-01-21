@@ -4,20 +4,21 @@ $this->title = "Gestion Utilisateurs";
 
 ?>
 
+
 <div class="table-container">
 
-    <h1>Gestion des utilisateurs</h1>
+    <h1><?php echo TXT_TITRE_AU ;?></h1>
 
     <table class="table">
         <thead>
         <tr>
-            <td>ID</td>
-            <td>Login</td>
-            <td>Statut</td>
-            <td>Prenom</td>
-            <td>Nom</td>
-            <td>Modifier l'utilisateur</td>
-            <td>Supprimer l'utilisateur</td>
+            <td><?php echo TXT_TD1_AU ;?></td>
+            <td><?php echo TXT_TD2_AU ;?></td>
+            <td><?php echo TXT_TD3_AU ;?></td>
+            <td><?php echo TXT_TD4_AU ;?></td>
+            <td><?php echo TXT_TD5_AU ;?></td>
+            <td><?php echo TXT_TD6_AU ;?></td>
+            <td><?php echo TXT_TD7_AU ;?></td>
         </tr>
         </thead>
         <tbody>
@@ -29,9 +30,9 @@ $this->title = "Gestion Utilisateurs";
                 <td><?php echo $v['statut']; ?></td>
                 <td><?php echo $v['prenom']; ?></td>
                 <td><?php echo $v['nom']; ?></td>
-                <td><a href="adminuser/modification" class=button>Modifier</a></td>
+                <td><a href="adminuser/modification" class=button><?php echo TXT_BT1_AU ;?></a></td>
                 <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
-                    href="adminuser/delete/' . $v['id'] . '" class="button">Supprimer</a>' ?></td>
+                    href="adminuser/delete/' . $v['id'] . '" class="button">Supprimer</a>'?></td>
             </tr>
         <?php endforeach ?>
         </tbody>

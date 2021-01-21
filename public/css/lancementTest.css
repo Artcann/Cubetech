@@ -1,0 +1,38 @@
+td{
+	color: white;
+}
+
+thead tr {
+	background-color: black;
+}
+
+th,td {
+	padding: 15px 20px;
+}
+
+tbody tr, td, th{
+	border: 1.9px solid black;
+}
+
+.tableauRh{
+	border-collapse: collapse;
+	min-width: 400px;
+	width: 80%;
+	box-shadow: 0 5px 50px rgba(0,0,0,1);
+	cursor: pointer;
+	border: 2px solid #FF9000;
+	margin:auto;
+	margin-top: 22vh;
+}
+
+#chronotime{
+	color: white;
+}
+
+
+
+
+
+
+
+

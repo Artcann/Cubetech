@@ -17,7 +17,12 @@ class ControllerLogin extends Controller
     }
 
     public function index() {
-        $this->generateView();
+
+        if($this->session->isAttributeSet('user')) {
+            $this->redirect('home');
+        } else {
+            $this->generateView();
+        }
     }
 
     public function login()
@@ -30,6 +35,7 @@ class ControllerLogin extends Controller
         if (empty($data)) {
             echo "Vous n'êtes pas inscrit";
         } elseif (password_verify($password, $data['password'])) {
+            echo "test";
             $this->session->setAttribute("user", $data);
             $this->request->getCookies()->setValue('statut', $data['statut']);
 
@@ -40,3 +46,4 @@ class ControllerLogin extends Controller
         }
     }
 }
+

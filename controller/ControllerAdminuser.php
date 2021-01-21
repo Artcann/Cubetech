@@ -1,6 +1,6 @@
 <?php
 
-require_once "controller/ControllerAdmin.php";
+require_once "Controller/ControllerAdmin.php";
 require_once 'model/user.php';
 
 /**
@@ -17,8 +17,8 @@ class ControllerAdminuser extends ControllerAdmin {
 
     public function index() {
         $data = $this->user->getAllUsers();
-
-        $this->generateView($data);
+        
+        $this->generateView(array("data" => $data));
     }
 
     public function register() {
@@ -38,4 +38,3 @@ class ControllerAdminuser extends ControllerAdmin {
     }
 
 }
-

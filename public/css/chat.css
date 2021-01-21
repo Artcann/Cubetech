@@ -1,21 +1,21 @@
 #message-container p {
-    font-size: 16px;
     color : white;
 }
 
 #message-container {
-    height: 85%;
+    height: 75vh;
     width: 95%;
+    padding-top: 10px;
     overflow: auto;
     margin-left: auto;
 }
 
 .typing-container {
-    height: 15%;
     width: 100%;
     text-align: center;
     display: table;
-    position: fixed;
+    position: absolute;
+    bottom: 10%;
 }
 
 .typing-container textarea {
@@ -41,4 +41,17 @@
     background-color: #FF9000;
     padding: 15px;
     box-shadow: 4px 4px 6px black;
+}
+
+#message {
+    margin-left: 30px;
+    font-size: 22px;
+}
+
+strong {
+    font-size: 20px;
+}
+
+i {
+    font-size: 12px;
 }

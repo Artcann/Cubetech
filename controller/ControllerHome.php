@@ -5,7 +5,7 @@ require_once 'model/Test.php';
 require_once 'model/Corps.php';
 require_once 'model/Caserne.php';
 require_once 'Framework/Controller.php';
-require_once 'controller/ControllerSecure.php';
+require_once 'Controller/ControllerSecure.php';
 
 /**
  * Class ControllerHome
@@ -50,6 +50,7 @@ class ControllerHome extends ControllerSecure
 
         $statut = $this->session->getAttribute('user')['statut'];
 
+
         $tableauDesRdv = array();
 
         $tableauDeTest = array();
@@ -57,7 +58,6 @@ class ControllerHome extends ControllerSecure
         $testRhATraiter = array();
 
         $tableauTestRh = array();
-
 
 
         if ($data["statut"] != 3) {
@@ -125,7 +125,6 @@ class ControllerHome extends ControllerSecure
             }
         }
 
-
         $scriptData = Array('statut'=> $data['statut']);
 
 
@@ -137,6 +136,16 @@ class ControllerHome extends ControllerSecure
 
     }
 
+    public function switchlang() {
+        if($this->request->getParameter('id') == 1) {
+            $this->session->setAttribute("lang", "en");
+            $this->redirect("login");
+        } else {
+            $this->session->setAttribute("lang", "fr");
+            $this->redirect("login");
+        }
+    }
+
 
     public function disconnect()
     {
@@ -145,3 +154,5 @@ class ControllerHome extends ControllerSecure
  
  
 }
+
+
