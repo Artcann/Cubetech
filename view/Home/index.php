@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Accueil";
+$this->title = "Accueil | Cubetech";
 $this->script = "public/js/home.js";
 $this->style = "public/css/home.css"
 ?>

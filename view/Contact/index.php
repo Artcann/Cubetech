@@ -1,4 +1,5 @@
 <?php
+$this->title = "Contact | Cubetech";
 $this->style = "public/css/contact.css";
 ?>
 

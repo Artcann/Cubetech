@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Forum Posts | Cubetech";
+$this->title = "Forum Post Administrateur | Cubetech";
 
 /*$this->style = "public/css/forum.css";*/
 
@@ -21,6 +21,7 @@ print_r($data['reftop']);*/
         <td>Auteur</td>
         <td>Message</td>
         <td>Date</td>
+        <td>Suppression</td>
 
     </tr>
     </thead>
@@ -32,10 +33,12 @@ print_r($data['reftop']);*/
             <td><?php echo $datum['prenom'].' '.$datum['nom'].'</br>'.$datum['role'] ?></td>
             <td><?php echo $datum['message'] ?></td>
             <td><?php echo $datum['created'] ?></td>
+            <td><?php echo '<a onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer ce message ?\')"
+                    href="adminforum/deleteMessage/' . $datum['post_id'] . '" class="button">Supprimer</a>' ?></td>
 
         </tr>
     <?php endforeach ?>
-    <form action="forum/postmessage" method="post">
+    <form action="adminforum/postmessage" method="post">
         <input type="hidden" id="topic_id" name="topic_id" value="<?php echo $data['refTopic']?>">
 
         <tr>

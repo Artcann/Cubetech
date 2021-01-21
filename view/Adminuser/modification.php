@@ -1,22 +1,23 @@
 <?php
-$this->title = "Inscription | Cubetech";
+$this->title = "Modification";
 $this->style = "public/css/index.css";
 $this->script = "public/js/register.js";
 ?>
 
-<h1><?php echo TXT_TITRE_RE;?></h1>
+<h1>Modification</h1>
 
 <h3><?php echo TXT_TITRE2_RE;?></h3>
 <div class="form-container">
-    <form action="register/register" name="register" method="post">
+    <form action="adminuser/modifyDone/" name="register" method="post">
+      <input type="hidden" id="idUser" name="idUser" value="<?php echo $idUser?>">
         <div>
-            <label for="nom"><?php echo TXT_TD1_RE;?></label><input type="text" name="nom" id="nom" required>
+            <label for="nom"><?php echo TXT_TD1_RE;?></label><input type="text" name="nom" id="nom" >
         </div>
         <div>
-            <label for="prenom"><?php echo TXT_TD2_RE;?></label><input type="text" name="prenom" id="prenom" required>
+            <label for="prenom"><?php echo TXT_TD2_RE;?></label><input type="text" name="prenom" id="prenom" >
         </div>
         <div>
-            <label for="date"><?php echo TXT_TD3_RE;?></label><input type="date" name="date" id="date" required>
+            <label for="date"><?php echo TXT_TD3_RE;?></label><input type="date" name="date" id="date" >
         </div>
         <div>
             <label for="statut"><?php echo TXT_SELECT_RE;?></label>
@@ -46,17 +47,13 @@ $this->script = "public/js/register.js";
             <label for="mail"><?php echo TXT_TD9_RE;?></label><input type="text" name="mail" id="mail">
         </div>
         <div>
-            <label for="password"><?php echo TXT_TD10_RE;?></label><input type="password" name="password" id="password" required>
+            <label for="password"><?php echo TXT_TD10_RE;?></label><input type="password" name="password" id="password" >
         </div>
         <div>
-            <label for="password2"><?php echo TXT_TD11_RE;?></label><input type="password" name="password2" id="password2" required>
+            <label for="password2"><?php echo TXT_TD11_RE;?></label><input type="password" name="password2" id="password2" >
         </div>
         <div onclick="return validateForm();">
             <label for="submit"><?php echo TXT_BT1_RE;?></label><input type="submit">
         </div>
     </div>
 </form>
-
-
-
-

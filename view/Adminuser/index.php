@@ -1,14 +1,9 @@
 <?php
-
-$this->title = "Gestion Utilisateurs";
-
+$this->title = "Gestion Utilisateurs | Cubetech";
+$this->style = "public/css/index.css";
 ?>
-
-
 <div class="table-container">
-
     <h1><?php echo TXT_TITRE_AU ;?></h1>
-
     <table class="table">
         <thead>
         <tr>
@@ -30,7 +25,7 @@ $this->title = "Gestion Utilisateurs";
                 <td><?php echo $v['statut']; ?></td>
                 <td><?php echo $v['prenom']; ?></td>
                 <td><?php echo $v['nom']; ?></td>
-                <td><a href="adminuser/modification" class=button><?php echo TXT_BT1_AU ;?></a></td>
+                <td><?php echo '<a href="adminuser/modification/' . $v['login'] . '" class="button"> ' .  TXT_BT1_AU ;?></a></td>
                 <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
                     href="adminuser/delete/' . $v['id'] . '" class="button">Supprimer</a>'?></td>
             </tr>

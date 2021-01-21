@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Forum Topic | Cubetech";
+$this->title = "Forum Topic Administrateur | Cubetech";
 
 $this->style = "public/css/forum.css";
 $this->script = "public/js/forum.js"
@@ -33,17 +33,20 @@ $this->script = "public/js/forum.js"
         <td>Auteur</td>
         <td>Nombre de réponses</td>
         <td>Créé le </td>
+        <td>Supression</td>
 
     </tr>
     </thead>
     <tbody>
     <?php /** @noinspection PhpUndefinedVariableInspection */
     foreach($data['listTopics'] as $datum): ?>
-        <tr <?php echo 'data-href="forum/post/' . $datum['topic_id'] . '".'?>>
-            <td><?php echo '<a href="forum/post/'.$datum['topic_id'].'">'.$datum['subject'].'</a>'?></td>
+        <tr <?php echo 'data-href="adminforum/post/' . $datum['topic_id'] . '".'?>>
+            <td><?php echo '<a href="adminforum/post/'.$datum['topic_id'].'">'.$datum['subject'].'</a>'?></td>
             <td><?php echo $datum['nom'].' '.$datum['prenom'] ?></td>
             <td><?php echo $datum['total_topics'] ?></td>
             <td><?php echo $datum['created'] ?></td>
+            <td><?php echo '<a onclick="return confirm(\'Êtes-vous sûr de vouloir supprimer ce sujet ?\')"
+                    href="adminforum/deleteTopic/' . $datum['topic_id'] . '" class="button">Supprimer</a>' ?></td>
 
         </tr>
     <?php endforeach ?>
@@ -54,7 +57,7 @@ $this->script = "public/js/forum.js"
 
 
 <div class="form-popup" id="myForm">
-    <form action="forum/newTopic" class="form-container" method="post">
+    <form action="adminforum/newTopic" class="form-container" method="post">
         <input type="hidden" id="category_id" name="category_id" value="<?php echo $data['refCat']?>">
         <h1>Nouveau sujet</h1>
 

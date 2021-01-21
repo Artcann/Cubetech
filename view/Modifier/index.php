@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Modifier vos informations";
+$this->title = "Modifier vos informations | Cubetech";
 $this->style = "public/css/modifier.css";
 $this->script = "public/js/home.js";
 $this->script = "public/js/modifier.js";
@@ -78,9 +78,9 @@ $this->script = "public/js/modifier.js";
         <div id="formulaire">
             <form action="modifier/modifier" name="modifier" method="post">
               <span id="errorMsg"><?php echo $error ?></span></br>
-                <label for="verifiedPassword">Ancien Mot de Passe :</label><input type="password" name="verifiedPassword" id="verifiedPassword">
-                <label for="newPass">Nouveau Mot de Passe :</label><input type="password" name="password" id="password">
-                <label for="confirmNewPass">Confirmez-le :</label><input type="password" name="confirmNewPass" id="confirmNewPass">
+                <label for="verifiedPassword">Ancien Mot de Passe :</label><input type="password" name="verifiedPassword" id="verifiedPassword" required>
+                <label for="newPass">Nouveau Mot de Passe :</label><input type="password" name="password" id="password" required>
+                <label for="confirmNewPass">Confirmez-le :</label><input type="password" name="confirmNewPass" id="confirmNewPass" required>
                 <span id="test"></span> <span id="same"></span>
                 <div id="bas">
                 <input id="submit" type="submit" value="Changez">

@@ -1,6 +1,6 @@
 <?php
 $this->style = "public/css/index.css";
-$this->title = "Lancement d'un test";
+$this->title = "Lancement d'un test | Cubetech";
 ?>
 
 <form id="insertTest" action="index.php?controller=Test&action=add" method="post">
