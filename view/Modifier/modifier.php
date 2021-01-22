@@ -13,5 +13,5 @@ $this->script = "public/js/home.js";
     <?php echo $succesMessage ?>
 </div>
 
-<a id="retour" href="Login">Retour à la   page de connexion</a>
-<a onload="adminAccess()" href="Adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
+<a id="retour" href="Login">Retour à la page de connexion</a>
+<a onload="adminAccess()" href="Home/disconnect" id="adminAccess" style="display: none">Accès BackOffice</a>
