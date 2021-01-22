@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Ajout Admin Faq";
+$this->title = "Ajout de question FAQ | Cubetech";
 $this->style = "public/css/adminFaq.css";
 $this->script = "public/js/adminFaq.js";
 ?>

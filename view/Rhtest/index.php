@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Rhtest";
+$this->title = "Rhtest | Cubetech";
 
 ?>
 

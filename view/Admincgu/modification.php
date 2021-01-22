@@ -1,5 +1,5 @@
 <?php
-$this->title = "Accueil Admin CGU";
+$this->title = "Modification CGU | Cubetech";
 $this->script = "public/js/adminFaq.js";
 ?>
 

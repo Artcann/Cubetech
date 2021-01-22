@@ -40,8 +40,6 @@ class User extends Model
 
         $params = func_get_args();
 
-        #print_r($params);
-
         $formated = array();
 
         foreach($params as $param) {
@@ -50,15 +48,6 @@ class User extends Model
             }
             array_push($formated, $param);
         }
-
-        #print_r($formated);
-
-/*         $id = "%".$id."%";
-        $nom = "%".$nom."%";
-        $prenom = "%".$prenom."%";
-        $naissance = "%".$naissance."%"; */
-        
-
 
         $sql = "SELECT user.id AS id, user.nom, prenom, login, mail, naissance, nationalite,
         grade, corps, caserne, matricule, caserne.ville, statut.nom AS statutName, corps.type
@@ -75,13 +64,10 @@ class User extends Model
         $val = array($nom, $prenom, $naissance);
 
         $response = $this->executeRequest($sql, $formated);
-        #echo $response->debugDumpParams();
         $dataArr = array();
         while($data = $response->fetch()) {
             array_push($dataArr,$data);
         }
-
-        #print_r($dataArr);
 
         return $dataArr;
     }
@@ -89,7 +75,7 @@ class User extends Model
     public function getUserById($id)
     {
 
-        $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail 
+        $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail
         FROM user WHERE id='".$id."'";
 
         return $this->executeRequest($sql, array($id))->fetch();
@@ -105,8 +91,8 @@ class User extends Model
     {
 
 
-        $sql = 'INSERT INTO `user` (`nom`, `prenom`, `naissance`, `grade`, 
-                `nationalite`, `caserne`, `corps`, `statut`, `matricule`, `mail`, `password`, `login`) 
+        $sql = 'INSERT INTO `user` (`nom`, `prenom`, `naissance`, `grade`,
+                `nationalite`, `caserne`, `corps`, `statut`, `matricule`, `mail`, `password`,`login`)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
         $this->executeRequest($sql, $values);
 
@@ -125,11 +111,17 @@ class User extends Model
 
     }
 
+    public function modifyUserById($values){
+      $sql = 'UPDATE user SET id=? , login=?, password=?, statut=?,
+              prenom=?, nom=?, matricule=?, grade=?,naissance=?, nationalite=?, caserne=?, corps=?, mail=?,password=?
+             WHERE login=?';
+      $this->executeRequest($sql, $values);
+
+    }
+
     public function modifyPassword($id, $password) {
         $sql = "UPDATE user SET password= ? WHERE id= ?";
 
         $this->executeRequest($sql, array($password, $id));
     }
 }
-
-

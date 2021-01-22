@@ -1,5 +1,5 @@
 <?php
-$this->title='Page Recherche';
+$this->title='Résultats de votre recherche | Cubetech';
 #$this->style='public/css/styleR.css';
 /*$this->script='recherche.js';*/
 ?>

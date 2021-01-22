@@ -1,6 +1,6 @@
 <?php
 
-$this->title = "Ajout test";
+$this->title = "Ajout test | Cubetech";
 $this->style = "public/css/ajoutTest.css";
 $this->script = "";
 ?>

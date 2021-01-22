@@ -1,5 +1,5 @@
 <?php
-$this->title = "Lancerletest";
+$this->title = "Lancer un test | Cubetech";
 $this->style = "public/css/lancementTest.css";
 $this->script = "public/js/lancementTest.js"
 ?>

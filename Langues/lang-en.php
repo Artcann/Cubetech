@@ -56,13 +56,16 @@
     define('TXT_BT6_BACK', 'FAQ management');
     define('TXT_TEXT5_BACK', 'CGU management');
     define('TXT_BT7_BACK', 'CGU management');
-    define('TXT_BT8_BACK', 'Logout');
-    define('TXT_TEXT6_BACK', 'Test management');
-    define('TXT_BT9_BACK', 'Show test');
-    define('TXT_BT10_BACK', 'Add test');
- 
+    define('TXT_BT8_BACK', 'Forum management');
+    define('TXT_TEXT6_BACK', 'Forum management');
+    define('TXT_BT9_BACK', 'Logout');
+    define('TXT_BT10_BACK', 'Logout');
+    define('TXT_TEXT7_BACK', 'Test management');
+    define('TXT_BT11_BACK', 'Show test');
+    define('TXT_BT11_BACK', 'Add test');
 
     //Fin backoffice
+
 
 
     //Début resultats
@@ -72,8 +75,8 @@
     define('TXT_TEXT3_RESULTS', 'Temperature');
     define('TXT_TEXT4_RESULTS', 'Heartbeat');
 
-
     //Fin resultats
+
 
 
     //Début adminuser

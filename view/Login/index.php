@@ -1,5 +1,5 @@
 <?php
-$this->title = "Connexion";
+$this->title = "Connexion | Cubetech";
 $this->style = "public/css/login.css";
 ?>
     <tr>

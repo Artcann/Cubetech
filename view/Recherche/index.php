@@ -1,5 +1,5 @@
 <?php
-$this->title='Formulaire page Recherche';
+$this->title='Formulaire de recherche | Cubetech';
 #$this->style='public/css/styleRform.css';
 /*$this->script='recherche.js';*/
 ?>
