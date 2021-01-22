@@ -13,7 +13,7 @@ class Caserne extends Model {
      */
     public function getCaserneById($id)
     {
-        $sql = "SELECT id, ville, addresse, nbMilitaire, nbOpex FROM caserne WHERE id=(?)";
+        $sql = "SELECT id, ville, addresse FROM caserne WHERE id=(?)";
 
         return $this->executeRequest($sql, array($id))->fetch();
     }
@@ -22,7 +22,7 @@ class Caserne extends Model {
      * @return array
      */
     public function getAllCaserne() {
-        $sql = "SELECT id, ville, addresse, nbMilitaire, nbOpex FROM caserne";
+        $sql = "SELECT id, ville, addresse FROM caserne";
 
         $dataArr = array();
         $response = $this->executeRequest($sql);
@@ -39,7 +39,7 @@ class Caserne extends Model {
      */
     public function insertCaserne($data) {
 
-        $sql = "INSERT INTO caserne (ville, addresse, nbMilitaire, nbOpex) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO caserne (ville, addresse) VALUES (?, ?)";
 
         $this->executeRequest($sql, $data);
     }

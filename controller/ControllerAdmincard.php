@@ -2,6 +2,7 @@
 
 require_once 'Controller/ControllerAdmin.php';
 require_once 'model/Card.php';
+require_once 'model/Caserne.php';
 
 /**
  * Class ControllerAdmincard
@@ -10,8 +11,11 @@ class ControllerAdmincard extends ControllerAdmin {
 
     private $card;
 
+    private $caserne;
+
     function __construct() {
         $this->card = new Card();
+        $this->caserne = new Caserne();
     }
 
     public function index() {
@@ -21,7 +25,7 @@ class ControllerAdmincard extends ControllerAdmin {
 
     public function create() {
         
-        $this->generateView();
+        $this->generateView(array('data' => $this->caserne->getAllCaserne()));
     }
 
     public function create_post() {

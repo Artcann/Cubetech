@@ -25,8 +25,8 @@ $this->script = "public/js/adminSav.js";
 	            <td><?php echo $v['idUser']; ?></td>
 	            <td><?php echo $v['date']; ?></td>
 	            <td><?php echo $v['contenu']; ?></td>
-	            <td><a href=""><center><img class="mail" src="public/images/mail.png" data-alt-src="public/images/mail2.png"></center></a></td>
-                <td class="valider"><a href="adminsav/archive/<?php echo $v['id']?>/<?php echo $v['idUser']?>"><center><img class="valider" src="public/images/valider.png" data-alt-src="public/images/valider1.png"></center></a></td>
+	            <td><a href="chat/<?php echo $v["id"];?>"><img class="mail" src="public/images/mail.png" data-alt-src="public/images/mail2.png"></a></td>
+                <td class="valider"><a href="adminsav/archive/<?php echo $v['id']?>/<?php echo $v['idUser']?>"><img class="valider" src="public/images/valider.png" data-alt-src="public/images/valider1.png"></a></td>
                     </td>
 	        </tr>
 	    <?php endforeach ?>

@@ -54,8 +54,8 @@
     define('TXT_BT6_BACK', 'Gérer la FAQ');
     define('TXT_TEXT5_BACK', 'Gestion des CGU');
     define('TXT_BT7_BACK', 'Gérer les CGU');
-    define('TXT_BT8_BACK', 'Gestion du Forum');
-    define('TXT_TEXT6_BACK', 'Gérer le Forum');
+    define('TXT_BT8_BACK', 'Gérer le Forum');
+    define('TXT_TEXT6_BACK', 'Gestion du Forum');
     define('TXT_BT9_BACK', 'Déconnexion');
 
     //Fin backoffice
@@ -158,7 +158,8 @@
     define('TXT_SELECT1_CAR2', 'Déployée');
     define('TXT_SELECT2_CAR2', 'En réparation');
     define('TXT_SELECT3_CAR2', 'En attente de déploiment');
-    define('TXT_TEXT2_CAR2', 'Entrez la date de sortie d usine de la carte');
+    define('TXT_TEXT2_CAR2', 'Selectionnez la caserne');
+    define('TXT_TEXT3_CAR2', 'Entrez la date de sortie d\'usine de la carte');
 
     //Fin Card2
 
