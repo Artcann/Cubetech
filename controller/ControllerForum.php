@@ -5,7 +5,7 @@ require_once 'Framework/Controller.php';
 require_once 'Framework/Request.php';
 require_once 'Controller/ControllerSecure.php';
 
-class ControllerForum extends Controller
+class ControllerForum extends ControllerSecure
 {
 
     private $forum;
@@ -37,7 +37,7 @@ class ControllerForum extends Controller
     {
         if(!$this->request->isParameterSet('id')) {
             http_response_code(404);
-            throw new Exception('Page Not Found');
+
         } else {
             $id=$this->request->getParameter('id');
             $catTopics=$this->forum->getTopicList($id);
