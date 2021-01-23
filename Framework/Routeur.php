@@ -66,8 +66,8 @@ class Routeur
      * @param Exception $exception
      */
     private function handleError(Exception $exception) {
-        /*echo $exception->getMessage();*/
-        http_response_code(404);
+        echo $exception->getMessage();
+        
     }
 
 }
