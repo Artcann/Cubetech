@@ -26,7 +26,7 @@ $this->title = "Gestion Cartes";
                 <td><?php echo $v['date']; ?></td>
                 <td><a href="admincard/modification" class="button"><?php echo TXT_TD4_CAR; ?></a></td>
                 <td><?php echo '<a class="button" onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
-                    href="Admincard/delete/' . $v['id'] . '">Supprimer</a>' ?></td>
+                    href="Admincard/delete/' . $v['id'] . '">' . TXT_BT2_CGU . ' </a>' ?></td>
             </tr>
         <?php endforeach ?>
         </tbody>

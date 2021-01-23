@@ -27,9 +27,10 @@ $this->style = "public/css/index.css";
                 <td><?php echo $v['nom']; ?></td>
                 <td><?php echo '<a href="adminuser/modification/' . $v['login'] . '" class="button"> ' .  TXT_BT1_AU ;?></a></td>
                 <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
-                    href="adminuser/delete/' . $v['id'] . '" class="button">Supprimer</a>'?></td>
+                href="adminuser/delete/' . $v['id'] . '" class="button">Supprimer</a>'?></td>
             </tr>
         <?php endforeach ?>
         </tbody>
     </table>
 </div>
+

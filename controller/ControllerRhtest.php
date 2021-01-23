@@ -3,9 +3,9 @@
 require_once 'model/User.php';
 require_once 'model/Test.php';
 require_once 'Framework/Controller.php';
+require_once 'controller/ControllerRh.php';
 
-
-class ControllerRhTest extends Controller {
+class ControllerRhTest extends ControllerRh{
 
     private $test;
 
@@ -64,11 +64,15 @@ class ControllerRhTest extends Controller {
         } 
         else if ($this->request->getMethod() == 'POST') {
             http_response_code(200);
+
             $this->test->update($this->request->getParameter('date'),
                                	$this->request->getParameter('heure'),
                                	$this->request->getParameter('idRh'),
                            	   	$this->request->getParameter('id'));
+
+            $this->redirect('rhtest');
         }
+
     }
 
 
@@ -80,5 +84,6 @@ class ControllerRhTest extends Controller {
  
  
 }
+
 
 

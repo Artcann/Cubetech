@@ -18,9 +18,9 @@ $this->style = "public/css/adminHome.css";
             <a class=button href="adminhome/register"><?php echo TXT_BT2_BACK; ?></a>
             <h3><?php echo TXT_TEXT2_BACK; ?></h3>
             <a class=button href="adminsav"><?php echo TXT_BT3_BACK; ?></a>
-            <h3><?php echo 'Gestion des RDV'; ?></h3>
-            <a class="button" href="rhtest"><?php echo 'Gérer les rendez-vous'; ?></a>
-            <a class="button" href="rhtest/ajout"><?php echo 'Ajouter un rendez-vous'; ?></a>
+            <h3><?php echo TXT_TEXT7_BACK; ?></h3>
+            <a class="button" href="rhtest"><?php echo TXT_BT11_BACK; ?></a>
+            <a class="button" href="rhtest/ajout"><?php echo TXT_BT12_BACK; ?></a>
         </div>
         <div class="row-2-col-2">
             <h3><?php echo TXT_TEXT3_BACK; ?></h3>
