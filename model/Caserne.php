@@ -39,7 +39,9 @@ class Caserne extends Model {
      */
     public function insertCaserne($data) {
 
-        $sql = "INSERT INTO caserne (ville, addresse) VALUES (?, ?, ?, ?)";
+
+        $sql = "INSERT INTO caserne (ville, addresse) VALUES (?, ?)";
+
 
         $this->executeRequest($sql, $data);
     }
