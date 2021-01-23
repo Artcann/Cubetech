@@ -45,6 +45,7 @@ class Routeur
             return $controller;
         } else {
             throw new Exception("Fichier '$fileController' introuvable");
+
         }
     }
 
@@ -65,7 +66,8 @@ class Routeur
      * @param Exception $exception
      */
     private function handleError(Exception $exception) {
-        echo $exception->getMessage();
+        /*echo $exception->getMessage();*/
+        http_response_code(404);
     }
 
 }

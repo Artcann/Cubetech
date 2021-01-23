@@ -40,7 +40,7 @@ print_r($data['reftop']);*/
 
         <tr>
             <td>Répondre : </td>
-            <td><textarea id='message' name="message" class="textarea" placeholder="Message..."></textarea> </td>
+            <td><textarea id='message' name="message" class="textarea" placeholder="Message..." required></textarea> </td>
             <td> <input id="valid" type='submit' value="Envoyer"></td>
         </tr>
     </form>
