@@ -64,11 +64,15 @@ class ControllerRhTest extends ControllerRh{
         } 
         else if ($this->request->getMethod() == 'POST') {
             http_response_code(200);
+
             $this->test->update($this->request->getParameter('date'),
                                	$this->request->getParameter('heure'),
                                	$this->request->getParameter('idRh'),
                            	   	$this->request->getParameter('id'));
+
+            $this->redirect('rhtest');
         }
+
     }
 
 
@@ -80,5 +84,6 @@ class ControllerRhTest extends ControllerRh{
  
  
 }
+
 
 

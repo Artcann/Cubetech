@@ -25,6 +25,7 @@
 
 
 
+
     //Fin home
 
    //Début contact
@@ -62,7 +63,7 @@
     define('TXT_BT10_BACK', 'Logout');
     define('TXT_TEXT7_BACK', 'Test management');
     define('TXT_BT11_BACK', 'Show test');
-    define('TXT_BT11_BACK', 'Add test');
+    define('TXT_BT12_BACK', 'Add test');
 
     //Fin backoffice
 

@@ -71,10 +71,11 @@ class Test extends Model
 
         $sql = "UPDATE test SET date=?, heure=?, idRh =? WHERE id=?";
 
-        $val = array($date, $heure, $idRh);
+        $val = array($date, $heure, $idRh, $id);
 
         return $this->executeRequest($sql, $val);
     }
+
 
     public function addTest($date, $heure, $idRh, $idUser){
 
@@ -84,6 +85,7 @@ class Test extends Model
 
         return $this->executeRequest($sql, $val);
     }
+
 
 
     public function getTestByRh($idRh){
