@@ -79,7 +79,7 @@ $this->script = "public/js/adminSav.js";
 	            <td><?php echo $v['date']; ?></td>
 	            <td><?php echo $v['contenu']; ?></td>
 	           	<td><a href=""><center><img class="mail" src="public/images/mail.png" data-alt-src="public/images/mail2.png"></center></a></td>
-	            <td class="valider"><a href="adminsav/archive/<?php echo $v['id']?>"><center><img class="valider" src="public/images/valider.png" data-alt-src="public/images/valider1.png"></center></a></td>
+	            <td class="valider"><a href="adminsav/archive/<?php echo $v['id'].'/'.$v['idUser']?>"><center><img class="valider" src="public/images/valider.png" data-alt-src="public/images/valider1.png"></center></a></td>
 	        </tr>
 	    <?php endforeach ?>
 	    </tbody>

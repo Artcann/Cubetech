@@ -1,18 +1,14 @@
 <?php
 require_once "Framework/Model.php";
-require("controller/ControllerContact.php");
 
 class Contact extends Model
 {
-    private function getDestinataire()
+    public function insertMessage($idUser,$contenu,$type,$date,$statut,$destinataire)
     {
+        $sql= "INSERT INTO sav (idUser,contenu,type,date,statut,destinataire) VALUES (?,?,?,?,?,?)";
+        $values= array($idUser,$contenu,$type,$date,$statut,$destinataire);
 
-    }
-    private function insertMessage($idUser,$contenu,$type,$date,$status,$destinataire)
-    {
-        $sql= "INSERT INTO `sav` VALUES (?,?,?,?,?,?)";
-
-        $this->executeRequest($sql);
+        $this->executeRequest($sql,$values);
 
     }
     public function getType()
