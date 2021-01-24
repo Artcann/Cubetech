@@ -14,7 +14,7 @@ class User extends Model
     public function getUserByLogin($login)
     {
 
-        $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail FROM user WHERE login='".$login."'";
+        $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail FROM app2021_user WHERE login='".$login."'";
 
         return $this->executeRequest($sql, array($login))->fetch();
     }
@@ -23,7 +23,7 @@ class User extends Model
      * @return array
      */
     public function getAllUsers() {
-        $sql = "SELECT id, login, statut, prenom, nom FROM user";
+        $sql = "SELECT id, login, statut, prenom, nom FROM app2021_user";
 
         $response = $this->executeRequest($sql);
 
@@ -49,16 +49,16 @@ class User extends Model
             array_push($formated, $param);
         }
 
-        $sql = "SELECT user.id AS id, user.nom, prenom, login, mail, naissance, nationalite,
-        grade, corps, caserne, matricule, caserne.ville, statut.nom AS statutName, corps.type
-        FROM user
-        INNER JOIN caserne
-        ON user.caserne = caserne.id
-        INNER JOIN statut
-        ON user.statut = statut.id
-        INNER JOIN corps
-        ON user.corps = corps.id
-        WHERE (user.nom LIKE ? OR prenom LIKE ? OR naissance = ? OR grade = ? OR caserne = ? OR nationalite LIKE ?
+        $sql = "SELECT app2021_user.id AS id, app2021_user.nom, prenom, login, mail, naissance, nationalite,
+        grade, corps, caserne, matricule, app2021_caserne.ville, app2021_statut.nom AS statutName, app2021_corps.type
+        FROM app2021_user
+        INNER JOIN app2021_caserne
+        ON app2021_user.caserne = app2021_caserne.id
+        INNER JOIN app2021_statut
+        ON app2021_user.statut = app2021_statut.id
+        INNER JOIN app2021_corps
+        ON app2021_user.corps = app2021_corps.id
+        WHERE (app2021_user.nom LIKE ? OR prenom LIKE ? OR naissance = ? OR grade = ? OR caserne = ? OR nationalite LIKE ?
         OR corps = ? OR statut = ? OR matricule LIKE ?)";
 
         $val = array($nom, $prenom, $naissance);
@@ -76,7 +76,7 @@ class User extends Model
     {
 
         $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail
-        FROM user WHERE id='".$id."'";
+        FROM app2021_user WHERE id='".$id."'";
 
         return $this->executeRequest($sql, array($id))->fetch();
     }
@@ -91,7 +91,7 @@ class User extends Model
     {
 
 
-        $sql = 'INSERT INTO `user` (`nom`, `prenom`, `naissance`, `grade`,
+        $sql = 'INSERT INTO `app2021_user` (`nom`, `prenom`, `naissance`, `grade`,
                 `nationalite`, `caserne`, `corps`, `statut`, `matricule`, `mail`, `password`,`login`)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
         $this->executeRequest($sql, $values);
@@ -105,14 +105,14 @@ class User extends Model
      * @param $id
      */
     public function deleteUserById($id) {
-        $sql = "DELETE FROM user WHERE id='".$id."'";
+        $sql = "DELETE FROM app2021_user WHERE id='".$id."'";
 
         $this->executeRequest($sql);
 
     }
 
     public function modifyUserById($values){
-      $sql = 'UPDATE user SET id=? , login=?, password=?, statut=?,
+      $sql = 'UPDATE app2021_user SET id=? , login=?, password=?, statut=?,
               prenom=?, nom=?, matricule=?, grade=?,naissance=?, nationalite=?, caserne=?, corps=?, mail=?,password=?
              WHERE login=?';
       $this->executeRequest($sql, $values);
@@ -120,7 +120,7 @@ class User extends Model
     }
 
     public function modifyPassword($id, $password) {
-        $sql = "UPDATE user SET password= ? WHERE id= ?";
+        $sql = "UPDATE app2021_user SET password= ? WHERE id= ?";
 
         $this->executeRequest($sql, array($password, $id));
     }
