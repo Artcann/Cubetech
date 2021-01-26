@@ -56,7 +56,6 @@ abstract class Controller
         $controller = str_replace("Controller", "", $classController);
 
         if(!$this->session->isAttributeSet('lang')) {
-            echo 'test';
             $this->session->setAttribute('lang', 'fr');
         }
 
