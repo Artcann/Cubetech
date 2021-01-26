@@ -40,8 +40,7 @@ class ControllerRegister extends Controller
         $test = "nada";
 
         if($this->request->isParameterSet('mail')) {
-            //$to = $this->request->getParameter('mail');
-            echo 'test';
+
             $to = "art.cann@orange.fr";
             $subject = "TESTING";
             $message = "Bonjour, votre identifiant de connexion est : " . $login . ".";

@@ -1,4 +1,5 @@
 
+console.log(statut);
 
 if (statut === 'Administrateur'){
     $("#button1").attr("href", "adminhome");
