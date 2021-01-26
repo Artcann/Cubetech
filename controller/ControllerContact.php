@@ -34,7 +34,7 @@ class ControllerContact extends Controller
         else $destinataire=3;
 
         $contenu=$this->request->getParameter("message");
-        $contenu=sanitize($contenu);
+
         $status=0;
         $date= date("Y-m-d");
         $idUser=$this->session->getAttribute("user")["id"];
