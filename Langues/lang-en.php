@@ -215,6 +215,22 @@
     //Fin gestion CGU
 
 
+    //Début form Recherche
+
+    define('TXT_LBL1_RECH', 'Username');
+    define('TXT_LBL2_RECH', 'Last name');
+    define('TXT_LBL3_RECH', 'First name');
+    define('TXT_LBL4_RECH', 'Date');
+    define('TXT_LBL5_RECH', 'Barrack');
+    define('TXT_LBL6_RECH', 'Nationality');
+    define('TXT_LBL7_RECH', 'Corps');
+    define('TXT_LBL8_RECH', 'Status');
+    define('TXT_LBL9_RECH', 'Registration number');
+    define('TXT_LBL10_RECH', 'Login');
+
+    //Fin form Recherche
+
+
     //Début modification CGU
 
     define('TXT_TEXT1_CGU', 'Question title');
