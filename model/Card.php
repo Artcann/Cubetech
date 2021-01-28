@@ -10,7 +10,7 @@ class Card extends Model {
    
     public function getAllCards() {
 
-        $sql = 'SELECT id, statut, date, caserne FROM carte';
+        $sql = 'SELECT id, statut, date, caserne FROM app2021_carte';
 
         $dataArr = array();
 
@@ -27,7 +27,7 @@ class Card extends Model {
 
    public function getCardByCaserne($idCaserne) {
 
-        $sql = "SELECT id, statut FROM carte WHERE caserne = ?";
+        $sql = "SELECT id, statut FROM app2021_carte WHERE caserne = ?";
 
         $val = array($idCaserne);
 
@@ -43,7 +43,7 @@ class Card extends Model {
    }
 
    public function insertCard($date, $statut, $caserne) {
-        $sql = "INSERT INTO carte (date, statut, caserne) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO app2021_carte (date, statut, caserne) VALUES (?, ?, ?)";
         $val = array($date, $statut, $caserne);
 
         $this->executeRequest($sql, $val);

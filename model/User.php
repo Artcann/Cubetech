@@ -14,7 +14,7 @@ class User extends Model
     public function getUserByLogin($login)
     {
 
-        $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail FROM user WHERE login='".$login."'";
+        $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail FROM app2021_user WHERE login='".$login."'";
 
         return $this->executeRequest($sql, array($login))->fetch();
     }
@@ -23,7 +23,7 @@ class User extends Model
      * @return array
      */
     public function getAllUsers() {
-        $sql = "SELECT id, login, statut, prenom, nom FROM user";
+        $sql = "SELECT id, login, statut, prenom, nom FROM app2021_user";
 
         $response = $this->executeRequest($sql);
 
@@ -49,6 +49,8 @@ class User extends Model
             array_push($formated, $param);
         }
 
+
+        
         $sql = "SELECT user.id AS id, user.nom, prenom, login, mail, naissance, nationalite,
         grade, corps, caserne, matricule, caserne.ville, statut.nom AS statutName, corps.type
         FROM user
@@ -79,7 +81,7 @@ class User extends Model
     {
 
         $sql = "SELECT id, login, password, statut, prenom, nom, matricule, grade, naissance, nationalite, caserne, corps, mail
-        FROM user WHERE id='".$id."'";
+        FROM app2021_user WHERE id='".$id."'";
 
         return $this->executeRequest($sql, array($id))->fetch();
     }
@@ -94,7 +96,7 @@ class User extends Model
     {
 
 
-        $sql = 'INSERT INTO `user` (`nom`, `prenom`, `naissance`, `grade`,
+        $sql = 'INSERT INTO `app2021_user` (`nom`, `prenom`, `naissance`, `grade`,
                 `nationalite`, `caserne`, `corps`, `statut`, `matricule`, `mail`, `password`,`login`)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
         $this->executeRequest($sql, $values);
@@ -108,14 +110,14 @@ class User extends Model
      * @param $id
      */
     public function deleteUserById($id) {
-        $sql = "DELETE FROM user WHERE id='".$id."'";
+        $sql = "DELETE FROM app2021_user WHERE id='".$id."'";
 
         $this->executeRequest($sql);
 
     }
 
     public function modifyUserById($values){
-      $sql = 'UPDATE user SET id=? , login=?, password=?, statut=?,
+      $sql = 'UPDATE app2021_user SET id=? , login=?, password=?, statut=?,
               prenom=?, nom=?, matricule=?, grade=?,naissance=?, nationalite=?, caserne=?, corps=?, mail=?,password=?
              WHERE login=?';
       $this->executeRequest($sql, $values);
@@ -123,7 +125,7 @@ class User extends Model
     }
 
     public function modifyPassword($id, $password) {
-        $sql = "UPDATE user SET password= ? WHERE id= ?";
+        $sql = "UPDATE app2021_user SET password= ? WHERE id= ?";
 
         $this->executeRequest($sql, array($password, $id));
     }
