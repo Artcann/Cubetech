@@ -243,6 +243,8 @@
     define('TXT_LBL9_RECH', 'Matricule');
     define('TXT_LBL10_RECH', 'Login');
 
+    //Fin form Recherche
+
     //Début gestion test
 
     define('TXT_TITRE1_TEST', 'Gestion des tests');
