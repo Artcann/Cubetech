@@ -28,8 +28,11 @@ class ControllerAdmincard extends ControllerAdmin {
         $this->generateView(array('data' => $this->caserne->getAllCaserne()));
     }
 
-    public function create_post() {
-
+    public function createpost() {
+        $this->card->insertCard($this->request->getParameter('date'),
+                                    $this->request->getParameter('statut'),
+                                    $this->request->getParameter('caserne'));
+        $this->redirect('adminhome');
     }
 
 }

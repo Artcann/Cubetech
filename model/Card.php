@@ -46,7 +46,7 @@ class Card extends Model {
         $sql = "INSERT INTO carte (date, statut, caserne) VALUES (?, ?, ?)";
         $val = array($date, $statut, $caserne);
 
-        
+        $this->executeRequest($sql, $val);
 
    }
 

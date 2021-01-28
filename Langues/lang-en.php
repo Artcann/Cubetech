@@ -160,7 +160,8 @@
     define('TXT_SELECT1_CAR2', 'Deployed');
     define('TXT_SELECT2_CAR2', 'Under reparation');
     define('TXT_SELECT3_CAR2', 'Awaiting deployment');
-    define('TXT_TEXT2_CAR2', 'Enter the date the card left the factory');
+    define('TXT_TEXT2_CAR2', 'Select Barrack');
+    define('TXT_TEXT3_CAR2', 'Enter the date the card left the factory');
 
     //Fin Card2
 

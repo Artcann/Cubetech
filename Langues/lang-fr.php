@@ -225,4 +225,17 @@
 
     //Fin ajout CGU
 
+    //Début form Recherche
+
+    define('TXT_LBL1_RECH', 'Identifiant');
+    define('TXT_LBL2_RECH', 'Nom');
+    define('TXT_LBL3_RECH', 'Prénom');
+    define('TXT_LBL4_RECH', 'Date');
+    define('TXT_LBL5_RECH', 'Caserne');
+    define('TXT_LBL6_RECH', 'Nationalité');
+    define('TXT_LBL7_RECH', 'Corps');
+    define('TXT_LBL8_RECH', 'Statut');
+    define('TXT_LBL9_RECH', 'Matricule');
+    define('TXT_LBL10_RECH', 'Login');
+
 ?>

@@ -52,24 +52,27 @@ class User extends Model
         $sql = "SELECT user.id AS id, user.nom, prenom, login, mail, naissance, nationalite,
         grade, corps, caserne, matricule, caserne.ville, statut.nom AS statutName, corps.type
         FROM user
-        INNER JOIN caserne
+        LEFT JOIN caserne
         ON user.caserne = caserne.id
-        INNER JOIN statut
+        LEFT JOIN statut
         ON user.statut = statut.id
-        INNER JOIN corps
+        LEFT JOIN corps
         ON user.corps = corps.id
         WHERE (user.nom LIKE ? OR prenom LIKE ? OR naissance = ? OR grade = ? OR caserne = ? OR nationalite LIKE ?
         OR corps = ? OR statut = ? OR matricule LIKE ?)";
 
         $val = array($nom, $prenom, $naissance);
 
+        echo $this->executeRequest($sql, $formated)->debugDumpParams();
+
         $response = $this->executeRequest($sql, $formated);
+        
         $dataArr = array();
         while($data = $response->fetch()) {
             array_push($dataArr,$data);
         }
 
-        return $dataArr;
+        #return $dataArr;
     }
 
     public function getUserById($id)
