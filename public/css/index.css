@@ -242,7 +242,7 @@ footer {
 a.button {
     text-align: center;
     display: block;
-    background-color: dimgrey;
+    background-color: #FF9000;
     justify-content: center;
     width: 75%;
     height: 25px;
@@ -254,7 +254,7 @@ a.button {
     border-radius: 6px;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid orange;
+    border: 2px solid black;
     font-weight: bolder;
 }
 
