@@ -35,6 +35,15 @@ label {
     color: white;
 }
 
+select {
+    font: 1em sans-serif;
+
+    width: 300px;
+    box-sizing: border-box;
+
+    border: 1px solid #999;
+}
+
 input {
     /* Pour s'assurer que tous les champs texte ont la même police.
        Par défaut, les textarea ont une police monospace */

@@ -6,7 +6,7 @@ $this->script = "public/js/register.js";
 
 <h1><?php echo TXT_TITRE_RE;?></h1>
 
-<h3><?php echo TXT_TITRE2_RE;?></h3>
+<!-- <h3><?php echo TXT_TITRE2_RE;?></h3> -->
 <div class="form-container">
     <form action="register/register" name="register" method="post">
         <div>
@@ -34,14 +34,24 @@ $this->script = "public/js/register.js";
             <label for="nationalite"><?php echo TXT_TD5_RE;?></label><input type="text" name="nationalite" id="nationalite">
         </div>
         <div>
-            <label for="caserne"><?php echo TXT_TD6_RE;?></label><input type="text" name="caserne" id="caserne">
+            <label for="caserne"><?php echo TXT_TD6_RE;?></label>
+            <select name="caserne" id="caserne">
+                <option value="">-- Choose an option --</option>
+                <option value="7">Nancy | Place Stanislas</option>
+                <option value="8">Brest | 36 Rue des Ciboulots</option>
+            </select>
         </div>
         <div>
-            <label for="corps"><?php echo TXT_TD7_RE;?></label><input type="text" name="corps" id="corps">
+            <label for="corps"><?php echo TXT_TD7_RE;?></label>
+            <select name="corps" id="corps">
+                <option value="">-- Choose an option --</option>
+                <option value="1">Armée de l'Air</option>
+                <option value="2">Armée de Terre</option>
+            </select>
         </div>
-        <div>
+<!--         <div>
             <label for="matricule"><?php echo TXT_TD8_RE;?></label><input type="text" name="matricule" id="matricule">
-        </div>
+        </div> -->
         <div>
             <label for="mail"><?php echo TXT_TD9_RE;?></label><input type="text" name="mail" id="mail">
         </div>

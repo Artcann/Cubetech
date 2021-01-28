@@ -1,10 +1,9 @@
 <?php
 
     //Début home
-
-    //Début home
     define('TXT_TITRE1_HOME', 'Welcome');
     define('TXT_TITRE2_HOME', 'on CubeTech');
+    define('TXT_BT4_HOME', 'Research');
     if($statut=="1"){
       define('TXT_BT1_HOME', 'Go to the back office');
       define('TXT_BT2_HOME', 'Test');

@@ -3,6 +3,7 @@
     //Début home
     define('TXT_TITRE1_HOME', 'Bienvenue');
     define('TXT_TITRE2_HOME', 'sur le site CubeTech');
+    define('TXT_BT4_HOME', 'Recherche');
     if($statut=="1"){
       define('TXT_BT1_HOME', 'Accéder au back office');
       define('TXT_BT2_HOME', 'Test');

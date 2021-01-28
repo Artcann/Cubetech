@@ -19,7 +19,7 @@ $this->style = "public/css/home.css"
         <div class="row3-col1">
           <li id="bt1"><a href="result" id="button1"> <?php echo TXT_BT1_HOME ;?></a></li>
           <li id="bt2"><a href="result" id="button2"> <?php echo TXT_BT2_HOME ;?></a></li>
-          <li><a href="recherche" id="button4"><?php echo 'recherche';?></a></li>
+          <li><a href="recherche" id="button4"><?php echo TXT_BT4_HOME ;?></a></li>
           <li id="bt3"><a href="home/disconnect" id="button3"><?php echo TXT_BT3_HOME ;?></a></li>
         </div>
         </div>

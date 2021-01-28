@@ -9,6 +9,8 @@
 
 .container {
     color: white;
+    width: 90%;
+    margin: auto;
 }
 
 h1{

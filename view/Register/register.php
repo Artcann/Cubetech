@@ -1,7 +1,7 @@
 <?php
 
 $this->title = "Enregistrement | Cubetech";
-$this->style = "public/css/index.css";
+$this->style = "public/css/register.css";
 $this->script = "public/js/home.js";
 ?>
 
@@ -13,11 +13,4 @@ $this->script = "public/js/home.js";
 </p>
 
 <?php /** @noinspection PhpUndefinedVariableInspection */
-echo "<h3>".$login."</h3>";
-echo "<h3>".$test."</h3>"; ?>
-
-<img id="LogoPNG" src="public/images/logo.png" alt="Logo du site">
-
-<a href="Login"><?php echo TXT_TEXT3_RE2;?></a>
-
-<a onload="adminAccess()" href="adminhome" id="adminAccess" style="display: none">Accès BackOffice</a>
+echo "<h3>".$login."</h3>";?>
