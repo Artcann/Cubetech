@@ -3,6 +3,7 @@
     //Début home
     define('TXT_TITRE1_HOME', 'Bienvenue');
     define('TXT_TITRE2_HOME', 'sur le site CubeTech');
+    define('TXT_BT4_HOME', 'Recherche');
     if($statut=="1"){
       define('TXT_BT1_HOME', 'Accéder au back office');
       define('TXT_BT2_HOME', 'Test');
@@ -11,7 +12,7 @@
     }
     else if($statut=="2"){
       define('TXT_BT1_HOME', 'Lancer un test');
-      define('TXT_BT2_HOME', 'Consulter mon agenda');
+      define('TXT_BT2_HOME', 'Ajouter un test');
       define('TXT_BT3_HOME', 'Déconnexion');
     }
     else{
@@ -229,6 +230,20 @@
 
     //Fin ajout CGU
 
+    //Début form Recherche
+
+    define('TXT_LBL1_RECH', 'Identifiant');
+    define('TXT_LBL2_RECH', 'Nom');
+    define('TXT_LBL3_RECH', 'Prénom');
+    define('TXT_LBL4_RECH', 'Date');
+    define('TXT_LBL5_RECH', 'Caserne');
+    define('TXT_LBL6_RECH', 'Nationalité');
+    define('TXT_LBL7_RECH', 'Corps');
+    define('TXT_LBL8_RECH', 'Statut');
+    define('TXT_LBL9_RECH', 'Matricule');
+    define('TXT_LBL10_RECH', 'Login');
+
+    //Fin form Recherche
 
     //Début gestion test
 
@@ -251,7 +266,6 @@
     define('TXT_TD4_TEST2', 'idUser');
 
     //Fin  ajout test
-
 
 
 ?>

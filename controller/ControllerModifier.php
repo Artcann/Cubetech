@@ -115,7 +115,7 @@ class ControllerModifier extends ControllerSecure
 
                 foreach ($testRhATraiter as $j) {
 
-                    array_push($tableauTestRh, ' Le ' . $j['date'] . ' à ' . $j['heure'] . ' avec ' . $j['idUser'] . '</br>');
+                    array_push($tableauTestRh, ' Le ' . $j['date'] . ' à ' . $j['heure'] . ' avec ' . $this->user->getUserById($j['idUser'])['prenom'] . '</br>');
 
                 }
             }

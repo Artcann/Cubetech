@@ -29,11 +29,6 @@ class ControllerAdminuser extends ControllerAdmin {
         $this->redirect('adminuser');
     }
 
-    public function json() {
-        //header('Content-Type: application/json');
-
-        $this->generateView(array("data" => $this->user->getAllUsersRaw()));
-    }
     public function modification(){
       $idUser = $this->request->getParameter('id');
       $this->generateView(array("idUser"=>$idUser));

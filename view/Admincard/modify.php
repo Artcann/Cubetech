@@ -5,9 +5,9 @@ $this->script = "public/js/register.js";
 
 ?>
 
-<h1><?php echo TXT_TITRE1_CAR2;?></h1>
+<h1>Modification de carte</h1>
 <div class="form-container">
-    <form action="admincard/createpost" method="post">
+    <form action="admincard/modifypost/<?php echo $id ;?>" method="post">
         <label for="statut"><?php echo TXT_TEXT1_CAR2;?></label>
         <select name="statut" id="statut">
             <option value=""><?php echo TXT_SELECT_CAR2;?></option>

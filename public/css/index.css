@@ -35,6 +35,15 @@ label {
     color: white;
 }
 
+select {
+    font: 1em sans-serif;
+
+    width: 300px;
+    box-sizing: border-box;
+
+    border: 1px solid #999;
+}
+
 input {
     /* Pour s'assurer que tous les champs texte ont la même police.
        Par défaut, les textarea ont une police monospace */
@@ -328,6 +337,26 @@ table {
 .form-container label {
     font-size: large;
     margin-top: 10px;
+}
+
+.form-container button {
+    font-weight:bold;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 2em;
+    background-color:  #FF9000;
+    color: black;
+    border: 2px solid #FF9000;
+}
+
+.form-container button:hover {
+    background-color: #FF9000;
+    border: 2px solid black;
+    box-shadow: 4px 4px 6px black;
+}
+
+legend {
+    color: white;
 }
 
 

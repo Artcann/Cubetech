@@ -4,10 +4,10 @@ $this->style = "public/css/lancementTest.css";
 $this->script = "public/js/lancementTest.js"
 ?>
 
+<h1>Lancer un Test</h1>
 
-
-<div class="tableau">
-	<table class="tableauRh">
+<div class="table-container">
+	<table class="table">
 
 	    <thead>
 

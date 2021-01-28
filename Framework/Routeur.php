@@ -67,7 +67,7 @@ class Routeur
      */
     private function handleError(Exception $exception) {
         echo $exception->getMessage();
-        
+        header('HTTP/1.0 404 Not Found');
     }
 
 }

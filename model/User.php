@@ -49,27 +49,32 @@ class User extends Model
             array_push($formated, $param);
         }
 
-        $sql = "SELECT app2021_user.id AS id, app2021_user.nom, prenom, login, mail, naissance, nationalite,
-        grade, corps, caserne, matricule, app2021_caserne.ville, app2021_statut.nom AS statutName, app2021_corps.type
-        FROM app2021_user
-        INNER JOIN app2021_caserne
-        ON app2021_user.caserne = app2021_caserne.id
-        INNER JOIN app2021_statut
-        ON app2021_user.statut = app2021_statut.id
-        INNER JOIN app2021_corps
-        ON app2021_user.corps = app2021_corps.id
-        WHERE (app2021_user.nom LIKE ? OR prenom LIKE ? OR naissance = ? OR grade = ? OR caserne = ? OR nationalite LIKE ?
+
+        
+        $sql = "SELECT user.id AS id, user.nom, prenom, login, mail, naissance, nationalite,
+        grade, corps, caserne, matricule, caserne.ville, statut.nom AS statutName, corps.type
+        FROM user
+        LEFT JOIN caserne
+        ON user.caserne = caserne.id
+        LEFT JOIN statut
+        ON user.statut = statut.id
+        LEFT JOIN corps
+        ON user.corps = corps.id
+        WHERE (user.nom LIKE ? OR prenom LIKE ? OR naissance = ? OR grade = ? OR caserne = ? OR nationalite LIKE ?
         OR corps = ? OR statut = ? OR matricule LIKE ?)";
 
         $val = array($nom, $prenom, $naissance);
 
+        echo $this->executeRequest($sql, $formated)->debugDumpParams();
+
         $response = $this->executeRequest($sql, $formated);
+        
         $dataArr = array();
         while($data = $response->fetch()) {
             array_push($dataArr,$data);
         }
 
-        return $dataArr;
+        #return $dataArr;
     }
 
     public function getUserById($id)

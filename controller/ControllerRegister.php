@@ -53,7 +53,6 @@ class ControllerRegister extends Controller
                 $test = 'nope';
             }
         }
-        $lang = $this->session->getAttribute('user')['nationalite'];
-        $this->generateView(array("login" => $login, "test" => $test, "lang" => $lang));
+        $this->generateView(array("login" => $login));
     }
 }

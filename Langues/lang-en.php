@@ -1,10 +1,9 @@
 <?php
 
     //Début home
-
-    //Début home
     define('TXT_TITRE1_HOME', 'Welcome');
     define('TXT_TITRE2_HOME', 'on CubeTech');
+    define('TXT_BT4_HOME', 'Research');
     if($statut=="1"){
       define('TXT_BT1_HOME', 'Go to the back office');
       define('TXT_BT2_HOME', 'Test');
@@ -13,7 +12,7 @@
     }
     else if($statut=="2"){
       define('TXT_BT1_HOME', 'Start a test');
-      define('TXT_BT2_HOME', 'See my agenda');
+      define('TXT_BT2_HOME', 'Add a test');
       define('TXT_BT3_HOME', 'Logout');
     }
     else{
@@ -166,7 +165,8 @@
     define('TXT_SELECT1_CAR2', 'Deployed');
     define('TXT_SELECT2_CAR2', 'Under reparation');
     define('TXT_SELECT3_CAR2', 'Awaiting deployment');
-    define('TXT_TEXT2_CAR2', 'Enter the date the card left the factory');
+    define('TXT_TEXT2_CAR2', 'Select Barrack');
+    define('TXT_TEXT3_CAR2', 'Enter the date the card left the factory');
 
     //Fin Card2
 
@@ -213,6 +213,22 @@
     define('TXT_BT3_CGU', 'Add GCU');
 
     //Fin gestion CGU
+
+
+    //Début form Recherche
+
+    define('TXT_LBL1_RECH', 'Username');
+    define('TXT_LBL2_RECH', 'Last name');
+    define('TXT_LBL3_RECH', 'First name');
+    define('TXT_LBL4_RECH', 'Date');
+    define('TXT_LBL5_RECH', 'Barrack');
+    define('TXT_LBL6_RECH', 'Nationality');
+    define('TXT_LBL7_RECH', 'Corps');
+    define('TXT_LBL8_RECH', 'Status');
+    define('TXT_LBL9_RECH', 'Registration number');
+    define('TXT_LBL10_RECH', 'Login');
+
+    //Fin form Recherche
 
 
     //Début modification CGU
