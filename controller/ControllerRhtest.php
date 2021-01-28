@@ -3,9 +3,9 @@
 require_once 'model/User.php';
 require_once 'model/Test.php';
 require_once 'Framework/Controller.php';
-require_once 'controller/ControllerRh.php';
+require_once 'Controller/ControllerRh.php';
 
-class ControllerRhTest extends ControllerRh{
+class ControllerRhtest extends ControllerRh{
 
     private $test;
 
