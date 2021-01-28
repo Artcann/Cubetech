@@ -50,4 +50,17 @@ class Card extends Model {
 
    }
 
+   public function deleteCard($id) {
+       $sql = "DELETE FROM carte WHERE id= ? ";
+       $val = array($id);
+
+       $this->executeRequest($sql, $val);
+   }
+
+   public function modifyCard($id, $date, $statut, $caserne) {
+       $sql = "UPDATE carte SET date=?, statut=?, caserne=? WHERE id=?";
+
+       $this->executeRequest($sql, array($date, $statut, $caserne, $id));
+
+    }
 }
