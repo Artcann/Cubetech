@@ -41,10 +41,10 @@ class ControllerRegister extends Controller
 
         if($this->request->isParameterSet('mail')) {
 
-            $to = "art.cann@orange.fr";
-            $subject = "TESTING";
-            $message = "Bonjour, votre identifiant de connexion est : " . $login . ".";
-            $headers = "From: arthur.cann.29@gmail.com" . "\r\n" .
+            $to = $this->request->getParameter('mail');
+            $subject = "[Cubetech] Identifiant de connexion";
+            $message = "Bonjour, votre identifiant de connexion est : " . $login . ". <br> Votre mot de passe est ".$this->request->getParameter('password')." <br> L'équipe Cubetech";
+            $headers = "From: Cubetech Contact <contact@cubetech.fr>" . "\r\n" .
                 "MIME-Version: 1.0" . "\r\n" .
                 "Content-type: text/html; charset=utf8";
             if(mail($to, $subject, $message, $headers)) {
