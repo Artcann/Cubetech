@@ -24,7 +24,7 @@ $this->style = "public/css/adminFaq.css";
                 <td><?php echo MarkdownParser::render($v['titre']); ?></td>
                 <td><?php echo '<a href="adminfaq/modification/'. $v['id'] .'" class=button>Modifier</a>'?></td>
                 <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cette question ?\')"
-                    href="adminfaq/delete/' . $v['id'] . '" class="button">Supprimer</a>' ?></td>
+                    href="adminfaq/delete/' . $v['id'] . '" class="button">' . TXT_BT2_CGU . '</a>' ?></td>
             </tr>
         <?php endforeach ?>
         </tbody>

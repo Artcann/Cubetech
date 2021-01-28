@@ -24,7 +24,7 @@ $this->style = "public/css/index.css";
             <td><?php echo $v['nbOpex']; ?></td>
             <td><a href="admincaserne/modification">Modifier</a></td>
             <td><?php echo '<a onclick="return confirm(\'Êtes vous sûrs de vouloir supprimer cet utilisateur ?\')"
-                   href="admincard/delete/' . $v['id'] . '">Supprimer</a>' ?></td>
+                   href="admincard/delete/' . $v['id'] . '">'. TXT_BT2_CGU .'</a>' ?></td>
         </tr>
     <?php endforeach ?>
     </tbody>

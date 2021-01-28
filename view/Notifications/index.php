@@ -10,7 +10,7 @@ $this->style = "public/css/index.css";
 
 </head>
 <body>
-<?php print_r($data)?>
+
     <h1>Notifications</h1>
     <table>
     <thead>

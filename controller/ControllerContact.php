@@ -2,6 +2,7 @@
 require_once 'Framework/Controller.php';
 require_once 'Framework/Configuration.php';
 require_once 'controller/ControllerSecure.php';
+require_once 'Framework/View.php';
 require_once 'model/Contact.php';
 
 /**
@@ -21,23 +22,23 @@ class ControllerContact extends Controller
        $this->generateView($liste);
     }
 
-    public function getDestinataire()
+    public function message()
     {
-        $type=$this->session->getAttribute("user")['type'];
-        if ($type=='rendez-vous')
+        $type=$this->request->getParameter("type");
+        if ($type=='1')
             $destinataire=2;
-        if ($type['type']=='Bug')
+        elseif ($type=='2')
             $destinataire=3;
-        if ($type['type']=='suggestion')
+        elseif ($type=='3')
             $destinataire=3;
+        else $destinataire=3;
 
-    }
-
-    public function Message()
-    {
-        $contenu=$this->session->getAttribute("user")['message'];
+        $contenu=$this->request->getParameter("message");
+        $contenu=sanitize($contenu);
         $status=0;
-        $date= date('F h:i:s A');
-        $idUser=$this->session->getAttribute("user")['name'];
+        $date= date("Y-m-d");
+        $idUser=$this->session->getAttribute("user")["id"];
+        $this->contact->insertMessage($idUser,$contenu,$type,$date,$status,$destinataire);
+        $this->generateView();
     }
 }

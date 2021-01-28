@@ -45,6 +45,7 @@ class Routeur
             return $controller;
         } else {
             throw new Exception("Fichier '$fileController' introuvable");
+
         }
     }
 

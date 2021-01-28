@@ -1,4 +1,5 @@
 
+console.log(statut);
 
 if (statut === 'Administrateur'){
     $("#button1").attr("href", "adminhome");
@@ -7,9 +8,10 @@ if (statut === 'Administrateur'){
 
 
 else if (statut === 'Ressource humaine') {
-  $("#button1").attr("href", "lancerLeTest");
+  $("#button1").attr("href", "Lancerletest");
   $("#button2").attr("href","Modifier");
 }
+
 else{
   $("#button1").attr("href", "contact");
   $("#button2").attr("href","result");

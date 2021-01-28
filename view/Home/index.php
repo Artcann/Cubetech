@@ -26,6 +26,8 @@ $this->style = "public/css/home.css"
         <div class="row4-col1">
           <a class="rickroll" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></a>
         </div>
+      </div>
 
-    </div>
-</div>
+
+
+

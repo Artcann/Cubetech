@@ -3,9 +3,9 @@
 require_once 'model/Forum.php';
 require_once 'Framework/Controller.php';
 require_once 'Framework/Request.php';
-require_once 'Controller/ControllerSecure.php';
+require_once 'Controller/ControllerAdmin.php';
 
-class ControllerAdminforum extends Controller
+class ControllerAdminforum extends ControllerAdmin
 {
 
     private $forum;

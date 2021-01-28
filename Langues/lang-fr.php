@@ -57,6 +57,10 @@
     define('TXT_BT8_BACK', 'Gérer le Forum');
     define('TXT_TEXT6_BACK', 'Gestion du Forum');
     define('TXT_BT9_BACK', 'Déconnexion');
+    define('TXT_BT10_BACK', 'Déconnexion');
+    define('TXT_TEXT7_BACK', 'Gestion des tests');
+    define('TXT_BT11_BACK', 'Afficher les tests');
+    define('TXT_BT12_BACK', 'Ajouter un test');
 
     //Fin backoffice
 
@@ -237,5 +241,28 @@
     define('TXT_LBL8_RECH', 'Statut');
     define('TXT_LBL9_RECH', 'Matricule');
     define('TXT_LBL10_RECH', 'Login');
+
+    //Début gestion test
+
+    define('TXT_TITRE1_TEST', 'Gestion des tests');
+    define('TXT_TD1_TEST', 'Date');
+    define('TXT_TD2_TEST', 'Heure');
+    define('TXT_TD3_TEST', 'Patient');
+    define('TXT_TD4_TEST', 'Rh');
+    define('TXT_TD5_TEST', 'Modifier');
+    define('TXT_TD6_TEST', 'Supprimer');
+
+    //Fin gestion test
+
+
+    //Début ajout test
+
+    define('TXT_TD1_TEST2', 'Date');
+    define('TXT_TD2_TEST2', 'Heure');
+    define('TXT_TD3_TEST2', 'idRh');
+    define('TXT_TD4_TEST2', 'idUser');
+
+    //Fin  ajout test
+
 
 ?>
