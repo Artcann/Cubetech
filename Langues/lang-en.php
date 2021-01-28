@@ -13,7 +13,7 @@
     }
     else if($statut=="2"){
       define('TXT_BT1_HOME', 'Start a test');
-      define('TXT_BT2_HOME', 'See my agenda');
+      define('TXT_BT2_HOME', 'Add a test');
       define('TXT_BT3_HOME', 'Logout');
     }
     else{

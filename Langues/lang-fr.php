@@ -11,7 +11,7 @@
     }
     else if($statut=="2"){
       define('TXT_BT1_HOME', 'Lancer un test');
-      define('TXT_BT2_HOME', 'Consulter mon agenda');
+      define('TXT_BT2_HOME', 'Ajouter un test');
       define('TXT_BT3_HOME', 'Déconnexion');
     }
     else{
