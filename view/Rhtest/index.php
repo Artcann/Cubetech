@@ -37,4 +37,7 @@ $this->title = "Rhtest | Cubetech";
     
 </div>
 
+<div id="scroll_to_top">
+    <a href="rhtest/ajout"><img src="public/images/plus.png" alt="Ajouter un RDV" /></a>
+</div>
 

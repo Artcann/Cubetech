@@ -378,3 +378,14 @@ legend {
 #lang-fixed img {
     width: 50px;
 }
+
+#scroll_to_top {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 150px;
+    right: 80px;
+}
+#scroll_to_top img {
+    width: 90px;
+}

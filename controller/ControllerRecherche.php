@@ -28,7 +28,7 @@ class ControllerRecherche extends Controller {
         $dataUser = $this->user->researchUsers($nom, $prenom, $naissance, $grade, $caserne, $nationalite, $corps, $statut, $matricule);
 
 
-        #$this->generateView(array("data" => $dataUser));
+        $this->generateView(array("data" => $dataUser));
 }
 
 }

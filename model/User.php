@@ -65,7 +65,7 @@ class User extends Model
 
         $val = array($nom, $prenom, $naissance);
 
-        echo $this->executeRequest($sql, $formated)->debugDumpParams();
+        #echo $this->executeRequest($sql, $formated)->debugDumpParams();
 
         $response = $this->executeRequest($sql, $formated);
         
@@ -74,7 +74,7 @@ class User extends Model
             array_push($dataArr,$data);
         }
 
-        #return $dataArr;
+        return $dataArr;
     }
 
     public function getUserById($id)
