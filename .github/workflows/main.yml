@@ -38,7 +38,7 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.DOCKER_HUB_USERNAME }}/Cubetech:latest
+          tags: ${{ steps.DOCKER_HUB_USERNAME }}/simplewhale:latest
           
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
