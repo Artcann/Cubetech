@@ -1,5 +1,5 @@
 <?php
-require_once 'model/User.php';
+require_once 'Model/User.php';
 require_once 'Framework/Controller.php';
 
 class ControllerRecherche extends Controller {

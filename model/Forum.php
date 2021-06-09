@@ -65,7 +65,7 @@ class Forum extends Model
         $sql = "
                 SELECT t.topic_id, t.subject, t.user_id, t.created, u.nom, u.prenom, count(t.topic_id) as total_topics, t.created	
 				FROM app2021_forum_topics as t
-				LEFT JOIN app2021_user as u ON t.user_id = u.id
+				LEFT JOIN user as u ON t.user_id = u.id
 				LEFT JOIN app2021_forum_posts as p ON t.topic_id = p.topic_id
 				WHERE category_id = ?
 				GROUP BY t.topic_id
@@ -89,7 +89,7 @@ class Forum extends Model
         $sql = "
                 SELECT p.post_id, p.message, p.user_id, p.created, u.nom, u.prenom, s.nom as role 		
 				FROM app2021_forum_posts as p
-				LEFT JOIN app2021_user as u ON p.user_id = u.id
+				LEFT JOIN user as u ON p.user_id = u.id
 				LEFT JOIN app2021_statut as s ON u.statut = s.id
 				WHERE p.topic_id = ?
 				";

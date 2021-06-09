@@ -40,9 +40,9 @@ class Test extends Model
 
     public function getAllTests(){
 
-        $sql = "SELECT app2021_test.id, date, idUser, heure, idRh, app2021_test.statut, app2021_user.nom, app2021_user.prenom, app2021_user.caserne 
+        $sql = "SELECT app2021_test.id, date, idUser, heure, idRh, app2021_test.statut, user.nom, user.prenom, user.caserne 
                 FROM app2021_test 
-                INNER JOIN app2021_user on app2021_test.idUser = app2021_user.id 
+                INNER JOIN user on app2021_test.idUser = user.id 
                 WHERE app2021_test.statut = 0 ORDER BY date 
                ";
 

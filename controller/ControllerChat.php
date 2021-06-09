@@ -1,6 +1,6 @@
 <?php
 include_once 'Framework/Controller.php';
-include_once 'model/Chat.php';
+include_once 'Model/Chat.php';
 
 class ControllerChat extends Controller {
 

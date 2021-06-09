@@ -1,7 +1,7 @@
 <?php
 
 require_once 'ControllerAdmin.php';
-require_once 'model/Faq.php';
+require_once 'Model/Faq.php';
 
 class ControllerAdminfaq extends ControllerAdmin {
 

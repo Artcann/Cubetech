@@ -1,7 +1,7 @@
 <?php
 
 require_once "Controller/ControllerAdmin.php";
-require_once 'model/User.php';
+require_once 'Model/User.php';
 
 /**
  * Class ControllerAdminuser

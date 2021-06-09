@@ -1,9 +1,9 @@
 <?php
 
-require_once 'model/User.php';
-require_once 'model/Test.php';
-require_once 'model/Corps.php';
-require_once 'model/Caserne.php';
+require_once 'Model/User.php';
+require_once 'Model/Test.php';
+require_once 'Model/Corps.php';
+require_once 'Model/Caserne.php';
 require_once 'Framework/Controller.php';
 require_once 'Controller/ControllerSecure.php';
 

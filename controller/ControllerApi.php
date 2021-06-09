@@ -1,8 +1,8 @@
 <?php
 require_once "Framework/Controller.php";
-require_once "model/Test.php";
-require_once "model/User.php";
-require_once "model/Chat.php";
+require_once "Model/Test.php";
+require_once "Model/User.php";
+require_once "Model/Chat.php";
 
 /**
  * Class ControllerApi
@@ -50,7 +50,7 @@ class ControllerApi extends Controller
     public function getRecentTestByUser() {
         if($this->verification()) {
             header('Content-Type: application/json');
-            echo json_encode($this->test->getRecentTestByUser($this->request->getParameter('id'),
+            echo json_encode($this->test->getTestByUser($this->request->getParameter('id'),
                                                               $this->request->getParameter('idTest')), JSON_PRETTY_PRINT);
         }
     }

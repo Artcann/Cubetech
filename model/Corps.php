@@ -5,7 +5,7 @@ class Corps extends Model {
 
     public function getAllCorps() {
 
-        $sql = 'SELECT id, type, nbMilitaire, nbOpex FROM app2021_corps';
+        $sql = 'SELECT id, type, nbMilitaire, nbOpex FROM corps';
 
         $dataArr = array();
 

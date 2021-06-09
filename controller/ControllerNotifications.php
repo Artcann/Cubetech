@@ -1,6 +1,6 @@
 <?php
 require_once 'Framework/Controller.php';
-require_once 'model/Notifications.php';
+require_once 'Model/Notifications.php';
 require_once 'Controller/ControllerSecure.php';
 
 class ControllerNotifications extends Controller

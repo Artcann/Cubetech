@@ -1,6 +1,6 @@
 <?php
 
-require_once 'model/Forum.php';
+require_once 'Model/Forum.php';
 require_once 'Framework/Controller.php';
 require_once 'Framework/Request.php';
 require_once 'Controller/ControllerAdmin.php';

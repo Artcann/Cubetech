@@ -18,7 +18,7 @@
 =======
       <change beforePath="$PROJECT_DIR$/controller/frontoffice.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/frontoffice.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/frontoffice.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/frontoffice.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/frontoffice.php" beforeDir="false" afterPath="$PROJECT_DIR$/Model/frontoffice.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontoffice/register.php" afterDir="false" />
 >>>>>>> f4852f9e864b0a07fa0eab3941ba9d801e23a042
       <change beforePath="$PROJECT_DIR$/view/frontoffice/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/frontoffice/home.php" afterDir="false" />

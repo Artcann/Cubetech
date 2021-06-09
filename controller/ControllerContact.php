@@ -3,7 +3,7 @@ require_once 'Framework/Controller.php';
 require_once 'Framework/Configuration.php';
 require_once 'Controller/ControllerSecure.php';
 require_once 'Framework/View.php';
-require_once 'model/Contact.php';
+require_once 'Model/Contact.php';
 
 /**
  * Class ControllerContact

@@ -1,6 +1,6 @@
 <?php
 
-require_once 'model/Cgu.php';
+require_once 'Model/Cgu.php';
 require_once 'Framework/Controller.php';
 
 class ControllerCgu extends Controller

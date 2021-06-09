@@ -8,7 +8,7 @@ class Notifications extends Model
     public function getNotif($idUser)
     {
 
-        $sql='SELECT id,contenu,date FROM app2021_notification WHERE idUser='.$idUser;
+        $sql='SELECT id,contenu,date FROM notification WHERE idUser='.$idUser;
         $response=$this->executeRequest($sql);
         $dataArr= array();
         while ($data= $response->fetch()){

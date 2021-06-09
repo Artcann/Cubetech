@@ -24,7 +24,7 @@ class View
      */
     public function __construct($action, $controller = "")
     {
-        $fichier = "view/";
+        $fichier = "View/";
         if($controller != "") {
             $fichier = $fichier . $controller ."/";
         }
@@ -41,10 +41,10 @@ class View
         $root = Configuration::get("racineWeb", "/");
 
         if($lang == "fr") {
-            $view = $this->generateFile("view/template.php", array('title' => $this->title, 'content' => $content,
+            $view = $this->generateFile("View/template.php", array('title' => $this->title, 'content' => $content,
             'racineWeb' => $root, 'style' => $this->style, 'script' => $this->script));
         } else if($lang == 'en') {    
-            $view = $this->generateFile("view/template-en.php", array('title' => $this->title, 'content' => $content,
+            $view = $this->generateFile("View/template-en.php", array('title' => $this->title, 'content' => $content,
             'racineWeb' => $root, 'style' => $this->style, 'script' => $this->script));
        }
 

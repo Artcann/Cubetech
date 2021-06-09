@@ -5,7 +5,7 @@ class Contact extends Model
 {
     public function insertMessage($idUser,$contenu,$type,$date,$statut,$destinataire)
     {
-        $sql= "INSERT INTO app2021_sav (idUser,contenu,type,date,statut,destinataire) VALUES (?,?,?,?,?,?)";
+        $sql= "INSERT INTO sav (idUser,contenu,type,date,statut,destinataire) VALUES (?,?,?,?,?,?)";
         $values= array($idUser,$contenu,$type,$date,$statut,$destinataire);
 
         $this->executeRequest($sql,$values);
@@ -13,7 +13,7 @@ class Contact extends Model
     }
     public function getType()
     {
-        $sql="SELECT id,type FROM app2021_sav_type";
+        $sql="SELECT id,type FROM sav_type";
         $response=$this->executeRequest($sql);
         $dataArr = array();
 
