@@ -9,7 +9,7 @@ class Forum extends Model
     /*Supprimer getCategoryList et getCategoryTopicsCount si getCategoryCount fonctionne*/
     public function getCategoryList(){
         $sql = "SELECT * 
-                FROM app2021_forum_category 
+                FROM  forum_category 
                 ORDER BY category_id";
         $response = $this->executeRequest($sql);
         $dataArr = array();
@@ -25,7 +25,7 @@ class Forum extends Model
     {
         $sql = "
 				SELECT count(*) as total_topic
-				FROM app2021_forum_topics 
+				FROM  forum_topics 
 				GROUP BY category_id 
 				ORDER BY category_id";
 
@@ -44,8 +44,8 @@ class Forum extends Model
     {
         $sql = "
 				SELECT c.name, c.category_id, c.description, count(t.topic_id) as total_topics
-				FROM app2021_forum_category as c
-				LEFT JOIN app2021_forum_topics as t ON c.category_id = t.category_id				
+				FROM  forum_category as c
+				LEFT JOIN  forum_topics as t ON c.category_id = t.category_id				
 				GROUP BY c.category_id
 				";
 
@@ -64,9 +64,9 @@ class Forum extends Model
 
         $sql = "
                 SELECT t.topic_id, t.subject, t.user_id, t.created, u.nom, u.prenom, count(t.topic_id) as total_topics, t.created	
-				FROM app2021_forum_topics as t
+				FROM  forum_topics as t
 				LEFT JOIN user as u ON t.user_id = u.id
-				LEFT JOIN app2021_forum_posts as p ON t.topic_id = p.topic_id
+				LEFT JOIN  forum_posts as p ON t.topic_id = p.topic_id
 				WHERE category_id = ?
 				GROUP BY t.topic_id
 				ORDER BY t.topic_id DESC";
@@ -88,9 +88,9 @@ class Forum extends Model
 
         $sql = "
                 SELECT p.post_id, p.message, p.user_id, p.created, u.nom, u.prenom, s.nom as role 		
-				FROM app2021_forum_posts as p
+				FROM  forum_posts as p
 				LEFT JOIN user as u ON p.user_id = u.id
-				LEFT JOIN app2021_statut as s ON u.statut = s.id
+				LEFT JOIN  statut as s ON u.statut = s.id
 				WHERE p.topic_id = ?
 				";
 
@@ -109,7 +109,7 @@ class Forum extends Model
     public function getTopicSubject($id){
         $sql = "
                 SELECT subject, topic_id
-                FROM app2021_forum_topics
+                FROM  forum_topics
                 WHERE topic_id = ?
                 GROUP BY topic_id";
 
@@ -125,7 +125,7 @@ class Forum extends Model
     }
 
     public function insertPost($message, $topic_id, $user_id) {
-        $sql = "INSERT INTO app2021_forum_posts(message, topic_id, user_id, created)
+        $sql = "INSERT INTO  forum_posts(message, topic_id, user_id, created)
                 VALUES (?, ?, ?, current_timestamp)";
 
         $values = array($message, $topic_id, $user_id) ;
@@ -134,7 +134,7 @@ class Forum extends Model
     }
 
     public function insertTopic($subject,$category_id, $user_id) {
-        $sql = "INSERT INTO app2021_forum_topics(subject, category_id, user_id, created)
+        $sql = "INSERT INTO  forum_topics(subject, category_id, user_id, created)
                 VALUES (?, ?, ?, current_timestamp)";
 
         $values = array($subject, $category_id, $user_id) ;
@@ -143,7 +143,7 @@ class Forum extends Model
     }
 
     public function insertCategory($cat_name,$description) {
-        $sql = "INSERT INTO app2021_forum_category(name, description)
+        $sql = "INSERT INTO  forum_category(name, description)
                 VALUES (?, ?)";
 
         $values = array($cat_name, $description) ;
@@ -156,7 +156,7 @@ class Forum extends Model
     public function getTopicIdBySubject ($subject){
         $sql = "
                 SELECT topic_id
-                FROM app2021_forum_topics
+                FROM  forum_topics
                 WHERE subject = '".$subject."'
         ";
         $response = $this->executeRequest($sql);
@@ -171,21 +171,21 @@ class Forum extends Model
     }
 
     public function deletePost($id) {
-        $sql = "DELETE FROM app2021_forum_posts WHERE post_id=?";
+        $sql = "DELETE FROM  forum_posts WHERE post_id=?";
         $val = array($id);
 
         $this->executeRequest($sql, $val);
     }
 
     public function deleteTopic($id) {
-        $sql = "DELETE FROM app2021_forum_topics WHERE topic_id=?";
+        $sql = "DELETE FROM  forum_topics WHERE topic_id=?";
         $val = array($id);
 
         $this->executeRequest($sql, $val);
     }
 
     public function deleteCategory($id) {
-        $sql = "DELETE FROM app2021_forum_category WHERE category_id=?";
+        $sql = "DELETE FROM  forum_category WHERE category_id=?";
         $val = array($id);
 
         $this->executeRequest($sql, $val);

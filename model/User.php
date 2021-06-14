@@ -52,12 +52,12 @@ class User extends Model
 
         
         $sql = "SELECT user.id AS id, user.nom, prenom, login, mail, naissance, nationalite,
-        grade, corps, caserne, matricule, caserne.ville, app2021_statut.nom AS statutName, corps.type
+        grade, corps, caserne, matricule, caserne.ville,  statut.nom AS statutName, corps.type
         FROM user
         LEFT JOIN caserne
         ON user.caserne = caserne.id
-        LEFT JOIN app2021_statut
-        ON user.statut = app2021_statut.id
+        LEFT JOIN  statut
+        ON user.statut =  statut.id
         LEFT JOIN corps
         ON user.corps = corps.id
         WHERE (user.nom LIKE ? OR prenom LIKE ? OR naissance = ? OR grade = ? OR caserne = ? OR nationalite LIKE ?

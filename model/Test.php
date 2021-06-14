@@ -14,7 +14,7 @@ class Test extends Model
 
     public function getTestByUser($idUser){
 
-        $sql = "SELECT id, date,idUser, heure, idRh, statut FROM app2021_test WHERE idUser= ?";
+        $sql = "SELECT id, date,idUser, heure, idRh, statut FROM  test WHERE idUser= ?";
 
         $response = $this->executeRequest($sql, array($idUser));
 
@@ -30,7 +30,7 @@ class Test extends Model
 
     public function getTestById($id){
 
-        $sql = "SELECT id, date,idUser, heure, idRh, statut FROM app2021_test WHERE id= ?";
+        $sql = "SELECT id, date,idUser, heure, idRh, statut FROM  test WHERE id= ?";
 
         $val = array($id);
 
@@ -40,10 +40,10 @@ class Test extends Model
 
     public function getAllTests(){
 
-        $sql = "SELECT app2021_test.id, date, idUser, heure, idRh, app2021_test.statut, user.nom, user.prenom, user.caserne 
-                FROM app2021_test 
-                INNER JOIN user on app2021_test.idUser = user.id 
-                WHERE app2021_test.statut = 0 ORDER BY date 
+        $sql = "SELECT  test.id, date, idUser, heure, idRh,  test.statut, user.nom, user.prenom, user.caserne 
+                FROM  test 
+                INNER JOIN user on  test.idUser = user.id 
+                WHERE  test.statut = 0 ORDER BY date 
                ";
 
         $response = $this->executeRequest($sql);
@@ -60,7 +60,7 @@ class Test extends Model
 
     public function delete($id){
 
-        $sql = "DELETE FROM app2021_test WHERE id=?";
+        $sql = "DELETE FROM  test WHERE id=?";
 
         $val = array($id);
 
@@ -70,7 +70,7 @@ class Test extends Model
 
     public function update($date, $heure, $idRh, $id){
 
-        $sql = "UPDATE app2021_test SET date=?, heure=?, idRh =? WHERE id=?";
+        $sql = "UPDATE  test SET date=?, heure=?, idRh =? WHERE id=?";
 
         $val = array($date, $heure, $idRh, $id);
 
@@ -80,7 +80,7 @@ class Test extends Model
 
     public function addTest($date, $heure, $idRh, $idUser){
 
-        $sql = "INSERT INTO app2021_test (date, heure, idRh, idUser) VALUES (?, ?, ?, ?)";
+        $sql = "INSERT INTO  test (date, heure, idRh, idUser) VALUES (?, ?, ?, ?)";
 
         $val = array($date, $heure, $idRh, $idUser);
 
@@ -91,7 +91,7 @@ class Test extends Model
 
     public function getTestByRh($idRh){
 
-        $sql = "SELECT id, date, idUser, heure, idRh, statut FROM app2021_test WHERE idRh= ?";
+        $sql = "SELECT id, date, idUser, heure, idRh, statut FROM  test WHERE idRh= ?";
 
         $response = $this->executeRequest($sql, array($idRh));
 
@@ -126,7 +126,7 @@ class Test extends Model
   
     public function insertTest($trame, $idUser, $idRh){
 
-        $sql = "INSERT into app2021_test (idCapteur, valeur, date, heure, idUser, idRh, statut) 
+        $sql = "INSERT into  test (idCapteur, valeur, date, heure, idUser, idRh, statut) 
                 VALUES (?, ?, current_date, ?, ?, ?, ?, ?)";
 
         $idCapteur = substr($trame, 6,1);
