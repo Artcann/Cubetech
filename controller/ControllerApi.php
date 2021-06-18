@@ -80,6 +80,10 @@ class ControllerApi extends Controller
      * @return bool
      */
     private function verification() {
-        return $this->request->getParameter('access') == 'moeve';
+        $headers = apache_request_headers();
+        $token = $headers['Authorization'];
+
+        header('Content-Type: application/json');
+        echo json_encode($token);
     }
 }

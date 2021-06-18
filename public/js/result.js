@@ -2,8 +2,7 @@ function ajaxRequest(idTest) {
 
     let request = new XMLHttpRequest();
     request.open("GET", "index.php?controller=api&action=getrecenttestbyuser&id=" + userId + "&idTest=" + idTest, true);
-
-    console.log("index.php?controller=api&action=getrecenttestbyuser&id=" + userId + "&idTest=" + idTest);
+    request.setRequestHeader('Authorization', 'helloworld');
 
     request.responseType = "json";
     request.onload = function () {
