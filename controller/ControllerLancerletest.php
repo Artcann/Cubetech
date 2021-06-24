@@ -16,6 +16,8 @@ class ControllerLancerletest extends Controller{
 
     private $card; 
 
+    private $requestStack;
+
 
     public function __construct() {
 
@@ -27,6 +29,7 @@ class ControllerLancerletest extends Controller{
 
         $this->card = new Card();
 
+        $this->requestStack = array('111000045', '111000046');
     }
 
 
@@ -43,6 +46,29 @@ class ControllerLancerletest extends Controller{
 
         $this->generateView(array("test" => $test, "data" => $data, 'caserne' => $caserne, "card" => $card));
 
+    }
+
+    public function getNextRequest() {
+        if($this->verification()) {
+            header('Content-Type: application/json');
+            echo json_encode(array_shift($this->requestStack));
+        }
+    }
+
+    public function addRequest() {
+        array_push($this->requestStack, $this->request->getParameter(''));
+    }
+
+    private function verification() {
+        // $headers = apache_request_headers();
+        // if(isset($headers['Authorization'])) {
+        //     $token = $headers['Authorization'];
+        //     return $token == 'helloworld';
+        // } else {
+        //     return false;
+        // }
+        
+        return true;
     }
 
 }

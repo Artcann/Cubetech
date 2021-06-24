@@ -56,6 +56,6 @@ const selectButton = document.querySelector("#selectResult");
 
 selectButton.addEventListener('change', (event) => {
     const selectedTest = event.target.value;
-    ajaxRequest(selectedTest);
+    ajaxRequest(selectedTest); 
 });
 

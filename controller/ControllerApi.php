@@ -81,8 +81,12 @@ class ControllerApi extends Controller
      */
     private function verification() {
         $headers = apache_request_headers();
-        $token = $headers['Authorization'];
-
-        return $token == 'helloworld';
+        if(isset($headers['Authorization'])) {
+            $token = $headers['Authorization'];
+            return $token == 'helloworld';
+        } else {
+            return false;
+        }
+        
     }
 }
