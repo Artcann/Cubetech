@@ -1,3 +1,8 @@
+function onloadRequest(){
+    console.log("onloadRequest");
+}
+
+
 function ajaxRequest(idTest) {
 
     let request = new XMLHttpRequest();
@@ -6,7 +11,7 @@ function ajaxRequest(idTest) {
     console.log("index.php?controller=api&action=getrecenttestbyuser&id=" + userId + "&idTest=" + idTest);
 
     request.responseType = "json";
-    request.onload = function () {
+    request.onload = function onloadRequest() {
         if (request.status === 200) {
             let response = request.response;
             console.log(response);
@@ -14,6 +19,7 @@ function ajaxRequest(idTest) {
             for (var key in response) {
                 if (response.hasOwnProperty(key)) {
                     results[i] = response[key]['valeur'];
+                    console.log(results[i]);
                 }
                 i++;
             }
@@ -39,8 +45,8 @@ var chart = new Chart(ctx, {
         labels: ['0', '10', '20', '30', '40', '50', '60'],
         datasets: [{
             label: 'Test',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(255, 144, 0)',
+            borderColor: 'rgb(255, 144, 0)',
             data: results
         }]
     },

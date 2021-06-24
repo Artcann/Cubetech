@@ -69,9 +69,11 @@
     //Début resultats
 
     define('TXT_TEXT1_RESULTS', 'Selectionnez les résultats à afficher');
-    define('TXT_TEXT2_RESULTS', '---Select---');
-    define('TXT_TEXT3_RESULTS', 'Température');
-    define('TXT_TEXT4_RESULTS', 'Rythme Cardiaque');
+    define('TXT_TEXT2_RESULTS', '---Selectionner---');
+    define('TXT_TEXT3_RESULTS', 'Tonalité');
+    define('TXT_TEXT4_RESULTS', 'Température');
+    define('TXT_TEXT5_RESULTS', 'Réaction à un son');
+    define('TXT_TEXT6_RESULTS', 'Réaction à une led');
 
 
     //Fin resultats

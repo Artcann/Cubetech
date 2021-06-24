@@ -80,6 +80,6 @@ class ControllerApi extends Controller
      * @return bool
      */
     private function verification() {
-        return $this->request->getParameter('access') == 'moeve';
+        return $this->request->getParameter('access') == 'moeve'; // ???
     }
 }

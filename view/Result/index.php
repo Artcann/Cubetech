@@ -9,8 +9,10 @@ $this->title="Résultat";
     <label for="select"><?php echo TXT_TEXT1_RESULTS;?></label>
     <select id="select">
         <option value="0"><?php echo TXT_TEXT2_RESULTS;?></option>
-        <option value="3"><?php echo TXT_TEXT3_RESULTS;?></option>
-        <option value="5"><?php echo TXT_TEXT4_RESULTS;?></option>
+        <option value="1"><?php echo TXT_TEXT3_RESULTS;?></option>
+        <option value="2"><?php echo TXT_TEXT4_RESULTS;?></option>
+        <option value="3"><?php echo TXT_TEXT5_RESULTS;?></option>
+        <option value="4"><?php echo TXT_TEXT6_RESULTS;?></option>
     </select>
 </div>
 
