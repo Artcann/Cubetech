@@ -90,7 +90,9 @@ class Test extends Model
 
     public function getTestByRh($idRh){
 
-        $sql = "SELECT id, date, idUser, heure, idRh, statut FROM test WHERE idRh= ?";
+        $sql = "SELECT id, date, idUser, heure, idRh, statut, id_carte 
+                FROM test 
+                WHERE idRh= ?";
 
         $response = $this->executeRequest($sql, array($idRh));
 
@@ -104,12 +106,14 @@ class Test extends Model
     }
 
 
-/*     public function getRecentTestByUser($idUser, $idCapteur)
+    public function getRecentTestByUser($idUser, $idCapteur) // mise à jour le 24 juin 
     {
 
-
-        $sql = "SELECT id, date, idUser, idRh, statut FROM test WHERE idUser= ? AND idCapteur = ?
-                ORDER BY id DESC LIMIT 7";
+        $sql = "SELECT test.id, valeur_test.id, date, idUser, trame, id_capteur
+                FROM valeur_test
+                LEFT JOIN test ON test.id = valeur_test.id_test
+                WHERE idUser= ? AND id_capteur = ?
+                ORDER BY valeur_test.id";
 
         $response = $this->executeRequest($sql, array($idUser, $idCapteur));
 
@@ -120,7 +124,7 @@ class Test extends Model
         }
 
         return($dataArr);
-    } */
+    } 
 
   
     public function insertTest($trame, $idUser, $idRh){

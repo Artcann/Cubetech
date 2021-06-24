@@ -1,21 +1,15 @@
-function onloadRequest(){
-    console.log("onloadRequest");
-}
-
-
 function ajaxRequest(idTest) {
 
     let request = new XMLHttpRequest();
     request.open("GET", "index.php?controller=api&action=getrecenttestbyuser&id=" + userId + "&idTest=" + idTest, true);
-
     console.log("index.php?controller=api&action=getrecenttestbyuser&id=" + userId + "&idTest=" + idTest);
 
     request.responseType = "json";
-    request.onload = function onloadRequest() {
+    request.onload = function () {
         if (request.status === 200) {
             let response = request.response;
-            console.log(response);
             let i = 0;
+            console.log(response);
             for (var key in response) {
                 if (response.hasOwnProperty(key)) {
                     results[i] = response[key]['valeur'];
