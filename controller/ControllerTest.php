@@ -16,7 +16,8 @@ class ControllerTest extends Controller {
 
     public function index()
     {
-        $this->generateView();
+        $test = $this->test->getRecentTestByUser(5, 2);
+        var_dump($test);
     }
 
     public function add() {

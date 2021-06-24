@@ -50,8 +50,9 @@ class ControllerApi extends Controller
     public function getRecentTestByUser() {
         if($this->verification()) {
             header('Content-Type: application/json');
-            echo json_encode($this->test->getTestByUser($this->request->getParameter('id'),
-                                                              $this->request->getParameter('idTest')), JSON_PRETTY_PRINT);
+
+            echo json_encode($this->test->getRecentTestByUser($this->request->getParameter('idUser'),
+                                                                      $this->request->getParameter('id_capteur')), JSON_PRETTY_PRINT);
         }
     }
 
@@ -88,5 +89,6 @@ class ControllerApi extends Controller
             return false;
         }
         
+
     }
 }
